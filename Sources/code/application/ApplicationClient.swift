@@ -2332,7 +2332,7 @@ if let value = longitude {
             b: Bool?,
             assignCardId: Int?,
             
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2385,7 +2385,7 @@ if let value = assignCardId {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2464,7 +2464,7 @@ if let value = id {
             i: Bool?,
             b: Bool?,
             body: AddCartRequest,
-            onResponse: @escaping (_ response: AddCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: AddRequestCartResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2503,7 +2503,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(AddCartResponse.self, from: data)
+                        let response = Utility.decode(AddRequestCartResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2528,7 +2528,7 @@ if let value = b {
             i: Bool?,
             b: Bool?,
             body: UpdateCartRequest,
-            onResponse: @escaping (_ response: UpdateCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: UpdateRequestCartResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2574,7 +2574,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(UpdateCartResponse.self, from: data)
+                        let response = Utility.decode(UpdateRequestCartResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2710,7 +2710,7 @@ if let value = uid {
             p: Bool?,
             uid: Int?,
             body: ApplyCouponRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2763,7 +2763,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2786,7 +2786,7 @@ if let value = uid {
         public func removeCoupon(
             uid: Int?,
             
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2818,7 +2818,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2922,7 +2922,7 @@ if let value = slug {
             i: Bool?,
             b: Bool?,
             body: RewardPointRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2968,7 +2968,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -3311,7 +3311,7 @@ if let value = isDefault {
             i: Bool?,
             b: Bool?,
             body: SelectCartAddressRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -3357,7 +3357,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -3380,7 +3380,7 @@ if let value = b {
         public func selectPaymentMode(
             uid: String?,
             body: UpdateCartPaymentRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -3412,7 +3412,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12711,7 +12711,7 @@ if let value = pageSize {
             b: Bool?,
             assignCardId: Int?,
             
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12764,7 +12764,7 @@ if let value = assignCardId {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12843,7 +12843,7 @@ if let value = id {
             i: Bool?,
             b: Bool?,
             body: AddCartRequest,
-            onResponse: @escaping (_ response: AddCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: AddRequestCartResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12882,7 +12882,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(AddCartResponse.self, from: data)
+                        let response = Utility.decode(AddRequestCartResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12907,7 +12907,7 @@ if let value = b {
             i: Bool?,
             b: Bool?,
             body: UpdateCartRequest,
-            onResponse: @escaping (_ response: UpdateCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: UpdateRequestCartResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12953,7 +12953,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(UpdateCartResponse.self, from: data)
+                        let response = Utility.decode(UpdateRequestCartResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13089,7 +13089,7 @@ if let value = uid {
             p: Bool?,
             uid: Int?,
             body: ApplyCouponRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13142,7 +13142,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13165,7 +13165,7 @@ if let value = uid {
         public func removeCoupon(
             uid: Int?,
             
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13197,7 +13197,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13301,7 +13301,7 @@ if let value = slug {
             i: Bool?,
             b: Bool?,
             body: RewardPointRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13347,7 +13347,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13690,7 +13690,7 @@ if let value = isDefault {
             i: Bool?,
             b: Bool?,
             body: SelectCartAddressRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13736,7 +13736,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13759,7 +13759,7 @@ if let value = b {
         public func selectPaymentMode(
             uid: String?,
             body: UpdateCartPaymentRequest,
-            onResponse: @escaping (_ response: CartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13791,7 +13791,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartResponse.self, from: data)
+                        let response = Utility.decode(CartRequestResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
