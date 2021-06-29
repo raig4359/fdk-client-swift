@@ -93,7 +93,6 @@
     * [submitCustomForm](#submitcustomform)
     * [getParticipantsInsideVideoRoom](#getparticipantsinsidevideoroom)
     * [getTokenForVideoRoom](#gettokenforvideoroom)
-    * [getASDF](#getasdf)
     
 
 * [Theme](#Theme)
@@ -1170,7 +1169,7 @@ Schema: `ErrorResponse`
 List all the collections
 
 ```swift
-catalog.getCollections(pageNo: pageNo, pageSize: pageSize) { (response, error) in
+catalog.getCollections(pageNo: pageNo, pageSize: pageSize, tag: tag) { (response, error) in
     // Use response
 }
 ```
@@ -1179,7 +1178,8 @@ catalog.getCollections(pageNo: pageNo, pageSize: pageSize) { (response, error) i
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
 | pageNo | Int? | The page number to navigate through the given set of results. |    
-| pageSize | Int? | The number of items to retrieve in each page. |  
+| pageSize | Int? | The number of items to retrieve in each page. |    
+| tag | String? | List of tags  to filter collections |  
 
 
 Collections are a great way to organize your products and can improve the ability for customers to find items quickly and efficiently.
@@ -2676,42 +2676,6 @@ lead.getTokenForVideoRoom(uniqueName: uniqueName) { (response, error) in
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
 | uniqueName | String? | Unique name of Video Room |  
-
-
-Get Token to join a specific Video Room using it's unqiue name, this Token is your ticket to Room and also creates your identity there.
-
-*Success Response:*
-
-
-
-Success
-
-
-Schema: `GetTokenForVideoRoomResponse`
-
-
-
-
-
-
----
-
-
-#### getASDF
-Get Token to join a specific Video Room using it's unqiue name
-
-```swift
-lead.getASDF(inQuery: inQuery, inHeader: inHeader, inPath: inPath) { (response, error) in
-    // Use response
-}
-```
-
-
-| Argument  |  Type  | Description |
-| --------- | ----  | --- |  
-| inQuery | PriorityEnum? | For adding support for enum |    
-| inHeader | PriorityEnum? | For adding support for enum |    
-| inPath | PriorityEnum? | For adding support for enum |  
 
 
 Get Token to join a specific Video Room using it's unqiue name, this Token is your ticket to Room and also creates your identity there.
