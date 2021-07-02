@@ -1529,7 +1529,7 @@ var xQuery: [String: Any] = [:]
         public func getCollections(
             pageNo: Int?,
             pageSize: Int?,
-            tag: String?,
+            tag: [String]?,
             
             onResponse: @escaping (_ response: GetCollectionListingResponse?, _ error: FDKError?) -> Void
         ) {
@@ -1614,7 +1614,7 @@ if let value = tag {
         **/
         public func getCollectionsPaginator(
             pageSize: Int?,
-            tag: String?
+            tag: [String]?
             
             ) -> Paginator<GetCollectionListingResponse> {
             let pageSize = pageSize ?? 20
@@ -2346,7 +2346,7 @@ if let value = longitude {
             b: Bool?,
             assignCardId: Int?,
             
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2399,7 +2399,7 @@ if let value = assignCardId {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2478,7 +2478,7 @@ if let value = id {
             i: Bool?,
             b: Bool?,
             body: AddCartRequest,
-            onResponse: @escaping (_ response: AddRequestCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: AddCartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2517,7 +2517,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(AddRequestCartResponse.self, from: data)
+                        let response = Utility.decode(AddCartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2542,7 +2542,7 @@ if let value = b {
             i: Bool?,
             b: Bool?,
             body: UpdateCartRequest,
-            onResponse: @escaping (_ response: UpdateRequestCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: UpdateCartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2588,7 +2588,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(UpdateRequestCartResponse.self, from: data)
+                        let response = Utility.decode(UpdateCartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2664,16 +2664,16 @@ if let value = id {
         * Description: Use this API to get a list of available coupons along with their details.
         **/
         public func getCoupons(
-            uid: Int?,
+            id: String?,
             
             onResponse: @escaping (_ response: GetCouponResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -2722,9 +2722,9 @@ if let value = uid {
             i: Bool?,
             b: Bool?,
             p: Bool?,
-            uid: Int?,
+            id: String?,
             body: ApplyCouponRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -2750,9 +2750,9 @@ if let value = p {
 }
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -2777,7 +2777,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2798,16 +2798,16 @@ if let value = uid {
         * Description: Remove Coupon applied on the cart by passing uid in request body.
         **/
         public func removeCoupon(
-            uid: Int?,
+            id: String?,
             
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -2832,7 +2832,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -2932,18 +2932,18 @@ if let value = slug {
         * Description: Use this API to redeem a fixed no. of reward points by applying it to the cart.
         **/
         public func applyRewardPoints(
-            uid: Int?,
+            id: String?,
             i: Bool?,
             b: Bool?,
             body: RewardPointRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -2982,7 +2982,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -3225,7 +3225,7 @@ if let value = isDefault {
         * Description: Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
         **/
         public func updateAddress(
-            id: Int,
+            id: String,
             body: Address,
             onResponse: @escaping (_ response: UpdateAddressResponse?, _ error: FDKError?) -> Void
         ) {
@@ -3273,7 +3273,7 @@ if let value = isDefault {
         * Description: Use this API to delete an address by its ID. This will returns an object that will indicate whether the address was deleted successfully or not.
         **/
         public func removeAddress(
-            id: Int,
+            id: String,
             
             onResponse: @escaping (_ response: DeleteAddressResponse?, _ error: FDKError?) -> Void
         ) {
@@ -3325,7 +3325,7 @@ if let value = isDefault {
             i: Bool?,
             b: Bool?,
             body: SelectCartAddressRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -3371,7 +3371,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -3392,16 +3392,16 @@ if let value = b {
         * Description: Use this API to update cart payment.
         **/
         public func selectPaymentMode(
-            uid: String?,
+            id: String?,
             body: UpdateCartPaymentRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -3426,7 +3426,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -3447,7 +3447,7 @@ if let value = uid {
         * Description: Use this API to validate a coupon against the payment mode such as NetBanking, Wallet, UPI etc.
         **/
         public func validateCouponForPayment(
-            uid: String?,
+            id: String?,
             addressId: String?,
             paymentMode: String?,
             paymentIdentifier: String?,
@@ -3459,9 +3459,9 @@ if let value = uid {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -3543,8 +3543,8 @@ if let value = merchantCode {
         **/
         public func getShipments(
             p: Bool?,
-            uid: Int?,
-            addressId: Int?,
+            id: String?,
+            addressId: String?,
             areaCode: String?,
             
             onResponse: @escaping (_ response: CartShipmentsResponse?, _ error: FDKError?) -> Void
@@ -3559,9 +3559,9 @@ if let value = p {
 }
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -3621,7 +3621,7 @@ if let value = areaCode {
         * Description: Use this API to checkout all items in the cart for payment and order generation. For COD, order will be directly generated, whereas for other checkout modes, user will be redirected to a payment gateway.
         **/
         public func checkoutCart(
-            body: CartCheckoutRequest,
+            body: CartCheckoutDetailRequest,
             onResponse: @escaping (_ response: CartCheckoutResponse?, _ error: FDKError?) -> Void
         ) {
             
@@ -3668,16 +3668,16 @@ if let value = areaCode {
         * Description: Use this API to update cart meta like checkout_mode and gstin.
         **/
         public func updateCartMeta(
-            uid: Int?,
+            id: String?,
             body: CartMetaRequest,
             onResponse: @escaping (_ response: CartMetaResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -12662,7 +12662,7 @@ if let value = pageSize {
             b: Bool?,
             assignCardId: Int?,
             
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12715,7 +12715,7 @@ if let value = assignCardId {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12794,7 +12794,7 @@ if let value = id {
             i: Bool?,
             b: Bool?,
             body: AddCartRequest,
-            onResponse: @escaping (_ response: AddRequestCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: AddCartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12833,7 +12833,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(AddRequestCartResponse.self, from: data)
+                        let response = Utility.decode(AddCartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12858,7 +12858,7 @@ if let value = b {
             i: Bool?,
             b: Bool?,
             body: UpdateCartRequest,
-            onResponse: @escaping (_ response: UpdateRequestCartResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: UpdateCartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -12904,7 +12904,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(UpdateRequestCartResponse.self, from: data)
+                        let response = Utility.decode(UpdateCartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -12980,16 +12980,16 @@ if let value = id {
         * Description: Use this API to get a list of available coupons along with their details.
         **/
         public func getCoupons(
-            uid: Int?,
+            id: String?,
             
             onResponse: @escaping (_ response: GetCouponResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13038,9 +13038,9 @@ if let value = uid {
             i: Bool?,
             b: Bool?,
             p: Bool?,
-            uid: Int?,
+            id: String?,
             body: ApplyCouponRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13066,9 +13066,9 @@ if let value = p {
 }
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13093,7 +13093,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13114,16 +13114,16 @@ if let value = uid {
         * Description: Remove Coupon applied on the cart by passing uid in request body.
         **/
         public func removeCoupon(
-            uid: Int?,
+            id: String?,
             
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13148,7 +13148,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13248,18 +13248,18 @@ if let value = slug {
         * Description: Use this API to redeem a fixed no. of reward points by applying it to the cart.
         **/
         public func applyRewardPoints(
-            uid: Int?,
+            id: String?,
             i: Bool?,
             b: Bool?,
             body: RewardPointRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13298,7 +13298,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13541,7 +13541,7 @@ if let value = isDefault {
         * Description: Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
         **/
         public func updateAddress(
-            id: Int,
+            id: String,
             body: Address,
             onResponse: @escaping (_ response: UpdateAddressResponse?, _ error: FDKError?) -> Void
         ) {
@@ -13589,7 +13589,7 @@ if let value = isDefault {
         * Description: Use this API to delete an address by its ID. This will returns an object that will indicate whether the address was deleted successfully or not.
         **/
         public func removeAddress(
-            id: Int,
+            id: String,
             
             onResponse: @escaping (_ response: DeleteAddressResponse?, _ error: FDKError?) -> Void
         ) {
@@ -13641,7 +13641,7 @@ if let value = isDefault {
             i: Bool?,
             b: Bool?,
             body: SelectCartAddressRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
@@ -13687,7 +13687,7 @@ if let value = b {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13708,16 +13708,16 @@ if let value = b {
         * Description: Use this API to update cart payment.
         **/
         public func selectPaymentMode(
-            uid: String?,
+            id: String?,
             body: UpdateCartPaymentRequest,
-            onResponse: @escaping (_ response: CartRequestResponse?, _ error: FDKError?) -> Void
+            onResponse: @escaping (_ response: CartDetailResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13742,7 +13742,7 @@ if let value = uid {
                         onResponse(nil, err)
                     } else if let data = responseData {
                         
-                        let response = Utility.decode(CartRequestResponse.self, from: data)
+                        let response = Utility.decode(CartDetailResponse.self, from: data)
                         
                         onResponse(response, nil)
                     } else {
@@ -13763,7 +13763,7 @@ if let value = uid {
         * Description: Use this API to validate a coupon against the payment mode such as NetBanking, Wallet, UPI etc.
         **/
         public func validateCouponForPayment(
-            uid: String?,
+            id: String?,
             addressId: String?,
             paymentMode: String?,
             paymentIdentifier: String?,
@@ -13775,9 +13775,9 @@ if let value = uid {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13861,8 +13861,8 @@ if let value = merchantCode {
             pickAtStoreUid: Int?,
             orderingStoreId: Int?,
             p: Bool?,
-            uid: Int?,
-            addressId: Int?,
+            id: String?,
+            addressId: String?,
             areaCode: String?,
             orderType: String?,
             
@@ -13892,9 +13892,9 @@ if let value = p {
 }
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -13963,8 +13963,8 @@ if let value = orderType {
         public func updateShipments(
             i: Bool?,
             p: Bool?,
-            uid: Int?,
-            addressId: Int?,
+            id: String?,
+            addressId: String?,
             orderType: String?,
             body: UpdateCartShipmentRequest,
             onResponse: @escaping (_ response: CartShipmentsResponse?, _ error: FDKError?) -> Void
@@ -13986,9 +13986,9 @@ if let value = p {
 }
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -14048,16 +14048,16 @@ if let value = orderType {
         * Description: Use this API to checkout all items in the cart for payment and order generation. For COD, order will be generated directly, whereas for other checkout modes, user will be redirected to a payment gateway.
         **/
         public func checkoutCart(
-            uid: Int?,
-            body: CartPosCheckoutRequest,
+            id: String?,
+            body: CartPosCheckoutDetailRequest,
             onResponse: @escaping (_ response: CartCheckoutResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -14103,16 +14103,16 @@ if let value = uid {
         * Description: Use this API to update cart meta like checkout_mode and gstin.
         **/
         public func updateCartMeta(
-            uid: Int?,
+            id: String?,
             body: CartMetaRequest,
             onResponse: @escaping (_ response: CartMetaResponse?, _ error: FDKError?) -> Void
         ) {
             
 var xQuery: [String: Any] = [:] 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 
@@ -14159,7 +14159,7 @@ if let value = uid {
         **/
         public func getAvailableDeliveryModes(
             areaCode: String,
-            uid: Int?,
+            id: String?,
             
             onResponse: @escaping (_ response: CartDeliveryModesResponse?, _ error: FDKError?) -> Void
         ) {
@@ -14171,9 +14171,9 @@ var xQuery: [String: Any] = [:]
 
 
 
-if let value = uid {
+if let value = id {
     
-    xQuery["uid"] = value
+    xQuery["id"] = value
     
 }
 

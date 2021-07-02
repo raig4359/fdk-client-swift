@@ -1179,7 +1179,7 @@ catalog.getCollections(pageNo: pageNo, pageSize: pageSize, tag: tag) { (response
 | --------- | ----  | --- |  
 | pageNo | Int? | The page number to navigate through the given set of results. |    
 | pageSize | Int? | The number of items to retrieve in each page. |    
-| tag | String? | List of tags  to filter collections |  
+| tag | [String]? | List of tags  to filter collections |  
 
 
 Collections are a great way to organize your products and can improve the ability for customers to find items quickly and efficiently.
@@ -1603,7 +1603,7 @@ Use this API to get details of all the items added to a cart.
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -1669,7 +1669,7 @@ Use this API to add items to the cart.
 Success. Returns a cart object as shown below. Refer `AddRequestCartResponse` for more details.
 
 
-Schema: `AddRequestCartResponse`
+Schema: `AddCartDetailResponse`
 
 
 
@@ -1705,7 +1705,7 @@ Use this API to update items added to the cart with the help of a request object
 Success. Updates and returns a cart object as shown below. Refer `UpdateRequestCartResponse` for more details.
 
 
-Schema: `UpdateRequestCartResponse`
+Schema: `UpdateCartDetailResponse`
 
 
 
@@ -1753,7 +1753,7 @@ Schema: `CartItemCountResponse`
 Fetch Coupon
 
 ```swift
-cart.getCoupons(uid: uid) { (response, error) in
+cart.getCoupons(id: id) { (response, error) in
     // Use response
 }
 ```
@@ -1761,7 +1761,7 @@ cart.getCoupons(uid: uid) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to get a list of available coupons along with their details.
@@ -1787,7 +1787,7 @@ Schema: `GetCouponResponse`
 Apply Coupon
 
 ```swift
-cart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
+cart.applyCoupon(i: i, b: b, p: p, id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -1798,7 +1798,7 @@ cart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
 | i | Bool? |  |    
 | b | Bool? |  |    
 | p | Bool? |  |    
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to apply coupons on items in the cart.
@@ -1810,7 +1810,7 @@ Use this API to apply coupons on items in the cart.
 Success. Returns coupons applied to the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -1824,7 +1824,7 @@ Schema: `CartRequestResponse`
 Remove Coupon Applied
 
 ```swift
-cart.removeCoupon(uid: uid) { (response, error) in
+cart.removeCoupon(id: id) { (response, error) in
     // Use response
 }
 ```
@@ -1832,7 +1832,7 @@ cart.removeCoupon(uid: uid) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? | The unique identifier of the cart |  
+| id | String? | The unique identifier of the cart |  
 
 
 Remove Coupon applied on the cart by passing uid in request body.
@@ -1844,7 +1844,7 @@ Remove Coupon applied on the cart by passing uid in request body.
 Success. Returns coupons removed from the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -1904,7 +1904,7 @@ Schema: `[String: Any]`
 Apply reward points at cart
 
 ```swift
-cart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
+cart.applyRewardPoints(id: id, i: i, b: b, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -1912,7 +1912,7 @@ cart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? |  |    
+| id | String? |  |    
 | i | Bool? |  |    
 | b | Bool? |  |  
 
@@ -1926,7 +1926,7 @@ Use this API to redeem a fixed no. of reward points by applying it to the cart.
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -2055,7 +2055,7 @@ cart.updateAddress(id: id, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| id | Int? | ID allotted to the selected address |  
+| id | String? | ID allotted to the selected address |  
 
 
 Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
@@ -2089,7 +2089,7 @@ cart.removeAddress(id: id) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| id | Int? | ID allotted to the selected address |  
+| id | String? | ID allotted to the selected address |  
 
 
 Use this API to delete an address by its ID. This will returns an object that will indicate whether the address was deleted successfully or not.
@@ -2137,7 +2137,7 @@ cart.selectAddress(cartId: cartId, i: i, b: b, body: body) { (response, error) i
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.  .
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -2160,7 +2160,7 @@ Schema: `[String: Any]`
 Update cart payment
 
 ```swift
-cart.selectPaymentMode(uid: uid, body: body) { (response, error) in
+cart.selectPaymentMode(id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -2168,7 +2168,7 @@ cart.selectPaymentMode(uid: uid, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | String? |  |  
+| id | String? |  |  
 
 
 Use this API to update cart payment.
@@ -2180,7 +2180,7 @@ Use this API to update cart payment.
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -2194,7 +2194,7 @@ Schema: `CartRequestResponse`
 Verify the coupon eligibility against the payment mode
 
 ```swift
-cart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
+cart.validateCouponForPayment(id: id, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
     // Use response
 }
 ```
@@ -2202,7 +2202,7 @@ cart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: payme
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | String? |  |    
+| id | String? |  |    
 | addressId | String? |  |    
 | paymentMode | String? |  |    
 | paymentIdentifier | String? |  |    
@@ -2233,7 +2233,7 @@ Schema: `PaymentCouponValidate`
 Get delivery date and options before checkout
 
 ```swift
-cart.getShipments(p: p, uid: uid, addressId: addressId, areaCode: areaCode) { (response, error) in
+cart.getShipments(p: p, id: id, addressId: addressId, areaCode: areaCode) { (response, error) in
     // Use response
 }
 ```
@@ -2242,8 +2242,8 @@ cart.getShipments(p: p, uid: uid, addressId: addressId, areaCode: areaCode) { (r
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
 | p | Bool? | This is a boolean value. Select `true` for getting a payment option in response. |    
-| uid | Int? | The unique identifier of the cart |    
-| addressId | Int? | ID allotted to the selected address |    
+| id | String? | The unique identifier of the cart |    
+| addressId | String? | ID allotted to the selected address |    
 | areaCode | String? | The PIN Code of the destination address, e.g. 400059 |  
 
 
@@ -2309,7 +2309,7 @@ Schema: `CartCheckoutResponse`
 Update the cart meta
 
 ```swift
-cart.updateCartMeta(uid: uid, body: body) { (response, error) in
+cart.updateCartMeta(id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -2317,7 +2317,7 @@ cart.updateCartMeta(uid: uid, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? | The unique identifier of the cart |  
+| id | String? | The unique identifier of the cart |  
 
 
 Use this API to update cart meta like checkout_mode and gstin.
@@ -9293,7 +9293,7 @@ Use this API to get details of all the items added to a cart.
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9359,7 +9359,7 @@ Use this API to add items to the cart.
 Success. Returns a cart object as shown below. Refer `AddRequestCartResponse` for more details.
 
 
-Schema: `AddRequestCartResponse`
+Schema: `AddCartDetailResponse`
 
 
 
@@ -9395,7 +9395,7 @@ Use this API to update items added to the cart with the help of a request object
 Success. Updates and returns a cart object as shown below. Refer `UpdateRequestCartResponse` for more details.
 
 
-Schema: `UpdateRequestCartResponse`
+Schema: `UpdateCartDetailResponse`
 
 
 
@@ -9443,7 +9443,7 @@ Schema: `CartItemCountResponse`
 Fetch Coupon
 
 ```swift
-poscart.getCoupons(uid: uid) { (response, error) in
+poscart.getCoupons(id: id) { (response, error) in
     // Use response
 }
 ```
@@ -9451,7 +9451,7 @@ poscart.getCoupons(uid: uid) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to get a list of available coupons along with their details.
@@ -9477,7 +9477,7 @@ Schema: `GetCouponResponse`
 Apply Coupon
 
 ```swift
-poscart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
+poscart.applyCoupon(i: i, b: b, p: p, id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -9488,7 +9488,7 @@ poscart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) 
 | i | Bool? |  |    
 | b | Bool? |  |    
 | p | Bool? |  |    
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to apply coupons on items in the cart.
@@ -9500,7 +9500,7 @@ Use this API to apply coupons on items in the cart.
 Success. Returns coupons applied to the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9514,7 +9514,7 @@ Schema: `CartRequestResponse`
 Remove Coupon Applied
 
 ```swift
-poscart.removeCoupon(uid: uid) { (response, error) in
+poscart.removeCoupon(id: id) { (response, error) in
     // Use response
 }
 ```
@@ -9522,7 +9522,7 @@ poscart.removeCoupon(uid: uid) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? | The unique identifier of the cart |  
+| id | String? | The unique identifier of the cart |  
 
 
 Remove Coupon applied on the cart by passing uid in request body.
@@ -9534,7 +9534,7 @@ Remove Coupon applied on the cart by passing uid in request body.
 Success. Returns coupons removed from the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9594,7 +9594,7 @@ Schema: `[String: Any]`
 Apply reward points at cart
 
 ```swift
-poscart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
+poscart.applyRewardPoints(id: id, i: i, b: b, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -9602,7 +9602,7 @@ poscart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) 
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? |  |    
+| id | String? |  |    
 | i | Bool? |  |    
 | b | Bool? |  |  
 
@@ -9616,7 +9616,7 @@ Use this API to redeem a fixed no. of reward points by applying it to the cart.
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9745,7 +9745,7 @@ poscart.updateAddress(id: id, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| id | Int? | ID allotted to the selected address |  
+| id | String? | ID allotted to the selected address |  
 
 
 Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
@@ -9779,7 +9779,7 @@ poscart.removeAddress(id: id) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| id | Int? | ID allotted to the selected address |  
+| id | String? | ID allotted to the selected address |  
 
 
 Use this API to delete an address by its ID. This will returns an object that will indicate whether the address was deleted successfully or not.
@@ -9827,7 +9827,7 @@ poscart.selectAddress(cartId: cartId, i: i, b: b, body: body) { (response, error
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.  .
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9850,7 +9850,7 @@ Schema: `[String: Any]`
 Update cart payment
 
 ```swift
-poscart.selectPaymentMode(uid: uid, body: body) { (response, error) in
+poscart.selectPaymentMode(id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -9858,7 +9858,7 @@ poscart.selectPaymentMode(uid: uid, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | String? |  |  
+| id | String? |  |  
 
 
 Use this API to update cart payment.
@@ -9870,7 +9870,7 @@ Use this API to update cart payment.
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.
 
 
-Schema: `CartRequestResponse`
+Schema: `CartDetailResponse`
 
 
 
@@ -9884,7 +9884,7 @@ Schema: `CartRequestResponse`
 Verify the coupon eligibility against the payment mode
 
 ```swift
-poscart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
+poscart.validateCouponForPayment(id: id, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
     // Use response
 }
 ```
@@ -9892,7 +9892,7 @@ poscart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: pa
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | String? |  |    
+| id | String? |  |    
 | addressId | String? |  |    
 | paymentMode | String? |  |    
 | paymentIdentifier | String? |  |    
@@ -9923,7 +9923,7 @@ Schema: `PaymentCouponValidate`
 Get delivery date and options before checkout
 
 ```swift
-poscart.getShipments(pickAtStoreUid: pickAtStoreUid, orderingStoreId: orderingStoreId, p: p, uid: uid, addressId: addressId, areaCode: areaCode, orderType: orderType) { (response, error) in
+poscart.getShipments(pickAtStoreUid: pickAtStoreUid, orderingStoreId: orderingStoreId, p: p, id: id, addressId: addressId, areaCode: areaCode, orderType: orderType) { (response, error) in
     // Use response
 }
 ```
@@ -9934,8 +9934,8 @@ poscart.getShipments(pickAtStoreUid: pickAtStoreUid, orderingStoreId: orderingSt
 | pickAtStoreUid | Int? |  |    
 | orderingStoreId | Int? |  |    
 | p | Bool? | This is a boolean value. Select `true` for getting a payment option in response. |    
-| uid | Int? | The unique identifier of the cart |    
-| addressId | Int? | ID allotted to the selected address |    
+| id | String? | The unique identifier of the cart |    
+| addressId | String? | ID allotted to the selected address |    
 | areaCode | String? | The PIN Code of the destination address, e.g. 400059 |    
 | orderType | String? | The order type of shipment HomeDelivery - If the customer wants the order home-delivered PickAtStore - If the customer wants the handover of an order at the store itself. |  
 
@@ -9972,7 +9972,7 @@ Schema: `[String: Any]`
 Update shipment delivery type and quantity before checkout
 
 ```swift
-poscart.updateShipments(i: i, p: p, uid: uid, addressId: addressId, orderType: orderType, body: body) { (response, error) in
+poscart.updateShipments(i: i, p: p, id: id, addressId: addressId, orderType: orderType, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -9982,8 +9982,8 @@ poscart.updateShipments(i: i, p: p, uid: uid, addressId: addressId, orderType: o
 | --------- | ----  | --- |  
 | i | Bool? | This is a boolean value. Select `true` to retrieve all the items added in the cart. |    
 | p | Bool? | This is a boolean value. Select `true` for getting a payment option in response. |    
-| uid | Int? | The unique identifier of the cart |    
-| addressId | Int? | ID allotted to an address |    
+| id | String? | The unique identifier of the cart |    
+| addressId | String? | ID allotted to an address |    
 | orderType | String? | The order type of shipment HomeDelivery - If the customer wants the order home-delivered PickAtStore - If the customer wants the handover of an order at the store itself. |  
 
 
@@ -10019,7 +10019,7 @@ Schema: `[String: Any]`
 Checkout all items in the cart
 
 ```swift
-poscart.checkoutCart(uid: uid, body: body) { (response, error) in
+poscart.checkoutCart(id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -10027,7 +10027,7 @@ poscart.checkoutCart(uid: uid, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to checkout all items in the cart for payment and order generation. For COD, order will be generated directly, whereas for other checkout modes, user will be redirected to a payment gateway.
@@ -10053,7 +10053,7 @@ Schema: `CartCheckoutResponse`
 Update the cart meta
 
 ```swift
-poscart.updateCartMeta(uid: uid, body: body) { (response, error) in
+poscart.updateCartMeta(id: id, body: body) { (response, error) in
     // Use response
 }
 ```
@@ -10061,7 +10061,7 @@ poscart.updateCartMeta(uid: uid, body: body) { (response, error) in
 
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
-| uid | Int? | The unique identifier of the cart |  
+| id | String? | The unique identifier of the cart |  
 
 
 Use this API to update cart meta like checkout_mode and gstin.
@@ -10096,7 +10096,7 @@ Schema: `CartMetaMissingResponse`
 Get available delivery modes for cart
 
 ```swift
-poscart.getAvailableDeliveryModes(areaCode: areaCode, uid: uid) { (response, error) in
+poscart.getAvailableDeliveryModes(areaCode: areaCode, id: id) { (response, error) in
     // Use response
 }
 ```
@@ -10105,7 +10105,7 @@ poscart.getAvailableDeliveryModes(areaCode: areaCode, uid: uid) { (response, err
 | Argument  |  Type  | Description |
 | --------- | ----  | --- |  
 | areaCode | String? |  |    
-| uid | Int? |  |  
+| id | String? |  |  
 
 
 Use this API to get the delivery modes (home-delivery/store-pickup) along with a list of pickup stores available for a given cart at a given PIN Code. User can then view the address of a pickup store with the help of store-address API.
