@@ -8622,11 +8622,15 @@ Schema: `FeedbackError`
 Delete Media
 
 ```swift
-feedback.deleteMedia() { (response, error) in
+feedback.deleteMedia(ids: ids) { (response, error) in
     // Use response
 }
 ```
 
+
+| Argument  |  Type  | Description |
+| --------- | ----  | --- |  
+| ids | [String]? | List of media ID |  
 
 
 Use this API to delete media for an entity ID.

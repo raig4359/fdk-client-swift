@@ -11323,11 +11323,17 @@ if let value = pageSize {
         * Description: Use this API to delete media for an entity ID.
         **/
         public func deleteMedia(
+            ids: [String],
             
             onResponse: @escaping (_ response: UpdateResponse?, _ error: FDKError?) -> Void
         ) {
             
- 
+var xQuery: [String: Any] = [:] 
+
+
+    xQuery["ids"] = ids
+
+
 
  
 
@@ -11336,7 +11342,7 @@ if let value = pageSize {
                 config: config,
                 method: "delete",
                 url: "/service/application/feedback/v1.0/media/",
-                query: nil,
+                query: xQuery,
                 extraHeaders:  [],
                 body: nil,
                 responseType: "application/json",
