@@ -1,3 +1,5 @@
+
+
 # FDK Application Front API Documentaion
 
 
@@ -50,8 +52,8 @@
     * [getCollectionItemsBySlug](#getcollectionitemsbyslug)
     * [getCollectionDetailBySlug](#getcollectiondetailbyslug)
     * [getFollowedListing](#getfollowedlisting)
-    * [unfollowById](#unfollowbyid)
     * [followById](#followbyid)
+    * [unfollowById](#unfollowbyid)
     * [getFollowerCountById](#getfollowercountbyid)
     * [getFollowIds](#getfollowids)
     * [getStores](#getstores)
@@ -334,11 +336,14 @@
 #### getProductDetailBySlug
 Get a product
 
+
+
 ```swift
 catalog.getProductDetailBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -354,18 +359,9 @@ Use this API to retrieve a product by its slug value.
 
 
 
-`ProductDetail`
+[ProductDetail](#ProductDetail)
 
 Success. Returns a Product object. Check the example shown below or refer `ProductDetail` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -378,11 +374,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductSizesBySlug
 Get the sizes of a product
 
+
+
 ```swift
 catalog.getProductSizesBySlug(slug: slug, storeId: storeId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -399,18 +398,9 @@ A product can have multiple sizes. Use this API to fetch all the available sizes
 
 
 
-`ProductSizes`
+[ProductSizes](#ProductSizes)
 
 Success. Returns a ProductSize object. Check the example shown below or refer `ProductSizes` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -423,11 +413,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductPriceBySlug
 Get the price of a product size at a PIN Code
 
+
+
 ```swift
 catalog.getProductPriceBySlug(slug: slug, size: size, pincode: pincode, storeId: storeId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -446,18 +439,9 @@ Prices may vary for different sizes of a product. Use this API to retrieve the p
 
 
 
-`ProductSizePriceResponse`
+[ProductSizePriceResponse](#ProductSizePriceResponse)
 
 Success. Returns a ProductSizePrice object. Check the example shown below or refer `ProductSizePriceResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -470,11 +454,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductSellersBySlug
 Get the sellers of a product size at a PIN Code
 
+
+
 ```swift
 catalog.getProductSellersBySlug(slug: slug, size: size, pincode: pincode, strategy: strategy, pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -495,18 +482,9 @@ A product of a particular size may be sold by multiple sellers. Use this API to 
 
 
 
-`ProductSizeSellersResponse`
+[ProductSizeSellersResponse](#ProductSizeSellersResponse)
 
 Success. Returns a ProductSizeSeller object. Check the example shown below or refer `ProductSizeSellersResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -519,11 +497,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductComparisonBySlugs
 Compare products
 
+
+
 ```swift
 catalog.getProductComparisonBySlugs(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -539,18 +520,9 @@ Use this API to compare the features of products belonging to the same category.
 
 
 
-`ProductsComparisonResponse`
+[ProductsComparisonResponse](#ProductsComparisonResponse)
 
 Success. Returns an array of objects containing the attributes for comparision. Check the example shown below or refer `ProductsComparisonResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -563,11 +535,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getSimilarComparisonProductBySlug
 Get comparison between similar products
 
+
+
 ```swift
 catalog.getSimilarComparisonProductBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -583,18 +558,9 @@ Use this API to compare a given product automatically with similar products. Onl
 
 
 
-`ProductCompareResponse`
+[ProductCompareResponse](#ProductCompareResponse)
 
 Success. Returns an array of objects containing the attributes for comparision. Check the example shown below or refer `ProductCompareResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -607,11 +573,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getComparedFrequentlyProductBySlug
 Get comparison between frequently compared products with the given product
 
+
+
 ```swift
 catalog.getComparedFrequentlyProductBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -627,18 +596,9 @@ Use this API to compare a given product automatically with products that are fre
 
 
 
-`ProductFrequentlyComparedSimilarResponse`
+[ProductFrequentlyComparedSimilarResponse](#ProductFrequentlyComparedSimilarResponse)
 
 Success. Returns an array of objects containing the attributes for comparision. Check the example shown below or refer `ProductFrequentlyComparedSimilarResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -651,11 +611,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductSimilarByIdentifier
 Get similar products
 
+
+
 ```swift
 catalog.getProductSimilarByIdentifier(slug: slug, similarType: similarType) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -672,18 +635,9 @@ Use this API to retrieve products similar to the one specified by its slug. You 
 
 
 
-`SimilarProductByTypeResponse`
+[SimilarProductByTypeResponse](#SimilarProductByTypeResponse)
 
 Success. Returns a group of similar products based on type. Check the example shown below or refer `SimilarProductByTypeResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -696,11 +650,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductVariantsBySlug
 Get variant of a particular product
 
+
+
 ```swift
 catalog.getProductVariantsBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -716,18 +673,9 @@ A product can have a different type of variants such as colour, shade, memory. U
 
 
 
-`ProductVariantsResponse`
+[ProductVariantsResponse](#ProductVariantsResponse)
 
 Success. Returns all variants of a product. Check the example shown below or refer `ProductVariantsResponse` for more details. For `display_type:image`, `color` key will be present otherwise `value` key will be shown.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -740,11 +688,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductStockByIds
 Get the stock of a product
 
+
+
 ```swift
 catalog.getProductStockByIds(itemId: itemId, alu: alu, skuCode: skuCode, ean: ean, upc: upc) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -764,18 +715,9 @@ Retrieve the available stock of the products. Use this API to retrieve stock of 
 
 
 
-`ProductStockStatusResponse`
+[ProductStockStatusResponse](#ProductStockStatusResponse)
 
 Success. Returns the status of the product stock.Check the example shown below or refer `ProductStockStatusResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -788,11 +730,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProductStockForTimeByIds
 Get the stock of a product
 
+
+
 ```swift
 catalog.getProductStockForTimeByIds(timestamp: timestamp, pageSize: pageSize, pageId: pageId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -810,18 +755,9 @@ Retrieve the available stock of the products. Use this API to get the stock stat
 
 
 
-`ProductStockPolling`
+[ProductStockPolling](#ProductStockPolling)
 
 Success. Returns the status of the product stock.Check the example shown below or refer `ProductStockPolling` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -834,11 +770,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getProducts
 Get all the products
 
+
+
 ```swift
 catalog.getProducts(q: q, f: f, filters: filters, sortOn: sortOn, pageId: pageId, pageSize: pageSize, pageNo: pageNo, pageType: pageType) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -861,18 +800,9 @@ Use this API to list all the products. You may choose a sort order or make arbit
 
 
 
-`ProductListingResponse`
+[ProductListingResponse](#ProductListingResponse)
 
 Success. Returns a paginated list of products..Check the example shown below or refer `ProductListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -885,11 +815,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getBrands
 Get all the brands
 
+
+
 ```swift
 catalog.getBrands(department: department, pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -907,18 +840,9 @@ A brand is the name under which a product is sold. Use this API to list all the 
 
 
 
-`BrandListingResponse`
+[BrandListingResponse](#BrandListingResponse)
 
 Success. Returns a paginated list of brands. Check the example shown below or refer `BrandListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -931,11 +855,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getBrandDetailBySlug
 Get metadata of a brand
 
+
+
 ```swift
 catalog.getBrandDetailBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -951,18 +878,9 @@ Fetch metadata of a brand such as name, information, logo, banner, etc.
 
 
 
-`BrandDetailResponse`
+[BrandDetailResponse](#BrandDetailResponse)
 
 Success. Returns a metadata object. Check the example shown below or refer `BrandDetailResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -975,11 +893,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCategories
 List all the categories
 
+
+
 ```swift
 catalog.getCategories(department: department) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -995,18 +916,9 @@ Use this API to list all the categories. You can also filter the categories by d
 
 
 
-`CategoryListingResponse`
+[CategoryListingResponse](#CategoryListingResponse)
 
 Success. Returns a list of categories. Check the example shown below or refer `CategoryListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1019,11 +931,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCategoryDetailBySlug
 Get metadata of a category
 
+
+
 ```swift
 catalog.getCategoryDetailBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1039,18 +954,9 @@ Fetch metadata of a category such as name, information, logo, banner, etc.
 
 
 
-`CategoryMetaResponse`
+[CategoryMetaResponse](#CategoryMetaResponse)
 
 Success. Returns metadata of a category. Check the example shown below or refer `CategoryMetaResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1063,11 +969,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getHomeProducts
 List the products
 
+
+
 ```swift
 catalog.getHomeProducts(sortOn: sortOn, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1085,18 +994,9 @@ List all the products associated with a brand, collection or category in a rando
 
 
 
-`HomeListingResponse`
+[HomeListingResponse](#HomeListingResponse)
 
 Success. Returns a paginated list of products. Check the example shown below or refer `HomeListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1109,11 +1009,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getDepartments
 List all the departments
 
+
+
 ```swift
 catalog.getDepartments() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -1124,18 +1027,9 @@ Departments are a way to categorise similar products. A product can lie in multi
 
 
 
-`DepartmentResponse`
+[DepartmentResponse](#DepartmentResponse)
 
 List of Departments. See example below or refer `DepartmentResponse` for details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1148,11 +1042,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getSearchResults
 Get relevant suggestions for a search query
 
+
+
 ```swift
 catalog.getSearchResults(q: q) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1168,18 +1065,9 @@ Retrieves a list of suggestions for a given search query. Each suggestion is a v
 
 
 
-`AutoCompleteResponse`
+[AutoCompleteResponse](#AutoCompleteResponse)
 
 Success. Returns a list autocomplete suggestions for the search query `q`. Check the example shown below or refer `AutoCompleteResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1192,11 +1080,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCollections
 List all the collections
 
+
+
 ```swift
 catalog.getCollections(pageNo: pageNo, pageSize: pageSize, tag: tag) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1214,18 +1105,9 @@ Collections are a great way to organize your products and can improve the abilit
 
 
 
-`GetCollectionListingResponse`
+[GetCollectionListingResponse](#GetCollectionListingResponse)
 
 Success. Returns a list of collections. Check the example shown below or refer `GetCollectionListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1238,11 +1120,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCollectionItemsBySlug
 Get the items in a collection
 
+
+
 ```swift
 catalog.getCollectionItemsBySlug(slug: slug, f: f, filters: filters, sortOn: sortOn, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1263,18 +1148,9 @@ Get items in a collection specified by its `slug`.
 
 
 
-`ProductListingResponse`
+[ProductListingResponse](#ProductListingResponse)
 
 Success. Returns a list items in a given collection. Check the example shown below or refer `ProductListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1287,11 +1163,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCollectionDetailBySlug
 Get a particular collection
 
+
+
 ```swift
 catalog.getCollectionDetailBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1307,18 +1186,9 @@ Get the details of a collection by its `slug`.
 
 
 
-`CollectionDetailResponse`
+[CollectionDetailResponse](#CollectionDetailResponse)
 
 Success. Returns a Collection object. Check the example shown below or refer `CollectionDetailResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1331,11 +1201,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getFollowedListing
 Get a list of followed Products, Brands, Collections
 
+
+
 ```swift
 catalog.getFollowedListing(collectionType: collectionType, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1353,63 +1226,9 @@ Users can follow a product they like. This API retrieves the products the user h
 
 
 
-`GetFollowListingResponse`
+[GetFollowListingResponse](#GetFollowListingResponse)
 
 Success. Returns a Followed resource object. Check the example shown below or refer `GetFollowListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
----
-
-
-#### unfollowById
-Unfollow an entity (product/brand/collection)
-
-```swift
-catalog.unfollowById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
-    // Use response
-}
-```
-
-
-| Argument  |  Type  | Required | Description |
-| --------- | -----  | -------- | ----------- |  
-| collectionType | String? | no | Type of collection followed, i.e. products, brands, or collections. |    
-| collectionId | String? | no | The ID of the collection type. |  
-
-
-
-You can undo a followed product, brand or collection by its ID. This action is referred as _unfollow_.
-
-*Returned Response:*
-
-
-
-
-`FollowPostResponse`
-
-Success. Returns a response object. Check the example shown below or refer `FollowPostResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1422,11 +1241,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### followById
 Follow an entity (product/brand/collection)
 
+
+
 ```swift
 catalog.followById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1443,7 +1265,7 @@ Follow a particular entity such as product, brand, collection specified by its I
 
 
 
-`FollowPostResponse`
+[FollowPostResponse](#FollowPostResponse)
 
 Success. Returns a response object. Check the example shown below or refer `FollowPostResponse` for more details.
 
@@ -1452,9 +1274,39 @@ Success. Returns a response object. Check the example shown below or refer `Foll
 
 
 
-`ErrorResponse`
+---
 
-Bad request. See the error object in the response body to know the exact reason.
+
+#### unfollowById
+Unfollow an entity (product/brand/collection)
+
+
+
+```swift
+catalog.unfollowById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
+    // Use response
+}
+```
+
+
+
+| Argument  |  Type  | Required | Description |
+| --------- | -----  | -------- | ----------- |  
+| collectionType | String? | no | Type of collection followed, i.e. products, brands, or collections. |    
+| collectionId | String? | no | The ID of the collection type. |  
+
+
+
+You can undo a followed product, brand or collection by its ID. This action is referred as _unfollow_.
+
+*Returned Response:*
+
+
+
+
+[FollowPostResponse](#FollowPostResponse)
+
+Success. Returns a response object. Check the example shown below or refer `FollowPostResponse` for more details.
 
 
 
@@ -1467,11 +1319,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getFollowerCountById
 Get Follow Count
 
+
+
 ```swift
 catalog.getFollowerCountById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1488,18 +1343,9 @@ Get the total count of followers for a given collection type and collection ID.
 
 
 
-`FollowerCountResponse`
+[FollowerCountResponse](#FollowerCountResponse)
 
 Success. Returns the number of followers for a given collection type. Check the example shown below or refer `FollowerCountResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1512,11 +1358,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getFollowIds
 Get the IDs of followed products, brands and collections.
 
+
+
 ```swift
 catalog.getFollowIds(collectionType: collectionType) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1532,18 +1381,9 @@ You can get the IDs of all the followed Products, Brands and Collections. Pass c
 
 
 
-`FollowIdsResponse`
+[FollowIdsResponse](#FollowIdsResponse)
 
 Success. Returns the IDs of all the Products, Brands and Collections which were followed. Check the example shown below or refer `FollowIdsResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1556,11 +1396,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getStores
 Get store meta information.
 
+
+
 ```swift
 catalog.getStores(pageNo: pageNo, pageSize: pageSize, q: q, range: range, latitude: latitude, longitude: longitude) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1581,18 +1424,9 @@ Use this API to get a list of stores in a specific application.
 
 
 
-`StoreListingResponse`
+[StoreListingResponse](#StoreListingResponse)
 
 Success. Returns a list of selling locations. Check the example shown below or refer `StoreListingResponse` for more details.
-
-
-
-
-
-
-`ErrorResponse`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -1612,11 +1446,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getCart
 Fetch all items added to the cart
 
+
+
 ```swift
 cart.getCart(uid: uid, i: i, b: b, assignCardId: assignCardId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1635,7 +1472,7 @@ Use this API to get details of all the items added to a cart.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
@@ -1650,11 +1487,14 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 #### getCartLastModified
 Fetch last-modified timestamp
 
+
+
 ```swift
 cart.getCartLastModified(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1680,6 +1520,8 @@ Use this API to fetch Last-Modified timestamp in header metadata.
 #### addItems
 Add items to cart
 
+
+
 ```swift
 cart.addItems(i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -1687,11 +1529,12 @@ cart.addItems(i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [AddCartRequest](#AddCartRequest) | yes | Request body |
+| body | [AddCartRequest](#AddCartRequest) |  no  | Request body |
 
 
 Use this API to add items to the cart.
@@ -1701,7 +1544,7 @@ Use this API to add items to the cart.
 
 
 
-`AddCartResponse`
+[AddCartResponse](#AddCartResponse)
 
 Success. Returns a cart object as shown below. Refer `AddCartResponse` for more details.
 
@@ -1716,6 +1559,8 @@ Success. Returns a cart object as shown below. Refer `AddCartResponse` for more 
 #### updateCart
 Update items in the cart
 
+
+
 ```swift
 cart.updateCart(uid: uid, i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -1723,12 +1568,13 @@ cart.updateCart(uid: uid, i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [UpdateCartRequest](#UpdateCartRequest) | yes | Request body |
+| body | [UpdateCartRequest](#UpdateCartRequest) |  no  | Request body |
 
 
 Use this API to update items added to the cart with the help of a request object containing attributes like item_quantity and item_size. These attributes will be fetched from the following APIs</p> <ul> <li><font color="monochrome">operation</font> Operation for current api call. <b>update_item</b> for update items. <b>remove_item</b> for removing items.</li> <li> <font color="monochrome">item_id</font>  "/platform/content/v1/products/"</li> <li> <font color="monochrome">item_size</font>   "/platform/content/v1/products/{slug}/sizes/"</li> <li> <font color="monochrome">quantity</font>  item quantity (must be greater than or equal to 1)</li> <li> <font color="monochrome">article_id</font>   "/content​/v1​/products​/{identifier}​/sizes​/price​/"</li> <li> <font color="monochrome">item_index</font>  item position in the cart (must be greater than or equal to 0)</li> </ul>
@@ -1738,7 +1584,7 @@ Use this API to update items added to the cart with the help of a request object
 
 
 
-`UpdateCartResponse`
+[UpdateCartResponse](#UpdateCartResponse)
 
 Success. Updates and returns a cart object as shown below. Refer `UpdateCartResponse` for more details.
 
@@ -1753,11 +1599,14 @@ Success. Updates and returns a cart object as shown below. Refer `UpdateCartResp
 #### getItemCount
 Count items in the cart
 
+
+
 ```swift
 cart.getItemCount(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1773,7 +1622,7 @@ Use this API to get the total number of items present in cart.
 
 
 
-`CartItemCountResponse`
+[CartItemCountResponse](#CartItemCountResponse)
 
 Success. Returns the total count of items in a user's cart.
 
@@ -1788,11 +1637,14 @@ Success. Returns the total count of items in a user's cart.
 #### getCoupons
 Fetch Coupon
 
+
+
 ```swift
 cart.getCoupons(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1808,7 +1660,7 @@ Use this API to get a list of available coupons along with their details.
 
 
 
-`GetCouponResponse`
+[GetCouponResponse](#GetCouponResponse)
 
 Success. Returns a coupon object which has a list of all the eligible coupons. Refer `GetCouponResponse` for more details.
 
@@ -1823,11 +1675,14 @@ Success. Returns a coupon object which has a list of all the eligible coupons. R
 #### applyCoupon
 Apply Coupon
 
+
+
 ```swift
 cart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1836,21 +1691,12 @@ cart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
 | b | Bool? | no |  |    
 | p | Bool? | no |  |    
 | uid | Int? | no |  |  
-| body | [ApplyCouponRequest](#ApplyCouponRequest) | yes | Request body |
+| body | [ApplyCouponRequest](#ApplyCouponRequest) |  no  | Request body |
 
 
 Use this API to apply coupons on items in the cart.
 
 *Returned Response:*
-
-
-
-
-`CartResponse`
-
-Success. Returns coupons applied to the cart along with item details and price breakup. Refer `CartResponse` for more details.
-
-
 
 
 
@@ -1861,11 +1707,14 @@ Success. Returns coupons applied to the cart along with item details and price b
 #### removeCoupon
 Remove Coupon Applied
 
+
+
 ```swift
 cart.removeCoupon(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1881,7 +1730,7 @@ Remove Coupon applied on the cart by passing uid in request body.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns coupons removed from the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
@@ -1896,11 +1745,14 @@ Success. Returns coupons removed from the cart along with item details and price
 #### getBulkDiscountOffers
 Get discount offers based on quantity
 
+
+
 ```swift
 cart.getBulkDiscountOffers(itemId: itemId, articleId: articleId, uid: uid, slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -1919,18 +1771,9 @@ Use this API to get a list of applicable offers along with current, next and bes
 
 
 
-`BulkPriceResponse`
+[BulkPriceResponse](#BulkPriceResponse)
 
 Success. Returns a data object containing the seller details and available offers (if exists) on bulk products. Refer `BulkPriceResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Unhandled API error
 
 
 
@@ -1943,6 +1786,8 @@ Unhandled API error
 #### applyRewardPoints
 Apply reward points at cart
 
+
+
 ```swift
 cart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -1950,12 +1795,13 @@ cart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [RewardPointRequest](#RewardPointRequest) | yes | Request body |
+| body | [RewardPointRequest](#RewardPointRequest) |  no  | Request body |
 
 
 Use this API to redeem a fixed no. of reward points by applying it to the cart.
@@ -1965,7 +1811,7 @@ Use this API to redeem a fixed no. of reward points by applying it to the cart.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
@@ -1980,11 +1826,14 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 #### getAddresses
 Fetch address
 
+
+
 ```swift
 cart.getAddresses(uid: uid, mobileNo: mobileNo, checkoutMode: checkoutMode, tags: tags, isDefault: isDefault) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2004,7 +1853,7 @@ Use this API to get all the addresses associated with an account. If successful,
 
 
 
-`GetAddressesResponse`
+[GetAddressesResponse](#GetAddressesResponse)
 
 Success. Returns an Address object containing a list of address saved in the account. Refer `GetAddressesResponse` for more details.
 
@@ -2019,6 +1868,8 @@ Success. Returns an Address object containing a list of address saved in the acc
 #### addAddress
 Add address to an account
 
+
+
 ```swift
 cart.addAddress(body: body) { (response, error) in
     // Use response
@@ -2026,9 +1877,10 @@ cart.addAddress(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [Address](#Address) | yes | Request body |
+| body | [Address](#Address) |  no  | Request body |
 
 
 Use this API to add an address to an account.
@@ -2038,7 +1890,7 @@ Use this API to add an address to an account.
 
 
 
-`SaveAddressResponse`
+[SaveAddressResponse](#SaveAddressResponse)
 
 Success. Returns the address ID, a flag whether the address is set as default, and a success message. Refer `SaveAddressResponse` for more details.
 
@@ -2053,11 +1905,14 @@ Success. Returns the address ID, a flag whether the address is set as default, a
 #### getAddressById
 Fetch a single address by its ID
 
+
+
 ```swift
 cart.getAddressById(id: id, uid: uid, mobileNo: mobileNo, checkoutMode: checkoutMode, tags: tags, isDefault: isDefault) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2078,7 +1933,7 @@ Use this API to get an addresses using its ID. If successful, returns a Address 
 
 
 
-`Address`
+[Address](#Address)
 
 Success. Returns an Address object containing a list of address saved in the account. Refer `Address` for more details.
 
@@ -2093,6 +1948,8 @@ Success. Returns an Address object containing a list of address saved in the acc
 #### updateAddress
 Update address added to an account
 
+
+
 ```swift
 cart.updateAddress(id: id, body: body) { (response, error) in
     // Use response
@@ -2100,24 +1957,16 @@ cart.updateAddress(id: id, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | id | Int? | no | ID allotted to the selected address |  
-| body | [Address](#Address) | yes | Request body |
+| body | [Address](#Address) |  no  | Request body |
 
 
 Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
 
 *Returned Response:*
-
-
-
-
-`UpdateAddressResponse`
-
-Success. Returns the address ID and a message indicating a successful address updation.
-
-
 
 
 
@@ -2128,11 +1977,14 @@ Success. Returns the address ID and a message indicating a successful address up
 #### removeAddress
 Remove address associated with an account
 
+
+
 ```swift
 cart.removeAddress(id: id) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2148,20 +2000,13 @@ Use this API to delete an address by its ID. This will returns an object that wi
 
 
 
-`DeleteAddressResponse`
-
-Returns a Status object indicating the success or failure of address deletion.
-
-
-
-
-
-
 ---
 
 
 #### selectAddress
 Select an address from available addresses
+
+
 
 ```swift
 cart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
@@ -2170,35 +2015,18 @@ cart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [SelectCartAddressRequest](#SelectCartAddressRequest) | yes | Request body |
+| body | [SelectCartAddressRequest](#SelectCartAddressRequest) |  no  | Request body |
 
 
 <p>Select Address from all addresses associated with the account in order to ship the cart items to that address, otherwise default address will be selected implicitly. See `SelectCartAddressRequest` in schema of request body for the list of attributes needed to select Address from account. On successful request, this API returns a Cart object. Below address attributes are required. <ul> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">billing_address_id</font></li> <li> <font color="monochrome">uid</font></li> </ul>
 
 *Returned Response:*
-
-
-
-
-`CartResponse`
-
-Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.  .
-
-
-
-
-
-
-`[String: Any]`
-
-Address or PIN code error
-
-
 
 
 
@@ -2209,6 +2037,8 @@ Address or PIN code error
 #### selectPaymentMode
 Update cart payment
 
+
+
 ```swift
 cart.selectPaymentMode(uid: uid, body: body) { (response, error) in
     // Use response
@@ -2216,10 +2046,11 @@ cart.selectPaymentMode(uid: uid, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | String? | no |  |  
-| body | [UpdateCartPaymentRequest](#UpdateCartPaymentRequest) | yes | Request body |
+| body | [UpdateCartPaymentRequest](#UpdateCartPaymentRequest) |  no  | Request body |
 
 
 Use this API to update cart payment.
@@ -2229,7 +2060,7 @@ Use this API to update cart payment.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.
 
@@ -2244,11 +2075,14 @@ Success. Returns a Cart object as shown below. Refer `CartResponse` for more det
 #### validateCouponForPayment
 Verify the coupon eligibility against the payment mode
 
+
+
 ```swift
 cart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2269,7 +2103,7 @@ Use this API to validate a coupon against the payment mode such as NetBanking, W
 
 
 
-`PaymentCouponValidate`
+[PaymentCouponValidate](#PaymentCouponValidate)
 
 Success. Returns a success message and the coupon validity. Refer `PaymentCouponValidate` for more details.
 
@@ -2284,11 +2118,14 @@ Success. Returns a success message and the coupon validity. Refer `PaymentCoupon
 #### getShipments
 Get delivery date and options before checkout
 
+
+
 ```swift
 cart.getShipments(p: p, uid: uid, addressId: addressId, areaCode: areaCode) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2307,18 +2144,9 @@ Use this API to get shipment details, expected delivery date, items and price br
 
 
 
-`CartShipmentsResponse`
+[CartShipmentsResponse](#CartShipmentsResponse)
 
 Success. Returns delivery promise along with shipment details and price breakup. Refer `CartShipmentsResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Unhandled API error
 
 
 
@@ -2331,6 +2159,8 @@ Unhandled API error
 #### checkoutCart
 Checkout all items in the cart
 
+
+
 ```swift
 cart.checkoutCart(body: body) { (response, error) in
     // Use response
@@ -2338,9 +2168,10 @@ cart.checkoutCart(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CartCheckoutRequest](#CartCheckoutRequest) | yes | Request body |
+| body | [CartCheckoutRequest](#CartCheckoutRequest) |  no  | Request body |
 
 
 Use this API to checkout all items in the cart for payment and order generation. For COD, order will be directly generated, whereas for other checkout modes, user will be redirected to a payment gateway.
@@ -2350,7 +2181,7 @@ Use this API to checkout all items in the cart for payment and order generation.
 
 
 
-`CartCheckoutResponse`
+[CartCheckoutResponse](#CartCheckoutResponse)
 
 Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for more details.
 
@@ -2365,6 +2196,8 @@ Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for m
 #### updateCartMeta
 Update the cart meta
 
+
+
 ```swift
 cart.updateCartMeta(uid: uid, body: body) { (response, error) in
     // Use response
@@ -2372,10 +2205,11 @@ cart.updateCartMeta(uid: uid, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no | The unique identifier of the cart |  
-| body | [CartMetaRequest](#CartMetaRequest) | yes | Request body |
+| body | [CartMetaRequest](#CartMetaRequest) |  no  | Request body |
 
 
 Use this API to update cart meta like checkout_mode and gstin.
@@ -2385,18 +2219,9 @@ Use this API to update cart meta like checkout_mode and gstin.
 
 
 
-`CartMetaResponse`
+[CartMetaResponse](#CartMetaResponse)
 
 Returns a message indicating the success of cart meta updation as shown below.
-
-
-
-
-
-
-`CartMetaMissingResponse`
-
-Missing required Field
 
 
 
@@ -2409,6 +2234,8 @@ Missing required Field
 #### getCartShareLink
 Generate token for sharing the cart
 
+
+
 ```swift
 cart.getCartShareLink(body: body) { (response, error) in
     // Use response
@@ -2416,9 +2243,10 @@ cart.getCartShareLink(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [GetShareCartLinkRequest](#GetShareCartLinkRequest) | yes | Request body |
+| body | [GetShareCartLinkRequest](#GetShareCartLinkRequest) |  no  | Request body |
 
 
 Use this API to generate a shared cart snapshot and return a shortlink token. The link can be shared with other users for getting the same items in their cart.
@@ -2428,7 +2256,7 @@ Use this API to generate a shared cart snapshot and return a shortlink token. Th
 
 
 
-`GetShareCartLinkResponse`
+[GetShareCartLinkResponse](#GetShareCartLinkResponse)
 
 Returns a URL to share and a token as shown below.
 
@@ -2443,11 +2271,14 @@ Returns a URL to share and a token as shown below.
 #### getCartSharedItems
 Get details of a shared cart
 
+
+
 ```swift
 cart.getCartSharedItems(token: token) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2463,18 +2294,9 @@ Use this API to get the shared cart details as per the token generated using the
 
 
 
-`SharedCartResponse`
+[SharedCartResponse](#SharedCartResponse)
 
 Success. Returns a Cart object as per the valid token. Refer `SharedCartResponse` for more details.
-
-
-
-
-
-
-`SharedCartResponse`
-
-No cart found for the token sent
 
 
 
@@ -2487,11 +2309,14 @@ No cart found for the token sent
 #### updateCartWithSharedItems
 Merge or replace existing cart
 
+
+
 ```swift
 cart.updateCartWithSharedItems(token: token, action: action) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2508,7 +2333,7 @@ Use this API to merge the shared cart with existing cart, or replace the existin
 
 
 
-`SharedCartResponse`
+[SharedCartResponse](#SharedCartResponse)
 
 Success. Returns a merged or replaced cart as per the valid token. Refer `SharedCartResponse` for more details.
 
@@ -2530,11 +2355,14 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 #### getLocations
 Get countries, states, cities
 
+
+
 ```swift
 common.getLocations(locationType: locationType, id: id) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2551,7 +2379,7 @@ common.getLocations(locationType: locationType, id: id) { (response, error) in
 
 
 
-`Locations`
+[Locations](#Locations)
 
 Success
 
@@ -2573,11 +2401,14 @@ Success
 #### getTicket
 Get Ticket with the specific id
 
+
+
 ```swift
 lead.getTicket(id: id) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2593,7 +2424,7 @@ Get Ticket with the specific id, this is used to view the ticket details
 
 
 
-`Ticket`
+[Ticket](#Ticket)
 
 Success
 
@@ -2608,6 +2439,8 @@ Success
 #### createHistory
 Create history for specific Ticket
 
+
+
 ```swift
 lead.createHistory(id: id, body: body) { (response, error) in
     // Use response
@@ -2615,10 +2448,11 @@ lead.createHistory(id: id, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | id | String? | no | Ticket ID for which history is created |  
-| body | [TicketHistoryPayload](#TicketHistoryPayload) | yes | Request body |
+| body | [TicketHistoryPayload](#TicketHistoryPayload) |  no  | Request body |
 
 
 Create history for specific Ticket, this history is seen on ticket detail page, this can be comment, log or rating.
@@ -2628,7 +2462,7 @@ Create history for specific Ticket, this history is seen on ticket detail page, 
 
 
 
-`TicketHistory`
+[TicketHistory](#TicketHistory)
 
 Success
 
@@ -2643,6 +2477,8 @@ Success
 #### createTicket
 Create Ticket
 
+
+
 ```swift
 lead.createTicket(body: body) { (response, error) in
     // Use response
@@ -2650,9 +2486,10 @@ lead.createTicket(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [AddTicketPayload](#AddTicketPayload) | yes | Request body |
+| body | [AddTicketPayload](#AddTicketPayload) |  no  | Request body |
 
 
 This is used to Create Ticket.
@@ -2662,7 +2499,7 @@ This is used to Create Ticket.
 
 
 
-`Ticket`
+[Ticket](#Ticket)
 
 Success
 
@@ -2677,11 +2514,14 @@ Success
 #### getCustomForm
 Get specific Custom Form using it's slug
 
+
+
 ```swift
 lead.getCustomForm(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2697,7 +2537,7 @@ Get specific Custom Form using it's slug, this is used to view the form.
 
 
 
-`CustomForm`
+[CustomForm](#CustomForm)
 
 Success
 
@@ -2712,6 +2552,8 @@ Success
 #### submitCustomForm
 Submit Response for a specific Custom Form using it's slug
 
+
+
 ```swift
 lead.submitCustomForm(slug: slug, body: body) { (response, error) in
     // Use response
@@ -2719,10 +2561,11 @@ lead.submitCustomForm(slug: slug, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | slug | String? | no | Slug of form whose response is getting submitted |  
-| body | [CustomFormSubmissionPayload](#CustomFormSubmissionPayload) | yes | Request body |
+| body | [CustomFormSubmissionPayload](#CustomFormSubmissionPayload) |  no  | Request body |
 
 
 Submit Response for a specific Custom Form using it's slug, this response is then used to create a ticket on behalf of the user.
@@ -2732,7 +2575,7 @@ Submit Response for a specific Custom Form using it's slug, this response is the
 
 
 
-`SubmitCustomFormResponse`
+[SubmitCustomFormResponse](#SubmitCustomFormResponse)
 
 Success
 
@@ -2747,11 +2590,14 @@ Success
 #### getParticipantsInsideVideoRoom
 Get participants of a specific Video Room using it's unique name
 
+
+
 ```swift
 lead.getParticipantsInsideVideoRoom(uniqueName: uniqueName) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2767,7 +2613,7 @@ Get participants of a specific Video Room using it's unique name, this can be us
 
 
 
-`GetParticipantsInsideVideoRoomResponse`
+[GetParticipantsInsideVideoRoomResponse](#GetParticipantsInsideVideoRoomResponse)
 
 Success
 
@@ -2782,11 +2628,14 @@ Success
 #### getTokenForVideoRoom
 Get Token to join a specific Video Room using it's unqiue name
 
+
+
 ```swift
 lead.getTokenForVideoRoom(uniqueName: uniqueName) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2802,7 +2651,7 @@ Get Token to join a specific Video Room using it's unqiue name, this Token is yo
 
 
 
-`GetTokenForVideoRoomResponse`
+[GetTokenForVideoRoomResponse](#GetTokenForVideoRoomResponse)
 
 Success
 
@@ -2824,11 +2673,14 @@ Success
 #### getAllPages
 Get all pages of a theme
 
+
+
 ```swift
 theme.getAllPages(themeId: themeId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2844,27 +2696,9 @@ Use this API to retrieve all the available pages of a theme by its ID.
 
 
 
-`AllAvailablePageSchema`
+[AllAvailablePageSchema](#AllAvailablePageSchema)
 
 Success. Returns an array all the pages of the theme. Refer `AllAvailablePageSchema` for more details.
-
-
-
-
-
-
-`BlitzkriegApiError`
-
-
-
-
-
-
-
-
-`BlitzkriegInternalServerError`
-
-
 
 
 
@@ -2877,11 +2711,14 @@ Success. Returns an array all the pages of the theme. Refer `AllAvailablePageSch
 #### getPage
 Get page of a theme
 
+
+
 ```swift
 theme.getPage(themeId: themeId, pageValue: pageValue) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2898,27 +2735,9 @@ Use this API to retrieve a page of a theme.
 
 
 
-`AvailablePageSchema`
+[AvailablePageSchema](#AvailablePageSchema)
 
 Success. Returns an object of the pages.  Refer `AvailablePageSchema` for more details.
-
-
-
-
-
-
-`BlitzkriegApiError`
-
-
-
-
-
-
-
-
-`BlitzkriegInternalServerError`
-
-
 
 
 
@@ -2931,11 +2750,14 @@ Success. Returns an object of the pages.  Refer `AvailablePageSchema` for more d
 #### getAppliedTheme
 Get the theme currently applied to an application
 
+
+
 ```swift
 theme.getAppliedTheme() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -2946,27 +2768,9 @@ An application has multiple themes, but only one theme can be applied at a time.
 
 
 
-`ThemesSchema`
+[ThemesSchema](#ThemesSchema)
 
 Success. Returns a JSON object of the theme. Check the example shown below or    refer `ThemesSchema` for more details.
-
-
-
-
-
-
-`BlitzkriegApiError`
-
-
-
-
-
-
-
-
-`BlitzkriegInternalServerError`
-
-
 
 
 
@@ -2979,11 +2783,14 @@ Success. Returns a JSON object of the theme. Check the example shown below or   
 #### getThemeForPreview
 Get a theme for a preview
 
+
+
 ```swift
 theme.getThemeForPreview(themeId: themeId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -2999,27 +2806,9 @@ A theme can be previewed before applying it. Use this API to retrieve the previe
 
 
 
-`ThemesSchema`
+[ThemesSchema](#ThemesSchema)
 
 Success. Returns a JSON object of the theme. Check the example shown below or refer `ThemesSchema` for more details.
-
-
-
-
-
-
-`BlitzkriegApiError`
-
-
-
-
-
-
-
-
-`BlitzkriegInternalServerError`
-
-
 
 
 
@@ -3039,6 +2828,8 @@ Success. Returns a JSON object of the theme. Check the example shown below or re
 #### loginWithFacebook
 Login or Register using Facebook
 
+
+
 ```swift
 user.loginWithFacebook(body: body) { (response, error) in
     // Use response
@@ -3046,9 +2837,10 @@ user.loginWithFacebook(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OAuthRequestSchema](#OAuthRequestSchema) | yes | Request body |
+| body | [OAuthRequestSchema](#OAuthRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register using Facebook credentials.
@@ -3058,27 +2850,9 @@ Use this API to login or register using Facebook credentials.
 
 
 
-`AuthSuccess`
+[AuthSuccess](#AuthSuccess)
 
 Success. Returns a JSON object with the user details. Check the example shown below or refer `AuthSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3091,6 +2865,8 @@ Success. Returns a JSON object with the user details. Check the example shown be
 #### loginWithGoogle
 Login or Register using Google
 
+
+
 ```swift
 user.loginWithGoogle(body: body) { (response, error) in
     // Use response
@@ -3098,9 +2874,10 @@ user.loginWithGoogle(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OAuthRequestSchema](#OAuthRequestSchema) | yes | Request body |
+| body | [OAuthRequestSchema](#OAuthRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register using Google Account credentials.
@@ -3110,27 +2887,9 @@ Use this API to login or register using Google Account credentials.
 
 
 
-`AuthSuccess`
+[AuthSuccess](#AuthSuccess)
 
 Success. Returns a JSON object with the user details. Check the example shown below or refer `AuthSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3143,6 +2902,8 @@ Success. Returns a JSON object with the user details. Check the example shown be
 #### loginWithGoogleAndroid
 Login or Register using Google on Android
 
+
+
 ```swift
 user.loginWithGoogleAndroid(body: body) { (response, error) in
     // Use response
@@ -3150,9 +2911,10 @@ user.loginWithGoogleAndroid(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OAuthRequestSchema](#OAuthRequestSchema) | yes | Request body |
+| body | [OAuthRequestSchema](#OAuthRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register in Android app using Google Account credentials.
@@ -3162,27 +2924,9 @@ Use this API to login or register in Android app using Google Account credential
 
 
 
-`AuthSuccess`
+[AuthSuccess](#AuthSuccess)
 
 Success. Returns a JSON object with the user details. Check the example shown below or refer `AuthSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3195,6 +2939,8 @@ Success. Returns a JSON object with the user details. Check the example shown be
 #### loginWithGoogleIOS
 Login or Register using Google on iOS
 
+
+
 ```swift
 user.loginWithGoogleIOS(body: body) { (response, error) in
     // Use response
@@ -3202,9 +2948,10 @@ user.loginWithGoogleIOS(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OAuthRequestSchema](#OAuthRequestSchema) | yes | Request body |
+| body | [OAuthRequestSchema](#OAuthRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register in iOS app using Google Account credentials.
@@ -3214,27 +2961,9 @@ Use this API to login or register in iOS app using Google Account credentials.
 
 
 
-`AuthSuccess`
+[AuthSuccess](#AuthSuccess)
 
 Success. Returns a JSON object with the user details. Check the example shown below or refer `AuthSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3247,6 +2976,8 @@ Success. Returns a JSON object with the user details. Check the example shown be
 #### loginWithOTP
 Login or Register with OTP
 
+
+
 ```swift
 user.loginWithOTP(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3254,10 +2985,11 @@ user.loginWithOTP(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [SendOtpRequestSchema](#SendOtpRequestSchema) | yes | Request body |
+| body | [SendOtpRequestSchema](#SendOtpRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register with a One-time Password (OTP) sent via Email or SMS.
@@ -3267,27 +2999,9 @@ Use this API to login or register with a One-time Password (OTP) sent via Email 
 
 
 
-`SendOtpResponse`
+[SendOtpResponse](#SendOtpResponse)
 
 Success. Check the example shown below or refer `SendOtpResponse` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3300,6 +3014,8 @@ Success. Check the example shown below or refer `SendOtpResponse` for more detai
 #### loginWithEmailAndPassword
 Login or Register with password
 
+
+
 ```swift
 user.loginWithEmailAndPassword(body: body) { (response, error) in
     // Use response
@@ -3307,9 +3023,10 @@ user.loginWithEmailAndPassword(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [PasswordLoginRequestSchema](#PasswordLoginRequestSchema) | yes | Request body |
+| body | [PasswordLoginRequestSchema](#PasswordLoginRequestSchema) |  no  | Request body |
 
 
 Use this API to login or register using an email address and password.
@@ -3319,27 +3036,9 @@ Use this API to login or register using an email address and password.
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3352,6 +3051,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### sendResetPasswordEmail
 Reset Password
 
+
+
 ```swift
 user.sendResetPasswordEmail(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3359,10 +3060,11 @@ user.sendResetPasswordEmail(platform: platform, body: body) { (response, error) 
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [SendResetPasswordEmailRequestSchema](#SendResetPasswordEmailRequestSchema) | yes | Request body |
+| body | [SendResetPasswordEmailRequestSchema](#SendResetPasswordEmailRequestSchema) |  no  | Request body |
 
 
 Use this API to reset a password using the link sent on email.
@@ -3372,27 +3074,9 @@ Use this API to reset a password using the link sent on email.
 
 
 
-`ResetPasswordSuccess`
+[ResetPasswordSuccess](#ResetPasswordSuccess)
 
 Success. Check the example shown below or refer `ResetPasswordSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3405,6 +3089,8 @@ Success. Check the example shown below or refer `ResetPasswordSuccess` for more 
 #### forgotPassword
 Forgot Password
 
+
+
 ```swift
 user.forgotPassword(body: body) { (response, error) in
     // Use response
@@ -3412,9 +3098,10 @@ user.forgotPassword(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [ForgotPasswordRequestSchema](#ForgotPasswordRequestSchema) | yes | Request body |
+| body | [ForgotPasswordRequestSchema](#ForgotPasswordRequestSchema) |  no  | Request body |
 
 
 Use this API to reset a password using the code sent on email or SMS.
@@ -3424,27 +3111,9 @@ Use this API to reset a password using the code sent on email or SMS.
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3457,6 +3126,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### sendResetToken
 Reset Password using token
 
+
+
 ```swift
 user.sendResetToken(body: body) { (response, error) in
     // Use response
@@ -3464,9 +3135,10 @@ user.sendResetToken(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CodeRequestBodySchema](#CodeRequestBodySchema) | yes | Request body |
+| body | [CodeRequestBodySchema](#CodeRequestBodySchema) |  no  | Request body |
 
 
 Use this API to send code to reset password.
@@ -3476,27 +3148,9 @@ Use this API to send code to reset password.
 
 
 
-`ResetPasswordSuccess`
+[ResetPasswordSuccess](#ResetPasswordSuccess)
 
 Success. Check the example shown below or refer `ResetPasswordSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3509,6 +3163,8 @@ Success. Check the example shown below or refer `ResetPasswordSuccess` for more 
 #### loginWithToken
 Login or Register with token
 
+
+
 ```swift
 user.loginWithToken(body: body) { (response, error) in
     // Use response
@@ -3516,9 +3172,10 @@ user.loginWithToken(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [TokenRequestBodySchema](#TokenRequestBodySchema) | yes | Request body |
+| body | [TokenRequestBodySchema](#TokenRequestBodySchema) |  no  | Request body |
 
 
 Use this API to login or register using a token for authentication.
@@ -3528,36 +3185,9 @@ Use this API to login or register using a token for authentication.
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3570,6 +3200,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### registerWithForm
 Registration using a form
 
+
+
 ```swift
 user.registerWithForm(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3577,10 +3209,11 @@ user.registerWithForm(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [FormRegisterRequestSchema](#FormRegisterRequestSchema) | yes | Request body |
+| body | [FormRegisterRequestSchema](#FormRegisterRequestSchema) |  no  | Request body |
 
 
 Use this API to perform user registration by sending form data in the request body.
@@ -3590,27 +3223,9 @@ Use this API to perform user registration by sending form data in the request bo
 
 
 
-`RegisterFormSuccess`
+[RegisterFormSuccess](#RegisterFormSuccess)
 
 Success. Check the example shown below or refer `RegisterFormSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3623,6 +3238,8 @@ Success. Check the example shown below or refer `RegisterFormSuccess` for more d
 #### verifyEmail
 Verify email
 
+
+
 ```swift
 user.verifyEmail(body: body) { (response, error) in
     // Use response
@@ -3630,9 +3247,10 @@ user.verifyEmail(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CodeRequestBodySchema](#CodeRequestBodySchema) | yes | Request body |
+| body | [CodeRequestBodySchema](#CodeRequestBodySchema) |  no  | Request body |
 
 
 Use this API to send a verification code to verify an email.
@@ -3642,27 +3260,9 @@ Use this API to send a verification code to verify an email.
 
 
 
-`VerifyEmailSuccess`
+[VerifyEmailSuccess](#VerifyEmailSuccess)
 
 Success. Check the example shown below or refer `VerifyEmailSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3675,6 +3275,8 @@ Success. Check the example shown below or refer `VerifyEmailSuccess` for more de
 #### verifyMobile
 Verify mobile
 
+
+
 ```swift
 user.verifyMobile(body: body) { (response, error) in
     // Use response
@@ -3682,9 +3284,10 @@ user.verifyMobile(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CodeRequestBodySchema](#CodeRequestBodySchema) | yes | Request body |
+| body | [CodeRequestBodySchema](#CodeRequestBodySchema) |  no  | Request body |
 
 
 Use this API to send a verification code to verify a mobile number.
@@ -3694,27 +3297,9 @@ Use this API to send a verification code to verify a mobile number.
 
 
 
-`VerifyEmailSuccess`
+[VerifyEmailSuccess](#VerifyEmailSuccess)
 
 Success. Check the example shown below or refer `VerifyEmailSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3727,11 +3312,14 @@ Success. Check the example shown below or refer `VerifyEmailSuccess` for more de
 #### hasPassword
 Check password
 
+
+
 ```swift
 user.hasPassword() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -3742,27 +3330,9 @@ Use this API to check if user has created a password for login.
 
 
 
-`HasPasswordSuccess`
+[HasPasswordSuccess](#HasPasswordSuccess)
 
 Success. Returns a boolean value. Check the example shown below or refer `HasPasswordSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3775,6 +3345,8 @@ Success. Returns a boolean value. Check the example shown below or refer `HasPas
 #### updatePassword
 Update user password
 
+
+
 ```swift
 user.updatePassword(body: body) { (response, error) in
     // Use response
@@ -3782,9 +3354,10 @@ user.updatePassword(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdatePasswordRequestSchema](#UpdatePasswordRequestSchema) | yes | Request body |
+| body | [UpdatePasswordRequestSchema](#UpdatePasswordRequestSchema) |  no  | Request body |
 
 
 Use this API to update the password.
@@ -3794,27 +3367,9 @@ Use this API to update the password.
 
 
 
-`VerifyEmailSuccess`
+[VerifyEmailSuccess](#VerifyEmailSuccess)
 
 Success. Returns a success message. Refer `VerifyEmailSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
 
 
 
@@ -3827,11 +3382,14 @@ Success. Returns a success message. Refer `VerifyEmailSuccess` for more details.
 #### logout
 Logs out currently logged in user
 
+
+
 ```swift
 user.logout() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -3842,27 +3400,9 @@ Use this API to check to logout a user from the app.
 
 
 
-`LogoutSuccess`
+[LogoutSuccess](#LogoutSuccess)
 
 Success. Returns a success message as shown below. Refer `LogoutSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3875,6 +3415,8 @@ Success. Returns a success message as shown below. Refer `LogoutSuccess` for mor
 #### sendOTPOnMobile
 Send OTP on mobile
 
+
+
 ```swift
 user.sendOTPOnMobile(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3882,10 +3424,11 @@ user.sendOTPOnMobile(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [SendMobileOtpRequestSchema](#SendMobileOtpRequestSchema) | yes | Request body |
+| body | [SendMobileOtpRequestSchema](#SendMobileOtpRequestSchema) |  no  | Request body |
 
 
 Use this API to send an OTP to a mobile number.
@@ -3895,27 +3438,9 @@ Use this API to send an OTP to a mobile number.
 
 
 
-`OtpSuccess`
+[OtpSuccess](#OtpSuccess)
 
 Success. Returns a JSON object as shown below. Refer `OtpSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3928,6 +3453,8 @@ Success. Returns a JSON object as shown below. Refer `OtpSuccess` for more detai
 #### verifyMobileOTP
 Verify OTP on mobile
 
+
+
 ```swift
 user.verifyMobileOTP(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3935,10 +3462,11 @@ user.verifyMobileOTP(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [VerifyOtpRequestSchema](#VerifyOtpRequestSchema) | yes | Request body |
+| body | [VerifyOtpRequestSchema](#VerifyOtpRequestSchema) |  no  | Request body |
 
 
 Use this API to verify the OTP received on a mobile number.
@@ -3948,27 +3476,9 @@ Use this API to verify the OTP received on a mobile number.
 
 
 
-`VerifyOtpSuccess`
+[VerifyOtpSuccess](#VerifyOtpSuccess)
 
 Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -3981,6 +3491,8 @@ Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more
 #### sendOTPOnEmail
 Send OTP on email
 
+
+
 ```swift
 user.sendOTPOnEmail(platform: platform, body: body) { (response, error) in
     // Use response
@@ -3988,10 +3500,11 @@ user.sendOTPOnEmail(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [SendEmailOtpRequestSchema](#SendEmailOtpRequestSchema) | yes | Request body |
+| body | [SendEmailOtpRequestSchema](#SendEmailOtpRequestSchema) |  no  | Request body |
 
 
 Use this API to send an OTP to an email ID.
@@ -4001,27 +3514,9 @@ Use this API to send an OTP to an email ID.
 
 
 
-`EmailOtpSuccess`
+[EmailOtpSuccess](#EmailOtpSuccess)
 
 Success. Returns a JSON object as shown below. Refer `EmailOtpSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4034,6 +3529,8 @@ Success. Returns a JSON object as shown below. Refer `EmailOtpSuccess` for more 
 #### verifyEmailOTP
 Verify OTP on email
 
+
+
 ```swift
 user.verifyEmailOTP(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4041,10 +3538,11 @@ user.verifyEmailOTP(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [VerifyEmailOtpRequestSchema](#VerifyEmailOtpRequestSchema) | yes | Request body |
+| body | [VerifyEmailOtpRequestSchema](#VerifyEmailOtpRequestSchema) |  no  | Request body |
 
 
 Use this API to verify the OTP received on an email ID.
@@ -4054,27 +3552,9 @@ Use this API to verify the OTP received on an email ID.
 
 
 
-`VerifyOtpSuccess`
+[VerifyOtpSuccess](#VerifyOtpSuccess)
 
 Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4087,11 +3567,14 @@ Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more
 #### getLoggedInUser
 Get logged in user
 
+
+
 ```swift
 user.getLoggedInUser() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -4102,27 +3585,9 @@ Use this API  to get the details of a logged in user.
 
 
 
-`UserObjectSchema`
+[UserObjectSchema](#UserObjectSchema)
 
 Success. Returns a JSON object with user details. Refer `UserObjectSchema` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4135,11 +3600,14 @@ Success. Returns a JSON object with user details. Refer `UserObjectSchema` for m
 #### getListOfActiveSessions
 Get list of sessions
 
+
+
 ```swift
 user.getListOfActiveSessions() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -4150,27 +3618,9 @@ Use this API to retrieve all active sessions of a user.
 
 
 
-`SessionListSuccess`
+[SessionListSuccess](#SessionListSuccess)
 
 Success. Returns a JSON object containing an array of sessions. Refer `SessionListSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4183,11 +3633,14 @@ Success. Returns a JSON object containing an array of sessions. Refer `SessionLi
 #### getPlatformConfig
 Get platform configurations
 
+
+
 ```swift
 user.getPlatformConfig(name: name) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4203,27 +3656,9 @@ Use this API to get all the platform configurations such as mobile image, deskto
 
 
 
-`PlatformSchema`
+[PlatformSchema](#PlatformSchema)
 
 Success. Returns a JSON object containing the all the platform configurations. Refer `PlatformSchema` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4236,6 +3671,8 @@ Success. Returns a JSON object containing the all the platform configurations. R
 #### updateProfile
 Edit Profile Details
 
+
+
 ```swift
 user.updateProfile(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4243,10 +3680,11 @@ user.updateProfile(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [EditProfileRequestSchema](#EditProfileRequestSchema) | yes | Request body |
+| body | [EditProfileRequestSchema](#EditProfileRequestSchema) |  no  | Request body |
 
 
 Use this API to update details in the user profile. Details can be first name, last name, gender, email, phone number, or profile picture.
@@ -4256,27 +3694,9 @@ Use this API to update details in the user profile. Details can be first name, l
 
 
 
-`ProfileEditSuccess`
+[ProfileEditSuccess](#ProfileEditSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4289,6 +3709,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### addMobileNumber
 Add mobile number to profile
 
+
+
 ```swift
 user.addMobileNumber(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4296,10 +3718,11 @@ user.addMobileNumber(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [EditMobileRequestSchema](#EditMobileRequestSchema) | yes | Request body |
+| body | [EditMobileRequestSchema](#EditMobileRequestSchema) |  no  | Request body |
 
 
 Use this API to add a new mobile number to a profile.
@@ -4309,27 +3732,9 @@ Use this API to add a new mobile number to a profile.
 
 
 
-`VerifyMobileOTPSuccess`
+[VerifyMobileOTPSuccess](#VerifyMobileOTPSuccess)
 
 Success. Check the example shown below or refer `VerifyMobileOTPSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4342,11 +3747,14 @@ Success. Check the example shown below or refer `VerifyMobileOTPSuccess` for mor
 #### deleteMobileNumber
 Delete mobile number from profile
 
+
+
 ```swift
 user.deleteMobileNumber(platform: platform, active: active, primary: primary, verified: verified, countryCode: countryCode, phone: phone) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4367,27 +3775,9 @@ Use this API to delete a mobile number from a profile.
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4400,6 +3790,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### setMobileNumberAsPrimary
 Set mobile as primary
 
+
+
 ```swift
 user.setMobileNumberAsPrimary(body: body) { (response, error) in
     // Use response
@@ -4407,9 +3799,10 @@ user.setMobileNumberAsPrimary(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [SendVerificationLinkMobileRequestSchema](#SendVerificationLinkMobileRequestSchema) | yes | Request body |
+| body | [SendVerificationLinkMobileRequestSchema](#SendVerificationLinkMobileRequestSchema) |  no  | Request body |
 
 
 Use this API to set a mobile number as primary. Primary number is a verified number used for all future communications.
@@ -4419,27 +3812,9 @@ Use this API to set a mobile number as primary. Primary number is a verified num
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Check the example shown below or refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4452,6 +3827,8 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 #### sendVerificationLinkToMobile
 Send verification link to mobile
 
+
+
 ```swift
 user.sendVerificationLinkToMobile(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4459,10 +3836,11 @@ user.sendVerificationLinkToMobile(platform: platform, body: body) { (response, e
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [SendVerificationLinkMobileRequestSchema](#SendVerificationLinkMobileRequestSchema) | yes | Request body |
+| body | [SendVerificationLinkMobileRequestSchema](#SendVerificationLinkMobileRequestSchema) |  no  | Request body |
 
 
 Use this API to send a verification link to a mobile number
@@ -4472,27 +3850,9 @@ Use this API to send a verification link to a mobile number
 
 
 
-`SendMobileVerifyLinkSuccess`
+[SendMobileVerifyLinkSuccess](#SendMobileVerifyLinkSuccess)
 
 Success. Check the example shown below or refer `SendMobileVerifyLinkSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4505,6 +3865,8 @@ Success. Check the example shown below or refer `SendMobileVerifyLinkSuccess` fo
 #### addEmail
 Add email to profile
 
+
+
 ```swift
 user.addEmail(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4512,10 +3874,11 @@ user.addEmail(platform: platform, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [EditEmailRequestSchema](#EditEmailRequestSchema) | yes | Request body |
+| body | [EditEmailRequestSchema](#EditEmailRequestSchema) |  no  | Request body |
 
 
 Use this API to add a new email address to a profile
@@ -4525,27 +3888,9 @@ Use this API to add a new email address to a profile
 
 
 
-`VerifyEmailOTPSuccess`
+[VerifyEmailOTPSuccess](#VerifyEmailOTPSuccess)
 
 Success. Returns a JSON object with user details. Refer `VerifyEmailOTPSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4558,11 +3903,14 @@ Success. Returns a JSON object with user details. Refer `VerifyEmailOTPSuccess` 
 #### deleteEmail
 Delete email from profile
 
+
+
 ```swift
 user.deleteEmail(platform: platform, active: active, primary: primary, verified: verified, email: email) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4582,27 +3930,9 @@ Use this API to delete an email address from a profile
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Returns a JSON object with user details. Refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4615,6 +3945,8 @@ Success. Returns a JSON object with user details. Refer `LoginSuccess` for more 
 #### setEmailAsPrimary
 Set email as primary
 
+
+
 ```swift
 user.setEmailAsPrimary(body: body) { (response, error) in
     // Use response
@@ -4622,9 +3954,10 @@ user.setEmailAsPrimary(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [EditEmailRequestSchema](#EditEmailRequestSchema) | yes | Request body |
+| body | [EditEmailRequestSchema](#EditEmailRequestSchema) |  no  | Request body |
 
 
 Use this API to set an email address as primary. Primary email ID is a email address used for all future communications.
@@ -4634,27 +3967,9 @@ Use this API to set an email address as primary. Primary email ID is a email add
 
 
 
-`LoginSuccess`
+[LoginSuccess](#LoginSuccess)
 
 Success. Returns a JSON object with user details. Refer `LoginSuccess` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4667,6 +3982,8 @@ Success. Returns a JSON object with user details. Refer `LoginSuccess` for more 
 #### sendVerificationLinkToEmail
 Send verification link to email
 
+
+
 ```swift
 user.sendVerificationLinkToEmail(platform: platform, body: body) { (response, error) in
     // Use response
@@ -4674,10 +3991,11 @@ user.sendVerificationLinkToEmail(platform: platform, body: body) { (response, er
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | platform | String? | no | ID of the application |  
-| body | [EditEmailRequestSchema](#EditEmailRequestSchema) | yes | Request body |
+| body | [EditEmailRequestSchema](#EditEmailRequestSchema) |  no  | Request body |
 
 
 Use this API to send verification link to an email address.
@@ -4687,27 +4005,9 @@ Use this API to send verification link to an email address.
 
 
 
-`SendEmailVerifyLinkSuccess`
+[SendEmailVerifyLinkSuccess](#SendEmailVerifyLinkSuccess)
 
 Request body must contain an email ID. Refer `EditEmailRequestSchema` for more details.
-
-
-
-
-
-
-`AuthenticationApiError`
-
-
-
-
-
-
-
-
-`AuthenticationInternalServerError`
-
-
 
 
 
@@ -4727,11 +4027,14 @@ Request body must contain an email ID. Refer `EditEmailRequestSchema` for more d
 #### getAnnouncements
 Get live announcements
 
+
+
 ```swift
 content.getAnnouncements() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -4742,27 +4045,9 @@ Announcements are useful to highlight a message or information on top of a webpa
 
 
 
-`AnnouncementsResponseSchema`
+[AnnouncementsResponseSchema](#AnnouncementsResponseSchema)
 
 Success. Returns a JSON object with the details of the announcement shown on an individual page. `$all` is a special slug to indicate that an announcement is being shown on all the pages. Check the example shown below or refer `AnnouncementsResponseSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -4775,11 +4060,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getBlog
 Get a blog
 
+
+
 ```swift
 content.getBlog(slug: slug, rootId: rootId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4796,27 +4084,9 @@ Use this API to get the details of a blog using its slug. Details include the ti
 
 
 
-`BlogSchema`
+[BlogSchema](#BlogSchema)
 
 Success. Returns a JSON object with blog details. Check the example shown below or refer `BlogSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -4829,11 +4099,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getBlogs
 Get a list of blogs
 
+
+
 ```swift
 content.getBlogs(pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4850,27 +4123,9 @@ Use this API to get all the blogs.
 
 
 
-`BlogGetResponse`
+[BlogGetResponse](#BlogGetResponse)
 
 Success. Check the example shown below or refer `BlogGetResponse` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -4883,11 +4138,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getFaqs
 Get a list of FAQs
 
+
+
 ```swift
 content.getFaqs() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -4898,27 +4156,9 @@ Use this API to get a list of frequently asked questions. Users will benefit fro
 
 
 
-`FaqResponseSchema`
+[FaqResponseSchema](#FaqResponseSchema)
 
 Success. Returns a JSON object with question and answers. Check the example shown below or refer `FaqResponseSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -4931,11 +4171,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getFaqCategories
 Get a list of FAQ categories
 
+
+
 ```swift
 content.getFaqCategories() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -4946,27 +4189,9 @@ FAQs can be divided into categories. Use this API to get a list of FAQ categorie
 
 
 
-`GetFaqCategoriesSchema`
+[GetFaqCategoriesSchema](#GetFaqCategoriesSchema)
 
 Success. Returns a JSON object with categories of FAQ. Check the example shown below or refer `GetFaqCategoriesSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -4979,11 +4204,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getFaqBySlug
 Get an FAQ
 
+
+
 ```swift
 content.getFaqBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -4999,27 +4227,9 @@ Use this API to get a particular FAQ by its slug.
 
 
 
-`FaqSchema`
+[FaqSchema](#FaqSchema)
 
 Success. Returns a question and answer by its slug. Check the example shown below or refer `FaqSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5032,11 +4242,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getFaqCategoryBySlug
 Get the FAQ category
 
+
+
 ```swift
 content.getFaqCategoryBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5052,27 +4265,9 @@ FAQs can be divided into categories. Use this API to get the category to which a
 
 
 
-`GetFaqCategoryBySlugSchema`
+[GetFaqCategoryBySlugSchema](#GetFaqCategoryBySlugSchema)
 
 Success. Returns a FAQ category with its slug. Check the example shown below or refer `GetFaqCategoryBySlugSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5085,11 +4280,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getFaqsByCategorySlug
 Get FAQs using the slug of FAQ category
 
+
+
 ```swift
 content.getFaqsByCategorySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5105,27 +4303,9 @@ FAQs can be divided into categories. Use this API to get all the FAQs belonging 
 
 
 
-`GetFaqSchema`
+[GetFaqSchema](#GetFaqSchema)
 
 Success. Returns a categorized list of question and answers using its slug. Check the example shown below or refer `GetFaqSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5138,11 +4318,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getLandingPage
 Get the landing page
 
+
+
 ```swift
 content.getLandingPage() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5153,27 +4336,9 @@ Landing page is the first page that a prospect lands upon while visiting a websi
 
 
 
-`LandingPageSchema`
+[LandingPageSchema](#LandingPageSchema)
 
 Success. Returns the landing page details. Check the example shown below or refer `LandingPageSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5186,11 +4351,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getLegalInformation
 Get legal information
 
+
+
 ```swift
 content.getLegalInformation() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5201,27 +4369,9 @@ Use this API to get the legal information of an application, which includes Priv
 
 
 
-`ApplicationLegal`
+[ApplicationLegal](#ApplicationLegal)
 
 Success. Returns the T&C, Shipping Policy, Privacy Policy and Return Policy. Check the example shown below or refer `ApplicationLegal` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5234,11 +4384,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getNavigations
 Get the navigation
 
+
+
 ```swift
 content.getNavigations(pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5255,27 +4408,9 @@ Use this API to fetch the navigations details which includes the items of the na
 
 
 
-`NavigationGetResponse`
+[NavigationGetResponse](#NavigationGetResponse)
 
 Success. Returns a JSON object with navigation details. Check the example shown below or refer `NavigationGetResponse` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5288,11 +4423,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPage
 Get a page
 
+
+
 ```swift
 content.getPage(slug: slug, rootId: rootId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5309,27 +4447,9 @@ Use this API to get the details of a page using its slug. Details include the ti
 
 
 
-`CustomPageSchema`
+[CustomPageSchema](#CustomPageSchema)
 
 Success. Returns a JSON object with page details. Check the example shown below or refer `CustomPageSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5342,11 +4462,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPages
 Get all pages
 
+
+
 ```swift
 content.getPages(pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5363,27 +4486,9 @@ Use this API to get a list of pages.
 
 
 
-`PageGetResponse`
+[PageGetResponse](#PageGetResponse)
 
 Success. Returns a list of pages along with their details. Check the example shown below or refer `PageGetResponse` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5396,11 +4501,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getSEOConfiguration
 Get the SEO of an application
 
+
+
 ```swift
 content.getSEOConfiguration() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5411,27 +4519,9 @@ Use this API to get the SEO details of an application, which includes a robot.tx
 
 
 
-`SeoComponent`
+[SeoComponent](#SeoComponent)
 
 Success. Returns a JSON object SEO details such as robots.txt, meta-tags, and sitemap. Check the example shown below or refer `SeoComponent` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5444,11 +4534,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getSlideshows
 Get the slideshows
 
+
+
 ```swift
 content.getSlideshows(pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5465,27 +4558,9 @@ Use this API to get a list of slideshows along with their details.
 
 
 
-`SlideshowGetResponse`
+[SlideshowGetResponse](#SlideshowGetResponse)
 
 Success. Check the example shown below or refer `SlideshowGetResponse` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5498,11 +4573,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getSlideshow
 Get a slideshow
 
+
+
 ```swift
 content.getSlideshow(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5518,27 +4596,9 @@ A slideshow is a group of images, videos or a combination of both that are shown
 
 
 
-`SlideshowSchema`
+[SlideshowSchema](#SlideshowSchema)
 
 Success. Returns the details of how a slideshow is configured. Check the example shown below or refer `SlideshowSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5551,11 +4611,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getSupportInformation
 Get the support information
 
+
+
 ```swift
 content.getSupportInformation() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5566,27 +4629,9 @@ Use this API to get contact details for customer support including emails and ph
 
 
 
-`Support`
+[Support](#Support)
 
 Success. Returns all support information including email and phone number. Check the example shown below or refer `Support` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5599,11 +4644,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getTags
 Get the tags associated with an application
 
+
+
 ```swift
 content.getTags() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5614,27 +4662,9 @@ Use this API to get all the CSS and JS injected in the application in the form o
 
 
 
-`TagsSchema`
+[TagsSchema](#TagsSchema)
 
 Success. Returns a JSON object containing all the tags injected in the application. Check the example shown below or refer `TagsSchema` for more details.
-
-
-
-
-
-
-`APIError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`APIError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -5654,11 +4684,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getCommunicationConsent
 Get communication consent
 
+
+
 ```swift
 communication.getCommunicationConsent() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5669,7 +4702,7 @@ Use this API to retrieve the consent provided by the user for receiving communic
 
 
 
-`CommunicationConsent`
+[CommunicationConsent](#CommunicationConsent)
 
 Success. Returns all available communication opt-ins along with the consent details. Check the example shown below or refer `CommunicationConsent` for more details.
 
@@ -5684,6 +4717,8 @@ Success. Returns all available communication opt-ins along with the consent deta
 #### upsertCommunicationConsent
 Upsert communication consent
 
+
+
 ```swift
 communication.upsertCommunicationConsent(body: body) { (response, error) in
     // Use response
@@ -5691,9 +4726,10 @@ communication.upsertCommunicationConsent(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CommunicationConsentReq](#CommunicationConsentReq) | yes | Request body |
+| body | [CommunicationConsentReq](#CommunicationConsentReq) |  yes  | Request body |
 
 
 Use this API to update and insert the consent provided by the user for receiving communication messages over Email/SMS/WhatsApp.
@@ -5703,18 +4739,9 @@ Use this API to update and insert the consent provided by the user for receiving
 
 
 
-`CommunicationConsentRes`
+[CommunicationConsentRes](#CommunicationConsentRes)
 
 Success. Updates the channels for which user has consented. Check the example shown below or refer `CommunicationConsentRes` for more details.
-
-
-
-
-
-
-`BadRequest`
-
-Bad request
 
 
 
@@ -5727,6 +4754,8 @@ Bad request
 #### upsertAppPushtoken
 Upsert push token of a user
 
+
+
 ```swift
 communication.upsertAppPushtoken(body: body) { (response, error) in
     // Use response
@@ -5734,9 +4763,10 @@ communication.upsertAppPushtoken(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [PushtokenReq](#PushtokenReq) | yes | Request body |
+| body | [PushtokenReq](#PushtokenReq) |  yes  | Request body |
 
 
 Use this API to update and insert the push token of the user.
@@ -5746,18 +4776,9 @@ Use this API to update and insert the push token of the user.
 
 
 
-`PushtokenRes`
+[PushtokenRes](#PushtokenRes)
 
 Success. Check the example shown below or refer `PushtokenRes` for more details.
-
-
-
-
-
-
-`BadRequest`
-
-Bad request
 
 
 
@@ -5777,11 +4798,14 @@ Bad request
 #### getApplicationQRCode
 Create QR Code of an app
 
+
+
 ```swift
 share.getApplicationQRCode() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -5792,7 +4816,7 @@ Use this API to create a QR code of an app for sharing it with users who want to
 
 
 
-`QRCodeResp`
+[QRCodeResp](#QRCodeResp)
 
 Success. Check the example shown below or refer `QRCodeResp` for more details.
 
@@ -5807,11 +4831,14 @@ Success. Check the example shown below or refer `QRCodeResp` for more details.
 #### getProductQRCodeBySlug
 Create QR Code of a product
 
+
+
 ```swift
 share.getProductQRCodeBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5827,18 +4854,9 @@ Use this API to create a QR code of a product for sharing it with users who want
 
 
 
-`QRCodeResp`
+[QRCodeResp](#QRCodeResp)
 
 Success. Check the example shown below or refer `QRCodeResp` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -5851,11 +4869,14 @@ Error
 #### getCollectionQRCodeBySlug
 Create QR Code of a collection
 
+
+
 ```swift
 share.getCollectionQRCodeBySlug(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5871,18 +4892,9 @@ Use this API to create a QR code of a collection of products for sharing it with
 
 
 
-`QRCodeResp`
+[QRCodeResp](#QRCodeResp)
 
 Success. Check the example shown below or refer `QRCodeResp` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -5895,11 +4907,14 @@ Error
 #### getUrlQRCode
 Create QR Code of a URL
 
+
+
 ```swift
 share.getUrlQRCode(url: url) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -5915,18 +4930,9 @@ Use this API to create a QR code of a URL for sharing it with users who want to 
 
 
 
-`QRCodeResp`
+[QRCodeResp](#QRCodeResp)
 
 Success. Check the example shown below or refer `QRCodeResp` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -5939,6 +4945,8 @@ Error
 #### createShortLink
 Create a short link
 
+
+
 ```swift
 share.createShortLink(body: body) { (response, error) in
     // Use response
@@ -5946,9 +4954,10 @@ share.createShortLink(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [ShortLinkReq](#ShortLinkReq) | yes | Request body |
+| body | [ShortLinkReq](#ShortLinkReq) |  no  | Request body |
 
 
 Use this API to create a short link that is easy to write/share/read as compared to long URLs.
@@ -5958,18 +4967,9 @@ Use this API to create a short link that is easy to write/share/read as compared
 
 
 
-`ShortLinkRes`
+[ShortLinkRes](#ShortLinkRes)
 
 Success. Check the example shown below or refer `ShortLinkRes` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -5982,11 +4982,14 @@ Error
 #### getShortLinkByHash
 Get short link by hash
 
+
+
 ```swift
 share.getShortLinkByHash(hash: hash) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6002,18 +5005,9 @@ Use this API to get a short link by using a hash value.
 
 
 
-`ShortLinkRes`
+[ShortLinkRes](#ShortLinkRes)
 
 Success. Check the example shown below or refer `ShortLinkRes` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -6026,11 +5020,14 @@ Error
 #### getOriginalShortLinkByHash
 Get original link by hash
 
+
+
 ```swift
 share.getOriginalShortLinkByHash(hash: hash) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6046,18 +5043,9 @@ Use this API to retrieve the original link from a short-link by using a hash val
 
 
 
-`ShortLinkRes`
+[ShortLinkRes](#ShortLinkRes)
 
 Success. Check the example shown below or refer `ShortLinkRes` for more details.
-
-
-
-
-
-
-`ErrorRes`
-
-Error
 
 
 
@@ -6077,6 +5065,8 @@ Error
 #### startUpload
 Initiates an upload and returns a storage link that is valid for 30 minutes. You can use the storage link to make subsequent upload request with file buffer or blob.
 
+
+
 ```swift
 filestorage.startUpload(namespace: namespace, body: body) { (response, error) in
     // Use response
@@ -6084,10 +5074,11 @@ filestorage.startUpload(namespace: namespace, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | namespace | String? | no | Name of the bucket created for storing objects. |  
-| body | [StartRequest](#StartRequest) | yes | Request body |
+| body | [StartRequest](#StartRequest) |  no  | Request body |
 
 
 Use this API to perform the first step of uploading (i.e. **Start**) an arbitrarily sized buffer or blob.
@@ -6115,18 +5106,9 @@ This operation will return the URL of the uploaded file.
 
 
 
-`StartResponse`
+[StartResponse](#StartResponse)
 
 Success. Next, call the `completeUpload` API and pass the response payload of this API to finish the upload process.
-
-
-
-
-
-
-`FailedResponse`
-
-Failed
 
 
 
@@ -6139,6 +5121,8 @@ Failed
 #### completeUpload
 Completes the upload process. After successfully uploading a file, call this API to finish the upload process.
 
+
+
 ```swift
 filestorage.completeUpload(namespace: namespace, body: body) { (response, error) in
     // Use response
@@ -6146,10 +5130,11 @@ filestorage.completeUpload(namespace: namespace, body: body) { (response, error)
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | namespace | String? | no | Name of the bucket created for storing objects. |  
-| body | [StartResponse](#StartResponse) | yes | Request body |
+| body | [StartResponse](#StartResponse) |  no  | Request body |
 
 
 Use this API to perform the third step of uploading (i.e. **Complete**) an arbitrarily sized buffer or blob.
@@ -6177,18 +5162,9 @@ This operation will return the URL of the uploaded file.
 
 
 
-`CompleteResponse`
+[CompleteResponse](#CompleteResponse)
 
 Success
-
-
-
-
-
-
-`FailedResponse`
-
-Failed
 
 
 
@@ -6208,11 +5184,14 @@ Failed
 #### getApplication
 Get current application details
 
+
+
 ```swift
 configuration.getApplication() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6223,18 +5202,9 @@ Use this API to get the current application details which includes configuration
 
 
 
-`Application`
+[Application](#Application)
 
 Success. Check the example shown below or refer `Application` for more details.
-
-
-
-
-
-
-`NotFound`
-
-Not found
 
 
 
@@ -6247,11 +5217,14 @@ Not found
 #### getOwnerInfo
 Get application, owner and seller information
 
+
+
 ```swift
 configuration.getOwnerInfo() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6262,7 +5235,7 @@ Use this API to get the current application details which includes channel name,
 
 
 
-`ApplicationAboutResponse`
+[ApplicationAboutResponse](#ApplicationAboutResponse)
 
 Success. Check the example shown below or refer `ApplicationAboutResponse` for more details.
 
@@ -6277,11 +5250,14 @@ Success. Check the example shown below or refer `ApplicationAboutResponse` for m
 #### getBasicDetails
 Get basic application details
 
+
+
 ```swift
 configuration.getBasicDetails() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6292,7 +5268,7 @@ Use this API to retrieve only the basic details of the application which include
 
 
 
-`ApplicationDetail`
+[ApplicationDetail](#ApplicationDetail)
 
 Success. Check the example shown below or refer `ApplicationDetail` for more details.
 
@@ -6307,11 +5283,14 @@ Success. Check the example shown below or refer `ApplicationDetail` for more det
 #### getIntegrationTokens
 Get integration tokens
 
+
+
 ```swift
 configuration.getIntegrationTokens() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6322,7 +5301,7 @@ Use this API to retrieve the tokens used while integrating Firebase, MoEngage, S
 
 
 
-`AppTokenResponse`
+[AppTokenResponse](#AppTokenResponse)
 
 Success. Check the example shown below or refer `AppTokenResponse` for more details.
 
@@ -6337,11 +5316,14 @@ Success. Check the example shown below or refer `AppTokenResponse` for more deta
 #### getOrderingStores
 Get deployment stores
 
+
+
 ```swift
 configuration.getOrderingStores(pageNo: pageNo, pageSize: pageSize, q: q) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6359,18 +5341,9 @@ Use this API to retrieve the details of all the deployment stores (the selling l
 
 
 
-`OrderingStores`
+[OrderingStores](#OrderingStores)
 
 Success. Check the example shown below or refer `OrderingStores` for more details.
-
-
-
-
-
-
-`NotFound`
-
-Not found
 
 
 
@@ -6383,11 +5356,14 @@ Not found
 #### getFeatures
 Get features of application
 
+
+
 ```swift
 configuration.getFeatures() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6398,18 +5374,9 @@ Use this API to retrieve the configuration of features such as product detail, l
 
 
 
-`AppFeatureResponse`
+[AppFeatureResponse](#AppFeatureResponse)
 
 Success. Check the example shown below or refer `AppFeatureResponse` for more details.
-
-
-
-
-
-
-`NotFound`
-
-Not found
 
 
 
@@ -6422,11 +5389,14 @@ Not found
 #### getContactInfo
 Get application information
 
+
+
 ```swift
 configuration.getContactInfo() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6437,7 +5407,7 @@ Use this API to retrieve information about the social links, address and contact
 
 
 
-`ApplicationInformation`
+[ApplicationInformation](#ApplicationInformation)
 
 Success. Check the example shown below or refer `ApplicationAboutResponse` for more details.
 
@@ -6452,11 +5422,14 @@ Success. Check the example shown below or refer `ApplicationAboutResponse` for m
 #### getCurrencies
 Get currencies enabled in the application
 
+
+
 ```swift
 configuration.getCurrencies() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6467,7 +5440,7 @@ Use this API to get a list of currencies allowed in the current application. Mor
 
 
 
-`CurrenciesResponse`
+[CurrenciesResponse](#CurrenciesResponse)
 
 Success. Check the example shown below or refer `CurrenciesResponse` for more details.
 
@@ -6482,11 +5455,14 @@ Success. Check the example shown below or refer `CurrenciesResponse` for more de
 #### getCurrencyById
 Get currency by its ID
 
+
+
 ```swift
 configuration.getCurrencyById(id: id) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6502,7 +5478,7 @@ Use this API to retrieve a currency using its ID.
 
 
 
-`Currency`
+[Currency](#Currency)
 
 Success. Check the example shown below or refer `Currency` for more details.
 
@@ -6517,11 +5493,14 @@ Success. Check the example shown below or refer `Currency` for more details.
 #### getLanguages
 Get list of languages
 
+
+
 ```swift
 configuration.getLanguages() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6532,7 +5511,7 @@ Use this API to get a list of languages supported in the application.
 
 
 
-`LanguageResponse`
+[LanguageResponse](#LanguageResponse)
 
 Success. Check the example shown below or refer `LanguageResponse` for more details.
 
@@ -6547,6 +5526,8 @@ Success. Check the example shown below or refer `LanguageResponse` for more deta
 #### getOrderingStoreCookie
 Get an Ordering Store signed cookie on selection of ordering store.
 
+
+
 ```swift
 configuration.getOrderingStoreCookie(body: body) { (response, error) in
     // Use response
@@ -6554,9 +5535,10 @@ configuration.getOrderingStoreCookie(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OrderingStoreSelectRequest](#OrderingStoreSelectRequest) | yes | Request body |
+| body | [OrderingStoreSelectRequest](#OrderingStoreSelectRequest) |  no  | Request body |
 
 
 Use this API to get an Ordering Store signed cookie upon selecting an ordering store. This will be used by the cart service to verify a coupon against the selected ordering store in cart.
@@ -6566,18 +5548,9 @@ Use this API to get an Ordering Store signed cookie upon selecting an ordering s
 
 
 
-`SuccessMessageResponse`
+[SuccessMessageResponse](#SuccessMessageResponse)
 
 Success
-
-
-
-
-
-
-`NotFound`
-
-API Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6590,11 +5563,14 @@ API Error. See the error object in the response body to know the exact reason.
 #### removeOrderingStoreCookie
 Unset the Ordering Store signed cookie.
 
+
+
 ```swift
 configuration.removeOrderingStoreCookie() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -6605,7 +5581,7 @@ Use this API to unset the Ordering Store cookie upon changing the sales channel,
 
 
 
-`SuccessMessageResponse`
+[SuccessMessageResponse](#SuccessMessageResponse)
 
 Success
 
@@ -6620,11 +5596,14 @@ Success
 #### getAppStaffs
 Get a list of staff.
 
+
+
 ```swift
 configuration.getAppStaffs(orderIncent: orderIncent, orderingStore: orderingStore, user: user) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6642,18 +5621,9 @@ Use this API to get a list of staff including the names, employee code, incentiv
 
 
 
-`AppStaffResponse`
+[AppStaffResponse](#AppStaffResponse)
 
 Success. Check the example shown below or refer `AppStaffResponse` for more details.
-
-
-
-
-
-
-`UnhandledError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6673,11 +5643,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getAggregatorsConfig
 Get payment gateway keys
 
+
+
 ```swift
 payment.getAggregatorsConfig(xApiToken: xApiToken, refresh: refresh) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6694,27 +5667,9 @@ Use this API to retrieve the payment gateway key, secrets, merchant, SDK/API det
 
 
 
-`AggregatorsConfigDetailResponse`
+[AggregatorsConfigDetailResponse](#AggregatorsConfigDetailResponse)
 
 Success. Returns the keys of all payment gateways. Check the example shown below or refer `AggregatorsConfigDetailResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6727,6 +5682,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### attachCardToCustomer
 Attach a saved card to customer.
 
+
+
 ```swift
 payment.attachCardToCustomer(body: body) { (response, error) in
     // Use response
@@ -6734,9 +5691,10 @@ payment.attachCardToCustomer(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [AttachCardRequest](#AttachCardRequest) | yes | Request body |
+| body | [AttachCardRequest](#AttachCardRequest) |  no  | Request body |
 
 
 Use this API to attach a customer's saved card at the payment gateway, such as Stripe, Juspay.
@@ -6746,27 +5704,9 @@ Use this API to attach a customer's saved card at the payment gateway, such as S
 
 
 
-`AttachCardsResponse`
+[AttachCardsResponse](#AttachCardsResponse)
 
 Success. Check the example shown below or refer `AttachCardsResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`[String: Any]`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6779,11 +5719,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getActiveCardAggregator
 Fetch active payment gateway for card payments
 
+
+
 ```swift
 payment.getActiveCardAggregator(refresh: refresh) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6799,27 +5742,9 @@ Use this API to retrieve an active payment aggregator along with the Customer ID
 
 
 
-`ActiveCardPaymentGatewayResponse`
+[ActiveCardPaymentGatewayResponse](#ActiveCardPaymentGatewayResponse)
 
 Success. Returns an active payment gateway. Check the example shown below or refer `ActiveCardPaymentGatewayResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6832,11 +5757,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getActiveUserCards
 Fetch the list of cards saved by the user
 
+
+
 ```swift
 payment.getActiveUserCards(forceRefresh: forceRefresh) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -6852,27 +5780,9 @@ Use this API to retrieve a list of cards stored by user from an active payment g
 
 
 
-`ListCardsResponse`
+[ListCardsResponse](#ListCardsResponse)
 
 Success. Returns a list of cards saved by the user. Check the example shown below or refer `ListCardsResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6885,6 +5795,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### deleteUserCard
 Delete a card
 
+
+
 ```swift
 payment.deleteUserCard(body: body) { (response, error) in
     // Use response
@@ -6892,9 +5804,10 @@ payment.deleteUserCard(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [DeletehCardRequest](#DeletehCardRequest) | yes | Request body |
+| body | [DeletehCardRequest](#DeletehCardRequest) |  no  | Request body |
 
 
 Use this API to delete a card added by a user on the payment gateway and clear the cache.
@@ -6904,27 +5817,9 @@ Use this API to delete a card added by a user on the payment gateway and clear t
 
 
 
-`DeleteCardsResponse`
+[DeleteCardsResponse](#DeleteCardsResponse)
 
 Success. Returns a success message if card is deleted.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6937,6 +5832,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### verifyCustomerForPayment
 Validate customer for payment
 
+
+
 ```swift
 payment.verifyCustomerForPayment(body: body) { (response, error) in
     // Use response
@@ -6944,9 +5841,10 @@ payment.verifyCustomerForPayment(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [ValidateCustomerRequest](#ValidateCustomerRequest) | yes | Request body |
+| body | [ValidateCustomerRequest](#ValidateCustomerRequest) |  no  | Request body |
 
 
 Use this API to check if the customer is eligible to use credit-line facilities such as Simpl Pay Later and Rupifi.
@@ -6956,27 +5854,9 @@ Use this API to check if the customer is eligible to use credit-line facilities 
 
 
 
-`ValidateCustomerResponse`
+[ValidateCustomerResponse](#ValidateCustomerResponse)
 
 Success. Check the example shown below or refer `ValidateCustomerResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -6989,6 +5869,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### verifyAndChargePayment
 Verify and charge payment
 
+
+
 ```swift
 payment.verifyAndChargePayment(body: body) { (response, error) in
     // Use response
@@ -6996,9 +5878,10 @@ payment.verifyAndChargePayment(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [ChargeCustomerRequest](#ChargeCustomerRequest) | yes | Request body |
+| body | [ChargeCustomerRequest](#ChargeCustomerRequest) |  no  | Request body |
 
 
 Use this API to verify and check the status of a payment transaction (server-to-server) made through aggregators like Simpl and Mswipe.
@@ -7008,27 +5891,9 @@ Use this API to verify and check the status of a payment transaction (server-to-
 
 
 
-`ChargeCustomerResponse`
+[ChargeCustomerResponse](#ChargeCustomerResponse)
 
 Success. Check the example shown below or refer `ChargeCustomerResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7041,6 +5906,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### initialisePayment
 Initialize a payment (server-to-server) for UPI and BharatQR
 
+
+
 ```swift
 payment.initialisePayment(body: body) { (response, error) in
     // Use response
@@ -7048,9 +5915,10 @@ payment.initialisePayment(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [PaymentInitializationRequest](#PaymentInitializationRequest) | yes | Request body |
+| body | [PaymentInitializationRequest](#PaymentInitializationRequest) |  no  | Request body |
 
 
 PUse this API to inititate payment using UPI, BharatQR, wherein the UPI requests are send to the app and QR code is displayed on the screen.
@@ -7060,27 +5928,9 @@ PUse this API to inititate payment using UPI, BharatQR, wherein the UPI requests
 
 
 
-`PaymentInitializationResponse`
+[PaymentInitializationResponse](#PaymentInitializationResponse)
 
 Success. Check the example shown below or refer `PaymentInitializationResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7093,6 +5943,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### checkAndUpdatePaymentStatus
 Performs continuous polling to check status of payment on the server
 
+
+
 ```swift
 payment.checkAndUpdatePaymentStatus(body: body) { (response, error) in
     // Use response
@@ -7100,9 +5952,10 @@ payment.checkAndUpdatePaymentStatus(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [PaymentStatusUpdateRequest](#PaymentStatusUpdateRequest) | yes | Request body |
+| body | [PaymentStatusUpdateRequest](#PaymentStatusUpdateRequest) |  no  | Request body |
 
 
 Use this API to perform continuous polling at intervals to check the status of payment until timeout.
@@ -7112,27 +5965,9 @@ Use this API to perform continuous polling at intervals to check the status of p
 
 
 
-`PaymentStatusUpdateResponse`
+[PaymentStatusUpdateResponse](#PaymentStatusUpdateResponse)
 
 Success. Returns the status of payment. Check the example shown below or refer `PaymentStatusUpdateResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7145,11 +5980,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPaymentModeRoutes
 Get applicable payment options
 
+
+
 ```swift
 payment.getPaymentModeRoutes(amount: amount, cartId: cartId, pincode: pincode, checkoutMode: checkoutMode, refresh: refresh, assignCardId: assignCardId, userDetails: userDetails) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7171,27 +6009,9 @@ Use this API to get all valid payment options for doing a payment.
 
 
 
-`PaymentModeRouteResponse`
+[PaymentModeRouteResponse](#PaymentModeRouteResponse)
 
 Success. Returns all available options for payment. Check the example shown below or refer `PaymentModeRouteResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7204,11 +6024,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPosPaymentModeRoutes
 Get applicable payment options for Point-of-Sale (POS)
 
+
+
 ```swift
 payment.getPosPaymentModeRoutes(amount: amount, cartId: cartId, pincode: pincode, checkoutMode: checkoutMode, refresh: refresh, assignCardId: assignCardId, orderType: orderType, userDetails: userDetails) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7231,27 +6054,9 @@ Use this API to get all valid payment options for doing a payment in POS.
 
 
 
-`PaymentModeRouteResponse`
+[PaymentModeRouteResponse](#PaymentModeRouteResponse)
 
 Success. Returns all available options for payment. Check the example shown below or refer `PaymentModeRouteResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7264,11 +6069,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getRupifiBannerDetails
 Get CreditLine Offer
 
+
+
 ```swift
 payment.getRupifiBannerDetails() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -7279,27 +6087,9 @@ Get CreditLine Offer if user is tentatively approved by rupifi
 
 
 
-`RupifiBannerResponse`
+[RupifiBannerResponse](#RupifiBannerResponse)
 
 Success. Return CreditLine Offer detail. Check the example shown below or refer `RupifiBannerResponseSchema` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7312,11 +6102,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getActiveRefundTransferModes
 Lists the mode of refund
 
+
+
 ```swift
 payment.getActiveRefundTransferModes() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -7327,18 +6120,9 @@ Use this API to retrieve eligible refund modes (such as Netbanking) and add the 
 
 
 
-`TransferModeResponse`
+[TransferModeResponse](#TransferModeResponse)
 
 Success. Shows the available refund mode to choose, e.g. Netbanking. Check the example shown below or refer `TransferModeResponse` for more details.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7351,6 +6135,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### enableOrDisableRefundTransferMode
 Enable/Disable a mode for transferring a refund
 
+
+
 ```swift
 payment.enableOrDisableRefundTransferMode(body: body) { (response, error) in
     // Use response
@@ -7358,9 +6144,10 @@ payment.enableOrDisableRefundTransferMode(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateRefundTransferModeRequest](#UpdateRefundTransferModeRequest) | yes | Request body |
+| body | [UpdateRefundTransferModeRequest](#UpdateRefundTransferModeRequest) |  no  | Request body |
 
 
 Activate or Deactivate Transfer Mode to collect Beneficiary Details for Refund
@@ -7370,18 +6157,9 @@ Activate or Deactivate Transfer Mode to collect Beneficiary Details for Refund
 
 
 
-`UpdateRefundTransferModeResponse`
+[UpdateRefundTransferModeResponse](#UpdateRefundTransferModeResponse)
 
 Success. Shows whether the refund mode was successfully enabled or disabled.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7394,11 +6172,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getUserBeneficiariesDetail
 Lists the beneficiary of a refund
 
+
+
 ```swift
 payment.getUserBeneficiariesDetail(orderId: orderId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7414,27 +6195,9 @@ Use this API to get the details of all active beneficiary added by a user for re
 
 
 
-`OrderBeneficiaryResponse`
+[OrderBeneficiaryResponse](#OrderBeneficiaryResponse)
 
 Success. Returns the details of the beneficiary getting a refund. Check the example shown below or refer `OrderBeneficiaryResponse` for more details.
-
-
-
-
-
-
-`NotFoundResourceError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7447,11 +6210,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### verifyIfscCode
 Verify IFSC Code
 
+
+
 ```swift
 payment.verifyIfscCode(ifscCode: ifscCode) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7467,27 +6233,9 @@ Use this API to check whether the 11-digit IFSC code is valid and to fetch the b
 
 
 
-`IfscCodeResponse`
+[IfscCodeResponse](#IfscCodeResponse)
 
 Success. Shows whether the IFSC code is valid, and returns the bank details. Check the example shown below or refer `IfscCodeResponse` for more details.
-
-
-
-
-
-
-`NotFoundResourceError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ErrorCodeDescription`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7500,11 +6248,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getOrderBeneficiariesDetail
 Lists the beneficiary of a refund
 
+
+
 ```swift
 payment.getOrderBeneficiariesDetail(orderId: orderId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7520,27 +6271,9 @@ Use this API to get the details of all active beneficiary added by a user for re
 
 
 
-`OrderBeneficiaryResponse`
+[OrderBeneficiaryResponse](#OrderBeneficiaryResponse)
 
 Success. Returns the details of the beneficiary getting a refund. Check the example shown below or refer `OrderBeneficiaryResponse` for more details.
-
-
-
-
-
-
-`NotFoundResourceError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7553,6 +6286,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### verifyOtpAndAddBeneficiaryForBank
 Verify the beneficiary details using OTP
 
+
+
 ```swift
 payment.verifyOtpAndAddBeneficiaryForBank(body: body) { (response, error) in
     // Use response
@@ -7560,9 +6295,10 @@ payment.verifyOtpAndAddBeneficiaryForBank(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [AddBeneficiaryViaOtpVerificationRequest](#AddBeneficiaryViaOtpVerificationRequest) | yes | Request body |
+| body | [AddBeneficiaryViaOtpVerificationRequest](#AddBeneficiaryViaOtpVerificationRequest) |  no  | Request body |
 
 
 Use this API to perform an OTP validation before saving the beneficiary details added for a refund.
@@ -7572,27 +6308,9 @@ Use this API to perform an OTP validation before saving the beneficiary details 
 
 
 
-`AddBeneficiaryViaOtpVerificationResponse`
+[AddBeneficiaryViaOtpVerificationResponse](#AddBeneficiaryViaOtpVerificationResponse)
 
 Success. Check the example shown below or refer `AddBeneficiaryViaOtpVerificationRequest` for more details.
-
-
-
-
-
-
-`WrongOtpError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7605,6 +6323,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### addBeneficiaryDetails
 Save bank details for cancelled/returned order
 
+
+
 ```swift
 payment.addBeneficiaryDetails(body: body) { (response, error) in
     // Use response
@@ -7612,9 +6332,10 @@ payment.addBeneficiaryDetails(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [AddBeneficiaryDetailsRequest](#AddBeneficiaryDetailsRequest) | yes | Request body |
+| body | [AddBeneficiaryDetailsRequest](#AddBeneficiaryDetailsRequest) |  no  | Request body |
 
 
 Use this API to save the bank details for a returned or cancelled order to refund the amount.
@@ -7624,27 +6345,9 @@ Use this API to save the bank details for a returned or cancelled order to refun
 
 
 
-`RefundAccountResponse`
+[RefundAccountResponse](#RefundAccountResponse)
 
 Success. Shows whether the beneficiary details were saved to a returned/cancelled order or not.
-
-
-
-
-
-
-`NotFoundResourceError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7657,6 +6360,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### verifyOtpAndAddBeneficiaryForWallet
 Send OTP on adding a wallet beneficiary
 
+
+
 ```swift
 payment.verifyOtpAndAddBeneficiaryForWallet(body: body) { (response, error) in
     // Use response
@@ -7664,9 +6369,10 @@ payment.verifyOtpAndAddBeneficiaryForWallet(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [WalletOtpRequest](#WalletOtpRequest) | yes | Request body |
+| body | [WalletOtpRequest](#WalletOtpRequest) |  no  | Request body |
 
 
 Use this API to send an OTP while adding a wallet beneficiary by mobile no. verification.
@@ -7676,27 +6382,9 @@ Use this API to send an OTP while adding a wallet beneficiary by mobile no. veri
 
 
 
-`WalletOtpResponse`
+[WalletOtpResponse](#WalletOtpResponse)
 
 Success. Sends the OTP to the given mobile number. Check the example shown below or refer `WalletOtpResponse` for more details.
-
-
-
-
-
-
-`NotFoundResourceError`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7709,6 +6397,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### updateDefaultBeneficiary
 Set a default beneficiary for a refund
 
+
+
 ```swift
 payment.updateDefaultBeneficiary(body: body) { (response, error) in
     // Use response
@@ -7716,9 +6406,10 @@ payment.updateDefaultBeneficiary(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [SetDefaultBeneficiaryRequest](#SetDefaultBeneficiaryRequest) | yes | Request body |
+| body | [SetDefaultBeneficiaryRequest](#SetDefaultBeneficiaryRequest) |  no  | Request body |
 
 
 Use this API to set a default beneficiary for getting a refund.
@@ -7728,27 +6419,9 @@ Use this API to set a default beneficiary for getting a refund.
 
 
 
-`SetDefaultBeneficiaryResponse`
+[SetDefaultBeneficiaryResponse](#SetDefaultBeneficiaryResponse)
 
 Success. Check the example shown below or refer `SetDefaultBeneficiaryResponse` for more details.
-
-
-
-
-
-
-`SetDefaultBeneficiaryResponse`
-
-Bad Request. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`HttpErrorCodeAndResponse`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7768,11 +6441,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getOrders
 Get all orders
 
+
+
 ```swift
 order.getOrders(pageNo: pageNo, pageSize: pageSize, fromDate: fromDate, toDate: toDate, orderStatus: orderStatus) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7792,27 +6468,9 @@ Use this API to retrieve all the orders.
 
 
 
-`OrderList`
+[OrderList](#OrderList)
 
 Success. Returns all the orders. Check the example shown below or refer `OrderList` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.. See the error object in the response body to know the exact reason.
 
 
 
@@ -7825,11 +6483,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getOrderById
 Get details of an order
 
+
+
 ```swift
 order.getOrderById(orderId: orderId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7845,27 +6506,9 @@ Use this API to retrieve order details such as tracking details, shipment, store
 
 
 
-`OrderById`
+[OrderById](#OrderById)
 
 Success. Check the example shown below or refer `OrderById` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7878,11 +6521,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getShipmentById
 Get details of a shipment
 
+
+
 ```swift
 order.getShipmentById(shipmentId: shipmentId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7898,27 +6544,9 @@ Use this API to retrieve shipment details such as price breakup, tracking detail
 
 
 
-`ShipmentById`
+[ShipmentById](#ShipmentById)
 
 Success. Check the example shown below or refer `ShipmentById` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7931,11 +6559,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getShipmentReasons
 Get reasons behind full or partial cancellation of a shipment
 
+
+
 ```swift
 order.getShipmentReasons(shipmentId: shipmentId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -7951,27 +6582,9 @@ Use this API to retrieve the issues that led to the cancellation of bags within 
 
 
 
-`ShipmentReasons`
+[ShipmentReasons](#ShipmentReasons)
 
 Success. Check the example shown below or refer `ShipmentReasons` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -7984,6 +6597,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### updateShipmentStatus
 Update the shipment status
 
+
+
 ```swift
 order.updateShipmentStatus(shipmentId: shipmentId, body: body) { (response, error) in
     // Use response
@@ -7991,10 +6606,11 @@ order.updateShipmentStatus(shipmentId: shipmentId, body: body) { (response, erro
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | shipmentId | String? | no | ID of the shipment. An order may contain multiple items and may get divided into one or more shipment, each having its own ID. |  
-| body | [ShipmentStatusUpdateBody](#ShipmentStatusUpdateBody) | yes | Request body |
+| body | [ShipmentStatusUpdateBody](#ShipmentStatusUpdateBody) |  yes  | Request body |
 
 
 Use this API to update the status of a shipment using its shipment ID.
@@ -8004,27 +6620,9 @@ Use this API to update the status of a shipment using its shipment ID.
 
 
 
-`ShipmentStatusUpdate`
+[ShipmentStatusUpdate](#ShipmentStatusUpdate)
 
 Success. Check the example shown below or refer `ShipmentStatusUpdateBody` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -8037,11 +6635,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### trackShipment
 Track shipment
 
+
+
 ```swift
 order.trackShipment(shipmentId: shipmentId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8057,27 +6658,9 @@ Use this API to track a shipment using its shipment ID.
 
 
 
-`ShipmentTrack`
+[ShipmentTrack](#ShipmentTrack)
 
 Success. Check the example shown below or refer `ShipmentTrack` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -8090,11 +6673,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPosOrderById
 Get POS Order
 
+
+
 ```swift
 order.getPosOrderById(orderId: orderId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8110,27 +6696,9 @@ Use this API to retrieve a POS order and all its details such as tracking detail
 
 
 
-`PosOrderById`
+[PosOrderById](#PosOrderById)
 
 Success. Check the example shown below or refer `PosOrderById` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -8150,6 +6718,8 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPointsOnProduct
 Get the eligibility of reward points on a product
 
+
+
 ```swift
 rewards.getPointsOnProduct(body: body) { (response, error) in
     // Use response
@@ -8157,9 +6727,10 @@ rewards.getPointsOnProduct(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CatalogueOrderRequest](#CatalogueOrderRequest) | yes | Request body |
+| body | [CatalogueOrderRequest](#CatalogueOrderRequest) |  yes  | Request body |
 
 
 Use this API to evaluate the amount of reward points that could be earned on any catalogue product.
@@ -8169,18 +6740,9 @@ Use this API to evaluate the amount of reward points that could be earned on any
 
 
 
-`CatalogueOrderResponse`
+[CatalogueOrderResponse](#CatalogueOrderResponse)
 
 Success. Check example below or refer `CatalogueOrderRequest` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8193,11 +6755,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getOfferByName
 Get offer by name
 
+
+
 ```swift
 rewards.getOfferByName(name: name) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8213,18 +6778,9 @@ Use this API to get the offer details and configuration by entering the name of 
 
 
 
-`Offer`
+[Offer](#Offer)
 
 Success. Check example below or refer `Offer` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8237,6 +6793,8 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getOrderDiscount
 Calculates the discount on order-amount
 
+
+
 ```swift
 rewards.getOrderDiscount(body: body) { (response, error) in
     // Use response
@@ -8244,9 +6802,10 @@ rewards.getOrderDiscount(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [OrderDiscountRequest](#OrderDiscountRequest) | yes | Request body |
+| body | [OrderDiscountRequest](#OrderDiscountRequest) |  yes  | Request body |
 
 
 Use this API to calculate the discount on order-amount based on all the amount range configured in order_discount.
@@ -8256,18 +6815,9 @@ Use this API to calculate the discount on order-amount based on all the amount r
 
 
 
-`OrderDiscountResponse`
+[OrderDiscountResponse](#OrderDiscountResponse)
 
 Success. Check example below or refer `OrderDiscountResponse` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8280,11 +6830,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getUserPoints
 Get reward points available with a user
 
+
+
 ```swift
 rewards.getUserPoints() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -8295,18 +6848,9 @@ Use this API to retrieve total available points of a user for current applicatio
 
 
 
-`PointsResponse`
+[PointsResponse](#PointsResponse)
 
 Success. Check example below or refer `PointsResponse` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8319,11 +6863,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getUserPointsHistory
 Get all transactions of reward points
 
+
+
 ```swift
 rewards.getUserPointsHistory(pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8340,18 +6887,9 @@ Use this API to get a list of points transactions. The list of points history is
 
 
 
-`PointsHistoryResponse`
+[PointsHistoryResponse](#PointsHistoryResponse)
 
 Success. Check example below or refer `PointsHistoryResponse` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8364,11 +6902,14 @@ Bad request. See the error object in the response body to know the exact reason.
 #### getUserReferralDetails
 Get referral details of a user
 
+
+
 ```swift
 rewards.getUserReferralDetails() { (response, error) in
     // Use response
 }
 ```
+
 
 
 
@@ -8379,18 +6920,9 @@ Use this API to retrieve the referral details a user has configured in the appli
 
 
 
-`ReferralDetailsResponse`
+[ReferralDetailsResponse](#ReferralDetailsResponse)
 
 Success. Check example below or refer `ReferralDetailsResponse` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8403,6 +6935,8 @@ Bad request. See the error object in the response body to know the exact reason.
 #### redeemReferralCode
 Redeems a referral code and credits reward points to users
 
+
+
 ```swift
 rewards.redeemReferralCode(body: body) { (response, error) in
     // Use response
@@ -8410,9 +6944,10 @@ rewards.redeemReferralCode(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [RedeemReferralCodeRequest](#RedeemReferralCodeRequest) | yes | Request body |
+| body | [RedeemReferralCodeRequest](#RedeemReferralCodeRequest) |  yes  | Request body |
 
 
 Use this API to enter a referral code following which, the configured points would be credited to a user's reward points account.
@@ -8422,18 +6957,9 @@ Use this API to enter a referral code following which, the configured points wou
 
 
 
-`RedeemReferralCodeResponse`
+[RedeemReferralCodeResponse](#RedeemReferralCodeResponse)
 
 Success. Check example below or refer `RedeemReferralCodeResponse` for more details.
-
-
-
-
-
-
-`Error`
-
-Bad request. See the error object in the response body to know the exact reason.
 
 
 
@@ -8453,6 +6979,8 @@ Bad request. See the error object in the response body to know the exact reason.
 #### createAbuseReport
 Post a new abuse request
 
+
+
 ```swift
 feedback.createAbuseReport(body: body) { (response, error) in
     // Use response
@@ -8460,9 +6988,10 @@ feedback.createAbuseReport(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [ReportAbuseRequest](#ReportAbuseRequest) | yes | Request body |
+| body | [ReportAbuseRequest](#ReportAbuseRequest) |  yes  | Request body |
 
 
 Use this API to report a specific entity (question/review/comment) for abuse.
@@ -8472,18 +7001,9 @@ Use this API to report a specific entity (question/review/comment) for abuse.
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns an abuse ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8496,6 +7016,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateAbuseReport
 Update abuse details
 
+
+
 ```swift
 feedback.updateAbuseReport(body: body) { (response, error) in
     // Use response
@@ -8503,9 +7025,10 @@ feedback.updateAbuseReport(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateAbuseStatusRequest](#UpdateAbuseStatusRequest) | yes | Request body |
+| body | [UpdateAbuseStatusRequest](#UpdateAbuseStatusRequest) |  yes  | Request body |
 
 
 Use this API to update the abuse details, i.e. status and description.
@@ -8515,18 +7038,9 @@ Use this API to update the abuse details, i.e. status and description.
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8539,11 +7053,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getAbuseReports
 Get a list of abuse data
 
+
+
 ```swift
 feedback.getAbuseReports(entityId: entityId, entityType: entityType, id: id, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8563,18 +7080,9 @@ Use this API to retrieve a list of abuse data from entity type and entity ID.
 
 
 
-`ReportAbuseGetResponse`
+[ReportAbuseGetResponse](#ReportAbuseGetResponse)
 
 Success. Check the example shown below or refer `ReportAbuseGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8587,11 +7095,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getAttributes
 Get a list of attribute data
 
+
+
 ```swift
 feedback.getAttributes(pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8608,18 +7119,9 @@ Use this API to retrieve a list of all attribute data, e.g. quality, material, p
 
 
 
-`AttributeResponse`
+[AttributeResponse](#AttributeResponse)
 
 Success. Check the example shown below or refer `AttributeResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8632,6 +7134,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createAttribute
 Add a new attribute request
 
+
+
 ```swift
 feedback.createAttribute(body: body) { (response, error) in
     // Use response
@@ -8639,9 +7143,10 @@ feedback.createAttribute(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [SaveAttributeRequest](#SaveAttributeRequest) | yes | Request body |
+| body | [SaveAttributeRequest](#SaveAttributeRequest) |  yes  | Request body |
 
 
 Use this API to add a new attribute (e.g. product quality/material/value for money) with its name, slug and description.
@@ -8651,18 +7156,9 @@ Use this API to add a new attribute (e.g. product quality/material/value for mon
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns an attribute ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8675,11 +7171,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getAttribute
 Get data of a single attribute
 
+
+
 ```swift
 feedback.getAttribute(slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8695,18 +7194,9 @@ Use this API to retrieve a single attribute data from a given slug.
 
 
 
-`Attribute`
+[Attribute](#Attribute)
 
 Success. Check the example shown below or refer `Attribute` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8719,6 +7209,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateAttribute
 Update details of an attribute 
 
+
+
 ```swift
 feedback.updateAttribute(slug: slug, body: body) { (response, error) in
     // Use response
@@ -8726,10 +7218,11 @@ feedback.updateAttribute(slug: slug, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | slug | String? | no | A short, human-readable, URL-friendly identifier of an attribute. You can get slug value from the endpoint 'service/application/feedback/v1.0/attributes'. |  
-| body | [UpdateAttributeRequest](#UpdateAttributeRequest) | yes | Request body |
+| body | [UpdateAttributeRequest](#UpdateAttributeRequest) |  yes  | Request body |
 
 
 Use this API update the attribute's name and description.
@@ -8739,18 +7232,9 @@ Use this API update the attribute's name and description.
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8763,6 +7247,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createComment
 Post a new comment
 
+
+
 ```swift
 feedback.createComment(body: body) { (response, error) in
     // Use response
@@ -8770,9 +7256,10 @@ feedback.createComment(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CommentRequest](#CommentRequest) | yes | Request body |
+| body | [CommentRequest](#CommentRequest) |  yes  | Request body |
 
 
 Use this API to add a new comment for a specific entity.
@@ -8782,18 +7269,9 @@ Use this API to add a new comment for a specific entity.
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns a comment ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8806,6 +7284,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateComment
 Update the status of a comment
 
+
+
 ```swift
 feedback.updateComment(body: body) { (response, error) in
     // Use response
@@ -8813,9 +7293,10 @@ feedback.updateComment(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateCommentRequest](#UpdateCommentRequest) | yes | Request body |
+| body | [UpdateCommentRequest](#UpdateCommentRequest) |  yes  | Request body |
 
 
 Use this API to update the comment status (active or approve) along with new comment if any.
@@ -8825,18 +7306,9 @@ Use this API to update the comment status (active or approve) along with new com
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8849,11 +7321,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getComments
 Get a list of comments
 
+
+
 ```swift
 feedback.getComments(entityType: entityType, id: id, entityId: entityId, userId: userId, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8874,18 +7349,9 @@ Use this API to retrieve a list of comments for a specific entity type, e.g. pro
 
 
 
-`CommentGetResponse`
+[CommentGetResponse](#CommentGetResponse)
 
 Success. Check the example shown below or refer `CommentGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8898,11 +7364,14 @@ Bad request. See the error object in the response body for specific reason.
 #### checkEligibility
 Checks eligibility to rate and review, and shows the cloud media configuration
 
+
+
 ```swift
 feedback.checkEligibility(entityType: entityType, entityId: entityId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8919,18 +7388,9 @@ Use this API to check whether an entity is eligible to be rated and reviewed. Mo
 
 
 
-`CheckEligibilityResponse`
+[CheckEligibilityResponse](#CheckEligibilityResponse)
 
 Success. Returns a Product object. Check the example shown below or refer `CheckEligibilityResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8943,11 +7403,14 @@ Bad request. See the error object in the response body for specific reason.
 #### deleteMedia
 Delete Media
 
+
+
 ```swift
 feedback.deleteMedia(ids: ids) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -8963,18 +7426,9 @@ Use this API to delete media for an entity ID.
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -8987,6 +7441,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createMedia
 Add Media
 
+
+
 ```swift
 feedback.createMedia(body: body) { (response, error) in
     // Use response
@@ -8994,9 +7450,10 @@ feedback.createMedia(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [AddMediaListRequest](#AddMediaListRequest) | yes | Request body |
+| body | [AddMediaListRequest](#AddMediaListRequest) |  yes  | Request body |
 
 
 Use this API to add media to an entity, e.g. review.
@@ -9006,18 +7463,9 @@ Use this API to add media to an entity, e.g. review.
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns media IDs.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9030,6 +7478,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateMedia
 Update Media
 
+
+
 ```swift
 feedback.updateMedia(body: body) { (response, error) in
     // Use response
@@ -9037,9 +7487,10 @@ feedback.updateMedia(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateMediaListRequest](#UpdateMediaListRequest) | yes | Request body |
+| body | [UpdateMediaListRequest](#UpdateMediaListRequest) |  yes  | Request body |
 
 
 Use this API to update media (archive/approve) for an entity.
@@ -9049,18 +7500,9 @@ Use this API to update media (archive/approve) for an entity.
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9073,11 +7515,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getMedias
 Get Media
 
+
+
 ```swift
 feedback.getMedias(entityType: entityType, entityId: entityId, id: id, type: type, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9098,18 +7543,9 @@ Use this API to retrieve all media from an entity.
 
 
 
-`MediaGetResponse`
+[MediaGetResponse](#MediaGetResponse)
 
 Success. Check the example shown below or refer `MediaGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9122,11 +7558,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getReviewSummaries
 Get a review summary
 
+
+
 ```swift
 feedback.getReviewSummaries(entityType: entityType, entityId: entityId, id: id, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9146,18 +7585,9 @@ Review summary gives ratings and attribute metrics of a review per entity. Use t
 
 
 
-`ReviewMetricGetResponse`
+[ReviewMetricGetResponse](#ReviewMetricGetResponse)
 
 Success. Check the example shown below or refer `ReviewMetricGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9170,6 +7600,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createReview
 Add customer reviews
 
+
+
 ```swift
 feedback.createReview(body: body) { (response, error) in
     // Use response
@@ -9177,9 +7609,10 @@ feedback.createReview(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateReviewRequest](#UpdateReviewRequest) | yes | Request body |
+| body | [UpdateReviewRequest](#UpdateReviewRequest) |  yes  | Request body |
 
 
 Use this API to add customer reviews for a specific entity along with the following data: attributes rating, entity rating, title, description, media resources and template ID.
@@ -9189,18 +7622,9 @@ Use this API to add customer reviews for a specific entity along with the follow
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success. Returns a review ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9213,6 +7637,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateReview
 Update customer reviews
 
+
+
 ```swift
 feedback.updateReview(body: body) { (response, error) in
     // Use response
@@ -9220,9 +7646,10 @@ feedback.updateReview(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateReviewRequest](#UpdateReviewRequest) | yes | Request body |
+| body | [UpdateReviewRequest](#UpdateReviewRequest) |  yes  | Request body |
 
 
 Use this API to update customer reviews for a specific entity along with following data: attributes rating, entity rating, title, description, media resources and template ID.
@@ -9232,18 +7659,9 @@ Use this API to update customer reviews for a specific entity along with followi
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9256,11 +7674,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getReviews
 Get list of customer reviews
 
+
+
 ```swift
 feedback.getReviews(entityType: entityType, entityId: entityId, id: id, userId: userId, media: media, rating: rating, attributeRating: attributeRating, facets: facets, sort: sort, active: active, approve: approve, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9288,18 +7709,9 @@ Use this API to retrieve a list of customer reviews based on entity and filters 
 
 
 
-`ReviewGetResponse`
+[ReviewGetResponse](#ReviewGetResponse)
 
 Success. Check the example shown below or refer `ReviewGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9312,11 +7724,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getTemplates
 Get the feedback templates for a product or l3
 
+
+
 ```swift
 feedback.getTemplates(templateId: templateId, entityId: entityId, entityType: entityType) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9334,18 +7749,9 @@ Use this API to retrieve the details of the following feedback template. order, 
 
 
 
-`TemplateGetResponse`
+[TemplateGetResponse](#TemplateGetResponse)
 
 Success. Check the example shown below or refer `TemplateGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9358,6 +7764,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createQuestion
 Create a new question
 
+
+
 ```swift
 feedback.createQuestion(body: body) { (response, error) in
     // Use response
@@ -9365,9 +7773,10 @@ feedback.createQuestion(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [CreateQNARequest](#CreateQNARequest) | yes | Request body |
+| body | [CreateQNARequest](#CreateQNARequest) |  yes  | Request body |
 
 
 Use this API to create a new question with following data- tags, text, type, choices for MCQ type questions, maximum length of answer.
@@ -9377,18 +7786,9 @@ Use this API to create a new question with following data- tags, text, type, cho
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns a qna ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9401,6 +7801,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateQuestion
 Update a question
 
+
+
 ```swift
 feedback.updateQuestion(body: body) { (response, error) in
     // Use response
@@ -9408,9 +7810,10 @@ feedback.updateQuestion(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateQNARequest](#UpdateQNARequest) | yes | Request body |
+| body | [UpdateQNARequest](#UpdateQNARequest) |  yes  | Request body |
 
 
 Use this API to update the status of a question, its tags and its choices.
@@ -9420,18 +7823,9 @@ Use this API to update the status of a question, its tags and its choices.
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9444,11 +7838,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getQuestionAndAnswers
 Get a list of QnA
 
+
+
 ```swift
 feedback.getQuestionAndAnswers(entityType: entityType, entityId: entityId, id: id, userId: userId, showAnswer: showAnswer, pageId: pageId, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9470,18 +7867,9 @@ Use this API to retrieve a list of questions and answers for a given entity.
 
 
 
-`QNAGetResponse`
+[QNAGetResponse](#QNAGetResponse)
 
 Success. Check the example shown below or refer `QNAGetResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9494,11 +7882,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getVotes
 Get a list of votes
 
+
+
 ```swift
 feedback.getVotes(id: id, refType: refType, pageNo: pageNo, pageSize: pageSize) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9517,18 +7908,9 @@ Use this API to retrieve a list of votes of a current logged in user. Votes can 
 
 
 
-`VoteResponse`
+[VoteResponse](#VoteResponse)
 
 Success. Check the example shown below or refer `VoteResponse` for more details.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9541,6 +7923,8 @@ Bad request. See the error object in the response body for specific reason.
 #### createVote
 Create a new vote
 
+
+
 ```swift
 feedback.createVote(body: body) { (response, error) in
     // Use response
@@ -9548,9 +7932,10 @@ feedback.createVote(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [VoteRequest](#VoteRequest) | yes | Request body |
+| body | [VoteRequest](#VoteRequest) |  yes  | Request body |
 
 
 Use this API to create a new vote, where the action could be an upvote or a downvote. This is useful when you want to give a vote (say upvote) to a review (ref_type) of a product (entity_type).
@@ -9560,18 +7945,9 @@ Use this API to create a new vote, where the action could be an upvote or a down
 
 
 
-`InsertResponse`
+[InsertResponse](#InsertResponse)
 
 Success. Returns a vote ID.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9584,6 +7960,8 @@ Bad request. See the error object in the response body for specific reason.
 #### updateVote
 Update a vote
 
+
+
 ```swift
 feedback.updateVote(body: body) { (response, error) in
     // Use response
@@ -9591,9 +7969,10 @@ feedback.updateVote(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [UpdateVoteRequest](#UpdateVoteRequest) | yes | Request body |
+| body | [UpdateVoteRequest](#UpdateVoteRequest) |  yes  | Request body |
 
 
 Use this API to update a vote with a new action, i.e. either an upvote or a downvote.
@@ -9603,18 +7982,9 @@ Use this API to update a vote with a new action, i.e. either an upvote or a down
 
 
 
-`UpdateResponse`
+[UpdateResponse](#UpdateResponse)
 
 Success.
-
-
-
-
-
-
-`FeedbackError`
-
-Bad request. See the error object in the response body for specific reason.
 
 
 
@@ -9634,11 +8004,14 @@ Bad request. See the error object in the response body for specific reason.
 #### getCart
 Fetch all items added to the cart
 
+
+
 ```swift
 poscart.getCart(uid: uid, i: i, b: b, assignCardId: assignCardId) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9657,7 +8030,7 @@ Use this API to get details of all the items added to a cart.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
@@ -9672,11 +8045,14 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 #### getCartLastModified
 Fetch last-modified timestamp
 
+
+
 ```swift
 poscart.getCartLastModified(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9702,6 +8078,8 @@ Use this API to fetch Last-Modified timestamp in header metadata.
 #### addItems
 Add items to cart
 
+
+
 ```swift
 poscart.addItems(i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -9709,11 +8087,12 @@ poscart.addItems(i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [AddCartRequest](#AddCartRequest) | yes | Request body |
+| body | [AddCartRequest](#AddCartRequest) |  no  | Request body |
 
 
 Use this API to add items to the cart.
@@ -9723,7 +8102,7 @@ Use this API to add items to the cart.
 
 
 
-`AddCartResponse`
+[AddCartResponse](#AddCartResponse)
 
 Success. Returns a cart object as shown below. Refer `AddCartResponse` for more details.
 
@@ -9738,6 +8117,8 @@ Success. Returns a cart object as shown below. Refer `AddCartResponse` for more 
 #### updateCart
 Update items in the cart
 
+
+
 ```swift
 poscart.updateCart(uid: uid, i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -9745,12 +8126,13 @@ poscart.updateCart(uid: uid, i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [UpdateCartRequest](#UpdateCartRequest) | yes | Request body |
+| body | [UpdateCartRequest](#UpdateCartRequest) |  no  | Request body |
 
 
 Use this API to update items added to the cart with the help of a request object containing attributes like item_quantity and item_size. These attributes will be fetched from the following APIs</p> <ul> <li><font color="monochrome">operation</font> Operation for current api call. <b>update_item</b> for update items. <b>remove_item</b> for removing items.</li> <li> <font color="monochrome">item_id</font>  "/platform/content/v1/products/"</li> <li> <font color="monochrome">item_size</font>   "/platform/content/v1/products/{slug}/sizes/"</li> <li> <font color="monochrome">quantity</font>  item quantity (must be greater than or equal to 1)</li> <li> <font color="monochrome">article_id</font>   "/content​/v1​/products​/{identifier}​/sizes​/price​/"</li> <li> <font color="monochrome">item_index</font>  item position in the cart (must be greater than or equal to 0)</li> </ul>
@@ -9760,7 +8142,7 @@ Use this API to update items added to the cart with the help of a request object
 
 
 
-`UpdateCartResponse`
+[UpdateCartResponse](#UpdateCartResponse)
 
 Success. Updates and returns a cart object as shown below. Refer `UpdateCartResponse` for more details.
 
@@ -9775,11 +8157,14 @@ Success. Updates and returns a cart object as shown below. Refer `UpdateCartResp
 #### getItemCount
 Count items in the cart
 
+
+
 ```swift
 poscart.getItemCount(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9795,7 +8180,7 @@ Use this API to get the total number of items present in cart.
 
 
 
-`CartItemCountResponse`
+[CartItemCountResponse](#CartItemCountResponse)
 
 Success. Returns the total count of items in a user's cart.
 
@@ -9810,11 +8195,14 @@ Success. Returns the total count of items in a user's cart.
 #### getCoupons
 Fetch Coupon
 
+
+
 ```swift
 poscart.getCoupons(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9830,7 +8218,7 @@ Use this API to get a list of available coupons along with their details.
 
 
 
-`GetCouponResponse`
+[GetCouponResponse](#GetCouponResponse)
 
 Success. Returns a coupon object which has a list of all the eligible coupons. Refer `GetCouponResponse` for more details.
 
@@ -9845,11 +8233,14 @@ Success. Returns a coupon object which has a list of all the eligible coupons. R
 #### applyCoupon
 Apply Coupon
 
+
+
 ```swift
 poscart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9858,21 +8249,12 @@ poscart.applyCoupon(i: i, b: b, p: p, uid: uid, body: body) { (response, error) 
 | b | Bool? | no |  |    
 | p | Bool? | no |  |    
 | uid | Int? | no |  |  
-| body | [ApplyCouponRequest](#ApplyCouponRequest) | yes | Request body |
+| body | [ApplyCouponRequest](#ApplyCouponRequest) |  no  | Request body |
 
 
 Use this API to apply coupons on items in the cart.
 
 *Returned Response:*
-
-
-
-
-`CartResponse`
-
-Success. Returns coupons applied to the cart along with item details and price breakup. Refer `CartResponse` for more details.
-
-
 
 
 
@@ -9883,11 +8265,14 @@ Success. Returns coupons applied to the cart along with item details and price b
 #### removeCoupon
 Remove Coupon Applied
 
+
+
 ```swift
 poscart.removeCoupon(uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9903,7 +8288,7 @@ Remove Coupon applied on the cart by passing uid in request body.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns coupons removed from the cart along with item details and price breakup. Refer `CartResponse` for more details.
 
@@ -9918,11 +8303,14 @@ Success. Returns coupons removed from the cart along with item details and price
 #### getBulkDiscountOffers
 Get discount offers based on quantity
 
+
+
 ```swift
 poscart.getBulkDiscountOffers(itemId: itemId, articleId: articleId, uid: uid, slug: slug) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -9941,18 +8329,9 @@ Use this API to get a list of applicable offers along with current, next and bes
 
 
 
-`BulkPriceResponse`
+[BulkPriceResponse](#BulkPriceResponse)
 
 Success. Returns a data object containing the seller details and available offers (if exists) on bulk products. Refer `BulkPriceResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Unhandled API error
 
 
 
@@ -9965,6 +8344,8 @@ Unhandled API error
 #### applyRewardPoints
 Apply reward points at cart
 
+
+
 ```swift
 poscart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) in
     // Use response
@@ -9972,12 +8353,13 @@ poscart.applyRewardPoints(uid: uid, i: i, b: b, body: body) { (response, error) 
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [RewardPointRequest](#RewardPointRequest) | yes | Request body |
+| body | [RewardPointRequest](#RewardPointRequest) |  no  | Request body |
 
 
 Use this API to redeem a fixed no. of reward points by applying it to the cart.
@@ -9987,7 +8369,7 @@ Use this API to redeem a fixed no. of reward points by applying it to the cart.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object. Check the example shown below or refer `CartResponse` for more details.
 
@@ -10002,11 +8384,14 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 #### getAddresses
 Fetch address
 
+
+
 ```swift
 poscart.getAddresses(uid: uid, mobileNo: mobileNo, checkoutMode: checkoutMode, tags: tags, isDefault: isDefault) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10026,7 +8411,7 @@ Use this API to get all the addresses associated with an account. If successful,
 
 
 
-`GetAddressesResponse`
+[GetAddressesResponse](#GetAddressesResponse)
 
 Success. Returns an Address object containing a list of address saved in the account. Refer `GetAddressesResponse` for more details.
 
@@ -10041,6 +8426,8 @@ Success. Returns an Address object containing a list of address saved in the acc
 #### addAddress
 Add address to an account
 
+
+
 ```swift
 poscart.addAddress(body: body) { (response, error) in
     // Use response
@@ -10048,9 +8435,10 @@ poscart.addAddress(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [Address](#Address) | yes | Request body |
+| body | [Address](#Address) |  no  | Request body |
 
 
 Use this API to add an address to an account.
@@ -10060,7 +8448,7 @@ Use this API to add an address to an account.
 
 
 
-`SaveAddressResponse`
+[SaveAddressResponse](#SaveAddressResponse)
 
 Success. Returns the address ID, a flag whether the address is set as default, and a success message. Refer `SaveAddressResponse` for more details.
 
@@ -10075,11 +8463,14 @@ Success. Returns the address ID, a flag whether the address is set as default, a
 #### getAddressById
 Fetch a single address by its ID
 
+
+
 ```swift
 poscart.getAddressById(id: id, uid: uid, mobileNo: mobileNo, checkoutMode: checkoutMode, tags: tags, isDefault: isDefault) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10100,7 +8491,7 @@ Use this API to get an addresses using its ID. If successful, returns a Address 
 
 
 
-`Address`
+[Address](#Address)
 
 Success. Returns an Address object containing a list of address saved in the account. Refer `Address` for more details.
 
@@ -10115,6 +8506,8 @@ Success. Returns an Address object containing a list of address saved in the acc
 #### updateAddress
 Update address added to an account
 
+
+
 ```swift
 poscart.updateAddress(id: id, body: body) { (response, error) in
     // Use response
@@ -10122,24 +8515,16 @@ poscart.updateAddress(id: id, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | id | Int? | no | ID allotted to the selected address |  
-| body | [Address](#Address) | yes | Request body |
+| body | [Address](#Address) |  no  | Request body |
 
 
 Use this API to update an existing address in the account. Request object should contain attributes mentioned in  <font color="blue">Address </font> can be updated. These attributes are:</p> <ul> <li> <font color="monochrome">is_default_address</font></li> <li> <font color="monochrome">landmark</font></li> <li> <font color="monochrome">area</font></li> <li> <font color="monochrome">pincode</font></li> <li> <font color="monochrome">email</font></li> <li> <font color="monochrome">address_type</font></li> <li> <font color="monochrome">name</font></li> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">address</font></li> </ul>
 
 *Returned Response:*
-
-
-
-
-`UpdateAddressResponse`
-
-Success. Returns the address ID and a message indicating a successful address updation.
-
-
 
 
 
@@ -10150,11 +8535,14 @@ Success. Returns the address ID and a message indicating a successful address up
 #### removeAddress
 Remove address associated with an account
 
+
+
 ```swift
 poscart.removeAddress(id: id) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10170,20 +8558,13 @@ Use this API to delete an address by its ID. This will returns an object that wi
 
 
 
-`DeleteAddressResponse`
-
-Returns a Status object indicating the success or failure of address deletion.
-
-
-
-
-
-
 ---
 
 
 #### selectAddress
 Select an address from available addresses
+
+
 
 ```swift
 poscart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
@@ -10192,35 +8573,18 @@ poscart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |    
 | i | Bool? | no |  |    
 | b | Bool? | no |  |  
-| body | [SelectCartAddressRequest](#SelectCartAddressRequest) | yes | Request body |
+| body | [SelectCartAddressRequest](#SelectCartAddressRequest) |  no  | Request body |
 
 
 <p>Select Address from all addresses associated with the account in order to ship the cart items to that address, otherwise default address will be selected implicitly. See `SelectCartAddressRequest` in schema of request body for the list of attributes needed to select Address from account. On successful request, this API returns a Cart object. Below address attributes are required. <ul> <li> <font color="monochrome">address_id</font></li> <li> <font color="monochrome">billing_address_id</font></li> <li> <font color="monochrome">uid</font></li> </ul>
 
 *Returned Response:*
-
-
-
-
-`CartResponse`
-
-Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.  .
-
-
-
-
-
-
-`[String: Any]`
-
-Address or PIN code error
-
-
 
 
 
@@ -10231,6 +8595,8 @@ Address or PIN code error
 #### selectPaymentMode
 Update cart payment
 
+
+
 ```swift
 poscart.selectPaymentMode(uid: uid, body: body) { (response, error) in
     // Use response
@@ -10238,10 +8604,11 @@ poscart.selectPaymentMode(uid: uid, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | String? | no |  |  
-| body | [UpdateCartPaymentRequest](#UpdateCartPaymentRequest) | yes | Request body |
+| body | [UpdateCartPaymentRequest](#UpdateCartPaymentRequest) |  no  | Request body |
 
 
 Use this API to update cart payment.
@@ -10251,7 +8618,7 @@ Use this API to update cart payment.
 
 
 
-`CartResponse`
+[CartResponse](#CartResponse)
 
 Success. Returns a Cart object as shown below. Refer `CartResponse` for more details.
 
@@ -10266,11 +8633,14 @@ Success. Returns a Cart object as shown below. Refer `CartResponse` for more det
 #### validateCouponForPayment
 Verify the coupon eligibility against the payment mode
 
+
+
 ```swift
 poscart.validateCouponForPayment(uid: uid, addressId: addressId, paymentMode: paymentMode, paymentIdentifier: paymentIdentifier, aggregatorName: aggregatorName, merchantCode: merchantCode) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10291,7 +8661,7 @@ Use this API to validate a coupon against the payment mode such as NetBanking, W
 
 
 
-`PaymentCouponValidate`
+[PaymentCouponValidate](#PaymentCouponValidate)
 
 Success. Returns a success message and the coupon validity. Refer `PaymentCouponValidate` for more details.
 
@@ -10306,11 +8676,14 @@ Success. Returns a success message and the coupon validity. Refer `PaymentCoupon
 #### getShipments
 Get delivery date and options before checkout
 
+
+
 ```swift
 poscart.getShipments(pickAtStoreUid: pickAtStoreUid, orderingStoreId: orderingStoreId, p: p, uid: uid, addressId: addressId, areaCode: areaCode, orderType: orderType) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10332,18 +8705,9 @@ Use this API to get shipment details, expected delivery date, items and price br
 
 
 
-`CartShipmentsResponse`
+[CartShipmentsResponse](#CartShipmentsResponse)
 
 Success. Returns delivery promise along with shipment details and price breakup. Refer `CartShipmentsResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Unhandled API error
 
 
 
@@ -10356,11 +8720,14 @@ Unhandled API error
 #### updateShipments
 Update shipment delivery type and quantity before checkout
 
+
+
 ```swift
 poscart.updateShipments(i: i, p: p, uid: uid, addressId: addressId, orderType: orderType, body: body) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10370,7 +8737,7 @@ poscart.updateShipments(i: i, p: p, uid: uid, addressId: addressId, orderType: o
 | uid | Int? | no | The unique identifier of the cart |    
 | addressId | Int? | no | ID allotted to an address |    
 | orderType | String? | no | The order type of shipment HomeDelivery - If the customer wants the order home-delivered PickAtStore - If the customer wants the handover of an order at the store itself. |  
-| body | [UpdateCartShipmentRequest](#UpdateCartShipmentRequest) | yes | Request body |
+| body | [UpdateCartShipmentRequest](#UpdateCartShipmentRequest) |  no  | Request body |
 
 
 Use this API to update the delivery type and quantity as per customer's preference for either store pick-up or home-delivery.
@@ -10380,18 +8747,9 @@ Use this API to update the delivery type and quantity as per customer's preferen
 
 
 
-`CartShipmentsResponse`
+[CartShipmentsResponse](#CartShipmentsResponse)
 
 Success. Returns delivery promise along with shipment details and price breakup. Refer `CartShipmentsResponse` for more details.
-
-
-
-
-
-
-`[String: Any]`
-
-Unhandled API error
 
 
 
@@ -10404,6 +8762,8 @@ Unhandled API error
 #### checkoutCart
 Checkout all items in the cart
 
+
+
 ```swift
 poscart.checkoutCart(uid: uid, body: body) { (response, error) in
     // Use response
@@ -10411,10 +8771,11 @@ poscart.checkoutCart(uid: uid, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no |  |  
-| body | [CartPosCheckoutRequest](#CartPosCheckoutRequest) | yes | Request body |
+| body | [CartPosCheckoutRequest](#CartPosCheckoutRequest) |  no  | Request body |
 
 
 Use this API to checkout all items in the cart for payment and order generation. For COD, order will be generated directly, whereas for other checkout modes, user will be redirected to a payment gateway.
@@ -10424,7 +8785,7 @@ Use this API to checkout all items in the cart for payment and order generation.
 
 
 
-`CartCheckoutResponse`
+[CartCheckoutResponse](#CartCheckoutResponse)
 
 Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for more details.
 
@@ -10439,6 +8800,8 @@ Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for m
 #### updateCartMeta
 Update the cart meta
 
+
+
 ```swift
 poscart.updateCartMeta(uid: uid, body: body) { (response, error) in
     // Use response
@@ -10446,10 +8809,11 @@ poscart.updateCartMeta(uid: uid, body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |  
 | uid | Int? | no | The unique identifier of the cart |  
-| body | [CartMetaRequest](#CartMetaRequest) | yes | Request body |
+| body | [CartMetaRequest](#CartMetaRequest) |  no  | Request body |
 
 
 Use this API to update cart meta like checkout_mode and gstin.
@@ -10459,18 +8823,9 @@ Use this API to update cart meta like checkout_mode and gstin.
 
 
 
-`CartMetaResponse`
+[CartMetaResponse](#CartMetaResponse)
 
 Returns a message indicating the success of cart meta updation as shown below.
-
-
-
-
-
-
-`CartMetaMissingResponse`
-
-Missing required Field
 
 
 
@@ -10483,11 +8838,14 @@ Missing required Field
 #### getAvailableDeliveryModes
 Get available delivery modes for cart
 
+
+
 ```swift
 poscart.getAvailableDeliveryModes(areaCode: areaCode, uid: uid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10504,7 +8862,7 @@ Use this API to get the delivery modes (home-delivery/store-pickup) along with a
 
 
 
-`CartDeliveryModesResponse`
+[CartDeliveryModesResponse](#CartDeliveryModesResponse)
 
 Success. Returns the available delivery mode available for a given PIN Code, along with the UID of all the eligible pickup stores.
 
@@ -10519,11 +8877,14 @@ Success. Returns the available delivery mode available for a given PIN Code, alo
 #### getStoreAddressByUid
 Get list of stores for give uids
 
+
+
 ```swift
 poscart.getStoreAddressByUid(storeUid: storeUid) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10539,7 +8900,7 @@ Use this API to get the store details by entering the unique identifier of the p
 
 
 
-`StoreDetailsResponse`
+[StoreDetailsResponse](#StoreDetailsResponse)
 
 Success. Returns available store information with its address as shown below.
 
@@ -10554,6 +8915,8 @@ Success. Returns available store information with its address as shown below.
 #### getCartShareLink
 Generate token for sharing the cart
 
+
+
 ```swift
 poscart.getCartShareLink(body: body) { (response, error) in
     // Use response
@@ -10561,9 +8924,10 @@ poscart.getCartShareLink(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [GetShareCartLinkRequest](#GetShareCartLinkRequest) | yes | Request body |
+| body | [GetShareCartLinkRequest](#GetShareCartLinkRequest) |  no  | Request body |
 
 
 Use this API to generate a shared cart snapshot and return a shortlink token. The link can be shared with other users for getting the same items in their cart.
@@ -10573,7 +8937,7 @@ Use this API to generate a shared cart snapshot and return a shortlink token. Th
 
 
 
-`GetShareCartLinkResponse`
+[GetShareCartLinkResponse](#GetShareCartLinkResponse)
 
 Returns a URL to share and a token as shown below.
 
@@ -10588,11 +8952,14 @@ Returns a URL to share and a token as shown below.
 #### getCartSharedItems
 Get details of a shared cart
 
+
+
 ```swift
 poscart.getCartSharedItems(token: token) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10608,18 +8975,9 @@ Use this API to get the shared cart details as per the token generated using the
 
 
 
-`SharedCartResponse`
+[SharedCartResponse](#SharedCartResponse)
 
 Success. Returns a Cart object as per the valid token. Refer `SharedCartResponse` for more details.
-
-
-
-
-
-
-`SharedCartResponse`
-
-No cart found for the token sent
 
 
 
@@ -10632,11 +8990,14 @@ No cart found for the token sent
 #### updateCartWithSharedItems
 Merge or replace existing cart
 
+
+
 ```swift
 poscart.updateCartWithSharedItems(token: token, action: action) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10653,7 +9014,7 @@ Use this API to merge the shared cart with existing cart, or replace the existin
 
 
 
-`SharedCartResponse`
+[SharedCartResponse](#SharedCartResponse)
 
 Success. Returns a merged or replaced cart as per the valid token. Refer `SharedCartResponse` for more details.
 
@@ -10675,6 +9036,8 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 #### getTatProduct
 Get TAT of a product
 
+
+
 ```swift
 logistic.getTatProduct(body: body) { (response, error) in
     // Use response
@@ -10682,9 +9045,10 @@ logistic.getTatProduct(body: body) { (response, error) in
 ```
 
 
+
 | Argument  |  Type  | Required | Description |
 | --------- | -----  | -------- | ----------- |
-| body | [GetTatProductReqBody](#GetTatProductReqBody) | yes | Request body |
+| body | [GetTatProductReqBody](#GetTatProductReqBody) |  yes  | Request body |
 
 
 Use this API to know the delivery turnaround time (TAT) by entering the product details along with the PIN Code of the location.
@@ -10694,27 +9058,9 @@ Use this API to know the delivery turnaround time (TAT) by entering the product 
 
 
 
-`GetTatProductResponse`
+[GetTatProductResponse](#GetTatProductResponse)
 
 Success. Check the example shown below or refer `GetTatProductResponse` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -10727,11 +9073,14 @@ Internal Server Error. See the error object in the response body to know the exa
 #### getPincodeCity
 Get city from PIN Code
 
+
+
 ```swift
 logistic.getPincodeCity(pincode: pincode) { (response, error) in
     // Use response
 }
 ```
+
 
 
 | Argument  |  Type  | Required | Description |
@@ -10747,27 +9096,9 @@ Use this API to retrieve a city by its PIN Code.
 
 
 
-`GetPincodeCityResponse`
+[GetPincodeCityResponse](#GetPincodeCityResponse)
 
 Success. Returns a JSON object containing the city name, state and country identified by its PIN Code. Check the example shown below or refer `GetPincodeCityResponse` for more details.
-
-
-
-
-
-
-`ApefaceApiError`
-
-API Error. See the error object in the response body to know the exact reason.
-
-
-
-
-
-
-`ApefaceApiError`
-
-Internal Server Error. See the error object in the response body to know the exact reason.
 
 
 
@@ -10803,74 +9134,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | meta | Meta |  |
+ | meta | [Meta](#Meta) |  |
  | type | String |  |
  | url | String |  |
-
----
-
-
- 
- 
- #### [ProductListingActionPage](#ProductListingActionPage)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | params | [String: Any] |  |
- | query | [String: Any] |  |
- | type | String |  |
-
----
-
-
- 
- 
- #### [ProductListingAction](#ProductListingAction)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | page | ProductListingActionPage |  |
- | type | String |  |
-
----
-
-
- 
- 
- #### [ProductBrand](#ProductBrand)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | name | String |  |
- | uid | Int |  |
- | logo | Media |  |
- | action | ProductListingAction |  |
-
----
-
-
- 
- 
- #### [Price](#Price)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | currency_symbol | String |  |
- | currency_code | String |  |
- | max | Double |  |
- | min | Double |  |
-
----
-
-
- 
- 
- #### [ProductListingPrice](#ProductListingPrice)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | effective | Price |  |
- | marked | Price |  |
 
 ---
 
@@ -10881,9 +9147,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | type | String |  |
- | key | String |  |
  | value | String |  |
+ | key | String |  |
+ | type | String |  |
 
 ---
 
@@ -10895,7 +9161,72 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | title | String |  |
- | details | [ProductDetailAttribute] |  |
+ | details | [[ProductDetailAttribute](#ProductDetailAttribute)] |  |
+
+---
+
+
+ 
+ 
+ #### [ProductListingActionPage](#ProductListingActionPage)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | type | String |  |
+ | query | [String: Any] |  |
+ | params | [String: Any] |  |
+
+---
+
+
+ 
+ 
+ #### [ProductListingAction](#ProductListingAction)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | type | String |  |
+ | page | [ProductListingActionPage](#ProductListingActionPage) |  |
+
+---
+
+
+ 
+ 
+ #### [ProductBrand](#ProductBrand)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | uid | Int |  |
+ | name | String |  |
+ | logo | [Media](#Media) |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+
+---
+
+
+ 
+ 
+ #### [Price](#Price)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | currency_symbol | String |  |
+ | max | Double |  |
+ | currency_code | String |  |
+ | min | Double |  |
+
+---
+
+
+ 
+ 
+ #### [ProductListingPrice](#ProductListingPrice)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | marked | [Price](#Price) |  |
+ | effective | [Price](#Price) |  |
 
 ---
 
@@ -10906,32 +9237,32 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | description | String |  |
- | image_nature | String |  |
- | categories | [ProductBrand] |  |
- | attributes | [String: Any] |  |
- | product_online_date | String |  |
  | slug | String |  |
  | uid | Int |  |
- | highlights | [String] |  |
- | price | ProductListingPrice |  |
- | name | String |  |
- | rating | Double |  |
- | color | String |  |
- | type | String |  |
- | teaser_tag | String |  |
  | item_code | String |  |
- | action | ProductListingAction |  |
- | similars | [String] |  |
- | medias | [Media] |  |
- | has_variant | Bool |  |
- | item_type | String |  |
+ | image_nature | String |  |
+ | type | String |  |
+ | medias | [[Media](#Media)] |  |
  | short_description | String |  |
- | grouped_attributes | [ProductDetailGroupedAttribute] |  |
- | brand | ProductBrand |  |
  | discount | String |  |
- | rating_count | Int |  |
+ | product_online_date | String |  |
+ | similars | [String] |  |
+ | name | String |  |
+ | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  |
+ | highlights | [String] |  |
+ | brand | [ProductBrand](#ProductBrand) |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | item_type | String |  |
+ | rating | Double |  |
  | tryouts | [String] |  |
+ | attributes | [String: Any] |  |
+ | teaser_tag | String |  |
+ | color | String |  |
+ | price | [ProductListingPrice](#ProductListingPrice) |  |
+ | has_variant | Bool |  |
+ | rating_count | Int |  |
+ | categories | [[ProductBrand](#ProductBrand)] |  |
+ | description | String |  |
 
 ---
 
@@ -10953,8 +9284,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | convertable | Bool |  |
  | value | String |  |
+ | convertable | Bool |  |
 
 ---
 
@@ -10965,12 +9296,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | col_3 | ColumnHeader |  |
- | col_4 | ColumnHeader |  |
- | col_5 | ColumnHeader |  |
- | col_1 | ColumnHeader |  |
- | col_2 | ColumnHeader |  |
- | col_6 | ColumnHeader |  |
+ | col_4 | [ColumnHeader](#ColumnHeader) |  |
+ | col_5 | [ColumnHeader](#ColumnHeader) |  |
+ | col_6 | [ColumnHeader](#ColumnHeader) |  |
+ | col_2 | [ColumnHeader](#ColumnHeader) |  |
+ | col_1 | [ColumnHeader](#ColumnHeader) |  |
+ | col_3 | [ColumnHeader](#ColumnHeader) |  |
 
 ---
 
@@ -10981,12 +9312,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | col_3 | String |  |
  | col_4 | String |  |
  | col_5 | String |  |
- | col_1 | String |  |
- | col_2 | String |  |
  | col_6 | String |  |
+ | col_2 | String |  |
+ | col_1 | String |  |
+ | col_3 | String |  |
 
 ---
 
@@ -10998,12 +9329,12 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | size_tip | String |  |
- | description | String |  |
- | image | String |  |
  | unit | String |  |
- | headers | ColumnHeaders |  |
- | sizes | [SizeChartValues] |  |
+ | headers | [ColumnHeaders](#ColumnHeaders) |  |
+ | image | String |  |
  | title | String |  |
+ | sizes | [[SizeChartValues](#SizeChartValues)] |  |
+ | description | String |  |
 
 ---
 
@@ -11014,10 +9345,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | quantity | Int |  |
+ | display | String |  |
  | is_available | Bool |  |
  | value | String |  |
- | display | String |  |
+ | quantity | Int |  |
 
 ---
 
@@ -11039,37 +9370,25 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | size_chart | SizeChart |  |
- | sizes | [ProductSize] |  |
- | discount | String |  |
  | sellable | Bool |  |
- | stores | ProductSizeStores |  |
- | price | ProductListingPrice |  |
+ | price | [ProductListingPrice](#ProductListingPrice) |  |
+ | size_chart | [SizeChart](#SizeChart) |  |
+ | discount | String |  |
+ | sizes | [[ProductSize](#ProductSize)] |  |
+ | stores | [ProductSizeStores](#ProductSizeStores) |  |
 
 ---
 
 
  
  
- #### [Details](#Details)
+ #### [ProductStockPrice](#ProductStockPrice)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | type | String |  |
- | key | String |  |
- | value | String |  |
-
----
-
-
- 
- 
- #### [MarketPlaceSttributes](#MarketPlaceSttributes)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | title | String |  |
- | details | [Details] |  |
+ | currency | String |  |
+ | marked | Double |  |
+ | effective | Double |  |
 
 ---
 
@@ -11080,8 +9399,56 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | uid | Int |  |
+ | name | String |  |
+ | count | Int |  |
+
+---
+
+
+ 
+ 
+ #### [ProductSetDistributionSize](#ProductSetDistributionSize)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | pieces | Int |  |
+ | size | String |  |
+
+---
+
+
+ 
+ 
+ #### [ProductSetDistribution](#ProductSetDistribution)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | sizes | [[ProductSetDistributionSize](#ProductSetDistributionSize)] |  |
+
+---
+
+
+ 
+ 
+ #### [ProductSet](#ProductSet)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | quantity | Int |  |
+ | size_distribution | [ProductSetDistribution](#ProductSetDistribution) |  |
+
+---
+
+
+ 
+ 
+ #### [Store](#Store)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | uid | Int |  |
+ | name | String |  |
  | count | Int |  |
 
 ---
@@ -11093,36 +9460,48 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | tat | Int |  |
  | pincode | Int |  |
  | distance | Int |  |
  | quantity | Int |  |
+ | tat | Int |  |
 
 ---
 
 
  
  
- #### [ProductStockPrice](#ProductStockPrice)
+ #### [ReturnConfig](#ReturnConfig)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | effective | Double |  |
- | currency | String |  |
- | marked | Double |  |
+ | time | Int |  |
+ | returnable | Bool |  |
+ | unit | String |  |
 
 ---
 
 
  
  
- #### [Store](#Store)
+ #### [Details](#Details)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | uid | Int |  |
- | count | Int |  |
+ | value | String |  |
+ | key | String |  |
+ | type | String |  |
+
+---
+
+
+ 
+ 
+ #### [MarketPlaceSttributes](#MarketPlaceSttributes)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | title | String |  |
+ | details | [[Details](#Details)] |  |
 
 ---
 
@@ -11141,75 +9520,27 @@ Internal Server Error. See the error object in the response body to know the exa
 
  
  
- #### [ReturnConfig](#ReturnConfig)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | returnable | Bool |  |
- | time | Int |  |
- | unit | String |  |
-
----
-
-
- 
- 
- #### [ProductSetDistributionSize](#ProductSetDistributionSize)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | size | String |  |
- | pieces | Int |  |
-
----
-
-
- 
- 
- #### [ProductSetDistribution](#ProductSetDistribution)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | sizes | [ProductSetDistributionSize] |  |
-
----
-
-
- 
- 
- #### [ProductSet](#ProductSet)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | size_distribution | ProductSetDistribution |  |
- | quantity | Int |  |
-
----
-
-
- 
- 
  #### [ProductSizePriceResponse](#ProductSizePriceResponse)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | seller_count | Int |  |
- | article_id | String |  |
- | marketplace_attributes | [MarketPlaceSttributes] |  |
- | seller | Seller |  |
+ | price_per_price | [ProductStockPrice](#ProductStockPrice) |  |
  | long_lat | [Double] |  |
- | strategy_wise_listing | [StrategyWiseListing] |  |
- | special_badge | String |  |
- | price_per_price | ProductStockPrice |  |
+ | price | [ProductStockPrice](#ProductStockPrice) |  |
+ | seller | [Seller](#Seller) |  |
  | item_type | String |  |
- | pincode | Int |  |
- | store | Store |  |
  | discount | String |  |
- | article_assignment | ArticleAssignment |  |
- | return_config | ReturnConfig |  |
- | set | ProductSet |  |
- | price | ProductStockPrice |  |
+ | set | [ProductSet](#ProductSet) |  |
+ | store | [Store](#Store) |  |
+ | special_badge | String |  |
+ | strategy_wise_listing | [[StrategyWiseListing](#StrategyWiseListing)] |  |
+ | return_config | [ReturnConfig](#ReturnConfig) |  |
+ | marketplace_attributes | [[MarketPlaceSttributes](#MarketPlaceSttributes)] |  |
+ | article_id | String |  |
  | quantity | Int |  |
+ | pincode | Int |  |
+ | seller_count | Int |  |
+ | article_assignment | [ArticleAssignment](#ArticleAssignment) |  |
 
 ---
 
@@ -11220,8 +9551,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | value | String |  |
+ | name | String |  |
  | is_selected | Bool |  |
 
 ---
@@ -11233,9 +9564,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | sort_on | [ProductSizeSellerFilter] |  |
- | page | Page |  |
- | items | [ProductSizePriceResponse] |  |
+ | items | [[ProductSizePriceResponse](#ProductSizePriceResponse)] |  |
+ | page | [Page](#Page) |  |
+ | sort_on | [[ProductSizeSellerFilter](#ProductSizeSellerFilter)] |  |
 
 ---
 
@@ -11246,10 +9577,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | logo | String |  |
+ | display | String |  |
  | key | String |  |
  | description | String |  |
- | display | String |  |
+ | logo | String |  |
 
 ---
 
@@ -11261,7 +9592,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | title | String |  |
- | details | [AttributeDetail] |  |
+ | details | [[AttributeDetail](#AttributeDetail)] |  |
 
 ---
 
@@ -11272,8 +9603,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ProductDetail] |  |
- | attributes_metadata | [AttributeMetadata] |  |
+ | items | [[ProductDetail](#ProductDetail)] |  |
+ | attributes_metadata | [[AttributeMetadata](#AttributeMetadata)] |  |
 
 ---
 
@@ -11284,10 +9615,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ProductDetail] |  |
- | title | String |  |
  | subtitle | String |  |
- | attributes_metadata | [AttributeMetadata] |  |
+ | items | [[ProductDetail](#ProductDetail)] |  |
+ | title | String |  |
+ | attributes_metadata | [[AttributeMetadata](#AttributeMetadata)] |  |
 
 ---
 
@@ -11298,7 +9629,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | similars | ProductCompareResponse |  |
+ | similars | [ProductCompareResponse](#ProductCompareResponse) |  |
 
 ---
 
@@ -11309,9 +9640,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ProductDetail] |  |
- | title | String |  |
  | subtitle | String |  |
+ | items | [[ProductDetail](#ProductDetail)] |  |
+ | title | String |  |
 
 ---
 
@@ -11322,7 +9653,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | similars | ProductSimilarItem |  |
+ | similars | [ProductSimilarItem](#ProductSimilarItem) |  |
 
 ---
 
@@ -11333,15 +9664,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | medias | [Media] |  |
- | color | String |  |
- | value | String |  |
- | action | ProductListingAction |  |
- | slug | String |  |
- | uid | Int |  |
  | is_available | Bool |  |
+ | medias | [[Media](#Media)] |  |
+ | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | value | String |  |
+ | uid | Int |  |
+ | name | String |  |
  | color_name | String |  |
+ | color | String |  |
 
 ---
 
@@ -11352,10 +9683,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | header | String |  |
- | display_type | String |  |
- | items | [ProductVariantItemResponse] |  |
+ | items | [[ProductVariantItemResponse](#ProductVariantItemResponse)] |  |
  | key | String |  |
+ | display_type | String |  |
+ | header | String |  |
 
 ---
 
@@ -11366,7 +9697,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | variants | [ProductVariantResponse] |  |
+ | variants | [[ProductVariantResponse](#ProductVariantResponse)] |  |
 
 ---
 
@@ -11390,8 +9721,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | name | String |  |
- | city | String |  |
  | code | String |  |
+ | city | String |  |
  | id | Int |  |
 
 ---
@@ -11403,15 +9734,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | identifier | [String: Any] |  |
- | company | CompanyDetail |  |
- | seller | Seller |  |
- | size | String |  |
  | item_id | Int |  |
- | store | StoreDetail |  |
+ | price | [ProductStockPrice](#ProductStockPrice) |  |
+ | company | [CompanyDetail](#CompanyDetail) |  |
+ | seller | [Seller](#Seller) |  |
+ | size | String |  |
+ | store | [StoreDetail](#StoreDetail) |  |
  | uid | String |  |
- | price | ProductStockPrice |  |
  | quantity | Int |  |
+ | identifier | [String: Any] |  |
 
 ---
 
@@ -11422,7 +9753,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ProductStockStatusItem] |  |
+ | items | [[ProductStockStatusItem](#ProductStockStatusItem)] |  |
 
 ---
 
@@ -11433,21 +9764,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [ProductStockStatusItem] |  |
-
----
-
-
- 
- 
- #### [ProductSortOn](#ProductSortOn)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | name | String |  |
- | value | String |  |
- | is_selected | Bool |  |
+ | items | [[ProductStockStatusItem](#ProductStockStatusItem)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -11458,18 +9776,18 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | currency_symbol | String |  |
- | display_format | String |  |
- | selected_min | Int |  |
  | is_selected | Bool |  |
- | count | Int |  |
- | query_format | String |  |
+ | currency_code | String |  |
  | value | String |  |
+ | count | Int |  |
+ | selected_min | Int |  |
+ | currency_symbol | String |  |
  | min | Int |  |
  | display | String |  |
- | selected_max | Int |  |
- | currency_code | String |  |
  | max | Int |  |
+ | query_format | String |  |
+ | selected_max | Int |  |
+ | display_format | String |  |
 
 ---
 
@@ -11480,10 +9798,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | logo | String |  |
- | kind | String |  |
  | display | String |  |
+ | name | String |  |
+ | kind | String |  |
+ | logo | String |  |
 
 ---
 
@@ -11494,8 +9812,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | values | [ProductFiltersValue] |  |
- | key | ProductFiltersKey |  |
+ | values | [[ProductFiltersValue](#ProductFiltersValue)] |  |
+ | key | [ProductFiltersKey](#ProductFiltersKey) |  |
 
 ---
 
@@ -11506,33 +9824,46 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | description | String |  |
- | image_nature | String |  |
- | categories | [ProductBrand] |  |
- | attributes | [String: Any] |  |
- | product_online_date | String |  |
  | slug | String |  |
  | uid | Int |  |
- | highlights | [String] |  |
- | price | ProductListingPrice |  |
- | name | String |  |
- | rating | Double |  |
- | color | String |  |
- | type | String |  |
- | teaser_tag | String |  |
  | item_code | String |  |
- | action | ProductListingAction |  |
- | similars | [String] |  |
- | medias | [Media] |  |
- | has_variant | Bool |  |
- | item_type | String |  |
+ | image_nature | String |  |
+ | type | String |  |
+ | medias | [[Media](#Media)] |  |
  | short_description | String |  |
- | grouped_attributes | [ProductDetailGroupedAttribute] |  |
- | sellable | Bool |  |
- | brand | ProductBrand |  |
  | discount | String |  |
- | rating_count | Int |  |
+ | product_online_date | String |  |
+ | similars | [String] |  |
+ | name | String |  |
+ | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  |
+ | highlights | [String] |  |
+ | brand | [ProductBrand](#ProductBrand) |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | item_type | String |  |
+ | rating | Double |  |
  | tryouts | [String] |  |
+ | attributes | [String: Any] |  |
+ | teaser_tag | String |  |
+ | color | String |  |
+ | sellable | Bool |  |
+ | price | [ProductListingPrice](#ProductListingPrice) |  |
+ | has_variant | Bool |  |
+ | rating_count | Int |  |
+ | categories | [[ProductBrand](#ProductBrand)] |  |
+ | description | String |  |
+
+---
+
+
+ 
+ 
+ #### [ProductSortOn](#ProductSortOn)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | value | String |  |
+ | name | String |  |
+ | is_selected | Bool |  |
 
 ---
 
@@ -11543,10 +9874,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | sort_on | [ProductSortOn] |  |
- | filters | [ProductFilters] |  |
- | page | Page |  |
- | items | [ProductListingDetail] |  |
+ | filters | [[ProductFilters](#ProductFilters)] |  |
+ | items | [[ProductListingDetail](#ProductListingDetail)] |  |
+ | page | [Page](#Page) |  |
+ | sort_on | [[ProductSortOn](#ProductSortOn)] |  |
 
 ---
 
@@ -11557,8 +9888,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | portrait | Media |  |
- | landscape | Media |  |
+ | portrait | [Media](#Media) |  |
+ | landscape | [Media](#Media) |  |
 
 ---
 
@@ -11569,14 +9900,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | banners | ImageUrls |  |
- | departments | [String] |  |
- | logo | Media |  |
- | discount | String |  |
- | action | ProductListingAction |  |
  | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | discount | String |  |
+ | logo | [Media](#Media) |  |
  | uid | Int |  |
+ | name | String |  |
+ | departments | [String] |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
 
 ---
 
@@ -11587,8 +9918,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [BrandItem] |  |
+ | items | [[BrandItem](#BrandItem)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -11599,89 +9930,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | uid | Int |  |
- | logo | Media |  |
- | banners | ImageUrls |  |
-
----
-
-
- 
- 
- #### [ThirdLevelChild](#ThirdLevelChild)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
  | name | String |  |
- | childs | [[String: Any]] |  |
- | banners | ImageUrls |  |
- | _custom_json | [String: Any] |  |
- | action | ProductListingAction |  |
- | slug | String |  |
- | uid | Int |  |
-
----
-
-
- 
- 
- #### [SecondLevelChild](#SecondLevelChild)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | name | String |  |
- | childs | [ThirdLevelChild] |  |
- | banners | ImageUrls |  |
- | _custom_json | [String: Any] |  |
- | action | ProductListingAction |  |
- | slug | String |  |
- | uid | Int |  |
-
----
-
-
- 
- 
- #### [Child](#Child)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | name | String |  |
- | childs | [SecondLevelChild] |  |
- | banners | ImageUrls |  |
- | _custom_json | [String: Any] |  |
- | action | ProductListingAction |  |
- | slug | String |  |
- | uid | Int |  |
-
----
-
-
- 
- 
- #### [CategoryItems](#CategoryItems)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | name | String |  |
- | childs | [Child] |  |
- | banners | ImageUrls |  |
- | action | ProductListingAction |  |
- | slug | String |  |
- | uid | Int |  |
-
----
-
-
- 
- 
- #### [DepartmentCategoryTree](#DepartmentCategoryTree)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | items | [CategoryItems] |  |
- | department | String |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+ | logo | [Media](#Media) |  |
 
 ---
 
@@ -11692,8 +9944,87 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | slug | String |  |
  | uid | Int |  |
+ | slug | String |  |
+
+---
+
+
+ 
+ 
+ #### [ThirdLevelChild](#ThirdLevelChild)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | uid | Int |  |
+ | childs | [[String: Any]] |  |
+ | name | String |  |
+ | _custom_json | [String: Any] |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+
+---
+
+
+ 
+ 
+ #### [SecondLevelChild](#SecondLevelChild)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | uid | Int |  |
+ | childs | [[ThirdLevelChild](#ThirdLevelChild)] |  |
+ | name | String |  |
+ | _custom_json | [String: Any] |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+
+---
+
+
+ 
+ 
+ #### [Child](#Child)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | uid | Int |  |
+ | childs | [[SecondLevelChild](#SecondLevelChild)] |  |
+ | name | String |  |
+ | _custom_json | [String: Any] |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+
+---
+
+
+ 
+ 
+ #### [CategoryItems](#CategoryItems)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | slug | String |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | uid | Int |  |
+ | childs | [[Child](#Child)] |  |
+ | name | String |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+
+---
+
+
+ 
+ 
+ #### [DepartmentCategoryTree](#DepartmentCategoryTree)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | department | String |  |
+ | items | [[CategoryItems](#CategoryItems)] |  |
 
 ---
 
@@ -11704,8 +10035,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | [DepartmentCategoryTree] |  |
- | departments | [DepartmentIdentifier] |  |
+ | departments | [[DepartmentIdentifier](#DepartmentIdentifier)] |  |
+ | data | [[DepartmentCategoryTree](#DepartmentCategoryTree)] |  |
 
 ---
 
@@ -11716,10 +10047,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | uid | Int |  |
- | logo | Media |  |
- | banners | ImageUrls |  |
+ | name | String |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+ | logo | [Media](#Media) |  |
 
 ---
 
@@ -11730,9 +10061,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [ProductListingDetail] |  |
+ | items | [[ProductListingDetail](#ProductListingDetail)] |  |
  | message | String |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -11743,11 +10074,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | logo | Media |  |
- | slug | String |  |
- | uid | Int |  |
  | priority_order | Int |  |
+ | slug | String |  |
+ | logo | [Media](#Media) |  |
+ | uid | Int |  |
+ | name | String |  |
 
 ---
 
@@ -11758,7 +10089,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Department] |  |
+ | items | [[Department](#Department)] |  |
 
 ---
 
@@ -11769,10 +10100,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | logo | Media |  |
- | type | String |  |
  | display | String |  |
- | action | ProductListingAction |  |
+ | type | String |  |
+ | logo | [Media](#Media) |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
 
 ---
 
@@ -11783,7 +10114,36 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [AutocompleteItem] |  |
+ | items | [[AutocompleteItem](#AutocompleteItem)] |  |
+
+---
+
+
+ 
+ 
+ #### [GetCollectionDetailNest](#GetCollectionDetailNest)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | app_id | String |  |
+ | slug | String |  |
+ | meta | [String: Any] |  |
+ | query | [String: Any] |  |
+ | logo | [Media](#Media) |  |
+ | uid | String |  |
+ | visible_facets_keys | [String] |  |
+ | cron | [String: Any] |  |
+ | _schedule | [String: Any] |  |
+ | badge | [String: Any] |  |
+ | type | String |  |
+ | name | String |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+ | action | [ProductListingAction](#ProductListingAction) |  |
+ | allow_sort | Bool |  |
+ | is_active | Bool |  |
+ | allow_facets | Bool |  |
+ | tag | [String] |  |
+ | description | String |  |
 
 ---
 
@@ -11794,8 +10154,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | display | String |  |
+ | name | String |  |
  | is_selected | Bool |  |
 
 ---
@@ -11807,8 +10167,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
  | display | String |  |
+ | name | String |  |
  | is_selected | Bool |  |
 
 ---
@@ -11820,37 +10180,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | type | [CollectionListingFilterType] |  |
- | tags | [CollectionListingFilterTag] |  |
-
----
-
-
- 
- 
- #### [GetCollectionDetailNest](#GetCollectionDetailNest)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | badge | [String: Any] |  |
- | banners | ImageUrls |  |
- | description | String |  |
- | slug | String |  |
- | uid | String |  |
- | visible_facets_keys | [String] |  |
- | name | String |  |
- | tag | [String] |  |
- | is_active | Bool |  |
- | type | String |  |
- | cron | [String: Any] |  |
- | query | [String: Any] |  |
- | action | ProductListingAction |  |
- | allow_sort | Bool |  |
- | logo | Media |  |
- | app_id | String |  |
- | allow_facets | Bool |  |
- | _schedule | [String: Any] |  |
- | meta | [String: Any] |  |
+ | type | [[CollectionListingFilterType](#CollectionListingFilterType)] |  |
+ | tags | [[CollectionListingFilterTag](#CollectionListingFilterTag)] |  |
 
 ---
 
@@ -11861,9 +10192,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | filters | CollectionListingFilter |  |
- | items | [GetCollectionDetailNest] |  |
- | page | Page |  |
+ | items | [[GetCollectionDetailNest](#GetCollectionDetailNest)] |  |
+ | page | [Page](#Page) |  |
+ | filters | [CollectionListingFilter](#CollectionListingFilter) |  |
 
 ---
 
@@ -11874,23 +10205,23 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | badge | [String: Any] |  |
- | banners | ImageUrls |  |
- | allow_facets | Bool |  |
- | description | String |  |
- | tag | [String] |  |
- | is_active | Bool |  |
+ | app_id | String |  |
  | type | String |  |
- | _schedule | [String: Any] |  |
+ | slug | String |  |
+ | is_active | Bool |  |
+ | meta | [String: Any] |  |
+ | banners | [ImageUrls](#ImageUrls) |  |
+ | query | [String: Any] |  |
+ | logo | [Media](#Media) |  |
+ | visible_facets_keys | [String] |  |
+ | name | String |  |
+ | allow_facets | Bool |  |
  | allow_sort | Bool |  |
  | cron | [String: Any] |  |
- | logo | Media |  |
- | query | [String: Any] |  |
- | app_id | String |  |
- | slug | String |  |
- | meta | [String: Any] |  |
- | visible_facets_keys | [String] |  |
+ | tag | [String] |  |
+ | _schedule | [String: Any] |  |
+ | description | String |  |
+ | badge | [String: Any] |  |
 
 ---
 
@@ -11901,8 +10232,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [ProductListingDetail] |  |
+ | items | [[ProductListingDetail](#ProductListingDetail)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -11936,9 +10267,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | brands | [Int] |  |
- | collections | [Int] |  |
  | products | [Int] |  |
+ | collections | [Int] |  |
+ | brands | [Int] |  |
 
 ---
 
@@ -11949,7 +10280,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | FollowIdsData |  |
+ | data | [FollowIdsData](#FollowIdsData) |  |
 
 ---
 
@@ -11960,8 +10291,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | coordinates | [Double] |  |
  | type | String |  |
+ | coordinates | [Double] |  |
 
 ---
 
@@ -11972,16 +10303,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name | String |  |
- | country | String |  |
- | city | String |  |
  | store_email | String |  |
- | address | String |  |
  | state | String |  |
+ | lat_long | [LatLong](#LatLong) |  |
+ | country | String |  |
  | store_code | String |  |
- | pincode | Int |  |
- | lat_long | LatLong |  |
  | uid | Int |  |
+ | name | String |  |
+ | pincode | Int |  |
+ | city | String |  |
+ | address | String |  |
 
 ---
 
@@ -11992,8 +10323,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [Store1] |  |
+ | items | [[Store1](#Store1)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -12005,13 +10336,37 @@ Internal Server Error. See the error object in the response body to know the exa
 
  
  
- #### [PaymentSelectionLock](#PaymentSelectionLock)
+ #### [BaseInfo](#BaseInfo)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | enabled | Bool |  |
- | payment_identifier | String |  |
- | default_options | String |  |
+ | uid | Int |  |
+ | name | String |  |
+
+---
+
+
+ 
+ 
+ #### [CategoryInfo](#CategoryInfo)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | uid | Int | Product Category Id |
+ | name | String |  |
+
+---
+
+
+ 
+ 
+ #### [Image](#Image)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | aspect_ratio | String |  |
+ | secure_url | String |  |
+ | url | String |  |
 
 ---
 
@@ -12033,46 +10388,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | query | [ActionQuery](#ActionQuery) |  |
  | type | String |  |
  | url | String |  |
- | query | ActionQuery |  |
-
----
-
-
- 
- 
- #### [Image](#Image)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | aspect_ratio | String |  |
- | secure_url | String |  |
- | url | String |  |
-
----
-
-
- 
- 
- #### [CategoryInfo](#CategoryInfo)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | uid | Int | Product Category Id |
- | name | String |  |
-
----
-
-
- 
- 
- #### [BaseInfo](#BaseInfo)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | uid | Int |  |
- | name | String |  |
 
 ---
 
@@ -12083,14 +10401,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | action | ProductAction |  |
- | type | String |  |
- | images | [Image] |  |
- | categories | [CategoryInfo] |  |
+ | brand | [BaseInfo](#BaseInfo) |  |
  | name | String |  |
- | uid | Int |  |
- | brand | BaseInfo |  |
  | slug | String | Unique product url name generated via product name and other meta data |
+ | type | String |  |
+ | categories | [[CategoryInfo](#CategoryInfo)] |  |
+ | uid | Int |  |
+ | images | [[Image](#Image)] |  |
+ | action | [ProductAction](#ProductAction) |  |
 
 ---
 
@@ -12101,12 +10419,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | currency_symbol | String |  |
- | selling | Double |  |
+ | marked | Double |  |
  | currency_code | String |  |
  | effective | Double |  |
  | add_on | Double |  |
- | marked | Double |  |
+ | selling | Double |  |
+ | currency_symbol | String |  |
 
 ---
 
@@ -12117,67 +10435,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | converted | ProductPrice |  |
- | base | ProductPrice |  |
-
----
-
-
- 
- 
- #### [BasePrice](#BasePrice)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | currency_symbol | String |  |
- | currency_code | String |  |
- | effective | Double |  |
- | marked | Double |  |
-
----
-
-
- 
- 
- #### [ArticlePriceInfo](#ArticlePriceInfo)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | converted | BasePrice |  |
- | base | BasePrice |  |
-
----
-
-
- 
- 
- #### [ProductArticle](#ProductArticle)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | price | ArticlePriceInfo |  |
- | type | String |  |
- | size | String |  |
- | store | BaseInfo |  |
- | seller | BaseInfo |  |
- | extra_meta | [String: Any] |  |
- | uid | String |  |
- | quantity | Int |  |
-
----
-
-
- 
- 
- #### [ProductAvailability](#ProductAvailability)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | sizes | [String] |  |
- | out_of_stock | Bool |  |
- | is_valid | Bool |  |
- | deliverable | Bool |  |
- | other_store_quantity | Int |  |
+ | converted | [ProductPrice](#ProductPrice) |  |
+ | base | [ProductPrice](#ProductPrice) |  |
 
 ---
 
@@ -12195,6 +10454,50 @@ Internal Server Error. See the error object in the response body to know the exa
 
  
  
+ #### [BasePrice](#BasePrice)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | marked | Double |  |
+ | currency_code | String |  |
+ | currency_symbol | String |  |
+ | effective | Double |  |
+
+---
+
+
+ 
+ 
+ #### [ArticlePriceInfo](#ArticlePriceInfo)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | converted | [BasePrice](#BasePrice) |  |
+ | base | [BasePrice](#BasePrice) |  |
+
+---
+
+
+ 
+ 
+ #### [ProductArticle](#ProductArticle)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | price | [ArticlePriceInfo](#ArticlePriceInfo) |  |
+ | extra_meta | [String: Any] |  |
+ | seller | [BaseInfo](#BaseInfo) |  |
+ | type | String |  |
+ | size | String |  |
+ | quantity | Int |  |
+ | uid | String |  |
+ | store | [BaseInfo](#BaseInfo) |  |
+
+---
+
+
+ 
+ 
  #### [CartProductIdentifer](#CartProductIdentifer)
 
  | Properties | Type | Description |
@@ -12206,36 +10509,39 @@ Internal Server Error. See the error object in the response body to know the exa
 
  
  
- #### [CartProductInfo](#CartProductInfo)
+ #### [ProductAvailability](#ProductAvailability)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | discount | String |  |
- | product | Product |  |
- | coupon_message | String |  |
- | price | ProductPriceInfo |  |
- | price_per_unit | ProductPriceInfo |  |
- | key | String |  |
- | article | ProductArticle |  |
- | message | String |  |
- | is_set | Bool |  |
- | availability | ProductAvailability |  |
- | promo_meta | PromoMeta |  |
- | bulk_offer | [String: Any] |  |
- | identifiers | CartProductIdentifer |  |
- | quantity | Int |  |
+ | other_store_quantity | Int |  |
+ | deliverable | Bool |  |
+ | is_valid | Bool |  |
+ | sizes | [String] |  |
+ | out_of_stock | Bool |  |
 
 ---
 
 
  
  
- #### [CartCurrency](#CartCurrency)
+ #### [CartProductInfo](#CartProductInfo)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | symbol | String |  |
- | code | String | Currency code defined by ISO 4217:2015 |
+ | product | [Product](#Product) |  |
+ | discount | String |  |
+ | is_set | Bool |  |
+ | price | [ProductPriceInfo](#ProductPriceInfo) |  |
+ | coupon_message | String |  |
+ | bulk_offer | [String: Any] |  |
+ | price_per_unit | [ProductPriceInfo](#ProductPriceInfo) |  |
+ | promo_meta | [PromoMeta](#PromoMeta) |  |
+ | key | String |  |
+ | quantity | Int |  |
+ | article | [ProductArticle](#ProductArticle) |  |
+ | identifiers | [CartProductIdentifer](#CartProductIdentifer) |  |
+ | message | String |  |
+ | availability | [ProductAvailability](#ProductAvailability) |  |
 
 ---
 
@@ -12246,8 +10552,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | min | String |  |
  | max | String |  |
+ | min | String |  |
 
 ---
 
@@ -12258,8 +10564,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | min | Double |  |
  | max | Double |  |
+ | min | Double |  |
 
 ---
 
@@ -12270,60 +10576,33 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | formatted | PromiseFormatted |  |
- | timestamp | PromiseTimestamp |  |
+ | formatted | [PromiseFormatted](#PromiseFormatted) |  |
+ | timestamp | [PromiseTimestamp](#PromiseTimestamp) |  |
 
 ---
 
 
  
  
- #### [DisplayBreakup](#DisplayBreakup)
+ #### [PaymentSelectionLock](#PaymentSelectionLock)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | currency_symbol | String |  |
- | value | Double |  |
- | key | String |  |
- | display | String |  |
- | message | [String] |  |
- | currency_code | String |  |
+ | payment_identifier | String |  |
+ | enabled | Bool |  |
+ | default_options | String |  |
 
 ---
 
 
  
  
- #### [RawBreakup](#RawBreakup)
+ #### [CartCurrency](#CartCurrency)
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | discount | Double |  |
- | delivery_charge | Double |  |
- | convenience_fee | Double |  |
- | fynd_cash | Double |  |
- | cod_charge | Double |  |
- | mrp_total | String |  |
- | gst_charges | Double |  |
- | vog | Double |  |
- | you_saved | Double |  |
- | subtotal | Double |  |
- | total | Double |  |
- | coupon | Double |  |
-
----
-
-
- 
- 
- #### [LoyaltyPoints](#LoyaltyPoints)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | applicable | Double |  |
- | description | String |  |
- | is_applied | Bool |  |
- | total | Double |  |
+ | code | String | Currency code defined by ISO 4217:2015 |
+ | symbol | String |  |
 
 ---
 
@@ -12335,11 +10614,63 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | value | Double |  |
+ | is_applied | Bool |  |
  | type | String |  |
  | code | String |  |
- | message | String |  |
  | uid | String |  |
+ | message | String |  |
+
+---
+
+
+ 
+ 
+ #### [DisplayBreakup](#DisplayBreakup)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | value | Double |  |
+ | currency_code | String |  |
+ | key | String |  |
+ | display | String |  |
+ | message | [String] |  |
+ | currency_symbol | String |  |
+
+---
+
+
+ 
+ 
+ #### [LoyaltyPoints](#LoyaltyPoints)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | applicable | Double |  |
  | is_applied | Bool |  |
+ | description | String |  |
+ | total | Double |  |
+
+---
+
+
+ 
+ 
+ #### [RawBreakup](#RawBreakup)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | discount | Double |  |
+ | fynd_cash | Double |  |
+ | gst_charges | Double |  |
+ | convenience_fee | Double |  |
+ | coupon | Double |  |
+ | cod_charge | Double |  |
+ | delivery_charge | Double |  |
+ | mrp_total | String |  |
+ | you_saved | Double |  |
+ | subtotal | Double |  |
+ | vog | Double |  |
+ | total | Double |  |
 
 ---
 
@@ -12350,10 +10681,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | display | [DisplayBreakup] |  |
- | raw | RawBreakup |  |
- | loyalty_points | LoyaltyPoints |  |
- | coupon | CouponBreakup |  |
+ | coupon | [CouponBreakup](#CouponBreakup) |  |
+ | display | [[DisplayBreakup](#DisplayBreakup)] |  |
+ | loyalty_points | [LoyaltyPoints](#LoyaltyPoints) |  |
+ | raw | [RawBreakup](#RawBreakup) |  |
 
 ---
 
@@ -12364,22 +10695,22 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | comment | String |  |
+ | gstin | String |  |
  | checkout_mode | String |  |
- | uid | String |  |
- | payment_selection_lock | PaymentSelectionLock |  |
- | last_modified | String |  |
- | coupon_text | String |  |
- | items | [CartProductInfo] |  |
  | cart_id | Int |  |
- | delivery_charge_info | String |  |
- | message | String |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  |
  | restrict_checkout | Bool |  |
  | is_valid | Bool |  |
- | currency | CartCurrency |  |
- | delivery_promise | ShipmentPromise |  |
- | breakup_values | CartBreakup |  |
- | gstin | String |  |
+ | delivery_charge_info | String |  |
+ | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  |
+ | comment | String |  |
+ | coupon_text | String |  |
+ | uid | String |  |
+ | last_modified | String |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  |
+ | message | String |  |
+ | currency | [CartCurrency](#CartCurrency) |  |
+ | breakup_values | [CartBreakup](#CartBreakup) |  |
 
 ---
 
@@ -12390,16 +10721,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | article_assignment | [String: Any] |  |
- | store_id | Int |  |
+ | extra_meta | [String: Any] |  |
  | item_size | String |  |
+ | article_id | String |  |
+ | store_id | Int |  |
+ | article_assignment | [String: Any] |  |
+ | quantity | Int |  |
+ | pos | Bool |  |
+ | display | String |  |
  | seller_id | Int |  |
  | item_id | Int |  |
- | display | String |  |
- | extra_meta | [String: Any] |  |
- | pos | Bool |  |
- | article_id | String |  |
- | quantity | Int |  |
 
 ---
 
@@ -12410,7 +10741,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [AddProductCart] |  |
+ | items | [[AddProductCart](#AddProductCart)] |  |
 
 ---
 
@@ -12421,10 +10752,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | cart | CartResponse |  |
- | partial | Bool | When adding multiple items check if all added. True if only few are added. |
- | success | Bool | True if all items are added successfully. False if partially added or not added. |
  | message | String |  |
+ | cart | [CartResponse](#CartResponse) |  |
+ | success | Bool | True if all items are added successfully. False if partially added or not added. |
+ | partial | Bool | When adding multiple items check if all added. True if only few are added. |
 
 ---
 
@@ -12435,13 +10766,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | item_size | String |  |
- | item_index | Int |  |
- | item_id | Int |  |
- | identifiers | CartProductIdentifer |  |
  | extra_meta | [String: Any] |  |
+ | item_size | String |  |
  | article_id | String |  |
  | quantity | Int |  |
+ | identifiers | [CartProductIdentifer](#CartProductIdentifer) |  |
+ | item_id | Int |  |
+ | item_index | Int |  |
 
 ---
 
@@ -12453,7 +10784,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | operation | String |  |
- | items | [UpdateProductCart] |  |
+ | items | [[UpdateProductCart](#UpdateProductCart)] |  |
 
 ---
 
@@ -12464,9 +10795,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | cart | CartResponse |  |
- | success | Bool | True if all items are added successfully. False if partially added or not added. |
  | message | String |  |
+ | cart | [CartResponse](#CartResponse) |  |
+ | success | Bool | True if all items are added successfully. False if partially added or not added. |
 
 ---
 
@@ -12488,16 +10819,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | coupon_value | Double |  |
- | expires_on | String |  |
- | title | String |  |
- | coupon_code | String |  |
  | max_discount_value | Double |  |
- | minimum_cart_value | Double |  |
- | sub_title | String |  |
- | message | String |  |
  | is_applicable | Bool |  |
+ | sub_title | String |  |
+ | title | String |  |
  | is_applied | Bool |  |
+ | expires_on | String |  |
+ | minimum_cart_value | Double |  |
+ | coupon_value | Double |  |
+ | coupon_code | String |  |
+ | message | String |  |
 
 ---
 
@@ -12508,10 +10839,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | total_item_count | Int |  |
- | current | Int |  |
  | has_next | Bool |  |
+ | current | Int |  |
  | has_previous | Bool |  |
+ | total_item_count | Int |  |
  | total | Int |  |
 
 ---
@@ -12523,8 +10854,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | available_coupon_list | [Coupon] |  |
- | page | PageCoupon |  |
+ | available_coupon_list | [[Coupon](#Coupon)] |  |
+ | page | [PageCoupon](#PageCoupon) |  |
 
 ---
 
@@ -12546,11 +10877,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | currency_symbol | String | Currency symbol for currency |
- | bulk_effective | Double | Discounted per unit price for current offer object |
+ | marked | Int | Original price of product |
  | currency_code | String | Currency code for all amounts |
  | effective | Int | Current per unit price of product after existing deductions |
- | marked | Int | Original price of product |
+ | currency_symbol | String | Currency symbol for currency |
+ | bulk_effective | Double | Discounted per unit price for current offer object |
 
 ---
 
@@ -12561,13 +10892,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | price | OfferPrice |  |
- | type | String | Offer type |
- | margin | Int | Percentage value of discount |
+ | price | [OfferPrice](#OfferPrice) |  |
  | best | Bool | Is true for best offer from all offers present for all sellers |
- | quantity | Int | Quantity on which offer is applicable |
- | total | Double | Total price of offer quantity with discount |
  | auto_applied | Bool |  |
+ | type | String | Offer type |
+ | quantity | Int | Quantity on which offer is applicable |
+ | margin | Int | Percentage value of discount |
+ | total | Double | Total price of offer quantity with discount |
 
 ---
 
@@ -12590,8 +10921,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | offers | [OfferItem] |  |
- | seller | OfferSeller |  |
+ | offers | [[OfferItem](#OfferItem)] |  |
+ | seller | [OfferSeller](#OfferSeller) |  |
 
 ---
 
@@ -12602,7 +10933,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | [BulkPriceOffer] | Consist of offers from multiple seller |
+ | data | [[BulkPriceOffer](#BulkPriceOffer)] | Consist of offers from multiple seller |
 
 ---
 
@@ -12636,28 +10967,28 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | address_type | String |  |
- | area_code | String |  |
  | address | String |  |
- | state | String |  |
- | google_map_point | [String: Any] |  |
+ | name | String |  |
  | tags | [String] |  |
- | geo_location | GeoLocation |  |
- | email | String |  |
- | landmark | String |  |
  | meta | [String: Any] |  |
+ | uid | Int |  |
+ | area | String |  |
+ | state | String |  |
+ | country_code | String |  |
+ | area_code_slug | String |  |
+ | country | String |  |
+ | is_active | Bool |  |
  | phone | String |  |
  | checkout_mode | String |  |
- | country | String |  |
- | area_code_slug | String |  |
- | is_active | Bool |  |
- | uid | Int |  |
- | country_code | String |  |
- | area | String |  |
+ | geo_location | [GeoLocation](#GeoLocation) |  |
  | user_id | String |  |
- | city | String |  |
- | name | String |  |
+ | landmark | String |  |
+ | email | String |  |
  | is_default_address | Bool |  |
+ | address_type | String |  |
+ | city | String |  |
+ | area_code | String |  |
+ | google_map_point | [String: Any] |  |
 
 ---
 
@@ -12668,7 +10999,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | address | [Address] |  |
+ | address | [[Address](#Address)] |  |
 
 ---
 
@@ -12680,8 +11011,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | is_default_address | Bool |  |
- | success | String |  |
  | address_id | Int |  |
+ | success | String |  |
 
 ---
 
@@ -12692,10 +11023,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | is_default_address | Bool |  |
- | success | Bool |  |
  | is_updated | Bool |  |
+ | is_default_address | Bool |  |
  | address_id | Int |  |
+ | success | Bool |  |
 
 ---
 
@@ -12719,8 +11050,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | uid | String |  |
- | billing_address_id | Int |  |
  | address_id | String |  |
+ | billing_address_id | Int |  |
 
 ---
 
@@ -12731,12 +11062,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | payment_mode | String |  |
  | payment_identifier | String |  |
- | merchant_code | String |  |
- | uid | Int |  |
- | aggregator_name | String |  |
+ | payment_mode | String |  |
  | address_id | Int |  |
+ | uid | Int |  |
+ | merchant_code | String |  |
+ | aggregator_name | String |  |
 
 ---
 
@@ -12749,8 +11080,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | discount | Double |  |
  | title | String |  |
- | display_message_en | String |  |
  | code | String |  |
+ | display_message_en | String |  |
  | valid | Bool |  |
 
 ---
@@ -12762,9 +11093,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | coupon_validity | [CouponValidity](#CouponValidity) |  |
  | message | String |  |
  | success | Bool |  |
- | coupon_validity | CouponValidity |  |
 
 ---
 
@@ -12775,16 +11106,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | shipment_type | String |  |
- | fulfillment_type | String |  |
- | items | [CartProductInfo] |  |
- | fulfillment_id | Int |  |
+ | promise | [ShipmentPromise](#ShipmentPromise) |  |
  | order_type | String |  |
- | promise | ShipmentPromise |  |
- | box_type | String |  |
- | shipments | Int |  |
  | dp_options | [String: Any] |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  |
  | dp_id | Int |  |
+ | fulfillment_type | String |  |
+ | shipments | Int |  |
+ | shipment_type | String |  |
+ | fulfillment_id | Int |  |
+ | box_type | String |  |
 
 ---
 
@@ -12795,23 +11126,23 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | comment | String |  |
+ | gstin | String |  |
  | checkout_mode | String |  |
- | uid | String |  |
- | payment_selection_lock | PaymentSelectionLock |  |
- | last_modified | String |  |
- | coupon_text | String |  |
  | cart_id | Int |  |
- | delivery_charge_info | String |  |
- | message | String |  |
  | restrict_checkout | Bool |  |
  | is_valid | Bool |  |
- | currency | CartCurrency |  |
- | delivery_promise | ShipmentPromise |  |
+ | delivery_charge_info | String |  |
+ | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  |
+ | comment | String |  |
+ | coupon_text | String |  |
+ | uid | String |  |
+ | last_modified | String |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  |
  | error | Bool |  |
- | breakup_values | CartBreakup |  |
- | shipments | [ShipmentResponse] |  |
- | gstin | String |  |
+ | message | String |  |
+ | shipments | [[ShipmentResponse](#ShipmentResponse)] |  |
+ | currency | [CartCurrency](#CartCurrency) |  |
+ | breakup_values | [CartBreakup](#CartBreakup) |  |
 
 ---
 
@@ -12822,22 +11153,22 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | payment_params | [String: Any] |  |
- | payment_mode | String |  |
- | ordering_store | Int |  |
- | billing_address_id | Int |  |
- | delivery_address | [String: Any] |  |
- | fyndstore_emp_id | String |  |
- | payment_auto_confirm | Bool |  |
- | staff | [String: Any] |  |
- | billing_address | [String: Any] |  |
- | payment_identifier | String |  |
- | merchant_code | String |  |
- | meta | [String: Any] |  |
- | callback_url | String |  |
  | extra_meta | [String: Any] |  |
- | aggregator | String |  |
+ | payment_identifier | String |  |
+ | callback_url | String |  |
+ | billing_address | [String: Any] |  |
+ | billing_address_id | Int |  |
+ | payment_mode | String |  |
+ | delivery_address | [String: Any] |  |
+ | meta | [String: Any] |  |
+ | staff | [String: Any] |  |
+ | payment_params | [String: Any] |  |
  | address_id | Int |  |
+ | ordering_store | Int |  |
+ | aggregator | String |  |
+ | payment_auto_confirm | Bool |  |
+ | merchant_code | String |  |
+ | fyndstore_emp_id | String |  |
 
 ---
 
@@ -12848,33 +11179,33 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | payment_selection_lock | PaymentSelectionLock |  |
- | order_id | String |  |
- | currency | CartCurrency |  |
- | store_code | String |  |
- | delivery_charges | Int |  |
- | gstin | String |  |
+ | delivery_charge_order_value | Int |  |
+ | store_emps | [[String: Any]] |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  |
+ | uid | String |  |
+ | comment | String |  |
+ | last_modified | String |  |
+ | message | String |  |
  | cod_message | String |  |
- | cod_charges | Int |  |
- | items | [CartProductInfo] |  |
- | delivery_promise | ShipmentPromise |  |
- | checkout_mode | String |  |
+ | user_type | String |  |
+ | success | Bool |  |
  | delivery_charge_info | String |  |
+ | coupon_text | String |  |
+ | error_message | String |  |
+ | currency | [CartCurrency](#CartCurrency) |  |
+ | store_code | String |  |
+ | checkout_mode | String |  |
+ | order_id | String |  |
+ | cart_id | Int |  |
  | restrict_checkout | Bool |  |
  | is_valid | Bool |  |
- | uid | String |  |
- | delivery_charge_order_value | Int |  |
- | comment | String |  |
- | user_type | String |  |
- | last_modified | String |  |
- | coupon_text | String |  |
- | store_emps | [[String: Any]] |  |
- | cart_id | Int |  |
- | error_message | String |  |
- | message | String |  |
- | breakup_values | CartBreakup |  |
- | success | Bool |  |
  | cod_available | Bool |  |
+ | delivery_charges | Int |  |
+ | breakup_values | [CartBreakup](#CartBreakup) |  |
+ | gstin | String |  |
+ | cod_charges | Int |  |
+ | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  |
 
 ---
 
@@ -12885,13 +11216,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | [String: Any] |  |
  | order_id | String |  |
- | cart | CheckCart |  |
- | message | String |  |
- | callback_url | String |  |
- | app_intercept_url | String |  |
  | success | Bool |  |
+ | app_intercept_url | String |  |
+ | cart | [CheckCart](#CheckCart) |  |
+ | callback_url | String |  |
+ | message | String |  |
+ | data | [String: Any] |  |
 
 ---
 
@@ -12902,10 +11233,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | comment | String |  |
- | checkout_mode | String |  |
  | gstin | String |  |
+ | checkout_mode | String |  |
  | pick_up_customer_details | [String: Any] | Customer contact details for customer pickup at store |
+ | comment | String |  |
 
 ---
 
@@ -12962,11 +11293,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | token | String | Short link id |
- | created_on | String |  |
- | meta | [String: Any] | Meta data sent while generating share cart link |
  | source | [String: Any] | Share link device and other source information |
+ | created_on | String |  |
  | user | [String: Any] | User details of who generated share link |
+ | meta | [String: Any] | Meta data sent while generating share cart link |
+ | token | String | Short link id |
 
 ---
 
@@ -12977,23 +11308,23 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | comment | String |  |
+ | gstin | String |  |
  | checkout_mode | String |  |
- | uid | String |  |
- | payment_selection_lock | PaymentSelectionLock |  |
- | shared_cart_details | SharedCartDetails |  |
- | last_modified | String |  |
- | coupon_text | String |  |
- | items | [CartProductInfo] |  |
  | cart_id | Int |  |
- | delivery_charge_info | String |  |
- | message | String |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  |
  | restrict_checkout | Bool |  |
  | is_valid | Bool |  |
- | currency | CartCurrency |  |
- | delivery_promise | ShipmentPromise |  |
- | breakup_values | CartBreakup |  |
- | gstin | String |  |
+ | delivery_charge_info | String |  |
+ | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  |
+ | comment | String |  |
+ | shared_cart_details | [SharedCartDetails](#SharedCartDetails) |  |
+ | coupon_text | String |  |
+ | uid | String |  |
+ | last_modified | String |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  |
+ | message | String |  |
+ | currency | [CartCurrency](#CartCurrency) |  |
+ | breakup_values | [CartBreakup](#CartBreakup) |  |
 
 ---
 
@@ -13004,8 +11335,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | cart | [SharedCart](#SharedCart) |  |
  | error | String |  |
- | cart | SharedCart |  |
 
 ---
 
@@ -13057,8 +11388,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | uid | Int |  |
  | __v | Int |  |
  | _id | String |  |
- | default_currency | LocationDefaultCurrency |  |
- | default_language | LocationDefaultLanguage |  |
+ | default_currency | [LocationDefaultCurrency](#LocationDefaultCurrency) |  |
+ | default_language | [LocationDefaultLanguage](#LocationDefaultLanguage) |  |
 
 ---
 
@@ -13069,7 +11400,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [LocationCountry] |  |
+ | items | [[LocationCountry](#LocationCountry)] |  |
 
 ---
 
@@ -13085,9 +11416,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Ticket] | List of tickets |
- | filters | Filter | All the filters available for tickets |
- | page | Page | Describes the pagination state |
+ | items | [[Ticket](#Ticket)] | List of tickets |
+ | filters | [Filter](#Filter) | All the filters available for tickets |
+ | page | [Page](#Page) | Describes the pagination state |
 
 ---
 
@@ -13115,8 +11446,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [TicketHistory] | List of ticket history |
- | page | Page | Describes the pagination state |
+ | items | [[TicketHistory](#TicketHistory)] | List of ticket history |
+ | page | [Page](#Page) | Describes the pagination state |
 
 ---
 
@@ -13127,8 +11458,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [CustomForm] | List of forms |
- | page | Page | Describes the pagination state |
+ | items | [[CustomForm](#CustomForm)] | List of forms |
+ | page | [Page](#Page) | Describes the pagination state |
 
 ---
 
@@ -13147,7 +11478,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | priority | [String: Any] | Describes the priority of the tickets created by the form |
  | should_notify | Bool | Indicates if staff should be notified when a response is received |
  | success_message | String | Success message that will be shown on submission |
- | poll_for_assignment | PollForAssignment | Describes how polling will be done for the tickets createds |
+ | poll_for_assignment | [PollForAssignment](#PollForAssignment) | Describes how polling will be done for the tickets createds |
 
 ---
 
@@ -13166,7 +11497,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | should_notify | Bool | Indicates if staff should be notified when a response is received |
  | login_required | Bool | Denotes if login is required to make a form response submission |
  | success_message | String | Success message that will be shown on submission |
- | poll_for_assignment | PollForAssignment | Describes how polling will be done for the tickets createds |
+ | poll_for_assignment | [PollForAssignment](#PollForAssignment) | Describes how polling will be done for the tickets createds |
 
 ---
 
@@ -13177,13 +11508,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | content | TicketContent | Ticket conetent details |
+ | content | [TicketContent](#TicketContent) | Ticket conetent details |
  | category | String | Category assigned to the ticket |
  | sub_category | String | Sub-category assigned to the ticket |
  | source | String | Denotes if the ticket was created at company or application level |
  | status | String | Denotes in what state is the ticket |
  | priority | [String: Any] | Denotes the priority of ticket |
- | assigned_to | AgentChangePayload | Details of support staff to whom ticket is assigned |
+ | assigned_to | [AgentChangePayload](#AgentChangePayload) | Details of support staff to whom ticket is assigned |
  | tags | [String] | Tags relevant to ticket |
 
 ---
@@ -13229,7 +11560,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | unique_name | String | Ticket id |
- | notify | [NotifyUser] | List of people to be notified |
+ | notify | [[NotifyUser](#NotifyUser)] | List of people to be notified |
 
 ---
 
@@ -13252,9 +11583,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | priorities | [Priority] | List of possible priorities for tickets |
- | categories | [TicketCategory] | List of possible categories for tickets |
- | statuses | [Status] | List of possible statuses for tickets |
+ | priorities | [[Priority](#Priority)] | List of possible priorities for tickets |
+ | categories | [[TicketCategory](#TicketCategory)] | List of possible categories for tickets |
+ | statuses | [[Status](#Status)] | List of possible statuses for tickets |
  | assignees | [[String: Any]] | List of support staff availble for tickets assignment |
 
 ---
@@ -13278,8 +11609,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | response | [KeyValue] | Form response |
- | attachments | [TicketAsset] | List of all attachments related to the form |
+ | response | [[KeyValue](#KeyValue)] | Form response |
+ | attachments | [[TicketAsset](#TicketAsset)] | List of all attachments related to the form |
 
 ---
 
@@ -13313,7 +11644,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | participants | [Participant] | List of participants of the video room |
+ | participants | [[Participant](#Participant)] | List of participants of the video room |
 
 ---
 
@@ -13324,7 +11655,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema | Details of participant |
+ | user | [UserSchema](#UserSchema) | Details of participant |
  | identity | String | Unique identifier of participant |
  | status | String | Status of participant |
 
@@ -13378,7 +11709,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | ticket | Ticket | Ticket created on form submission |
+ | ticket | [Ticket](#Ticket) | Ticket created on form submission |
 
 ---
 
@@ -13427,7 +11758,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | title | String | Title for ticket |
  | description | String | Long description of issue |
- | attachments | [TicketAsset] | List of all attachments related to the ticket |
+ | attachments | [[TicketAsset](#TicketAsset)] | List of all attachments related to the ticket |
 
 ---
 
@@ -13442,7 +11773,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | status | String | Status of the ticket |
  | priority | [String: Any] | Priority of the ticket |
  | category | String | Category of the ticket |
- | content | TicketContent | Content for the ticket |
+ | content | [TicketContent](#TicketContent) | Content for the ticket |
 
 ---
 
@@ -13453,7 +11784,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | key | PriorityEnum | Key for priority |
+ | key | [PriorityEnum](#PriorityEnum) | Key for priority |
  | display | String | Display text for priority |
  | color | String | Color for priority |
 
@@ -13481,9 +11812,9 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | key | String | Key for category |
  | display | String | Display text for category |
- | form | CustomForm | Form related to the category |
- | sub_categories | [TicketSubCategory] | Sub-category related to the category |
- | feedback_form | TicketFeedbackForm | Feedback form of category used to submit ticket feedback |
+ | form | [CustomForm](#CustomForm) | Form related to the category |
+ | sub_categories | [[TicketSubCategory](#TicketSubCategory)] | Sub-category related to the category |
+ | feedback_form | [TicketFeedbackForm](#TicketFeedbackForm) | Feedback form of category used to submit ticket feedback |
 
 ---
 
@@ -13518,7 +11849,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [TicketFeedback] | List of all ticket feedback for the ticket |
+ | items | [[TicketFeedback](#TicketFeedback)] | List of all ticket feedback for the ticket |
 
 ---
 
@@ -13572,15 +11903,15 @@ Internal Server Error. See the error object in the response body to know the exa
  | header_image | String | Form header image that will be shown to the user |
  | title | String | Form title that will be shown to the user |
  | description | String | Form description that will be shown to the user |
- | priority | Priority | Sets priority of tickets created by form response |
+ | priority | [Priority](#Priority) | Sets priority of tickets created by form response |
  | login_required | Bool | Denotes if login is required to make a form response submission |
  | should_notify | Bool | Denotes if new response submission for the form should be notified to the assignees |
  | success_message | String | Message that is to be shown on succesfull form response submission |
- | submit_button | SubmitButton | Details for submit button |
+ | submit_button | [SubmitButton](#SubmitButton) | Details for submit button |
  | inputs | [[String: Any]] | List of all the form fields |
- | created_on | CreatedOn | Gives details of when the form was created |
+ | created_on | [CreatedOn](#CreatedOn) | Gives details of when the form was created |
  | created_by | [String: Any] | Gives details of user who created the form |
- | poll_for_assignment | PollForAssignment | Details of how polling should be done for support |
+ | poll_for_assignment | [PollForAssignment](#PollForAssignment) | Details of how polling should be done for support |
  | _id | String | Unique identifier for the form |
 
 ---
@@ -13608,7 +11939,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | _id | String | Unique identifier for the feedback |
  | ticket_id | String | Readable ticket number |
  | company_id | String | Company id for which ticket was raised |
- | response | [FeedbackResponseItem] |  |
+ | response | [[FeedbackResponseItem](#FeedbackResponseItem)] |  |
  | category | String | Category of the ticket |
  | user | [String: Any] | User who submitted the feedback |
  | updated_at | String | Time when the feedback was last updated |
@@ -13626,7 +11957,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | type | String | Type of the history event |
  | value | [String: Any] | Data of the history event |
  | ticket_id | String | Readable ticket number |
- | created_on | CreatedOn | Time of creation of the history event |
+ | created_on | [CreatedOn](#CreatedOn) | Time of creation of the history event |
  | created_by | [String: Any] | User who created the history event |
  | _id | String | Unique identifier of the history event |
  | updated_at | String | Time of last update of the history event |
@@ -13641,16 +11972,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | context | TicketContext | Details of company and application realated to the ticket |
- | created_on | CreatedOn | Details of company and application realated to the ticket |
+ | context | [TicketContext](#TicketContext) | Details of company and application realated to the ticket |
+ | created_on | [CreatedOn](#CreatedOn) | Details of company and application realated to the ticket |
  | response_id | String | Details of company and application realated to the ticket |
- | content | TicketContent | Ticket conetent details |
+ | content | [TicketContent](#TicketContent) | Ticket conetent details |
  | ticket_id | String | Readable ticket number |
- | category | TicketCategory | Category assigned to the ticket |
- | sub_category | TicketSubCategory | Sub-category assigned to the ticket |
+ | category | [TicketCategory](#TicketCategory) | Category assigned to the ticket |
+ | sub_category | [TicketSubCategory](#TicketSubCategory) | Sub-category assigned to the ticket |
  | source | [String: Any] | Denotes if the ticket was created at company or application level |
- | status | Status | Denotes in what state is the ticket |
- | priority | Priority | Denotes the priority of ticket |
+ | status | [Status](#Status) | Denotes in what state is the ticket |
+ | priority | [Priority](#Priority) | Denotes the priority of ticket |
  | created_by | [String: Any] | User details of ticket creator |
  | assigned_to | [String: Any] | Details of support staff to whom ticket is assigned |
  | tags | [String] | Tags relevant to ticket |
@@ -13678,10 +12009,10 @@ Internal Server Error. See the error object in the response body to know the exa
  | text | String |  |
  | path | String |  |
  | type | String |  |
- | sections | [AvailablePageSchemaSections] |  |
- | sections_meta | [AvailablePageSectionMetaAttributes] |  |
+ | sections | [[AvailablePageSchemaSections](#AvailablePageSchemaSections)] |  |
+ | sections_meta | [[AvailablePageSectionMetaAttributes](#AvailablePageSectionMetaAttributes)] |  |
  | theme | String |  |
- | seo | AvailablePageSeo |  |
+ | seo | [AvailablePageSeo](#AvailablePageSeo) |  |
  | props | [[String: Any]] |  |
  | _id | String |  |
 
@@ -13723,7 +12054,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | props | [String: Any] |  |
  | blocks | [[String: Any]] |  |
  | preset | [String: Any] |  |
- | predicate | AvailablePagePredicate |  |
+ | predicate | [AvailablePagePredicate](#AvailablePagePredicate) |  |
 
 ---
 
@@ -13772,9 +12103,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | screen | AvailablePageScreenPredicate |  |
- | user | AvailablePageUserPredicate |  |
- | route | AvailablePageRoutePredicate |  |
+ | screen | [AvailablePageScreenPredicate](#AvailablePageScreenPredicate) |  |
+ | user | [AvailablePageUserPredicate](#AvailablePageUserPredicate) |  |
+ | route | [AvailablePageRoutePredicate](#AvailablePageRoutePredicate) |  |
 
 ---
 
@@ -13785,7 +12116,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | pages | [AvailablePageSchema] |  |
+ | pages | [[AvailablePageSchema](#AvailablePageSchema)] |  |
 
 ---
 
@@ -13811,8 +12142,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ThemesSchema] |  |
- | page | PaginationSchema |  |
+ | items | [[ThemesSchema](#ThemesSchema)] |  |
+ | page | [PaginationSchema](#PaginationSchema) |  |
 
 ---
 
@@ -13847,7 +12178,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | FontsSchemaItems |  |
+ | items | [FontsSchemaItems](#FontsSchemaItems) |  |
  | kind | String |  |
 
 ---
@@ -13897,7 +12228,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | subsets | [String] |  |
  | version | String |  |
  | last_modified | String |  |
- | files | FontsSchemaItemsFiles |  |
+ | files | [FontsSchemaItemsFiles](#FontsSchemaItemsFiles) |  |
  | category | String |  |
  | kind | String |  |
 
@@ -13933,19 +12264,19 @@ Internal Server Error. See the error object in the response body to know the exa
  | version | String |  |
  | parent_theme_version | String |  |
  | parent_theme | String |  |
- | information | Information |  |
+ | information | [Information](#Information) |  |
  | tags | [String] |  |
- | src | Src |  |
- | assets | AssetsSchema |  |
- | available_sections | [availableSectionSchema] |  |
+ | src | [Src](#Src) |  |
+ | assets | [AssetsSchema](#AssetsSchema) |  |
+ | available_sections | [[availableSectionSchema](#availableSectionSchema)] |  |
  | constants | [String: Any] |  |
  | styles | [String: Any] |  |
- | config | Config |  |
+ | config | [Config](#Config) |  |
  | settings | [String: Any] |  |
- | font | Font |  |
+ | font | [Font](#Font) |  |
  | _id | String |  |
  | __v | Int |  |
- | colors | Colors |  |
+ | colors | [Colors](#Colors) |  |
 
 ---
 
@@ -13956,10 +12287,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | blocks | [Blocks] |  |
+ | blocks | [[Blocks](#Blocks)] |  |
  | name | String |  |
  | label | String |  |
- | props | [BlocksProps] |  |
+ | props | [[BlocksProps](#BlocksProps)] |  |
 
 ---
 
@@ -13970,7 +12301,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | images | Images |  |
+ | images | [Images](#Images) |  |
  | features | [String] |  |
  | name | String |  |
  | description | String |  |
@@ -14009,9 +12340,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | umd_js | UmdJs |  |
- | common_js | CommonJs |  |
- | css | Css |  |
+ | umd_js | [UmdJs](#UmdJs) |  |
+ | common_js | [CommonJs](#CommonJs) |  |
+ | css | [Css](#Css) |  |
 
 ---
 
@@ -14078,10 +12409,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | preset | Preset |  |
- | global_schema | GlobalSchema |  |
+ | preset | [Preset](#Preset) |  |
+ | global_schema | [GlobalSchema](#GlobalSchema) |  |
  | current | String |  |
- | list | [ListSchemaItem] |  |
+ | list | [[ListSchemaItem](#ListSchemaItem)] |  |
 
 ---
 
@@ -14092,7 +12423,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | pages | [AvailablePageSchema] |  |
+ | pages | [[AvailablePageSchema](#AvailablePageSchema)] |  |
 
 ---
 
@@ -14103,7 +12434,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | props | [GlobalSchemaProps] |  |
+ | props | [[GlobalSchemaProps](#GlobalSchemaProps)] |  |
 
 ---
 
@@ -14115,7 +12446,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | global | [String: Any] |  |
- | page | [ConfigPage] |  |
+ | page | [[ConfigPage](#ConfigPage)] |  |
  | name | String |  |
 
 ---
@@ -14167,7 +12498,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | family | String |  |
- | variants | Variants |  |
+ | variants | [Variants](#Variants) |  |
 
 ---
 
@@ -14178,11 +12509,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | medium | Medium |  |
- | semi_bold | SemiBold |  |
- | bold | Bold |  |
- | light | Light |  |
- | regular | Regular |  |
+ | medium | [Medium](#Medium) |  |
+ | semi_bold | [SemiBold](#SemiBold) |  |
+ | bold | [Bold](#Bold) |  |
+ | light | [Light](#Light) |  |
+ | regular | [Regular](#Regular) |  |
 
 ---
 
@@ -14255,7 +12586,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | type | String |  |
  | name | String |  |
- | props | [BlocksProps] |  |
+ | props | [[BlocksProps](#BlocksProps)] |  |
 
 ---
 
@@ -14338,7 +12669,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | first_name | String |  |
  | last_name | String |  |
- | mobile | EditProfileMobileSchema |  |
+ | mobile | [EditProfileMobileSchema](#EditProfileMobileSchema) |  |
  | country_code | String |  |
  | email | String |  |
  | gender | String |  |
@@ -14444,7 +12775,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | gender | String |  |
  | email | String |  |
  | password | String |  |
- | phone | FormRegisterRequestSchemaPhone |  |
+ | phone | [FormRegisterRequestSchemaPhone](#FormRegisterRequestSchemaPhone) |  |
  | register_token | String |  |
 
 ---
@@ -14529,8 +12860,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | is_signed_in | Bool |  |
- | oauth2 | OAuthRequestSchemaOauth2 |  |
- | profile | OAuthRequestSchemaProfile |  |
+ | oauth2 | [OAuthRequestSchemaOauth2](#OAuthRequestSchemaOauth2) |  |
+ | profile | [OAuthRequestSchemaProfile](#OAuthRequestSchemaProfile) |  |
 
 ---
 
@@ -14541,7 +12872,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
 
 ---
 
@@ -14554,7 +12885,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | register_token | String |  |
  | user_exists | Bool |  |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
 
 ---
 
@@ -14588,7 +12919,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
  | register_token | String |  |
  | user_exists | Bool |  |
  | verify_email_link | Bool |  |
@@ -14605,7 +12936,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
  | request_id | String |  |
  | register_token | String |  |
 
@@ -14618,7 +12949,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
  | user_exists | Bool |  |
  | register_token | String |  |
 
@@ -14738,7 +13069,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
  | verify_mobile_link | Bool |  |
 
 ---
@@ -14750,7 +13081,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
  | verify_email_link | Bool |  |
 
 ---
@@ -14784,7 +13115,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | users | [UserSchema] |  |
+ | users | [[UserSchema](#UserSchema)] |  |
 
 ---
 
@@ -14795,8 +13126,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [UserSchema] |  |
- | page | PaginationSchema |  |
+ | items | [[UserSchema](#UserSchema)] |  |
+ | page | [PaginationSchema](#PaginationSchema) |  |
 
 ---
 
@@ -14922,9 +13253,9 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | first_name | String |  |
  | last_name | String |  |
- | debug | AuthSuccessUserDebug |  |
+ | debug | [AuthSuccessUserDebug](#AuthSuccessUserDebug) |  |
  | active | Bool |  |
- | emails | AuthSuccessUserEmails |  |
+ | emails | [AuthSuccessUserEmails](#AuthSuccessUserEmails) |  |
 
 ---
 
@@ -14977,7 +13308,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | user | UserSchema |  |
+ | user | [UserSchema](#UserSchema) |  |
 
 ---
 
@@ -15017,22 +13348,22 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | display | String |  |
- | look_and_feel | LookAndFeel |  |
+ | look_and_feel | [LookAndFeel](#LookAndFeel) |  |
  | updated_at | String |  |
  | active | Bool |  |
  | forgot_password | Bool |  |
- | login | Login |  |
+ | login | [Login](#Login) |  |
  | skip_captcha | Bool |  |
  | name | String |  |
- | meta | MetaSchema |  |
+ | meta | [MetaSchema](#MetaSchema) |  |
  | _id | String |  |
- | social | Social |  |
- | required_fields | RequiredFields |  |
- | register_required_fields | RegisterRequiredFields |  |
+ | social | [Social](#Social) |  |
+ | required_fields | [RequiredFields](#RequiredFields) |  |
+ | register_required_fields | [RegisterRequiredFields](#RegisterRequiredFields) |  |
  | skip_login | Bool |  |
- | flash_card | FlashCard |  |
+ | flash_card | [FlashCard](#FlashCard) |  |
  | subtext | String |  |
- | social_tokens | SocialTokens |  |
+ | social_tokens | [SocialTokens](#SocialTokens) |  |
  | created_at | String |  |
  | register | Bool |  |
  | mobile_image | String |  |
@@ -15095,8 +13426,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | email | PlatformEmail |  |
- | mobile | PlatformMobile |  |
+ | email | [PlatformEmail](#PlatformEmail) |  |
+ | mobile | [PlatformMobile](#PlatformMobile) |  |
 
 ---
 
@@ -15131,8 +13462,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | email | RegisterRequiredFieldsEmail |  |
- | mobile | RegisterRequiredFieldsMobile |  |
+ | email | [RegisterRequiredFieldsEmail](#RegisterRequiredFieldsEmail) |  |
+ | mobile | [RegisterRequiredFieldsMobile](#RegisterRequiredFieldsMobile) |  |
 
 ---
 
@@ -15180,9 +13511,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | facebook | Facebook |  |
- | account_kit | Accountkit |  |
- | google | Google |  |
+ | facebook | [Facebook](#Facebook) |  |
+ | account_kit | [Accountkit](#Accountkit) |  |
+ | google | [Google](#Google) |  |
 
 ---
 
@@ -15243,8 +13574,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | first_name | String |  |
  | meta | [String: Any] |  |
  | last_name | String |  |
- | phone_numbers | [PhoneNumber] |  |
- | emails | [Email] |  |
+ | phone_numbers | [[PhoneNumber](#PhoneNumber)] |  |
+ | emails | [[Email](#Email)] |  |
  | gender | String |  |
  | dob | String |  |
  | active | Bool |  |
@@ -15252,7 +13583,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | username | String |  |
  | account_type | String |  |
  | uid | String |  |
- | debug | Debug |  |
+ | debug | [Debug](#Debug) |  |
  | has_old_password_hash | Bool |  |
  | _id | String |  |
  | created_at | String |  |
@@ -15276,7 +13607,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | tnc | String |  |
  | policy | String |  |
  | shipping | String |  |
- | faq | [ApplicationLegalFAQ] |  |
+ | faq | [[ApplicationLegalFAQ](#ApplicationLegalFAQ)] |  |
  | _id | String |  |
  | updated_at | String |  |
  | created_at | String |  |
@@ -15302,7 +13633,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | seo | SeoSchema |  |
+ | seo | [SeoSchema](#SeoSchema) |  |
 
 ---
 
@@ -15317,8 +13648,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | _id | String |  |
  | robots_txt | String |  |
  | sitemap_enabled | Bool |  |
- | custom_meta_tags | [CustomMetaTag] |  |
- | details | Detail |  |
+ | custom_meta_tags | [[CustomMetaTag](#CustomMetaTag)] |  |
+ | details | [Detail](#Detail) |  |
  | created_at | String |  |
  | updated_at | String |  |
 
@@ -15398,13 +13729,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | platforms | [String] |  |
  | title | String |  |
  | announcement | String |  |
- | pages | [AnnouncementPageSchema] |  |
- | editor_meta | EditorMeta |  |
- | author | AnnouncementAuthorSchema |  |
+ | pages | [[AnnouncementPageSchema](#AnnouncementPageSchema)] |  |
+ | editor_meta | [EditorMeta](#EditorMeta) |  |
+ | author | [AnnouncementAuthorSchema](#AnnouncementAuthorSchema) |  |
  | created_at | String |  |
  | app | String |  |
  | modified_at | String |  |
- | _schedule | ScheduleSchema |  |
+ | _schedule | [ScheduleSchema](#ScheduleSchema) |  |
 
 ---
 
@@ -15419,7 +13750,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | start | String |  |
  | end | String |  |
  | duration | Double |  |
- | next_schedule | [NextSchedule] |  |
+ | next_schedule | [[NextSchedule](#NextSchedule)] |  |
 
 ---
 
@@ -15443,7 +13774,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | announcement | String |  |
- | schedule | ScheduleStartSchema |  |
+ | schedule | [ScheduleStartSchema](#ScheduleStartSchema) |  |
 
 ---
 
@@ -15466,8 +13797,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [BlogSchema] |  |
- | page | Page |  |
+ | items | [[BlogSchema](#BlogSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -15520,17 +13851,17 @@ Internal Server Error. See the error object in the response body to know the exa
  | _custom_json | [String: Any] |  |
  | application | String |  |
  | archived | Bool |  |
- | author | Author |  |
- | content | [ResourceContent] |  |
- | feature_image | Asset |  |
+ | author | [Author](#Author) |  |
+ | content | [[ResourceContent](#ResourceContent)] |  |
+ | feature_image | [Asset](#Asset) |  |
  | published | Bool |  |
  | reading_time | String |  |
  | slug | String |  |
  | tags | [String] |  |
- | seo | SEO |  |
- | _schedule | CronSchedule |  |
+ | seo | [SEO](#SEO) |  |
+ | _schedule | [CronSchedule](#CronSchedule) |  |
  | title | String |  |
- | date_meta | DateMeta |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
 
 ---
 
@@ -15542,7 +13873,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | description | String |  |
- | image | SEOImage |  |
+ | image | [SEOImage](#SEOImage) |  |
  | title | String |  |
 
 ---
@@ -15579,16 +13910,16 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | application | String |  |
  | _custom_json | [String: Any] |  |
- | author | Author |  |
- | content | [ResourceContent] |  |
- | feature_image | Asset |  |
+ | author | [Author](#Author) |  |
+ | content | [[ResourceContent](#ResourceContent)] |  |
+ | feature_image | [Asset](#Asset) |  |
  | published | Bool |  |
  | reading_time | String |  |
  | slug | String |  |
  | tags | [String] |  |
  | title | String |  |
- | seo | SEO |  |
- | _schedule | CronSchedule |  |
+ | seo | [SEO](#SEO) |  |
+ | _schedule | [CronSchedule](#CronSchedule) |  |
 
 ---
 
@@ -15599,8 +13930,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [AdminAnnouncementSchema] |  |
- | page | Page |  |
+ | items | [[AdminAnnouncementSchema](#AdminAnnouncementSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -15612,7 +13943,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | message | String |  |
- | data | AdminAnnouncementSchema |  |
+ | data | [AdminAnnouncementSchema](#AdminAnnouncementSchema) |  |
 
 ---
 
@@ -15626,13 +13957,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | name | String |  |
  | slug | String |  |
  | orientation | String |  |
- | created_by | CreatedBySchema |  |
- | date_meta | DateMeta |  |
+ | created_by | [CreatedBySchema](#CreatedBySchema) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | _id | String |  |
  | position | String |  |
  | application | String |  |
  | platform | String |  |
- | navigation | NavigationReference |  |
+ | navigation | [NavigationReference](#NavigationReference) |  |
 
 ---
 
@@ -15643,9 +13974,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | hi | Language |  |
- | ar | Language |  |
- | en_us | Language |  |
+ | hi | [Language](#Language) |  |
+ | ar | [Language](#Language) |  |
+ | en_us | [Language](#Language) |  |
 
 ---
 
@@ -15667,8 +13998,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | ActionPage |  |
- | popup | ActionPage |  |
+ | page | [ActionPage](#ActionPage) |  |
+ | popup | [ActionPage](#ActionPage) |  |
  | type | String |  |
 
 ---
@@ -15696,14 +14027,14 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | acl | [String] |  |
  | tags | [String] |  |
- | _locale_language | LocaleLanguage |  |
+ | _locale_language | [LocaleLanguage](#LocaleLanguage) |  |
  | image | String |  |
  | type | String |  |
- | action | Action |  |
+ | action | [Action](#Action) |  |
  | active | Bool |  |
  | display | String |  |
  | sort_order | Int |  |
- | sub_navigation | [NavigationReference] |  |
+ | sub_navigation | [[NavigationReference](#NavigationReference)] |  |
 
 ---
 
@@ -15714,7 +14045,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | LandingPageSchema |  |
+ | data | [LandingPageSchema](#LandingPageSchema) |  |
  | success | Bool |  |
 
 ---
@@ -15745,7 +14076,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | bg_color | String |  |
  | duration | Int |  |
  | auto_decide_duration | Bool |  |
- | action | Action |  |
+ | action | [Action](#Action) |  |
 
 ---
 
@@ -15756,7 +14087,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | SlideshowSchema |  |
+ | data | [SlideshowSchema](#SlideshowSchema) |  |
  | success | Bool |  |
 
 ---
@@ -15768,7 +14099,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | announcements | [String: [AnnouncementSchema]] |  |
+ | announcements | [String: [[AnnouncementSchema](#AnnouncementSchema)]] |  |
  | refresh_rate | Int | number of seconds after which api should hit again to fetch new announcements |
  | refresh_pages | [String] | list of page slugs on which announcement should be fetched as soon as they are loaded |
 
@@ -15781,7 +14112,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | faqs | [FaqSchema] |  |
+ | faqs | [[FaqSchema](#FaqSchema)] |  |
 
 ---
 
@@ -15792,7 +14123,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | tag | HandpickedTagSchema |  |
+ | tag | [HandpickedTagSchema](#HandpickedTagSchema) |  |
 
 ---
 
@@ -15849,7 +14180,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | tags | [CreateTagSchema] |  |
+ | tags | [[CreateTagSchema](#CreateTagSchema)] |  |
 
 ---
 
@@ -15927,7 +14258,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | index | Int |  |
  | title | String |  |
  | description | String |  |
- | children | [ChildrenSchema] |  |
+ | children | [[ChildrenSchema](#ChildrenSchema)] |  |
  | _id | String |  |
  | slug | String |  |
  | application | String |  |
@@ -15971,7 +14302,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | faq | FaqSchema |  |
+ | faq | [FaqSchema](#FaqSchema) |  |
 
 ---
 
@@ -15982,7 +14313,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | faq | FAQ |  |
+ | faq | [FAQ](#FAQ) |  |
 
 ---
 
@@ -15993,7 +14324,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | faqs | [FaqSchema] |  |
+ | faqs | [[FaqSchema](#FaqSchema)] |  |
 
 ---
 
@@ -16004,7 +14335,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | category | CategorySchema |  |
+ | category | [CategorySchema](#CategorySchema) |  |
 
 ---
 
@@ -16015,7 +14346,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | category | CategoryRequestSchema |  |
+ | category | [CategoryRequestSchema](#CategoryRequestSchema) |  |
 
 ---
 
@@ -16026,7 +14357,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | category | CategorySchema |  |
+ | category | [CategorySchema](#CategorySchema) |  |
 
 ---
 
@@ -16037,7 +14368,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | categories | [CategorySchema] |  |
+ | categories | [[CategorySchema](#CategorySchema)] |  |
 
 ---
 
@@ -16048,7 +14379,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | category | FAQCategorySchema |  |
+ | category | [FAQCategorySchema](#FAQCategorySchema) |  |
 
 ---
 
@@ -16059,8 +14390,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [LandingPageSchema] |  |
- | page | Page |  |
+ | items | [[LandingPageSchema](#LandingPageSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -16072,10 +14403,10 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | slug | String |  |
- | action | Action |  |
+ | action | [Action](#Action) |  |
  | platform | [String] |  |
- | created_by | CreatedBySchema |  |
- | date_meta | DateMeta |  |
+ | created_by | [CreatedBySchema](#CreatedBySchema) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | _id | String |  |
  | application | String |  |
  | archived | Bool |  |
@@ -16090,7 +14421,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [NavigationSchema] |  |
+ | items | [[NavigationSchema](#NavigationSchema)] |  |
 
 ---
 
@@ -16101,8 +14432,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [NavigationSchema] |  |
- | page | Page |  |
+ | items | [[NavigationSchema](#NavigationSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -16131,11 +14462,11 @@ Internal Server Error. See the error object in the response body to know the exa
  | name | String |  |
  | slug | String |  |
  | platform | [String] |  |
- | created_by | CreatedBySchema |  |
- | date_meta | DateMeta |  |
- | orientation | Orientation |  |
+ | created_by | [CreatedBySchema](#CreatedBySchema) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | orientation | [Orientation](#Orientation) |  |
  | version | Double |  |
- | navigation | [NavigationReference] |  |
+ | navigation | [[NavigationReference](#NavigationReference)] |  |
 
 ---
 
@@ -16149,8 +14480,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | name | String |  |
  | slug | String |  |
  | platform | [String] |  |
- | orientation | Orientation |  |
- | navigation | [NavigationReference] |  |
+ | orientation | [Orientation](#Orientation) |  |
+ | navigation | [[NavigationReference](#NavigationReference)] |  |
 
 ---
 
@@ -16172,9 +14503,9 @@ Internal Server Error. See the error object in the response body to know the exa
  | published | Bool |  |
  | tags | [String] |  |
  | content | [[String: Any]] |  |
- | created_by | CreatedBySchema |  |
- | date_meta | DateMeta |  |
- | _schedule | ScheduleSchema |  |
+ | created_by | [CreatedBySchema](#CreatedBySchema) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | _schedule | [ScheduleSchema](#ScheduleSchema) |  |
 
 ---
 
@@ -16197,7 +14528,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | CustomPageSchema |  |
+ | data | [CustomPageSchema](#CustomPageSchema) |  |
 
 ---
 
@@ -16219,8 +14550,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [PageSchema] |  |
- | page | Page |  |
+ | items | [[PageSchema](#PageSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -16231,7 +14562,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | specifications | [PageSpecItem] |  |
+ | specifications | [[PageSpecItem](#PageSpecItem)] |  |
 
 ---
 
@@ -16256,8 +14587,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | page_type | String |  |
  | display_name | String |  |
- | params | [PageSpecParam] |  |
- | query | [PageSpecParam] |  |
+ | params | [[PageSpecParam](#PageSpecParam)] |  |
+ | query | [[PageSpecParam](#PageSpecParam)] |  |
 
 ---
 
@@ -16271,13 +14602,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | _id | String |  |
  | application | String |  |
  | component_ids | [String] | Components can be used to store multiple components |
- | content | [PageContent] |  |
- | created_by | CreatedBySchema |  |
- | date_meta | DateMeta |  |
+ | content | [[PageContent](#PageContent)] |  |
+ | created_by | [CreatedBySchema](#CreatedBySchema) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | description | String |  |
- | feature_image | Asset |  |
- | page_meta | [PageMeta] |  |
- | _schedule | ScheduleSchema |  |
+ | feature_image | [Asset](#Asset) |  |
+ | page_meta | [[PageMeta](#PageMeta)] |  |
+ | _schedule | [ScheduleSchema](#ScheduleSchema) |  |
  | _custom_json | [String: Any] |  |
  | orientation | String |  |
  | platform | String |  |
@@ -16286,7 +14617,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | tags | [String] |  |
  | title | String |  |
  | type | String |  |
- | seo | SEO |  |
+ | seo | [SEO](#SEO) |  |
  | visibility | [String: Any] |  |
 
 ---
@@ -16333,18 +14664,18 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | _schedule | CronSchedule |  |
+ | _schedule | [CronSchedule](#CronSchedule) |  |
  | application | String |  |
- | author | Author |  |
+ | author | [Author](#Author) |  |
  | _custom_json | [String: Any] |  |
  | orientation | String |  |
  | content | [[String: Any]] |  |
- | feature_image | Asset |  |
+ | feature_image | [Asset](#Asset) |  |
  | published | Bool |  |
  | reading_time | String |  |
  | slug | String |  |
  | tags | [String] |  |
- | seo | SEO |  |
+ | seo | [SEO](#SEO) |  |
  | title | String |  |
 
 ---
@@ -16381,8 +14712,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | system_pages | [NavigationSchema] |  |
- | custom_pages | [PageSchema] |  |
+ | system_pages | [[NavigationSchema](#NavigationSchema)] |  |
+ | custom_pages | [[PageSchema](#PageSchema)] |  |
  | application_id | String |  |
 
 ---
@@ -16394,8 +14725,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [SlideshowSchema] |  |
- | page | Page |  |
+ | items | [[SlideshowSchema](#SlideshowSchema)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -16408,11 +14739,11 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | _id | String |  |
  | slug | String |  |
- | date_meta | DateMeta |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | application | String |  |
  | platform | String |  |
- | configuration | ConfigurationSchema |  |
- | media | [SlideshowMedia] |  |
+ | configuration | [ConfigurationSchema](#ConfigurationSchema) |  |
+ | media | [[SlideshowMedia](#SlideshowMedia)] |  |
  | active | Bool |  |
  | archived | Bool |  |
  | _custom_json | [String: Any] |  |
@@ -16428,8 +14759,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | slug | String |  |
  | platform | String |  |
- | configuration | ConfigurationSchema |  |
- | media | SlideshowMedia |  |
+ | configuration | [ConfigurationSchema](#ConfigurationSchema) |  |
+ | media | [SlideshowMedia](#SlideshowMedia) |  |
  | active | Bool |  |
 
 ---
@@ -16447,7 +14778,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | application | String |  |
  | created_at | String |  |
  | updated_at | String |  |
- | contact | ContactSchema |  |
+ | contact | [ContactSchema](#ContactSchema) |  |
 
 ---
 
@@ -16472,7 +14803,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | active | Bool |  |
- | phone | [PhoneProperties] |  |
+ | phone | [[PhoneProperties](#PhoneProperties)] |  |
 
 ---
 
@@ -16496,7 +14827,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | active | Bool |  |
- | email | [EmailProperties] |  |
+ | email | [[EmailProperties](#EmailProperties)] |  |
 
 ---
 
@@ -16507,8 +14838,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | phone | PhoneSchema |  |
- | email | EmailSchema |  |
+ | phone | [PhoneSchema](#PhoneSchema) |  |
+ | email | [EmailSchema](#EmailSchema) |  |
 
 ---
 
@@ -16521,7 +14852,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | application | String |  |
  | _id | String |  |
- | tags | [TagSchema] |  |
+ | tags | [[TagSchema](#TagSchema)] |  |
 
 ---
 
@@ -16570,7 +14901,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | app_id | String |  |
  | user_id | String |  |
- | channels | CommunicationConsentChannels |  |
+ | channels | [CommunicationConsentChannels](#CommunicationConsentChannels) |  |
 
 ---
 
@@ -16619,9 +14950,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | email | CommunicationConsentChannelsEmail |  |
- | sms | CommunicationConsentChannelsSms |  |
- | whatsapp | CommunicationConsentChannelsWhatsapp |  |
+ | email | [CommunicationConsentChannelsEmail](#CommunicationConsentChannelsEmail) |  |
+ | sms | [CommunicationConsentChannelsSms](#CommunicationConsentChannelsSms) |  |
+ | whatsapp | [CommunicationConsentChannelsWhatsapp](#CommunicationConsentChannelsWhatsapp) |  |
 
 ---
 
@@ -16634,7 +14965,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | app_id | String |  |
  | user_id | String |  |
- | channels | CommunicationConsentChannels |  |
+ | channels | [CommunicationConsentChannels](#CommunicationConsentChannels) |  |
 
 ---
 
@@ -16722,9 +15053,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | ios | RedirectDevice |  |
- | android | RedirectDevice |  |
- | web | WebRedirect |  |
+ | ios | [RedirectDevice](#RedirectDevice) |  |
+ | android | [RedirectDevice](#RedirectDevice) |  |
+ | web | [WebRedirect](#WebRedirect) |  |
  | force_web | Bool |  |
 
 ---
@@ -16779,10 +15110,10 @@ Internal Server Error. See the error object in the response body to know the exa
  | expire_at | String |  |
  | enable_tracking | Bool |  |
  | personalized | Bool | To create personalized short links. |
- | campaign | CampaignShortLink |  |
- | redirects | Redirects |  |
- | attribution | Attribution |  |
- | social_media_tags | SocialMediaTags |  |
+ | campaign | [CampaignShortLink](#CampaignShortLink) |  |
+ | redirects | [Redirects](#Redirects) |  |
+ | attribution | [Attribution](#Attribution) |  |
+ | social_media_tags | [SocialMediaTags](#SocialMediaTags) |  |
  | count | Int |  |
 
 ---
@@ -16808,7 +15139,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | title | String |  |
- | url | UrlInfo |  |
+ | url | [UrlInfo](#UrlInfo) |  |
  | created_by | String |  |
  | app_redirect | Bool |  |
  | fallback | String |  |
@@ -16819,12 +15150,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | application | String |  |
  | user_id | String |  |
  | created_at | String |  |
+ | meta | [String: Any] |  |
  | updated_at | String |  |
  | personalized | Bool | To create personalized short links |
- | campaign | CampaignShortLink |  |
- | redirects | Redirects |  |
- | attribution | Attribution |  |
- | social_media_tags | SocialMediaTags |  |
+ | campaign | [CampaignShortLink](#CampaignShortLink) |  |
+ | redirects | [Redirects](#Redirects) |  |
+ | attribution | [Attribution](#Attribution) |  |
+ | social_media_tags | [SocialMediaTags](#SocialMediaTags) |  |
  | count | Int |  |
 
 ---
@@ -16836,8 +15168,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ShortLinkRes] |  |
- | page | Page |  |
+ | items | [[ShortLinkRes](#ShortLinkRes)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -16905,8 +15237,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | namespace | String |  |
  | operation | String |  |
  | size | Int |  |
- | upload | Upload |  |
- | cdn | CDN |  |
+ | upload | [Upload](#Upload) |  |
+ | cdn | [CDN](#CDN) |  |
  | tags | [String] |  |
 
 ---
@@ -16941,8 +15273,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | namespace | String |  |
  | operation | String |  |
  | size | Int |  |
- | upload | Upload |  |
- | cdn | CDN |  |
+ | upload | [Upload](#Upload) |  |
+ | cdn | [CDN](#CDN) |  |
  | success | String |  |
  | tags | [String] |  |
  | created_on | String |  |
@@ -16972,8 +15304,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | id | String |  |
  | name | String |  |
- | data | BulkRequest |  |
- | opts | Opts |  |
+ | data | [BulkRequest](#BulkRequest) |  |
+ | opts | [Opts](#Opts) |  |
  | progress | Int |  |
  | delay | Int |  |
  | timestamp | Int |  |
@@ -16992,7 +15324,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | tracking_url | String |  |
- | task | CopyFileTask |  |
+ | task | [CopyFileTask](#CopyFileTask) |  |
 
 ---
 
@@ -17028,8 +15360,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | urls | [String] |  |
- | destination | Destination |  |
- | configuration | ReqConfiguration |  |
+ | destination | [Destination](#Destination) |  |
+ | configuration | [ReqConfiguration](#ReqConfiguration) |  |
 
 ---
 
@@ -17053,7 +15385,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | urls | [Urls] |  |
+ | urls | [[Urls](#Urls)] |  |
 
 ---
 
@@ -17084,8 +15416,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | namespace | String |  |
  | content_type | String |  |
  | file_path | String |  |
- | upload | Upload |  |
- | cdn | CDN |  |
+ | upload | [Upload](#Upload) |  |
+ | cdn | [CDN](#CDN) |  |
  | created_on | String |  |
  | modified_on | String |  |
 
@@ -17098,8 +15430,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [DbRecord] |  |
- | page | Page |  |
+ | items | [[DbRecord](#DbRecord)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -17115,9 +15447,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | application_info | ApplicationInfo |  |
- | company_info | CompanyInfo |  |
- | owner_info | OwnerInfo |  |
+ | application_info | [ApplicationInfo](#ApplicationInfo) |  |
+ | company_info | [CompanyInfo](#CompanyInfo) |  |
+ | owner_info | [OwnerInfo](#OwnerInfo) |  |
 
 ---
 
@@ -17129,17 +15461,17 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | _id | String |  |
- | domain | Domain |  |
- | website | ApplicationWebsite |  |
- | cors | ApplicationCors |  |
+ | domain | [Domain](#Domain) |  |
+ | website | [ApplicationWebsite](#ApplicationWebsite) |  |
+ | cors | [ApplicationCors](#ApplicationCors) |  |
  | description | String |  |
  | name | String |  |
- | meta | ApplicationMeta |  |
+ | meta | [ApplicationMeta](#ApplicationMeta) |  |
  | token | String |  |
  | secret | String |  |
  | created_at | String |  |
- | banner | SecureUrl |  |
- | logo | SecureUrl |  |
+ | banner | [SecureUrl](#SecureUrl) |  |
+ | logo | [SecureUrl](#SecureUrl) |  |
  | is_active | Bool |  |
 
 ---
@@ -17156,7 +15488,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | created_on | String |  |
  | is_active | Bool |  |
  | name | String |  |
- | addresses | [CompanyAboutAddress] |  |
+ | addresses | [[CompanyAboutAddress](#CompanyAboutAddress)] |  |
  | notification_emails | [String] |  |
 
 ---
@@ -17169,8 +15501,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | _id | String |  |
- | emails | [UserEmail] |  |
- | phone_numbers | [UserPhoneNumber] |  |
+ | emails | [[UserEmail](#UserEmail)] |  |
+ | phone_numbers | [[UserPhoneNumber](#UserPhoneNumber)] |  |
  | first_name | String |  |
  | last_name | String |  |
  | profile_pic | String |  |
@@ -17184,8 +15516,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | application | ApplicationVersionRequest |  |
- | device | Device |  |
+ | application | [ApplicationVersionRequest](#ApplicationVersionRequest) |  |
+ | device | [Device](#Device) |  |
  | locale | String |  |
  | timezone | String |  |
 
@@ -17215,7 +15547,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | build | Int |  |
  | model | String |  |
- | os | OS |  |
+ | os | [OS](#OS) |  |
 
 ---
 
@@ -17250,7 +15582,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [SupportedLanguage] |  |
+ | items | [[SupportedLanguage](#SupportedLanguage)] |  |
 
 ---
 
@@ -17261,7 +15593,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | staff_users | [AppStaff] |  |
+ | staff_users | [[AppStaff](#AppStaff)] |  |
 
 ---
 
@@ -17284,7 +15616,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | ordering_store | OrderingStoreSelect |  |
+ | ordering_store | [OrderingStoreSelect](#OrderingStoreSelect) |  |
 
 ---
 
@@ -17326,7 +15658,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | tokens | Tokens |  |
+ | tokens | [Tokens](#Tokens) |  |
  | _id | String |  |
  | application | String |  |
  | created_at | String |  |
@@ -17342,14 +15674,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | firebase | Firebase |  |
- | moengage | Moengage |  |
- | segment | Segment |  |
- | gtm | Gtm |  |
- | freshchat | Freshchat |  |
- | safetynet | Safetynet |  |
- | fynd_rewards | FyndRewards |  |
- | google_map | GoogleMap |  |
+ | firebase | [Firebase](#Firebase) |  |
+ | moengage | [Moengage](#Moengage) |  |
+ | segment | [Segment](#Segment) |  |
+ | gtm | [Gtm](#Gtm) |  |
+ | freshchat | [Freshchat](#Freshchat) |  |
+ | safetynet | [Safetynet](#Safetynet) |  |
+ | fynd_rewards | [FyndRewards](#FyndRewards) |  |
+ | google_map | [GoogleMap](#GoogleMap) |  |
 
 ---
 
@@ -17360,7 +15692,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | Credentials |  |
+ | credentials | [Credentials](#Credentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17372,8 +15704,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | ios | Ios |  |
- | android | Android |  |
+ | ios | [Ios](#Ios) |  |
+ | android | [Android](#Android) |  |
  | project_id | String |  |
  | gcm_sender_id | String |  |
  | application_id | String |  |
@@ -17412,7 +15744,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | MoengageCredentials |  |
+ | credentials | [MoengageCredentials](#MoengageCredentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17435,7 +15767,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | SegmentCredentials |  |
+ | credentials | [SegmentCredentials](#SegmentCredentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17458,7 +15790,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | GtmCredentials |  |
+ | credentials | [GtmCredentials](#GtmCredentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17481,7 +15813,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | FreshchatCredentials |  |
+ | credentials | [FreshchatCredentials](#FreshchatCredentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17506,7 +15838,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | SafetynetCredentials |  |
+ | credentials | [SafetynetCredentials](#SafetynetCredentials) |  |
  | enabled | Bool |  |
 
 ---
@@ -17529,7 +15861,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | FyndRewardsCredentials |  |
+ | credentials | [FyndRewardsCredentials](#FyndRewardsCredentials) |  |
 
 ---
 
@@ -17551,7 +15883,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | credentials | GoogleMapCredentials |  |
+ | credentials | [GoogleMapCredentials](#GoogleMapCredentials) |  |
 
 ---
 
@@ -17600,7 +15932,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | launch_page | LaunchPage |  |
+ | launch_page | [LaunchPage](#LaunchPage) |  |
  | continue_as_guest | Bool |  |
  | login_btn_text | String |  |
  | show_domain_textbox | Bool |  |
@@ -17626,15 +15958,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | product_detail | ProductDetailFeature |  |
- | landing_page | LandingPageFeature |  |
- | registration_page | RegistrationPageFeature |  |
- | home_page | HomePageFeature |  |
- | common | CommonFeature |  |
- | cart | CartFeature |  |
- | qr | QrFeature |  |
- | pcr | PcrFeature |  |
- | order | OrderFeature |  |
+ | product_detail | [ProductDetailFeature](#ProductDetailFeature) |  |
+ | landing_page | [LandingPageFeature](#LandingPageFeature) |  |
+ | registration_page | [RegistrationPageFeature](#RegistrationPageFeature) |  |
+ | home_page | [HomePageFeature](#HomePageFeature) |  |
+ | common | [CommonFeature](#CommonFeature) |  |
+ | cart | [CartFeature](#CartFeature) |  |
+ | qr | [QrFeature](#QrFeature) |  |
+ | pcr | [PcrFeature](#PcrFeature) |  |
+ | order | [OrderFeature](#OrderFeature) |  |
  | _id | String |  |
  | app | String |  |
  | created_at | String |  |
@@ -17661,14 +15993,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | communication_optin_dialog | CommunicationOptinDialogFeature |  |
- | deployment_store_selection | DeploymentStoreSelectionFeature |  |
- | listing_price | ListingPriceFeature |  |
- | listing_page | ListingPageFeature |  |
- | currency | CurrencyFeature |  |
- | revenue_engine | RevenueEngineFeature |  |
- | feedback | FeedbackFeature |  |
- | compare_products | CompareProductsFeature |  |
+ | communication_optin_dialog | [CommunicationOptinDialogFeature](#CommunicationOptinDialogFeature) |  |
+ | deployment_store_selection | [DeploymentStoreSelectionFeature](#DeploymentStoreSelectionFeature) |  |
+ | listing_price | [ListingPriceFeature](#ListingPriceFeature) |  |
+ | listing_page | [ListingPageFeature](#ListingPageFeature) |  |
+ | currency | [CurrencyFeature](#CurrencyFeature) |  |
+ | revenue_engine | [RevenueEngineFeature](#RevenueEngineFeature) |  |
+ | feedback | [FeedbackFeature](#FeedbackFeature) |  |
+ | compare_products | [CompareProductsFeature](#CompareProductsFeature) |  |
 
 ---
 
@@ -17820,7 +16152,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | feature | AppFeature |  |
+ | feature | [AppFeature](#AppFeature) |  |
 
 ---
 
@@ -17831,7 +16163,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | feature | AppFeature |  |
+ | feature | [AppFeature](#AppFeature) |  |
 
 ---
 
@@ -17946,9 +16278,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | website | ApplicationWebsite |  |
- | cors | ApplicationCors |  |
- | auth | ApplicationAuth |  |
+ | website | [ApplicationWebsite](#ApplicationWebsite) |  |
+ | cors | [ApplicationCors](#ApplicationCors) |  |
+ | auth | [ApplicationAuth](#ApplicationAuth) |  |
  | description | String |  |
  | channel_type | String |  |
  | cache_ttl | Int |  |
@@ -17959,18 +16291,18 @@ Internal Server Error. See the error object in the response body to know the exa
  | owner | String |  |
  | company_id | Int |  |
  | token | String |  |
- | redirections | [ApplicationRedirections] |  |
- | meta | [ApplicationMeta] |  |
+ | redirections | [[ApplicationRedirections](#ApplicationRedirections)] |  |
+ | meta | [[ApplicationMeta](#ApplicationMeta)] |  |
  | created_at | String |  |
  | updated_at | String |  |
  | __v | Int |  |
- | banner | SecureUrl |  |
- | logo | SecureUrl |  |
- | favicon | SecureUrl |  |
- | domains | [Domain] |  |
+ | banner | [SecureUrl](#SecureUrl) |  |
+ | logo | [SecureUrl](#SecureUrl) |  |
+ | favicon | [SecureUrl](#SecureUrl) |  |
+ | domains | [[Domain](#Domain)] |  |
  | app_type | String |  |
- | mobile_logo | SecureUrl |  |
- | domain | Domain |  |
+ | mobile_logo | [SecureUrl](#SecureUrl) |  |
+ | domain | [Domain](#Domain) |  |
 
 ---
 
@@ -18050,7 +16382,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | criteria | String | Whether enable all or explicitly few stores or use filter of brands and company as inventory stores |
- | rules | [StoreCriteriaRule] | List of rules with company and brands uids. Used when critera is `filter` |
+ | rules | [[StoreCriteriaRule](#StoreCriteriaRule)] | List of rules with company and brands uids. Used when critera is `filter` |
  | stores | [Int] | List of store uids. Used when critera is `explicit` |
 
 ---
@@ -18086,7 +16418,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | store_priority | StorePriorityRule |  |
+ | store_priority | [StorePriorityRule](#StorePriorityRule) |  |
 
 ---
 
@@ -18099,7 +16431,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | post_order_reassignment | Bool |  |
  | enforced_stores | [Int] |  |
- | rules | ArticleAssignmentRule |  |
+ | rules | [ArticleAssignmentRule](#ArticleAssignmentRule) |  |
 
 ---
 
@@ -18156,13 +16488,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | address | InformationAddress |  |
- | support | InformationSupport |  |
- | social_links | SocialLinks |  |
- | links | Links |  |
+ | address | [InformationAddress](#InformationAddress) |  |
+ | support | [InformationSupport](#InformationSupport) |  |
+ | social_links | [SocialLinks](#SocialLinks) |  |
+ | links | [Links](#Links) |  |
  | copyright_text | String |  |
  | _id | String |  |
- | business_highlights | BusinessHighlights |  |
+ | business_highlights | [BusinessHighlights](#BusinessHighlights) |  |
  | application | String |  |
  | created_at | String |  |
  | updated_at | String |  |
@@ -18179,7 +16511,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | loc | String |  |
  | address_line | [String] |  |
- | phone | InformationPhone |  |
+ | phone | [InformationPhone](#InformationPhone) |  |
  | city | String |  |
  | country | String |  |
  | pincode | Int |  |
@@ -18218,15 +16550,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | facebook | FacebookLink |  |
- | instagram | InstagramLink |  |
- | twitter | TwitterLink |  |
- | pinterest | PinterestLink |  |
- | google_plus | GooglePlusLink |  |
- | youtube | YoutubeLink |  |
- | linked_in | LinkedInLink |  |
- | vimeo | VimeoLink |  |
- | blog_link | BlogLink |  |
+ | facebook | [FacebookLink](#FacebookLink) |  |
+ | instagram | [InstagramLink](#InstagramLink) |  |
+ | twitter | [TwitterLink](#TwitterLink) |  |
+ | pinterest | [PinterestLink](#PinterestLink) |  |
+ | google_plus | [GooglePlusLink](#GooglePlusLink) |  |
+ | youtube | [YoutubeLink](#YoutubeLink) |  |
+ | linked_in | [LinkedInLink](#LinkedInLink) |  |
+ | vimeo | [VimeoLink](#VimeoLink) |  |
+ | blog_link | [BlogLink](#BlogLink) |  |
 
 ---
 
@@ -18382,12 +16714,12 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | name | String |  |
  | description | String |  |
- | logo | SecureUrl |  |
- | mobile_logo | SecureUrl |  |
- | favicon | SecureUrl |  |
- | banner | SecureUrl |  |
- | domain | Domain |  |
- | domains | [Domain] |  |
+ | logo | [SecureUrl](#SecureUrl) |  |
+ | mobile_logo | [SecureUrl](#SecureUrl) |  |
+ | favicon | [SecureUrl](#SecureUrl) |  |
+ | banner | [SecureUrl](#SecureUrl) |  |
+ | domain | [Domain](#Domain) |  |
+ | domains | [[Domain](#Domain)] |  |
  | _id | String |  |
 
 ---
@@ -18399,7 +16731,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Currency] |  |
+ | items | [[Currency](#Currency)] |  |
 
 ---
 
@@ -18424,7 +16756,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | state | String |  |
  | address1 | String |  |
- | lat_long | StoreLatLong |  |
+ | lat_long | [StoreLatLong](#StoreLatLong) |  |
  | address2 | String |  |
  | pincode | Int |  |
  | country | String |  |
@@ -18439,7 +16771,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | address | OptedStoreAddress |  |
+ | address | [OptedStoreAddress](#OptedStoreAddress) |  |
  | _id | String |  |
  | uid | Int |  |
  | name | String |  |
@@ -18458,8 +16790,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | page | Page |  |
- | items | [OrderingStore] |  |
+ | page | [Page](#Page) |  |
+ | items | [[OrderingStore](#OrderingStore)] |  |
  | deployed_stores | [Int] |  |
  | all_stores | Bool |  |
  | enabled | Bool |  |
@@ -18482,16 +16814,16 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | key | String | Payment gateway api key |
- | merchant_id | String | Unique merchant id |
- | config_type | String | Fynd or self payment gateway |
- | pin | String | Masked pin |
- | sdk | Bool | SDK |
- | user_id | String | Registered User id |
- | merchant_key | String | Unique merchant key |
- | verify_api | String | Payment gateway verify payment api endpoint |
- | secret | String | Masked payment gateway api secret |
  | api | String | Payment gateway api endpoint |
+ | merchant_key | String | Unique merchant key |
+ | merchant_id | String | Unique merchant id |
+ | key | String | Payment gateway api key |
+ | verify_api | String | Payment gateway verify payment api endpoint |
+ | config_type | String | Fynd or self payment gateway |
+ | sdk | Bool | SDK |
+ | secret | String | Masked payment gateway api secret |
+ | user_id | String | Registered User id |
+ | pin | String | Masked pin |
 
 ---
 
@@ -18502,15 +16834,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | simpl | AggregatorConfigDetail |  |
- | mswipe | AggregatorConfigDetail |  |
- | rupifi | AggregatorConfigDetail |  |
+ | rupifi | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | ccavenue | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | stripe | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | payumoney | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | mswipe | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | simpl | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | razorpay | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
+ | juspay | [AggregatorConfigDetail](#AggregatorConfigDetail) |  |
  | success | Bool |  |
- | ccavenue | AggregatorConfigDetail |  |
- | payumoney | AggregatorConfigDetail |  |
- | juspay | AggregatorConfigDetail |  |
- | stripe | AggregatorConfigDetail |  |
- | razorpay | AggregatorConfigDetail |  |
  | env | String | Environment i.e Live or Test |
 
 ---
@@ -18534,8 +16866,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | error | ErrorCodeAndDescription |  |
  | success | Bool | Response is successful or not |
+ | error | [ErrorCodeAndDescription](#ErrorCodeAndDescription) |  |
 
 ---
 
@@ -18546,10 +16878,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | name_on_card | String |  |
- | refresh | Bool | Refresh cache flag. |
- | nickname | String |  |
  | card_id | String | Card token of payment gateway. |
+ | refresh | Bool | Refresh cache flag. |
+ | name_on_card | String |  |
+ | nickname | String |  |
 
 ---
 
@@ -18561,8 +16893,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | message | String | Human readable message. |
- | data | [String: Any] | List of cards of customer. |
  | success | Bool | Response is successful or not. |
+ | data | [String: Any] | List of cards of customer. |
 
 ---
 
@@ -18586,9 +16918,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | cards | CardPaymentGateway | Card's payment gateway with customer id. |
  | message | String | Human readable message. |
  | success | Bool | Response is successful or not. |
+ | cards | [CardPaymentGateway](#CardPaymentGateway) | Card's payment gateway with customer id. |
 
 ---
 
@@ -18599,22 +16931,22 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | expired | Bool | expired |
- | card_name | String | card_name |
  | card_isin | String | card_isin |
- | card_number | String | card_number |
- | card_fingerprint | String | card_fingerprint |
- | exp_month | Int | exp_month |
- | card_type | String | card_type |
- | card_brand | String | card_brand |
- | card_reference | String | card_reference |
  | card_id | String | card_id |
- | card_token | String | card_token |
- | card_issuer | String | card_issuer |
+ | card_reference | String | card_reference |
+ | card_type | String | card_type |
+ | card_name | String | card_name |
  | nickname | String | nickname |
+ | card_token | String | card_token |
  | exp_year | Int | exp_year |
  | card_brand_image | String | card_brand_image |
+ | expired | Bool | expired |
+ | card_fingerprint | String | card_fingerprint |
+ | card_brand | String | card_brand |
+ | exp_month | Int | exp_month |
+ | card_number | String | card_number |
  | aggregator_name | String | aggregator_name |
+ | card_issuer | String | card_issuer |
 
 ---
 
@@ -18626,8 +16958,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | message | String | Human readable message. |
- | data | [Card] | List of cards of customer. |
  | success | Bool | Response is successful or not. |
+ | data | [[Card](#Card)] | List of cards of customer. |
 
 ---
 
@@ -18661,11 +16993,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | transaction_amount_in_paise | Int | Payable amount in paise |
  | payload | String | Hashed payload string. |
+ | aggregator | String | Payment gateway name in camel case i.e Simpl, Rupifi |
+ | transaction_amount_in_paise | Int | Payable amount in paise |
  | merchant_params | [String: Any] | Extra meta fields. |
  | phone_number | String | User mobile number without country code. |
- | aggregator | String | Payment gateway name in camel case i.e Simpl, Rupifi |
 
 ---
 
@@ -18677,8 +17009,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | message | String | Error or success message. |
- | data | [String: Any] | Payment gateway response data |
  | success | Bool | Response is successful or not |
+ | data | [String: Any] | Payment gateway response data |
 
 ---
 
@@ -18689,11 +17021,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | amount | Int | Chargable amount of order. |
- | order_id | String | Unique order id. |
  | aggregator | String | Payment gateway name i.e Simpl, Mswipe |
- | verified | Bool | Already Verified flag from payment gateway i.e Mswipe |
  | transaction_token | String | Transaction token of payment gateway. |
+ | verified | Bool | Already Verified flag from payment gateway i.e Mswipe |
+ | order_id | String | Unique order id. |
+ | amount | Int | Chargable amount of order. |
 
 ---
 
@@ -18704,13 +17036,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | success | Bool | Response is successful or not. |
- | order_id | String | Unique order id. |
- | aggregator | String | Payment gateway name i.e Simpl, Mswipe |
- | message | String | Human readable message. |
- | delivery_address_id | String | Delivery adddress id of customer |
- | status | String | Status of charged payment. |
  | cart_id | String | Cart id of customer |
+ | aggregator | String | Payment gateway name i.e Simpl, Mswipe |
+ | delivery_address_id | String | Delivery adddress id of customer |
+ | order_id | String | Unique order id. |
+ | status | String | Status of charged payment. |
+ | message | String | Human readable message. |
+ | success | Bool | Response is successful or not. |
 
 ---
 
@@ -18721,15 +17053,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | razorpay_payment_id | String | Payment gateway payment id |
+ | aggregator | String | Payment gateway name |
+ | method | String | Payment method |
+ | polling_url | String | Polling url to check payment status |
+ | aggregator_order_id | String | Payment gateway order id |
  | customer_id | String | Payment gateway customer id. |
  | timeout | Int | Payment polling timeout if not recieved response |
- | merchant_order_id | String | Unique fynd order id |
- | aggregator | String | Payment gateway name |
  | virtual_id | String | Bharat QR code virtual id |
- | razorpay_payment_id | String | Payment gateway payment id |
- | polling_url | String | Polling url to check payment status |
- | method | String | Payment method |
- | aggregator_order_id | String | Payment gateway order id |
+ | merchant_order_id | String | Unique fynd order id |
 
 ---
 
@@ -18740,21 +17072,21 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | amount | Int | Payable amount. |
+ | razorpay_payment_id | String | Payment  id. |
+ | aggregator | String | Payment gateway name |
+ | method | String | Payment method |
+ | vpa | String | Customer vpa address |
+ | polling_url | String | Polling url. |
+ | aggregator_order_id | String | Payment order id |
  | customer_id | String | Payment gateway customer id. |
  | bqr_image | String | Bharath qr image url. |
- | timeout | Int | timeout. |
- | merchant_order_id | String | order id |
- | success | Bool | Response is successful or not. |
- | vpa | String | Customer vpa address |
  | currency | String | Currency code. |
- | aggregator | String | Payment gateway name |
- | virtual_id | String | Payment virtual address. |
- | razorpay_payment_id | String | Payment  id. |
- | polling_url | String | Polling url. |
- | method | String | Payment method |
  | status | String | Status of payment. |
- | aggregator_order_id | String | Payment order id |
+ | amount | Int | Payable amount. |
+ | success | Bool | Response is successful or not. |
+ | virtual_id | String | Payment virtual address. |
+ | merchant_order_id | String | order id |
+ | timeout | Int | timeout. |
 
 ---
 
@@ -18765,17 +17097,17 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | amount | Int | Payable amount. |
- | customer_id | String | Payment gateway customer id. |
- | merchant_order_id | String | Unique fynd order id |
+ | aggregator | String | Payment gateway name |
+ | method | String | Payment method |
  | email | String | Customer valid email |
  | vpa | String | Customer vpa address |
+ | customer_id | String | Payment gateway customer id. |
  | order_id | String | Payment gateway order id |
- | aggregator | String | Payment gateway name |
  | currency | String | Currency code. |
- | contact | String | Customer valid mobile number |
- | method | String | Payment method |
  | status | String | Status of payment. |
+ | amount | Int | Payable amount. |
+ | contact | String | Customer valid mobile number |
+ | merchant_order_id | String | Unique fynd order id |
 
 ---
 
@@ -18786,43 +17118,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | aggregator_name | String | Payment gateway name |
  | retry | Bool | Response is successful or not. |
+ | aggregator_name | String | Payment gateway name |
  | status | String | Payment status |
-
----
-
-
- 
- 
- #### [AggregatorRoute](#AggregatorRoute)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | payment_flow | String | payment_flow |
- | data | [String: Any] | Data |
- | api_link | String | api_link |
-
----
-
-
- 
- 
- #### [PaymentFlow](#PaymentFlow)
-
- | Properties | Type | Description |
- | ---------- | ---- | ----------- |
- | simpl | AggregatorRoute | simpl |
- | rupifi | AggregatorRoute | Rupifi |
- | msipe | AggregatorRoute | mswipe |
- | bqr_razorpay | AggregatorRoute | BQR_Razorpay |
- | payubiz | AggregatorRoute | Payubiz |
- | fynd | AggregatorRoute | Fynd |
- | upi_razorpay | AggregatorRoute | UPI_Razorpay |
- | juspay | AggregatorRoute | Juspay |
- | ccavenue | AggregatorRoute | Ccavenue |
- | stripe | AggregatorRoute | Stripe |
- | razorpay | AggregatorRoute | Razorpay |
 
 ---
 
@@ -18833,8 +17131,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | small | String | smalll |
  | large | String | large |
+ | small | String | smalll |
 
 ---
 
@@ -18845,33 +17143,33 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | code | String | code |
- | card_isin | String | card_isin |
  | intent_flow | String | intent_flow |
- | timeout | Int | timeout |
  | nickname | String | nickname |
- | card_id | String | card_id |
  | card_token | String | card_token |
- | card_issuer | String | card_issuer |
- | display_name | String | display name |
  | fynd_vpa | String | fynd_vpa |
- | card_type | String | card_type |
- | exp_year | Int | exp_year |
- | logo_url | PaymentModeLogo | Logo |
- | card_fingerprint | String | card_fingerprint |
- | merchant_code | String | merchant code |
- | card_reference | String | card_reference |
- | exp_month | Int | exp_month |
- | expired | Bool | expired |
- | intent_app_error_list | [String] | intent_app_error_list |
- | retry_count | Int | retry_count |
- | card_number | String | card_number |
+ | name | String | name |
  | aggregator_name | String | aggregator_name |
  | display_priority | Int | Dispaly Priority |
- | name | String | name |
- | card_brand_image | String | card_brand_image |
- | card_brand | String | card_brand |
+ | card_id | String | card_id |
+ | exp_year | Int | exp_year |
+ | intent_app_error_list | [String] | intent_app_error_list |
+ | card_number | String | card_number |
+ | card_reference | String | card_reference |
+ | retry_count | Int | retry_count |
  | card_name | String | card_name |
+ | merchant_code | String | merchant code |
+ | card_fingerprint | String | card_fingerprint |
+ | code | String | code |
+ | card_issuer | String | card_issuer |
+ | card_isin | String | card_isin |
+ | card_type | String | card_type |
+ | card_brand_image | String | card_brand_image |
+ | expired | Bool | expired |
+ | display_name | String | display name |
+ | card_brand | String | card_brand |
+ | timeout | Int | timeout |
+ | exp_month | Int | exp_month |
+ | logo_url | [PaymentModeLogo](#PaymentModeLogo) | Logo |
 
 ---
 
@@ -18882,13 +17180,47 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | list | [[PaymentModeList](#PaymentModeList)] | Payment mode |
+ | display_priority | Int | Dispaly Priority |
  | display_name | String | Payment mode display name |
  | add_card_enabled | Bool | Annonymous card flag |
- | display_priority | Int | Dispaly Priority |
  | name | String | Payment mode name |
- | anonymous_enable | Bool | Annonymous card flag |
- | list | [PaymentModeList] | Payment mode |
  | aggregator_name | String | Dispaly Priority |
+ | anonymous_enable | Bool | Annonymous card flag |
+
+---
+
+
+ 
+ 
+ #### [AggregatorRoute](#AggregatorRoute)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | api_link | String | api_link |
+ | data | [String: Any] | Data |
+ | payment_flow | String | payment_flow |
+
+---
+
+
+ 
+ 
+ #### [PaymentFlow](#PaymentFlow)
+
+ | Properties | Type | Description |
+ | ---------- | ---- | ----------- |
+ | rupifi | [AggregatorRoute](#AggregatorRoute) | Rupifi |
+ | upi_razorpay | [AggregatorRoute](#AggregatorRoute) | UPI_Razorpay |
+ | msipe | [AggregatorRoute](#AggregatorRoute) | mswipe |
+ | bqr_razorpay | [AggregatorRoute](#AggregatorRoute) | BQR_Razorpay |
+ | payubiz | [AggregatorRoute](#AggregatorRoute) | Payubiz |
+ | ccavenue | [AggregatorRoute](#AggregatorRoute) | Ccavenue |
+ | stripe | [AggregatorRoute](#AggregatorRoute) | Stripe |
+ | simpl | [AggregatorRoute](#AggregatorRoute) | simpl |
+ | razorpay | [AggregatorRoute](#AggregatorRoute) | Razorpay |
+ | juspay | [AggregatorRoute](#AggregatorRoute) | Juspay |
+ | fynd | [AggregatorRoute](#AggregatorRoute) | Fynd |
 
 ---
 
@@ -18899,8 +17231,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | payment_flows | PaymentFlow | payment_flows |
- | payment_option | [RootPaymentMode] | Payment options |
+ | payment_option | [[RootPaymentMode](#RootPaymentMode)] | Payment options |
+ | payment_flows | [PaymentFlow](#PaymentFlow) | payment_flows |
 
 ---
 
@@ -18911,8 +17243,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | payment_options | PaymentOptionAndFlow | payment_options |
  | success | Bool | Response is successful or not |
+ | payment_options | [PaymentOptionAndFlow](#PaymentOptionAndFlow) | payment_options |
 
 ---
 
@@ -18923,8 +17255,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | status | String | Rupifi KYC status |
  | kyc_url | String | Rupifi KYC banner url. |
+ | status | String | Rupifi KYC status |
 
 ---
 
@@ -18935,8 +17267,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | RupifiBannerData | Rupifi KYC banner details. |
  | success | Bool | Successful or not. |
+ | data | [RupifiBannerData](#RupifiBannerData) | Rupifi KYC banner details. |
 
 ---
 
@@ -18947,9 +17279,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
+ | logo_small | String | Beneficiary small Logo |
  | id | String |   |
  | display_name | Bool | Beneficiary Display Name |
- | logo_small | String | Beneficiary small Logo |
  | name | String |  Beneficiary Name |
  | logo_large | String | Beneficiary large Logo |
 
@@ -18963,7 +17295,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | display_name | String | Beneficiary Mode Name |
- | items | [TransferItemsDetails] | Beneficiary Mode Items |
+ | items | [[TransferItemsDetails](#TransferItemsDetails)] | Beneficiary Mode Items |
 
 ---
 
@@ -18974,7 +17306,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | data | [TransferModeDetails] | Response Object |
+ | data | [[TransferModeDetails](#TransferModeDetails)] | Response Object |
 
 ---
 
@@ -18985,8 +17317,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | enable | Bool | True for enabling the Transfer Mode |
  | transfer_mode | String | Transfer Mode of the Beneficiary to be added |
+ | enable | Bool | True for enabling the Transfer Mode |
 
 ---
 
@@ -19008,25 +17340,25 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | mobile | Bool | MObile no of User |
- | account_no | String | Account Number |
- | comment | Bool | Remarks |
- | created_on | String | Creation Date of Beneficiary |
  | id | Int |   |
- | display_name | String | Display Name Of Account |
- | subtitle | String | SHort Title Of Account |
- | transfer_mode | String | Transfer Mode Of Account |
- | email | String | EMail of User |
- | branch_name | Bool | Branch Name Of Account |
  | address | String | Address of User |
- | beneficiary_id | String | Benenficiary Id |
- | ifsc_code | String | Ifsc Code Of Account |
  | title | String | Title Of Account |
- | modified_on | String | MOdification Date of Beneficiary |
- | delights_user_name | String | User Id Who filled the Beneficiary  |
- | is_active | Bool | Boolean Flag whether Beneficiary set or not |
+ | email | String | EMail of User |
+ | ifsc_code | String | Ifsc Code Of Account |
+ | mobile | Bool | MObile no of User |
+ | transfer_mode | String | Transfer Mode Of Account |
+ | account_no | String | Account Number |
+ | beneficiary_id | String | Benenficiary Id |
+ | branch_name | Bool | Branch Name Of Account |
  | account_holder | String | Account Holder Name |
+ | subtitle | String | SHort Title Of Account |
+ | is_active | Bool | Boolean Flag whether Beneficiary set or not |
+ | comment | Bool | Remarks |
+ | display_name | String | Display Name Of Account |
  | bank_name | String | Bank Name Of Account |
+ | created_on | String | Creation Date of Beneficiary |
+ | delights_user_name | String | User Id Who filled the Beneficiary  |
+ | modified_on | String | MOdification Date of Beneficiary |
 
 ---
 
@@ -19037,7 +17369,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | beneficiaries | [OrderBeneficiaryDetails] | All Beneficiaries Of An Order |
+ | beneficiaries | [[OrderBeneficiaryDetails](#OrderBeneficiaryDetails)] | All Beneficiaries Of An Order |
  | show_beneficiary_details | Bool | Show beneficiary details or not. |
 
 ---
@@ -19050,8 +17382,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | description | String | Not Found |
- | code | String | Bad Request Data |
  | success | Bool | Response is successful or not |
+ | code | String | Bad Request Data |
 
 ---
 
@@ -19063,8 +17395,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | branch_name | String | Branch Name Of Account |
- | bank_name | String | Bank Name Of Account |
  | success | Bool | Response is successful or not |
+ | bank_name | String | Bank Name Of Account |
 
 ---
 
@@ -19076,8 +17408,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | description | String | Error human understandable description. |
- | code | String | Error descrption code. |
  | success | Bool | Response is successful or not |
+ | code | String | Error descrption code. |
 
 ---
 
@@ -19088,9 +17420,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | request_id | String | Request Id sent in  |
  | hash_key | String | Hash key of the beneficiary Id |
  | otp | String | Otp sent to the given Mobile No |
+ | request_id | String | Request Id sent in  |
 
 ---
 
@@ -19101,9 +17433,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | request_id | String | Request Id of the otp  |
  | hash_key | String | Hash key of the beneficiary Id |
  | otp | String | Otp sent to the given Mobile No |
+ | request_id | String | Request Id of the otp  |
 
 ---
 
@@ -19126,17 +17458,17 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | mobile | String | Moblie Number of the User |
- | ifsc_code | String | Ifsc Code of the Account |
- | wallet | String |  |
  | address | String | Address of the User |
- | vpa | String |  |
  | branch_name | String | Branch Name of the Account |
- | email | String | Email of the Account Holder |
+ | wallet | String |  |
  | comment | String | Remarks added by The user |
- | account_no | String | Account NUmber of the Account Holder |
+ | vpa | String |  |
  | account_holder | String | Name of the Account Holder |
  | bank_name | String | Bank Name of the Account |
+ | email | String | Email of the Account Holder |
+ | ifsc_code | String | Ifsc Code of the Account |
+ | mobile | String | Moblie Number of the User |
+ | account_no | String | Account NUmber of the Account Holder |
 
 ---
 
@@ -19147,13 +17479,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | transfer_mode | String | Transfer Mode of the Beneficiary to be added |
- | details | BeneficiaryModeDetails | Beneficiary bank details |
  | delights | Bool | True if  beneficiary to be added by delights or False if by User |
- | otp | String |  |
- | order_id | String | Merchant Order Id |
  | request_id | String |  |
  | shipment_id | String | Shipment Id of the respective Merchant Order Id |
+ | transfer_mode | String | Transfer Mode of the Beneficiary to be added |
+ | details | [BeneficiaryModeDetails](#BeneficiaryModeDetails) | Beneficiary bank details |
+ | order_id | String | Merchant Order Id |
+ | otp | String |  |
 
 ---
 
@@ -19165,8 +17497,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | message | String | Response message |
- | data | [String: Any] | Refund account data. |
  | success | Bool | Success or failure flag. |
+ | data | [String: Any] | Refund account data. |
 
 ---
 
@@ -19190,8 +17522,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | is_verified_flag | String | Boolean Flag whether OTP Validation is already done or not |
- | request_id | String | request id  |
  | success | Bool | Response is successful or not |
+ | request_id | String | request id  |
 
 ---
 
@@ -19202,8 +17534,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | order_id | String | Merchant Order Id |
  | beneficiary_id | String | Beneficiary Hash Id of the beneficiary added |
+ | order_id | String | Merchant Order Id |
 
 ---
 
@@ -19231,7 +17563,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | order | OrderSchema |  |
+ | order | [OrderSchema](#OrderSchema) |  |
 
 ---
 
@@ -19242,9 +17574,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [OrderSchema] |  |
- | page | OrderPage |  |
- | filters | OrderFilters |  |
+ | items | [[OrderSchema](#OrderSchema)] |  |
+ | page | [OrderPage](#OrderPage) |  |
+ | filters | [OrderFilters](#OrderFilters) |  |
 
 ---
 
@@ -19270,8 +17602,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | statuses | [OrderStatuses] |  |
- | months | [OrderMonths] |  |
+ | statuses | [[OrderStatuses](#OrderStatuses)] |  |
+ | months | [[OrderMonths](#OrderMonths)] |  |
 
 ---
 
@@ -19311,7 +17643,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | shipment | Shipments |  |
+ | shipment | [Shipments](#Shipments) |  |
 
 ---
 
@@ -19322,7 +17654,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | reasons | [Reasons] |  |
+ | reasons | [[Reasons](#Reasons)] |  |
 
 ---
 
@@ -19333,7 +17665,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | statuses | [StatusesBody] |  |
+ | statuses | [[StatusesBody](#StatusesBody)] |  |
  | force_transition | Bool |  |
 
 ---
@@ -19369,7 +17701,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | results | [Track] |  |
+ | results | [[Track](#Track)] |  |
 
 ---
 
@@ -19381,12 +17713,12 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | order_id | String |  |
- | breakup_values | [BreakupValues] |  |
+ | breakup_values | [[BreakupValues](#BreakupValues)] |  |
  | order_created_time | String |  |
- | shipments | [Shipments] |  |
+ | shipments | [[Shipments](#Shipments)] |  |
  | total_shipments_in_order | Int |  |
- | user_info | UserInfo |  |
- | bags_for_reorder | [BagsForReorder] |  |
+ | user_info | [UserInfo](#UserInfo) |  |
+ | bags_for_reorder | [[BagsForReorder](#BagsForReorder)] |  |
 
 ---
 
@@ -19402,7 +17734,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | store_id | Int |  |
  | seller_id | Int |  |
  | quantity | Int |  |
- | article_assignment | BagsForReorderArticleAssignment |  |
+ | article_assignment | [BagsForReorderArticleAssignment](#BagsForReorderArticleAssignment) |  |
 
 ---
 
@@ -19425,7 +17757,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | order | OrderSchema |  |
+ | order | [OrderSchema](#OrderSchema) |  |
 
 ---
 
@@ -19436,11 +17768,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | item | Item |  |
- | prices | Prices |  |
- | current_status | CurrentStatus |  |
+ | item | [Item](#Item) |  |
+ | prices | [Prices](#Prices) |  |
+ | current_status | [CurrentStatus](#CurrentStatus) |  |
  | id | Int |  |
- | financial_breakup | [FinancialBreakup] |  |
+ | financial_breakup | [[FinancialBreakup](#FinancialBreakup)] |  |
 
 ---
 
@@ -19451,7 +17783,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | brand | ItemBrand |  |
+ | brand | [ItemBrand](#ItemBrand) |  |
  | name | String |  |
  | size | String |  |
  | slug_key | String |  |
@@ -19531,7 +17863,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | hsn_code | String |  |
  | coupon_effective_discount | Double |  |
  | transfer_price | Double |  |
- | identifiers | Identifiers |  |
+ | identifiers | [Identifiers](#Identifiers) |  |
  | gst_tag | String |  |
  | price_marked | Double |  |
  | price_effective | Double |  |
@@ -19643,7 +17975,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | timestamp | Timestamp |  |
+ | timestamp | [Timestamp](#Timestamp) |  |
 
 ---
 
@@ -19709,30 +18041,30 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | order_id | String |  |
- | breakup_values | [BreakupValues] |  |
+ | breakup_values | [[BreakupValues](#BreakupValues)] |  |
  | track_url | String |  |
  | traking_no | String |  |
- | tracking_details | [TrackingDetails] |  |
+ | tracking_details | [[TrackingDetails](#TrackingDetails)] |  |
  | beneficiary_details | Bool |  |
  | can_return | Bool |  |
- | prices | Prices |  |
+ | prices | [Prices](#Prices) |  |
  | need_help_url | String |  |
  | shipment_id | String |  |
  | total_bags | Int |  |
- | delivery_address | DeliveryAddress |  |
- | invoice | Invoice |  |
+ | delivery_address | [DeliveryAddress](#DeliveryAddress) |  |
+ | invoice | [Invoice](#Invoice) |  |
  | comment | String |  |
  | order_type | String |  |
- | promise | Promise |  |
- | fulfilling_store | FulfillingStore |  |
- | bags | [Bags] |  |
+ | promise | [Promise](#Promise) |  |
+ | fulfilling_store | [FulfillingStore](#FulfillingStore) |  |
+ | bags | [[Bags](#Bags)] |  |
  | can_cancel | Bool |  |
- | payment | ShipmentPayment |  |
+ | payment | [ShipmentPayment](#ShipmentPayment) |  |
  | shipment_created_at | String |  |
- | shipment_status | ShipmentStatus |  |
- | user_info | ShipmentUserInfo |  |
+ | shipment_status | [ShipmentStatus](#ShipmentStatus) |  |
+ | user_info | [ShipmentUserInfo](#ShipmentUserInfo) |  |
  | size_info | [String: Any] |  |
- | total_details | ShipmentTotalDetails |  |
+ | total_details | [ShipmentTotalDetails](#ShipmentTotalDetails) |  |
 
 ---
 
@@ -19842,7 +18174,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | articles | [RewardsArticle] |  |
+ | articles | [[RewardsArticle](#RewardsArticle)] |  |
 
 ---
 
@@ -19853,7 +18185,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | articles | [RewardsArticle] |  |
+ | articles | [[RewardsArticle](#RewardsArticle)] |  |
 
 ---
 
@@ -19893,14 +18225,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | _schedule | Schedule |  |
+ | _schedule | [Schedule](#Schedule) |  |
  | active | Bool |  |
  | application_id | String |  |
- | banner_image | Asset |  |
+ | banner_image | [Asset](#Asset) |  |
  | created_at | String |  |
  | name | String |  |
  | rule | [String: Any] |  |
- | share | ShareMessages |  |
+ | share | [ShareMessages](#ShareMessages) |  |
  | sub_text | String |  |
  | text | String |  |
  | type | String |  |
@@ -19929,9 +18261,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | applied_rule_bucket | OrderDiscountRuleBucket |  |
- | base_discount | DiscountProperties |  |
- | discount | DiscountProperties |  |
+ | applied_rule_bucket | [OrderDiscountRuleBucket](#OrderDiscountRuleBucket) |  |
+ | base_discount | [DiscountProperties](#DiscountProperties) |  |
+ | discount | [DiscountProperties](#DiscountProperties) |  |
  | order_amount | Double |  |
  | points | Double |  |
 
@@ -19983,8 +18315,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | history | [PointsHistory] | History is the list of points transaction. |
- | page | Page |  |
+ | history | [[PointsHistory](#PointsHistory)] | History is the list of points transaction. |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20033,10 +18365,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | referral | Offer |  |
+ | referral | [Offer](#Offer) |  |
  | referrer_info | String |  |
- | share | ShareMessages |  |
- | user | ReferralDetailsUser |  |
+ | share | [ShareMessages](#ShareMessages) |  |
+ | user | [ReferralDetailsUser](#ReferralDetailsUser) |  |
 
 ---
 
@@ -20113,13 +18445,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | abused | Bool |  |
- | date_meta | DateMeta |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | description | String |  |
- | entity | Entity |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | state | FeedbackState |  |
- | tags | [TagMeta] |  |
+ | state | [FeedbackState](#FeedbackState) |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
 
 ---
 
@@ -20146,7 +18478,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | entity_id | String |  |
  | entity_type | String |  |
- | media_list | [AddMediaRequest] |  |
+ | media_list | [[AddMediaRequest](#AddMediaRequest)] |  |
  | ref_id | String |  |
  | ref_type | String |  |
 
@@ -20191,12 +18523,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | date_meta | DateMeta |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | description | String |  |
  | id | String |  |
  | name | String |  |
  | slug | String |  |
- | tags | [TagMeta] |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
 
 ---
 
@@ -20223,8 +18555,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Attribute] |  |
- | page | Page |  |
+ | items | [[Attribute](#Attribute)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20235,7 +18567,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | text_detector | [TextDetector] |  |
+ | text_detector | [[TextDetector](#TextDetector)] |  |
 
 ---
 
@@ -20246,7 +18578,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | access | Access |  |
+ | access | [Access](#Access) |  |
 
 ---
 
@@ -20271,13 +18603,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | comment | [String] |  |
- | date_meta | DateMeta |  |
- | entity | Entity |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | state | FeedbackState |  |
- | tags | [TagMeta] |  |
- | vote_count | VoteCount |  |
+ | state | [FeedbackState](#FeedbackState) |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
+ | vote_count | [VoteCount](#VoteCount) |  |
 
 ---
 
@@ -20288,8 +18620,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Comment] |  |
- | page | Page |  |
+ | items | [[Comment](#Comment)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20333,7 +18665,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | id | String |  |
  | name | String |  |
- | tags | [TagMeta] |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
 
 ---
 
@@ -20345,7 +18677,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | items | [[String: Any]] |  |
- | page | Page |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20356,21 +18688,21 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | auto_detectors | AutoDetectors |  |
+ | auto_detectors | [AutoDetectors](#AutoDetectors) |  |
  | created_on | String |  |
- | device_meta | DeviceMeta |  |
- | entity | ProductEntity |  |
+ | device_meta | [DeviceMeta](#DeviceMeta) |  |
+ | entity | [ProductEntity](#ProductEntity) |  |
  | id | String |  |
- | location_meta | LocationMeta |  |
+ | location_meta | [LocationMeta](#LocationMeta) |  |
  | modified_on | String |  |
  | name | String |  |
- | rating | ReviewRating |  |
- | review | Review |  |
+ | rating | [ReviewRating](#ReviewRating) |  |
+ | review | [Review](#Review) |  |
  | slug | String |  |
- | state | State |  |
- | tags | [TagMeta] |  |
- | template | Template |  |
- | vote_count | VoteCount |  |
+ | state | [State](#State) |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
+ | template | [Template](#Template) |  |
+ | vote_count | [VoteCount](#VoteCount) |  |
 
 ---
 
@@ -20435,19 +18767,19 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | application | ApplicationSchema |  |
- | cloud | Cloud |  |
- | created_by | CreatedBy |  |
- | date_meta | DateMeta |  |
+ | application | [ApplicationSchema](#ApplicationSchema) |  |
+ | cloud | [Cloud](#Cloud) |  |
+ | created_by | [CreatedBy](#CreatedBy) |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
  | description | String |  |
- | entity | Entity |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | reference | Entity |  |
- | state | MediaState |  |
- | tags | [TagMeta] |  |
+ | reference | [Entity](#Entity) |  |
+ | state | [MediaState](#MediaState) |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
  | type | String |  |
- | url | Url |  |
+ | url | [Url](#Url) |  |
 
 ---
 
@@ -20499,7 +18831,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | country_code | String |  |
  | flag_url | String |  |
- | geo_loc | GeoLoc |  |
+ | geo_loc | [GeoLoc](#GeoLoc) |  |
  | name | String |  |
  | pincode | String |  |
 
@@ -20512,8 +18844,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | demand | Location |  |
- | supply | Location |  |
+ | demand | [Location](#Location) |  |
+ | supply | [Location](#Location) |  |
 
 ---
 
@@ -20524,8 +18856,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [FeedbackMedia] |  |
- | page | Page |  |
+ | items | [[FeedbackMedia](#FeedbackMedia)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20536,12 +18868,12 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | cloud | Cloud |  |
+ | cloud | [Cloud](#Cloud) |  |
  | comment | [String] |  |
  | description | String |  |
  | id | String |  |
  | type | String |  |
- | url | Url |  |
+ | url | [Url](#Url) |  |
 
 ---
 
@@ -20565,7 +18897,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | items | [[String: Any]] |  |
- | page | PageNumber |  |
+ | page | [PageNumber](#PageNumber) |  |
 
 ---
 
@@ -20592,7 +18924,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | id | String | For products, ID will be product ID, delivery, ID will be order id, seller ID will be company ID |
- | meta | EntityMeta |  |
+ | meta | [EntityMeta](#EntityMeta) |  |
  | type | String | product, delivery, seller, app, order |
 
 ---
@@ -20604,15 +18936,15 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | comments | [Comment] |  |
- | date_meta | DateMeta |  |
- | entity | Entity |  |
+ | comments | [[Comment](#Comment)] |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | question | Question |  |
- | state | QNAState |  |
+ | question | [Question](#Question) |  |
+ | state | [QNAState](#QNAState) |  |
  | tag | [String] |  |
- | tags | [TagMeta] |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
 
 ---
 
@@ -20623,8 +18955,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [QNA] |  |
- | page | Page |  |
+ | items | [[QNA](#QNA)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20665,9 +18997,9 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | attributes | [Attribute] |  |
+ | attributes | [[Attribute](#Attribute)] |  |
  | attributes_slugs | [String] |  |
- | ui | UI |  |
+ | ui | [UI](#UI) |  |
 
 ---
 
@@ -20678,8 +19010,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Rating] |  |
- | page | Page |  |
+ | items | [[Rating](#Rating)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20705,8 +19037,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [AbuseReport] |  |
- | page | Page |  |
+ | items | [[AbuseReport](#AbuseReport)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20733,7 +19065,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | answer_ids | [String] |  |
  | comments | [String] |  |
  | description | String |  |
- | media_meta | [MediaMeta] |  |
+ | media_meta | [[MediaMeta](#MediaMeta)] |  |
  | title | String |  |
 
 ---
@@ -20760,10 +19092,10 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | facets | [ReviewFacet] |  |
- | items | [CustomerReview] |  |
- | page | Page |  |
- | sort | [SortMethod] |  |
+ | facets | [[ReviewFacet](#ReviewFacet)] |  |
+ | items | [[CustomerReview](#CustomerReview)] |  |
+ | page | [Page](#Page) |  |
+ | sort | [[SortMethod](#SortMethod)] |  |
 
 ---
 
@@ -20787,14 +19119,14 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | attribute_metric | [RatingMetric] |  |
+ | attribute_metric | [[RatingMetric](#RatingMetric)] |  |
  | created_on | String |  |
- | entity | Entity | entity could be product, seller, delivery |
+ | entity | [Entity](#Entity) | entity could be product, seller, delivery |
  | id | String |  |
  | modified_on | String |  |
  | rating_avg | Double |  |
  | rating_count | Int | total rating count |
- | rating_metric | [RatingMetric] |  |
+ | rating_metric | [[RatingMetric](#RatingMetric)] |  |
  | review_count | Int | total review count |
 
 ---
@@ -20806,8 +19138,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [ReviewMetric] |  |
- | page | Page |  |
+ | items | [[ReviewMetric](#ReviewMetric)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20818,7 +19150,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | attributes | [AttributeObject] |  |
+ | attributes | [[AttributeObject](#AttributeObject)] |  |
  | value | Double |  |
 
 ---
@@ -20870,7 +19202,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | media | [MediaMeta] |  |
+ | media | [[MediaMeta](#MediaMeta)] |  |
  | name | String |  |
  | type | String |  |
 
@@ -20883,13 +19215,13 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | date_meta | DateMeta |  |
- | entity | Entity |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | rating | Rating |  |
- | review | TemplateReview |  |
- | state | FeedbackState |  |
+ | rating | [Rating](#Rating) |  |
+ | review | [TemplateReview](#TemplateReview) |  |
+ | state | [FeedbackState](#FeedbackState) |  |
 
 ---
 
@@ -20900,8 +19232,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Template] |  |
- | page | Page |  |
+ | items | [[Template](#Template)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -20914,9 +19246,9 @@ Internal Server Error. See the error object in the response body to know the exa
  | ---------- | ---- | ----------- |
  | description | String |  |
  | header | String |  |
- | image_meta | ReviewMediaMeta |  |
+ | image_meta | [ReviewMediaMeta](#ReviewMediaMeta) |  |
  | title | String |  |
- | video_meta | ReviewMediaMeta |  |
+ | video_meta | [ReviewMediaMeta](#ReviewMediaMeta) |  |
  | vote_allowed | Bool |  |
 
 ---
@@ -20943,7 +19275,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | feedback_question | [String] |  |
- | icon | UIIcon |  |
+ | icon | [UIIcon](#UIIcon) |  |
  | text | [String] |  |
  | type | String | star | images | gifs | smileys |
 
@@ -21057,12 +19389,12 @@ Internal Server Error. See the error object in the response body to know the exa
  | application | String |  |
  | approve | Bool |  |
  | archive | Bool |  |
- | attributes_rating | [AttributeObject] |  |
+ | attributes_rating | [[AttributeObject](#AttributeObject)] |  |
  | description | String |  |
- | device_meta | DeviceMeta |  |
+ | device_meta | [DeviceMeta](#DeviceMeta) |  |
  | entity_id | String |  |
  | entity_type | String |  |
- | media_resource | [MediaMeta] |  |
+ | media_resource | [[MediaMeta](#MediaMeta)] |  |
  | rating | Double |  |
  | review_id | String |  |
  | template_id | String |  |
@@ -21105,13 +19437,13 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | action | String | upvote and downvote |
- | date_meta | DateMeta |  |
- | entity | Entity |  |
+ | date_meta | [DateMeta](#DateMeta) |  |
+ | entity | [Entity](#Entity) |  |
  | id | String |  |
  | name | String |  |
- | reference | Entity | review | comment |
- | state | FeedbackState |  |
- | tags | [TagMeta] |  |
+ | reference | [Entity](#Entity) | review | comment |
+ | state | [FeedbackState](#FeedbackState) |  |
+ | tags | [[TagMeta](#TagMeta)] |  |
 
 ---
 
@@ -21149,8 +19481,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [Vote] |  |
- | page | Page |  |
+ | items | [[Vote](#Vote)] |  |
+ | page | [Page](#Page) |  |
 
 ---
 
@@ -21166,8 +19498,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | quantity | Int | Quantity of product in shipment |
  | article_uid | String | Article mongo id |
+ | quantity | Int | Quantity of product in shipment |
  | shipment_type | String | Shipment delivery type |
 
 ---
@@ -21179,7 +19511,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | shipments | [UpdateCartShipmentItem] |  |
+ | shipments | [[UpdateCartShipmentItem](#UpdateCartShipmentItem)] |  |
 
 ---
 
@@ -21190,8 +19522,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | key | String |  |
  | values | [String] |  |
+ | key | String |  |
 
 ---
 
@@ -21202,26 +19534,26 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | staff | [String: Any] |  |
- | payment_mode | String |  |
- | pos | Bool |  |
- | ordering_store | Int |  |
- | billing_address_id | Int |  |
- | delivery_address | [String: Any] |  |
- | merchant_code | String |  |
+ | files | [[Files](#Files)] | List of file url |
  | callback_url | String |  |
  | payment_auto_confirm | Bool |  |
+ | payment_identifier | String |  |
+ | staff | [String: Any] |  |
+ | fyndstore_emp_id | String |  |
+ | billing_address_id | Int |  |
+ | merchant_code | String |  |
+ | address_id | Int |  |
+ | pick_at_store_uid | Int |  |
+ | order_type | String |  |
  | payment_params | [String: Any] |  |
  | billing_address | [String: Any] |  |
- | pick_at_store_uid | Int |  |
- | meta | [String: Any] |  |
- | address_id | Int |  |
  | aggregator | String |  |
- | files | [Files] | List of file url |
+ | delivery_address | [String: Any] |  |
  | extra_meta | [String: Any] |  |
- | order_type | String |  |
- | fyndstore_emp_id | String |  |
- | payment_identifier | String |  |
+ | pos | Bool |  |
+ | meta | [String: Any] |  |
+ | ordering_store | Int |  |
+ | payment_mode | String |  |
 
 ---
 
@@ -21244,21 +19576,21 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | address | String |  |
+ | name | String |  |
+ | area_code | String |  |
  | pincode | Int |  |
  | area_code_slug | String |  |
- | name | String |  |
- | city | String |  |
- | store_code | String |  |
- | address_type | String |  |
  | email | String |  |
- | area_code | String |  |
- | landmark | String |  |
- | state | String |  |
- | uid | Int |  |
  | area | String |  |
- | phone | String |  |
  | country | String |  |
+ | address | String |  |
+ | phone | String |  |
+ | state | String |  |
+ | address_type | String |  |
+ | store_code | String |  |
+ | uid | Int |  |
+ | city | String |  |
+ | landmark | String |  |
 
 ---
 
@@ -21269,7 +19601,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | items | [PickupStoreDetail] |  |
+ | items | [[PickupStoreDetail](#PickupStoreDetail)] |  |
 
 ---
 
@@ -21288,7 +19620,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | request_uuid | String |  |
  | stormbreaker_uuid | String |  |
  | success | Bool |  |
- | data | [LogisticPincodeData] |  |
+ | data | [[LogisticPincodeData](#LogisticPincodeData)] |  |
 
 ---
 
@@ -21299,11 +19631,11 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | meta | LogisticMeta |  |
- | parents | [LogisticParents] |  |
+ | meta | [LogisticMeta](#LogisticMeta) |  |
+ | parents | [[LogisticParents](#LogisticParents)] |  |
  | sub_type | String |  |
  | name | String |  |
- | error | LogisticError |  |
+ | error | [LogisticError](#LogisticError) |  |
  | uid | String |  |
  | display_name | String |  |
 
@@ -21355,7 +19687,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | location_details | [LocationDetailsReq] |  |
+ | location_details | [[LocationDetailsReq](#LocationDetailsReq)] |  |
  | to_pincode | String |  |
  | action | String |  |
 
@@ -21369,7 +19701,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | from_pincode | String |  |
- | articles | [TatReqProductArticles] |  |
+ | articles | [[TatReqProductArticles](#TatReqProductArticles)] |  |
  | fulfillment_id | Int |  |
 
 ---
@@ -21381,7 +19713,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | category | LogisticRequestCategory |  |
+ | category | [LogisticRequestCategory](#LogisticRequestCategory) |  |
 
 ---
 
@@ -21404,7 +19736,7 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | location_details | [LocationDetails] |  |
+ | location_details | [[LocationDetails](#LocationDetails)] |  |
  | request_uuid | String |  |
  | error | [String: Any] |  |
  | to_city | String |  |
@@ -21426,7 +19758,7 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | from_pincode | String |  |
- | articles | [TatProductArticles] |  |
+ | articles | [[TatProductArticles](#TatProductArticles)] |  |
  | fulfillment_id | Int |  |
 
 ---
@@ -21439,8 +19771,8 @@ Internal Server Error. See the error object in the response body to know the exa
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
  | error | [String: Any] |  |
- | category | LogisticResponseCategory |  |
- | promise | LogisticPromise |  |
+ | category | [LogisticResponseCategory](#LogisticResponseCategory) |  |
+ | promise | [LogisticPromise](#LogisticPromise) |  |
 
 ---
 
@@ -21463,8 +19795,8 @@ Internal Server Error. See the error object in the response body to know the exa
 
  | Properties | Type | Description |
  | ---------- | ---- | ----------- |
- | timestamp | LogisticTimestamp |  |
- | formatted | Formatted |  |
+ | timestamp | [LogisticTimestamp](#LogisticTimestamp) |  |
+ | formatted | [Formatted](#Formatted) |  |
 
 ---
 
