@@ -22,7 +22,6 @@
 * [Logistic](#Logistic) - Handles Platform websites OMS 
 
 ----
-----
 
 ### Classes and Methods
 
@@ -325,7 +324,6 @@
     
 
 
----
 ---
 
 
@@ -1437,8 +1435,6 @@ Success. Returns a list of selling locations. Check the example shown below or r
 
 
 
----
-
 
 ## Cart
 
@@ -2346,8 +2342,6 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 
 
 
----
-
 
 ## Common
 
@@ -2391,8 +2385,6 @@ Success
 ---
 
 
-
----
 
 
 ## Lead
@@ -2664,8 +2656,6 @@ Success
 
 
 
----
-
 
 ## Theme
 
@@ -2818,8 +2808,6 @@ Success. Returns a JSON object of the theme. Check the example shown below or re
 ---
 
 
-
----
 
 
 ## User
@@ -4018,8 +4006,6 @@ Request body must contain an email ID. Refer `EditEmailRequestSchema` for more d
 
 
 
----
-
 
 ## Content
 
@@ -4675,8 +4661,6 @@ Success. Returns a JSON object containing all the tags injected in the applicati
 
 
 
----
-
 
 ## Communication
 
@@ -4788,8 +4772,6 @@ Success. Check the example shown below or refer `PushtokenRes` for more details.
 ---
 
 
-
----
 
 
 ## Share
@@ -5056,8 +5038,6 @@ Success. Check the example shown below or refer `ShortLinkRes` for more details.
 
 
 
----
-
 
 ## FileStorage
 
@@ -5174,8 +5154,6 @@ Success
 ---
 
 
-
----
 
 
 ## Configuration
@@ -5633,8 +5611,6 @@ Success. Check the example shown below or refer `AppStaffResponse` for more deta
 ---
 
 
-
----
 
 
 ## Payment
@@ -6432,8 +6408,6 @@ Success. Check the example shown below or refer `SetDefaultBeneficiaryResponse` 
 
 
 
----
-
 
 ## Order
 
@@ -6709,8 +6683,6 @@ Success. Check the example shown below or refer `PosOrderById` for more details.
 
 
 
----
-
 
 ## Rewards
 
@@ -6969,8 +6941,6 @@ Success. Check example below or refer `RedeemReferralCodeResponse` for more deta
 ---
 
 
-
----
 
 
 ## Feedback
@@ -7994,8 +7964,6 @@ Success.
 ---
 
 
-
----
 
 
 ## PosCart
@@ -9027,8 +8995,6 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 
 
 
----
-
 
 ## Logistic
 
@@ -9108,8 +9074,6 @@ Success. Returns a JSON object containing the city name, state and country ident
 ---
 
 
-
----
 
 
 ### Schemas
@@ -10331,212 +10295,12 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
- #### [BaseInfo](#BaseInfo)
+ #### [CartCurrency](#CartCurrency)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
- | name | String |  no  |  |
-
----
-
-
- 
- 
- #### [CategoryInfo](#CategoryInfo)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  | Product Category Id |
- | name | String |  no  |  |
-
----
-
-
- 
- 
- #### [Image](#Image)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | aspect_ratio | String |  no  |  |
- | secure_url | String |  no  |  |
- | url | String |  no  |  |
-
----
-
-
- 
- 
- #### [ActionQuery](#ActionQuery)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | product_slug | [String] |  no  | Contains list of product slug |
-
----
-
-
- 
- 
- #### [ProductAction](#ProductAction)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | query | [ActionQuery](#ActionQuery) |  no  |  |
- | type | String |  no  |  |
- | url | String |  no  |  |
-
----
-
-
- 
- 
- #### [Product](#Product)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | brand | [BaseInfo](#BaseInfo) |  no  |  |
- | name | String |  no  |  |
- | slug | String |  no  | Unique product url name generated via product name and other meta data |
- | type | String |  no  |  |
- | categories | [[CategoryInfo](#CategoryInfo)] |  no  |  |
- | uid | Int |  no  |  |
- | images | [[Image](#Image)] |  no  |  |
- | action | [ProductAction](#ProductAction) |  no  |  |
-
----
-
-
- 
- 
- #### [ProductPrice](#ProductPrice)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | marked | Double |  no  |  |
- | currency_code | String |  no  |  |
- | effective | Double |  no  |  |
- | add_on | Double |  no  |  |
- | selling | Double |  no  |  |
- | currency_symbol | String |  no  |  |
-
----
-
-
- 
- 
- #### [ProductPriceInfo](#ProductPriceInfo)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | converted | [ProductPrice](#ProductPrice) |  no  |  |
- | base | [ProductPrice](#ProductPrice) |  no  |  |
-
----
-
-
- 
- 
- #### [PromoMeta](#PromoMeta)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | message | String |  no  |  |
-
----
-
-
- 
- 
- #### [BasePrice](#BasePrice)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | marked | Double |  no  |  |
- | currency_code | String |  no  |  |
- | currency_symbol | String |  no  |  |
- | effective | Double |  no  |  |
-
----
-
-
- 
- 
- #### [ArticlePriceInfo](#ArticlePriceInfo)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | converted | [BasePrice](#BasePrice) |  no  |  |
- | base | [BasePrice](#BasePrice) |  no  |  |
-
----
-
-
- 
- 
- #### [ProductArticle](#ProductArticle)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | price | [ArticlePriceInfo](#ArticlePriceInfo) |  no  |  |
- | extra_meta | [String: Any] |  no  |  |
- | seller | [BaseInfo](#BaseInfo) |  no  |  |
- | type | String |  no  |  |
- | size | String |  no  |  |
- | quantity | Int |  no  |  |
- | uid | String |  no  |  |
- | store | [BaseInfo](#BaseInfo) |  no  |  |
-
----
-
-
- 
- 
- #### [CartProductIdentifer](#CartProductIdentifer)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | identifier | String |  no  | Article idenfier generated by cart |
-
----
-
-
- 
- 
- #### [ProductAvailability](#ProductAvailability)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | other_store_quantity | Int |  no  |  |
- | deliverable | Bool |  no  |  |
- | is_valid | Bool |  no  |  |
- | sizes | [String] |  no  |  |
- | out_of_stock | Bool |  no  |  |
-
----
-
-
- 
- 
- #### [CartProductInfo](#CartProductInfo)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | product | [Product](#Product) |  no  |  |
- | discount | String |  no  |  |
- | is_set | Bool |  no  |  |
- | price | [ProductPriceInfo](#ProductPriceInfo) |  no  |  |
- | coupon_message | String |  no  |  |
- | bulk_offer | [String: Any] |  no  |  |
- | price_per_unit | [ProductPriceInfo](#ProductPriceInfo) |  no  |  |
- | promo_meta | [PromoMeta](#PromoMeta) |  no  |  |
- | key | String |  no  |  |
- | quantity | Int |  no  |  |
- | article | [ProductArticle](#ProductArticle) |  no  |  |
- | identifiers | [CartProductIdentifer](#CartProductIdentifer)? |  yes  |  |
- | message | String |  no  |  |
- | availability | [ProductAvailability](#ProductAvailability) |  no  |  |
+ | code | String |  no  | Currency code defined by ISO 4217:2015 |
+ | symbol | String |  no  |  |
 
 ---
 
@@ -10579,41 +10343,225 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
+ #### [ProductPrice](#ProductPrice)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | currency_code | String |  no  |  |
+ | selling | Double |  no  |  |
+ | effective | Double |  no  |  |
+ | currency_symbol | String |  no  |  |
+ | add_on | Double |  no  |  |
+ | marked | Double |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductPriceInfo](#ProductPriceInfo)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | converted | [ProductPrice](#ProductPrice) |  no  |  |
+ | base | [ProductPrice](#ProductPrice) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductAvailability](#ProductAvailability)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | sizes | [String] |  no  |  |
+ | other_store_quantity | Int |  no  |  |
+ | out_of_stock | Bool |  no  |  |
+ | is_valid | Bool |  no  |  |
+ | deliverable | Bool |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [PromoMeta](#PromoMeta)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | message | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [CartProductIdentifer](#CartProductIdentifer)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | identifier | String |  no  | Article idenfier generated by cart |
+
+---
+
+
+ 
+ 
+ #### [BaseInfo](#BaseInfo)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [Image](#Image)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | url | String |  no  |  |
+ | aspect_ratio | String |  no  |  |
+ | secure_url | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ActionQuery](#ActionQuery)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | product_slug | [String] |  no  | Contains list of product slug |
+
+---
+
+
+ 
+ 
+ #### [ProductAction](#ProductAction)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | url | String |  no  |  |
+ | type | String |  no  |  |
+ | query | [ActionQuery](#ActionQuery) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [CategoryInfo](#CategoryInfo)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | uid | Int |  no  | Product Category Id |
+ | name | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [Product](#Product)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | brand | [BaseInfo](#BaseInfo) |  no  |  |
+ | images | [[Image](#Image)] |  no  |  |
+ | action | [ProductAction](#ProductAction) |  no  |  |
+ | slug | String |  no  | Unique product url name generated via product name and other meta data |
+ | name | String |  no  |  |
+ | uid | Int |  no  |  |
+ | type | String |  no  |  |
+ | categories | [[CategoryInfo](#CategoryInfo)] |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [BasePrice](#BasePrice)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | currency_code | String |  no  |  |
+ | effective | Double |  no  |  |
+ | marked | Double |  no  |  |
+ | currency_symbol | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ArticlePriceInfo](#ArticlePriceInfo)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | converted | [BasePrice](#BasePrice) |  no  |  |
+ | base | [BasePrice](#BasePrice) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductArticle](#ProductArticle)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | size | String |  no  |  |
+ | price | [ArticlePriceInfo](#ArticlePriceInfo) |  no  |  |
+ | extra_meta | [String: Any] |  no  |  |
+ | seller | [BaseInfo](#BaseInfo) |  no  |  |
+ | uid | String |  no  |  |
+ | quantity | Int |  no  |  |
+ | type | String |  no  |  |
+ | store | [BaseInfo](#BaseInfo) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [CartProductInfo](#CartProductInfo)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | coupon_message | String |  no  |  |
+ | price | [ProductPriceInfo](#ProductPriceInfo) |  no  |  |
+ | discount | String |  no  |  |
+ | availability | [ProductAvailability](#ProductAvailability) |  no  |  |
+ | is_set | Bool |  no  |  |
+ | promo_meta | [PromoMeta](#PromoMeta) |  no  |  |
+ | message | String |  no  |  |
+ | key | String |  no  |  |
+ | identifiers | [CartProductIdentifer](#CartProductIdentifer)? |  yes  |  |
+ | price_per_unit | [ProductPriceInfo](#ProductPriceInfo) |  no  |  |
+ | product | [Product](#Product) |  no  |  |
+ | article | [ProductArticle](#ProductArticle) |  no  |  |
+ | quantity | Int |  no  |  |
+ | bulk_offer | [String: Any] |  no  |  |
+
+---
+
+
+ 
+ 
  #### [PaymentSelectionLock](#PaymentSelectionLock)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | payment_identifier | String |  no  |  |
- | enabled | Bool |  no  |  |
  | default_options | String |  no  |  |
-
----
-
-
- 
- 
- #### [CartCurrency](#CartCurrency)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | code | String |  no  | Currency code defined by ISO 4217:2015 |
- | symbol | String |  no  |  |
-
----
-
-
- 
- 
- #### [CouponBreakup](#CouponBreakup)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | value | Double |  no  |  |
- | is_applied | Bool |  no  |  |
- | type | String |  no  |  |
- | code | String |  no  |  |
- | uid | String |  no  |  |
- | message | String |  no  |  |
+ | enabled | Bool |  no  |  |
+ | payment_identifier | String |  no  |  |
 
 ---
 
@@ -10624,12 +10572,12 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | value | Double |  no  |  |
- | currency_code | String |  no  |  |
- | key | String |  no  |  |
  | display | String |  no  |  |
- | message | [String] |  no  |  |
+ | currency_code | String |  no  |  |
  | currency_symbol | String |  no  |  |
+ | value | Double |  no  |  |
+ | message | [String] |  no  |  |
+ | key | String |  no  |  |
 
 ---
 
@@ -10640,10 +10588,26 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | applicable | Double |  no  |  |
- | is_applied | Bool |  no  |  |
  | description | String |  no  |  |
+ | is_applied | Bool |  no  |  |
  | total | Double |  no  |  |
+ | applicable | Double |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [CouponBreakup](#CouponBreakup)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | code | String |  no  |  |
+ | value | Double |  no  |  |
+ | message | String |  no  |  |
+ | uid | String |  no  |  |
+ | type | String |  no  |  |
+ | is_applied | Bool |  no  |  |
 
 ---
 
@@ -10654,18 +10618,18 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | discount | Double |  no  |  |
- | fynd_cash | Double |  no  |  |
- | gst_charges | Double |  no  |  |
  | convenience_fee | Double |  no  |  |
+ | vog | Double |  no  |  |
+ | discount | Double |  no  |  |
+ | you_saved | Double |  no  |  |
+ | fynd_cash | Double |  no  |  |
+ | mrp_total | String |  no  |  |
  | coupon | Double |  no  |  |
+ | total | Double |  no  |  |
  | cod_charge | Double |  no  |  |
  | delivery_charge | Double |  no  |  |
- | mrp_total | String |  no  |  |
- | you_saved | Double |  no  |  |
+ | gst_charges | Double |  no  |  |
  | subtotal | Double |  no  |  |
- | vog | Double |  no  |  |
- | total | Double |  no  |  |
 
 ---
 
@@ -10676,9 +10640,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | coupon | [CouponBreakup](#CouponBreakup) |  no  |  |
  | display | [[DisplayBreakup](#DisplayBreakup)] |  no  |  |
  | loyalty_points | [LoyaltyPoints](#LoyaltyPoints) |  no  |  |
+ | coupon | [CouponBreakup](#CouponBreakup) |  no  |  |
  | raw | [RawBreakup](#RawBreakup) |  no  |  |
 
 ---
@@ -10690,21 +10654,21 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | coupon_text | String |  no  |  |
  | gstin | String |  no  |  |
- | checkout_mode | String |  no  |  |
- | cart_id | Int |  no  |  |
- | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
- | restrict_checkout | Bool |  no  |  |
- | is_valid | Bool |  no  |  |
+ | currency | [CartCurrency](#CartCurrency) |  no  |  |
  | delivery_charge_info | String |  no  |  |
  | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
- | comment | String |  no  |  |
- | coupon_text | String |  no  |  |
- | uid | String |  no  |  |
  | last_modified | String |  no  |  |
- | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
+ | comment | String |  no  |  |
+ | restrict_checkout | Bool |  no  |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
  | message | String |  no  |  |
- | currency | [CartCurrency](#CartCurrency) |  no  |  |
+ | checkout_mode | String |  no  |  |
+ | is_valid | Bool |  no  |  |
+ | uid | String |  no  |  |
+ | cart_id | Int |  no  |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
  | breakup_values | [CartBreakup](#CartBreakup) |  no  |  |
 
 ---
@@ -10716,16 +10680,16 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | extra_meta | [String: Any] |  no  |  |
- | item_size | String |  no  |  |
- | article_id | String |  no  |  |
- | store_id | Int |  no  |  |
- | article_assignment | [String: Any] |  no  |  |
- | quantity | Int |  no  |  |
  | pos | Bool |  no  |  |
  | display | String |  no  |  |
- | seller_id | Int |  no  |  |
+ | article_assignment | [String: Any] |  no  |  |
  | item_id | Int |  no  |  |
+ | extra_meta | [String: Any] |  no  |  |
+ | article_id | String |  no  |  |
+ | store_id | Int |  no  |  |
+ | item_size | String |  no  |  |
+ | seller_id | Int |  no  |  |
+ | quantity | Int |  no  |  |
 
 ---
 
@@ -10747,10 +10711,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | message | String |  no  |  |
- | cart | [CartResponse](#CartResponse) |  no  |  |
  | success | Bool |  no  | True if all items are added successfully. False if partially added or not added. |
+ | message | String |  no  |  |
  | partial | Bool |  no  | When adding multiple items check if all added. True if only few are added. |
+ | cart | [CartResponse](#CartResponse) |  no  |  |
 
 ---
 
@@ -10761,13 +10725,13 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | extra_meta | [String: Any] |  no  |  |
- | item_size | String |  no  |  |
- | article_id | String |  no  |  |
- | quantity | Int |  no  |  |
- | identifiers | [CartProductIdentifer](#CartProductIdentifer)? |  yes  |  |
  | item_id | Int |  no  |  |
+ | extra_meta | [String: Any] |  no  |  |
  | item_index | Int |  no  |  |
+ | article_id | String |  no  |  |
+ | identifiers | [CartProductIdentifer](#CartProductIdentifer)? |  yes  |  |
+ | item_size | String |  no  |  |
+ | quantity | Int |  no  |  |
 
 ---
 
@@ -10790,9 +10754,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | success | Bool |  no  | True if all items are added successfully. False if partially added or not added. |
  | message | String |  no  |  |
  | cart | [CartResponse](#CartResponse) |  no  |  |
- | success | Bool |  no  | True if all items are added successfully. False if partially added or not added. |
 
 ---
 
@@ -10814,16 +10778,16 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | max_discount_value | Double |  no  |  |
- | is_applicable | Bool |  no  |  |
- | sub_title | String |  no  |  |
- | title | String |  no  |  |
- | is_applied | Bool |  no  |  |
- | expires_on | String |  no  |  |
- | minimum_cart_value | Double |  no  |  |
- | coupon_value | Double |  no  |  |
  | coupon_code | String |  no  |  |
+ | title | String |  no  |  |
+ | is_applicable | Bool |  no  |  |
+ | minimum_cart_value | Double |  no  |  |
+ | sub_title | String |  no  |  |
  | message | String |  no  |  |
+ | coupon_value | Double |  no  |  |
+ | expires_on | String |  no  |  |
+ | is_applied | Bool |  no  |  |
+ | max_discount_value | Double |  no  |  |
 
 ---
 
@@ -10836,9 +10800,9 @@ Success. Returns a JSON object containing the city name, state and country ident
  | ---------- | ---- | -------- | ----------- |
  | has_next | Bool |  no  |  |
  | current | Int |  no  |  |
- | has_previous | Bool |  no  |  |
  | total_item_count | Int |  no  |  |
  | total | Int |  no  |  |
+ | has_previous | Bool |  no  |  |
 
 ---
 
@@ -10868,38 +10832,6 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
- #### [OfferPrice](#OfferPrice)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | marked | Int |  no  | Original price of product |
- | currency_code | String |  no  | Currency code for all amounts |
- | effective | Int |  no  | Current per unit price of product after existing deductions |
- | currency_symbol | String |  no  | Currency symbol for currency |
- | bulk_effective | Double |  no  | Discounted per unit price for current offer object |
-
----
-
-
- 
- 
- #### [OfferItem](#OfferItem)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | price | [OfferPrice](#OfferPrice) |  no  |  |
- | best | Bool |  no  | Is true for best offer from all offers present for all sellers |
- | auto_applied | Bool |  no  |  |
- | type | String |  no  | Offer type |
- | quantity | Int |  no  | Quantity on which offer is applicable |
- | margin | Int |  no  | Percentage value of discount |
- | total | Double |  no  | Total price of offer quantity with discount |
-
----
-
-
- 
- 
  #### [OfferSeller](#OfferSeller)
 
  | Properties | Type | Nullable | Description |
@@ -10912,12 +10844,44 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
+ #### [OfferPrice](#OfferPrice)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | currency_code | String |  no  | Currency code for all amounts |
+ | effective | Int |  no  | Current per unit price of product after existing deductions |
+ | currency_symbol | String |  no  | Currency symbol for currency |
+ | bulk_effective | Double |  no  | Discounted per unit price for current offer object |
+ | marked | Int |  no  | Original price of product |
+
+---
+
+
+ 
+ 
+ #### [OfferItem](#OfferItem)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | margin | Int |  no  | Percentage value of discount |
+ | price | [OfferPrice](#OfferPrice) |  no  |  |
+ | total | Double |  no  | Total price of offer quantity with discount |
+ | best | Bool |  no  | Is true for best offer from all offers present for all sellers |
+ | type | String |  no  | Offer type |
+ | auto_applied | Bool |  no  |  |
+ | quantity | Int |  no  | Quantity on which offer is applicable |
+
+---
+
+
+ 
+ 
  #### [BulkPriceOffer](#BulkPriceOffer)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | offers | [[OfferItem](#OfferItem)] |  no  |  |
  | seller | [OfferSeller](#OfferSeller) |  no  |  |
+ | offers | [[OfferItem](#OfferItem)] |  no  |  |
 
 ---
 
@@ -10962,28 +10926,28 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | address | String |  no  |  |
- | name | String |  no  |  |
- | tags | [String] |  no  |  |
- | meta | [String: Any] |  no  |  |
- | uid | Int |  no  |  |
- | area | String |  no  |  |
- | state | String |  no  |  |
  | country_code | String |  no  |  |
- | area_code_slug | String |  no  |  |
- | country | String |  no  |  |
- | is_active | Bool |  no  |  |
- | phone | String |  no  |  |
  | checkout_mode | String |  no  |  |
- | geo_location | [GeoLocation](#GeoLocation) |  no  |  |
- | user_id | String |  no  |  |
- | landmark | String |  no  |  |
- | email | String |  no  |  |
- | is_default_address | Bool |  no  |  |
- | address_type | String |  no  |  |
+ | is_active | Bool |  no  |  |
  | city | String |  no  |  |
- | area_code | String |  no  |  |
  | google_map_point | [String: Any] |  no  |  |
+ | uid | Int |  no  |  |
+ | email | String |  no  |  |
+ | meta | [String: Any] |  no  |  |
+ | geo_location | [GeoLocation](#GeoLocation) |  no  |  |
+ | area_code | String |  no  |  |
+ | name | String |  no  |  |
+ | address_type | String |  no  |  |
+ | state | String |  no  |  |
+ | country | String |  no  |  |
+ | user_id | String |  no  |  |
+ | is_default_address | Bool |  no  |  |
+ | landmark | String |  no  |  |
+ | address | String |  no  |  |
+ | tags | [String] |  no  |  |
+ | phone | String |  no  |  |
+ | area | String |  no  |  |
+ | area_code_slug | String |  no  |  |
 
 ---
 
@@ -11005,9 +10969,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | success | String |  no  |  |
  | is_default_address | Bool |  no  |  |
  | address_id | Int |  no  |  |
- | success | String |  no  |  |
 
 ---
 
@@ -11018,10 +10982,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | is_updated | Bool |  no  |  |
+ | success | Bool |  no  |  |
  | is_default_address | Bool |  no  |  |
  | address_id | Int |  no  |  |
- | success | Bool |  no  |  |
+ | is_updated | Bool |  no  |  |
 
 ---
 
@@ -11045,8 +11009,8 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | uid | String |  no  |  |
- | address_id | String |  no  |  |
  | billing_address_id | Int |  no  |  |
+ | address_id | String |  no  |  |
 
 ---
 
@@ -11060,9 +11024,9 @@ Success. Returns a JSON object containing the city name, state and country ident
  | payment_identifier | String |  no  |  |
  | payment_mode | String |  no  |  |
  | address_id | Int |  no  |  |
- | uid | Int |  no  |  |
  | merchant_code | String |  no  |  |
  | aggregator_name | String |  no  |  |
+ | uid | Int |  no  |  |
 
 ---
 
@@ -11073,11 +11037,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | discount | Double |  no  |  |
  | title | String |  no  |  |
+ | discount | Double |  no  |  |
+ | valid | Bool |  no  |  |
  | code | String |  no  |  |
  | display_message_en | String |  no  |  |
- | valid | Bool |  no  |  |
 
 ---
 
@@ -11088,9 +11052,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | coupon_validity | [CouponValidity](#CouponValidity) |  no  |  |
- | message | String |  no  |  |
  | success | Bool? |  yes  |  |
+ | message | String |  no  |  |
+ | coupon_validity | [CouponValidity](#CouponValidity) |  no  |  |
 
 ---
 
@@ -11101,16 +11065,16 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | dp_id | Int |  no  |  |
  | promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
  | order_type | String |  no  |  |
- | dp_options | [String: Any] |  no  |  |
- | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
- | dp_id | Int |  no  |  |
- | fulfillment_type | String |  no  |  |
- | shipments | Int |  no  |  |
  | shipment_type | String |  no  |  |
- | fulfillment_id | Int |  no  |  |
+ | shipments | Int |  no  |  |
  | box_type | String |  no  |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
+ | dp_options | [String: Any] |  no  |  |
+ | fulfillment_id | Int |  no  |  |
+ | fulfillment_type | String |  no  |  |
 
 ---
 
@@ -11121,22 +11085,22 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | gstin | String |  no  |  |
- | checkout_mode | String |  no  |  |
- | cart_id | Int |  no  |  |
- | restrict_checkout | Bool |  no  |  |
- | is_valid | Bool |  no  |  |
- | delivery_charge_info | String |  no  |  |
- | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
- | comment | String |  no  |  |
  | coupon_text | String |  no  |  |
- | uid | String |  no  |  |
- | last_modified | String |  no  |  |
- | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
- | error | Bool |  no  |  |
- | message | String |  no  |  |
- | shipments | [[ShipmentResponse](#ShipmentResponse)] |  no  |  |
+ | gstin | String |  no  |  |
  | currency | [CartCurrency](#CartCurrency) |  no  |  |
+ | delivery_charge_info | String |  no  |  |
+ | shipments | [[ShipmentResponse](#ShipmentResponse)] |  no  |  |
+ | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
+ | last_modified | String |  no  |  |
+ | comment | String |  no  |  |
+ | restrict_checkout | Bool |  no  |  |
+ | message | String |  no  |  |
+ | checkout_mode | String |  no  |  |
+ | error | Bool |  no  |  |
+ | is_valid | Bool |  no  |  |
+ | uid | String |  no  |  |
+ | cart_id | Int |  no  |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
  | breakup_values | [CartBreakup](#CartBreakup) |  no  |  |
 
 ---
@@ -11148,22 +11112,22 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | extra_meta | [String: Any] |  no  |  |
- | payment_identifier | String |  no  |  |
- | callback_url | String |  no  |  |
- | billing_address | [String: Any] |  no  |  |
  | billing_address_id | Int |  no  |  |
  | payment_mode | String? |  yes  |  |
- | delivery_address | [String: Any] |  no  |  |
- | meta | [String: Any] |  no  |  |
- | staff | [String: Any] |  no  |  |
- | payment_params | [String: Any] |  no  |  |
  | address_id | Int |  no  |  |
- | ordering_store | Int |  no  |  |
- | aggregator | String |  no  |  |
- | payment_auto_confirm | Bool |  no  |  |
- | merchant_code | String |  no  |  |
+ | payment_identifier | String |  no  |  |
  | fyndstore_emp_id | String |  no  |  |
+ | callback_url | String |  no  |  |
+ | payment_params | [String: Any] |  no  |  |
+ | aggregator | String |  no  |  |
+ | billing_address | [String: Any] |  no  |  |
+ | merchant_code | String |  no  |  |
+ | payment_auto_confirm | Bool |  no  |  |
+ | staff | [String: Any] |  no  |  |
+ | extra_meta | [String: Any] |  no  |  |
+ | delivery_address | [String: Any] |  no  |  |
+ | ordering_store | Int |  no  |  |
+ | meta | [String: Any] |  no  |  |
 
 ---
 
@@ -11174,33 +11138,33 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | delivery_charge_order_value | Int |  no  |  |
- | store_emps | [[String: Any]] |  no  |  |
- | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
- | uid | String |  no  |  |
- | comment | String |  no  |  |
  | last_modified | String |  no  |  |
- | message | String |  no  |  |
- | cod_message | String |  no  |  |
- | user_type | String |  no  |  |
- | success | Bool |  no  |  |
- | delivery_charge_info | String |  no  |  |
- | coupon_text | String |  no  |  |
- | error_message | String |  no  |  |
- | currency | [CartCurrency](#CartCurrency) |  no  |  |
- | store_code | String |  no  |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
  | checkout_mode | String |  no  |  |
- | order_id | String |  no  |  |
- | cart_id | Int |  no  |  |
- | restrict_checkout | Bool |  no  |  |
- | is_valid | Bool |  no  |  |
- | cod_available | Bool |  no  |  |
- | delivery_charges | Int |  no  |  |
- | breakup_values | [CartBreakup](#CartBreakup) |  no  |  |
- | gstin | String |  no  |  |
- | cod_charges | Int |  no  |  |
  | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
+ | currency | [CartCurrency](#CartCurrency) |  no  |  |
+ | delivery_charge_info | String |  no  |  |
+ | user_type | String |  no  |  |
+ | uid | String |  no  |  |
+ | success | Bool |  no  |  |
+ | cart_id | Int |  no  |  |
  | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
+ | breakup_values | [CartBreakup](#CartBreakup) |  no  |  |
+ | delivery_charge_order_value | Int |  no  |  |
+ | coupon_text | String |  no  |  |
+ | gstin | String |  no  |  |
+ | comment | String |  no  |  |
+ | store_emps | [[String: Any]] |  no  |  |
+ | cod_charges | Int |  no  |  |
+ | cod_message | String |  no  |  |
+ | restrict_checkout | Bool |  no  |  |
+ | error_message | String |  no  |  |
+ | message | String |  no  |  |
+ | delivery_charges | Int |  no  |  |
+ | is_valid | Bool |  no  |  |
+ | order_id | String |  no  |  |
+ | cod_available | Bool |  no  |  |
+ | store_code | String |  no  |  |
 
 ---
 
@@ -11211,13 +11175,13 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | callback_url | String |  no  |  |
+ | cart | [CheckCart](#CheckCart) |  no  |  |
+ | data | [String: Any] |  no  |  |
+ | message | String |  no  |  |
+ | app_intercept_url | String |  no  |  |
  | order_id | String |  no  |  |
  | success | Bool |  no  |  |
- | app_intercept_url | String |  no  |  |
- | cart | [CheckCart](#CheckCart) |  no  |  |
- | callback_url | String |  no  |  |
- | message | String |  no  |  |
- | data | [String: Any] |  no  |  |
 
 ---
 
@@ -11230,8 +11194,8 @@ Success. Returns a JSON object containing the city name, state and country ident
  | ---------- | ---- | -------- | ----------- |
  | gstin | String |  no  |  |
  | checkout_mode | String |  no  |  |
- | pick_up_customer_details | [String: Any] |  no  | Customer contact details for customer pickup at store |
  | comment | String |  no  |  |
+ | pick_up_customer_details | [String: Any] |  no  | Customer contact details for customer pickup at store |
 
 ---
 
@@ -11276,8 +11240,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | token | String |  no  | Short url unique id |
  | share_url | String |  no  | Short shareable final url |
+ | token | String |  no  | Short url unique id |
 
 ---
 
@@ -11288,11 +11252,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | token | String |  no  | Short link id |
  | source | [String: Any] |  no  | Share link device and other source information |
  | created_on | String |  no  |  |
  | user | [String: Any] |  no  | User details of who generated share link |
  | meta | [String: Any] |  no  | Meta data sent while generating share cart link |
- | token | String |  no  | Short link id |
 
 ---
 
@@ -11303,22 +11267,22 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | coupon_text | String |  no  |  |
  | gstin | String |  no  |  |
- | checkout_mode | String |  no  |  |
- | cart_id | Int |  no  |  |
- | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
- | restrict_checkout | Bool |  no  |  |
- | is_valid | Bool |  no  |  |
+ | currency | [CartCurrency](#CartCurrency) |  no  |  |
  | delivery_charge_info | String |  no  |  |
  | delivery_promise | [ShipmentPromise](#ShipmentPromise) |  no  |  |
- | comment | String |  no  |  |
- | shared_cart_details | [SharedCartDetails](#SharedCartDetails) |  no  |  |
- | coupon_text | String |  no  |  |
- | uid | String |  no  |  |
  | last_modified | String |  no  |  |
- | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
+ | comment | String |  no  |  |
+ | restrict_checkout | Bool |  no  |  |
+ | items | [[CartProductInfo](#CartProductInfo)] |  no  |  |
+ | shared_cart_details | [SharedCartDetails](#SharedCartDetails) |  no  |  |
  | message | String |  no  |  |
- | currency | [CartCurrency](#CartCurrency) |  no  |  |
+ | checkout_mode | String |  no  |  |
+ | is_valid | Bool |  no  |  |
+ | uid | String |  no  |  |
+ | cart_id | Int |  no  |  |
+ | payment_selection_lock | [PaymentSelectionLock](#PaymentSelectionLock) |  no  |  |
  | breakup_values | [CartBreakup](#CartBreakup) |  no  |  |
 
 ---
@@ -11330,8 +11294,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | cart | [SharedCart](#SharedCart) |  no  |  |
  | error | String |  no  |  |
+ | cart | [SharedCart](#SharedCart) |  no  |  |
 
 ---
 
@@ -19451,9 +19415,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | shipment_type | String? |  yes  | Shipment delivery type |
  | article_uid | String? |  yes  | Article mongo id |
  | quantity | Int |  no  | Quantity of product in shipment |
- | shipment_type | String? |  yes  | Shipment delivery type |
 
 ---
 
@@ -19487,26 +19451,26 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | files | [[Files](#Files)] |  no  | List of file url |
- | callback_url | String |  no  |  |
- | payment_auto_confirm | Bool |  no  |  |
- | payment_identifier | String |  no  |  |
- | staff | [String: Any] |  no  |  |
- | fyndstore_emp_id | String |  no  |  |
- | billing_address_id | Int |  no  |  |
  | merchant_code | String |  no  |  |
- | address_id | Int |  no  |  |
- | pick_at_store_uid | Int |  no  |  |
- | order_type | String? |  yes  |  |
- | payment_params | [String: Any] |  no  |  |
- | billing_address | [String: Any] |  no  |  |
- | aggregator | String |  no  |  |
- | delivery_address | [String: Any] |  no  |  |
- | extra_meta | [String: Any] |  no  |  |
  | pos | Bool |  no  |  |
- | meta | [String: Any] |  no  |  |
- | ordering_store | Int |  no  |  |
+ | order_type | String? |  yes  |  |
+ | extra_meta | [String: Any] |  no  |  |
+ | staff | [String: Any] |  no  |  |
+ | delivery_address | [String: Any] |  no  |  |
+ | payment_identifier | String |  no  |  |
+ | aggregator | String |  no  |  |
+ | callback_url | String |  no  |  |
+ | billing_address_id | Int |  no  |  |
+ | billing_address | [String: Any] |  no  |  |
+ | address_id | Int |  no  |  |
  | payment_mode | String? |  yes  |  |
+ | fyndstore_emp_id | String |  no  |  |
+ | payment_auto_confirm | Bool |  no  |  |
+ | pick_at_store_uid | Int |  no  |  |
+ | ordering_store | Int |  no  |  |
+ | meta | [String: Any] |  no  |  |
+ | payment_params | [String: Any] |  no  |  |
+ | files | [[Files](#Files)] |  no  | List of file url |
 
 ---
 
@@ -19529,21 +19493,21 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | name | String |  no  |  |
- | area_code | String |  no  |  |
+ | state | String |  no  |  |
+ | store_code | String |  no  |  |
+ | address | String |  no  |  |
+ | landmark | String |  no  |  |
  | pincode | Int |  no  |  |
  | area_code_slug | String |  no  |  |
+ | area_code | String |  no  |  |
  | email | String |  no  |  |
- | area | String |  no  |  |
- | country | String |  no  |  |
- | address | String |  no  |  |
- | phone | String |  no  |  |
- | state | String |  no  |  |
+ | name | String |  no  |  |
  | address_type | String |  no  |  |
- | store_code | String |  no  |  |
  | uid | Int |  no  |  |
+ | phone | String |  no  |  |
+ | country | String |  no  |  |
  | city | String |  no  |  |
- | landmark | String |  no  |  |
+ | area | String |  no  |  |
 
 ---
 
