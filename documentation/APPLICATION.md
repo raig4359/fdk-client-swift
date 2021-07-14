@@ -26,7 +26,7 @@
 ### Classes and Methods
 
 
-* [Catalog](#Catalog)
+* ## [Catalog](#Catalog)
   * Methods
     * [getProductDetailBySlug](#getproductdetailbyslug)
     * [getProductSizesBySlug](#getproductsizesbyslug)
@@ -58,7 +58,7 @@
     * [getStores](#getstores)
     
 
-* [Cart](#Cart)
+* ## [Cart](#Cart)
   * Methods
     * [getCart](#getcart)
     * [getCartLastModified](#getcartlastmodified)
@@ -86,12 +86,12 @@
     * [updateCartWithSharedItems](#updatecartwithshareditems)
     
 
-* [Common](#Common)
+* ## [Common](#Common)
   * Methods
     * [getLocations](#getlocations)
     
 
-* [Lead](#Lead)
+* ## [Lead](#Lead)
   * Methods
     * [getTicket](#getticket)
     * [createHistory](#createhistory)
@@ -102,7 +102,7 @@
     * [getTokenForVideoRoom](#gettokenforvideoroom)
     
 
-* [Theme](#Theme)
+* ## [Theme](#Theme)
   * Methods
     * [getAllPages](#getallpages)
     * [getPage](#getpage)
@@ -110,7 +110,7 @@
     * [getThemeForPreview](#getthemeforpreview)
     
 
-* [User](#User)
+* ## [User](#User)
   * Methods
     * [loginWithFacebook](#loginwithfacebook)
     * [loginWithGoogle](#loginwithgoogle)
@@ -146,7 +146,7 @@
     * [sendVerificationLinkToEmail](#sendverificationlinktoemail)
     
 
-* [Content](#Content)
+* ## [Content](#Content)
   * Methods
     * [getAnnouncements](#getannouncements)
     * [getBlog](#getblog)
@@ -168,14 +168,14 @@
     * [getTags](#gettags)
     
 
-* [Communication](#Communication)
+* ## [Communication](#Communication)
   * Methods
     * [getCommunicationConsent](#getcommunicationconsent)
     * [upsertCommunicationConsent](#upsertcommunicationconsent)
     * [upsertAppPushtoken](#upsertapppushtoken)
     
 
-* [Share](#Share)
+* ## [Share](#Share)
   * Methods
     * [getApplicationQRCode](#getapplicationqrcode)
     * [getProductQRCodeBySlug](#getproductqrcodebyslug)
@@ -186,13 +186,13 @@
     * [getOriginalShortLinkByHash](#getoriginalshortlinkbyhash)
     
 
-* [FileStorage](#FileStorage)
+* ## [FileStorage](#FileStorage)
   * Methods
     * [startUpload](#startupload)
     * [completeUpload](#completeupload)
     
 
-* [Configuration](#Configuration)
+* ## [Configuration](#Configuration)
   * Methods
     * [getApplication](#getapplication)
     * [getOwnerInfo](#getownerinfo)
@@ -209,7 +209,7 @@
     * [getAppStaffs](#getappstaffs)
     
 
-* [Payment](#Payment)
+* ## [Payment](#Payment)
   * Methods
     * [getAggregatorsConfig](#getaggregatorsconfig)
     * [attachCardToCustomer](#attachcardtocustomer)
@@ -234,7 +234,7 @@
     * [updateDefaultBeneficiary](#updatedefaultbeneficiary)
     
 
-* [Order](#Order)
+* ## [Order](#Order)
   * Methods
     * [getOrders](#getorders)
     * [getOrderById](#getorderbyid)
@@ -245,7 +245,7 @@
     * [getPosOrderById](#getposorderbyid)
     
 
-* [Rewards](#Rewards)
+* ## [Rewards](#Rewards)
   * Methods
     * [getPointsOnProduct](#getpointsonproduct)
     * [getOfferByName](#getofferbyname)
@@ -256,7 +256,7 @@
     * [redeemReferralCode](#redeemreferralcode)
     
 
-* [Feedback](#Feedback)
+* ## [Feedback](#Feedback)
   * Methods
     * [createAbuseReport](#createabusereport)
     * [updateAbuseReport](#updateabusereport)
@@ -286,7 +286,7 @@
     * [updateVote](#updatevote)
     
 
-* [PosCart](#PosCart)
+* ## [PosCart](#PosCart)
   * Methods
     * [getCart](#getcart)
     * [getCartLastModified](#getcartlastmodified)
@@ -317,7 +317,7 @@
     * [updateCartWithSharedItems](#updatecartwithshareditems)
     
 
-* [Logistic](#Logistic)
+* ## [Logistic](#Logistic)
   * Methods
     * [getTatProduct](#gettatproduct)
     * [getPincodeCity](#getpincodecity)
