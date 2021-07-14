@@ -51,8 +51,8 @@
     * [getCollectionItemsBySlug](#getcollectionitemsbyslug)
     * [getCollectionDetailBySlug](#getcollectiondetailbyslug)
     * [getFollowedListing](#getfollowedlisting)
-    * [unfollowById](#unfollowbyid)
     * [followById](#followbyid)
+    * [unfollowById](#unfollowbyid)
     * [getFollowerCountById](#getfollowercountbyid)
     * [getFollowIds](#getfollowids)
     * [getStores](#getstores)
@@ -331,7 +331,7 @@
 ## Catalog
 
 
-#### Catalog.getProductDetailBySlug
+ Catalog.####getProductDetailBySlug
 Get a product
 
 
@@ -369,7 +369,7 @@ Success. Returns a Product object. Check the example shown below or refer `Produ
 ---
 
 
-#### Catalog.getProductSizesBySlug
+ Catalog.####getProductSizesBySlug
 Get the sizes of a product
 
 
@@ -408,7 +408,7 @@ Success. Returns a ProductSize object. Check the example shown below or refer `P
 ---
 
 
-#### Catalog.getProductPriceBySlug
+ Catalog.####getProductPriceBySlug
 Get the price of a product size at a PIN Code
 
 
@@ -449,7 +449,7 @@ Success. Returns a ProductSizePrice object. Check the example shown below or ref
 ---
 
 
-#### Catalog.getProductSellersBySlug
+ Catalog.####getProductSellersBySlug
 Get the sellers of a product size at a PIN Code
 
 
@@ -492,7 +492,7 @@ Success. Returns a ProductSizeSeller object. Check the example shown below or re
 ---
 
 
-#### Catalog.getProductComparisonBySlugs
+ Catalog.####getProductComparisonBySlugs
 Compare products
 
 
@@ -530,7 +530,7 @@ Success. Returns an array of objects containing the attributes for comparision. 
 ---
 
 
-#### Catalog.getSimilarComparisonProductBySlug
+ Catalog.####getSimilarComparisonProductBySlug
 Get comparison between similar products
 
 
@@ -568,7 +568,7 @@ Success. Returns an array of objects containing the attributes for comparision. 
 ---
 
 
-#### Catalog.getComparedFrequentlyProductBySlug
+ Catalog.####getComparedFrequentlyProductBySlug
 Get comparison between frequently compared products with the given product
 
 
@@ -606,7 +606,7 @@ Success. Returns an array of objects containing the attributes for comparision. 
 ---
 
 
-#### Catalog.getProductSimilarByIdentifier
+ Catalog.####getProductSimilarByIdentifier
 Get similar products
 
 
@@ -645,7 +645,7 @@ Success. Returns a group of similar products based on type. Check the example sh
 ---
 
 
-#### Catalog.getProductVariantsBySlug
+ Catalog.####getProductVariantsBySlug
 Get variant of a particular product
 
 
@@ -683,7 +683,7 @@ Success. Returns all variants of a product. Check the example shown below or ref
 ---
 
 
-#### Catalog.getProductStockByIds
+ Catalog.####getProductStockByIds
 Get the stock of a product
 
 
@@ -725,7 +725,7 @@ Success. Returns the status of the product stock.Check the example shown below o
 ---
 
 
-#### Catalog.getProductStockForTimeByIds
+ Catalog.####getProductStockForTimeByIds
 Get the stock of a product
 
 
@@ -765,7 +765,7 @@ Success. Returns the status of the product stock.Check the example shown below o
 ---
 
 
-#### Catalog.getProducts
+ Catalog.####getProducts
 Get all the products
 
 
@@ -810,7 +810,7 @@ Success. Returns a paginated list of products..Check the example shown below or 
 ---
 
 
-#### Catalog.getBrands
+ Catalog.####getBrands
 Get all the brands
 
 
@@ -850,7 +850,7 @@ Success. Returns a paginated list of brands. Check the example shown below or re
 ---
 
 
-#### Catalog.getBrandDetailBySlug
+ Catalog.####getBrandDetailBySlug
 Get metadata of a brand
 
 
@@ -888,7 +888,7 @@ Success. Returns a metadata object. Check the example shown below or refer `Bran
 ---
 
 
-#### Catalog.getCategories
+ Catalog.####getCategories
 List all the categories
 
 
@@ -926,7 +926,7 @@ Success. Returns a list of categories. Check the example shown below or refer `C
 ---
 
 
-#### Catalog.getCategoryDetailBySlug
+ Catalog.####getCategoryDetailBySlug
 Get metadata of a category
 
 
@@ -964,7 +964,7 @@ Success. Returns metadata of a category. Check the example shown below or refer 
 ---
 
 
-#### Catalog.getHomeProducts
+ Catalog.####getHomeProducts
 List the products
 
 
@@ -1004,7 +1004,7 @@ Success. Returns a paginated list of products. Check the example shown below or 
 ---
 
 
-#### Catalog.getDepartments
+ Catalog.####getDepartments
 List all the departments
 
 
@@ -1037,7 +1037,7 @@ List of Departments. See example below or refer `DepartmentResponse` for details
 ---
 
 
-#### Catalog.getSearchResults
+ Catalog.####getSearchResults
 Get relevant suggestions for a search query
 
 
@@ -1075,7 +1075,7 @@ Success. Returns a list autocomplete suggestions for the search query `q`. Check
 ---
 
 
-#### Catalog.getCollections
+ Catalog.####getCollections
 List all the collections
 
 
@@ -1115,7 +1115,7 @@ Success. Returns a list of collections. Check the example shown below or refer `
 ---
 
 
-#### Catalog.getCollectionItemsBySlug
+ Catalog.####getCollectionItemsBySlug
 Get the items in a collection
 
 
@@ -1158,7 +1158,7 @@ Success. Returns a list items in a given collection. Check the example shown bel
 ---
 
 
-#### Catalog.getCollectionDetailBySlug
+ Catalog.####getCollectionDetailBySlug
 Get a particular collection
 
 
@@ -1196,7 +1196,7 @@ Success. Returns a Collection object. Check the example shown below or refer `Co
 ---
 
 
-#### Catalog.getFollowedListing
+ Catalog.####getFollowedListing
 Get a list of followed Products, Brands, Collections
 
 
@@ -1236,46 +1236,7 @@ Success. Returns a Followed resource object. Check the example shown below or re
 ---
 
 
-#### Catalog.unfollowById
-Unfollow an entity (product/brand/collection)
-
-
-
-```swift
-catalog.unfollowById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
-    // Use response
-}
-```
-
-
-
-| Argument  |  Type  | Required | Description |
-| --------- | -----  | -------- | ----------- |  
-| collectionType | String? | no | Type of collection followed, i.e. products, brands, or collections. |    
-| collectionId | String? | no | The ID of the collection type. |  
-
-
-
-You can undo a followed product, brand or collection by its ID. This action is referred as _unfollow_.
-
-*Returned Response:*
-
-
-
-
-[FollowPostResponse](#FollowPostResponse)
-
-Success. Returns a response object. Check the example shown below or refer `FollowPostResponse` for more details.
-
-
-
-
-
-
----
-
-
-#### Catalog.followById
+ Catalog.####followById
 Follow an entity (product/brand/collection)
 
 
@@ -1314,7 +1275,46 @@ Success. Returns a response object. Check the example shown below or refer `Foll
 ---
 
 
-#### Catalog.getFollowerCountById
+ Catalog.####unfollowById
+Unfollow an entity (product/brand/collection)
+
+
+
+```swift
+catalog.unfollowById(collectionType: collectionType, collectionId: collectionId) { (response, error) in
+    // Use response
+}
+```
+
+
+
+| Argument  |  Type  | Required | Description |
+| --------- | -----  | -------- | ----------- |  
+| collectionType | String? | no | Type of collection followed, i.e. products, brands, or collections. |    
+| collectionId | String? | no | The ID of the collection type. |  
+
+
+
+You can undo a followed product, brand or collection by its ID. This action is referred as _unfollow_.
+
+*Returned Response:*
+
+
+
+
+[FollowPostResponse](#FollowPostResponse)
+
+Success. Returns a response object. Check the example shown below or refer `FollowPostResponse` for more details.
+
+
+
+
+
+
+---
+
+
+ Catalog.####getFollowerCountById
 Get Follow Count
 
 
@@ -1353,7 +1353,7 @@ Success. Returns the number of followers for a given collection type. Check the 
 ---
 
 
-#### Catalog.getFollowIds
+ Catalog.####getFollowIds
 Get the IDs of followed products, brands and collections.
 
 
@@ -1391,7 +1391,7 @@ Success. Returns the IDs of all the Products, Brands and Collections which were 
 ---
 
 
-#### Catalog.getStores
+ Catalog.####getStores
 Get store meta information.
 
 
@@ -1439,7 +1439,7 @@ Success. Returns a list of selling locations. Check the example shown below or r
 ## Cart
 
 
-#### Cart.getCart
+ Cart.####getCart
 Fetch all items added to the cart
 
 
@@ -1480,7 +1480,7 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 ---
 
 
-#### Cart.getCartLastModified
+ Cart.####getCartLastModified
 Fetch last-modified timestamp
 
 
@@ -1513,7 +1513,7 @@ Use this API to fetch Last-Modified timestamp in header metadata.
 ---
 
 
-#### Cart.addItems
+ Cart.####addItems
 Add items to cart
 
 
@@ -1552,7 +1552,7 @@ Success. Returns a cart object as shown below. Refer `AddCartResponse` for more 
 ---
 
 
-#### Cart.updateCart
+ Cart.####updateCart
 Update items in the cart
 
 
@@ -1592,7 +1592,7 @@ Success. Updates and returns a cart object as shown below. Refer `UpdateCartResp
 ---
 
 
-#### Cart.getItemCount
+ Cart.####getItemCount
 Count items in the cart
 
 
@@ -1630,7 +1630,7 @@ Success. Returns the total count of items in a user's cart.
 ---
 
 
-#### Cart.getCoupons
+ Cart.####getCoupons
 Fetch Coupon
 
 
@@ -1668,7 +1668,7 @@ Success. Returns a coupon object which has a list of all the eligible coupons. R
 ---
 
 
-#### Cart.applyCoupon
+ Cart.####applyCoupon
 Apply Coupon
 
 
@@ -1700,7 +1700,7 @@ Use this API to apply coupons on items in the cart.
 ---
 
 
-#### Cart.removeCoupon
+ Cart.####removeCoupon
 Remove Coupon Applied
 
 
@@ -1738,7 +1738,7 @@ Success. Returns coupons removed from the cart along with item details and price
 ---
 
 
-#### Cart.getBulkDiscountOffers
+ Cart.####getBulkDiscountOffers
 Get discount offers based on quantity
 
 
@@ -1779,7 +1779,7 @@ Success. Returns a data object containing the seller details and available offer
 ---
 
 
-#### Cart.applyRewardPoints
+ Cart.####applyRewardPoints
 Apply reward points at cart
 
 
@@ -1819,7 +1819,7 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 ---
 
 
-#### Cart.getAddresses
+ Cart.####getAddresses
 Fetch address
 
 
@@ -1861,7 +1861,7 @@ Success. Returns an Address object containing a list of address saved in the acc
 ---
 
 
-#### Cart.addAddress
+ Cart.####addAddress
 Add address to an account
 
 
@@ -1898,7 +1898,7 @@ Success. Returns the address ID, a flag whether the address is set as default, a
 ---
 
 
-#### Cart.getAddressById
+ Cart.####getAddressById
 Fetch a single address by its ID
 
 
@@ -1941,7 +1941,7 @@ Success. Returns an Address object containing a list of address saved in the acc
 ---
 
 
-#### Cart.updateAddress
+ Cart.####updateAddress
 Update address added to an account
 
 
@@ -1970,7 +1970,7 @@ Use this API to update an existing address in the account. Request object should
 ---
 
 
-#### Cart.removeAddress
+ Cart.####removeAddress
 Remove address associated with an account
 
 
@@ -1999,7 +1999,7 @@ Use this API to delete an address by its ID. This will returns an object that wi
 ---
 
 
-#### Cart.selectAddress
+ Cart.####selectAddress
 Select an address from available addresses
 
 
@@ -2030,7 +2030,7 @@ cart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
 ---
 
 
-#### Cart.selectPaymentMode
+ Cart.####selectPaymentMode
 Update cart payment
 
 
@@ -2068,7 +2068,7 @@ Success. Returns a Cart object as shown below. Refer `CartResponse` for more det
 ---
 
 
-#### Cart.validateCouponForPayment
+ Cart.####validateCouponForPayment
 Verify the coupon eligibility against the payment mode
 
 
@@ -2111,7 +2111,7 @@ Success. Returns a success message and the coupon validity. Refer `PaymentCoupon
 ---
 
 
-#### Cart.getShipments
+ Cart.####getShipments
 Get delivery date and options before checkout
 
 
@@ -2152,7 +2152,7 @@ Success. Returns delivery promise along with shipment details and price breakup.
 ---
 
 
-#### Cart.checkoutCart
+ Cart.####checkoutCart
 Checkout all items in the cart
 
 
@@ -2189,7 +2189,7 @@ Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for m
 ---
 
 
-#### Cart.updateCartMeta
+ Cart.####updateCartMeta
 Update the cart meta
 
 
@@ -2227,7 +2227,7 @@ Returns a message indicating the success of cart meta updation as shown below.
 ---
 
 
-#### Cart.getCartShareLink
+ Cart.####getCartShareLink
 Generate token for sharing the cart
 
 
@@ -2264,7 +2264,7 @@ Returns a URL to share and a token as shown below.
 ---
 
 
-#### Cart.getCartSharedItems
+ Cart.####getCartSharedItems
 Get details of a shared cart
 
 
@@ -2302,7 +2302,7 @@ Success. Returns a Cart object as per the valid token. Refer `SharedCartResponse
 ---
 
 
-#### Cart.updateCartWithSharedItems
+ Cart.####updateCartWithSharedItems
 Merge or replace existing cart
 
 
@@ -2346,7 +2346,7 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 ## Common
 
 
-#### Common.getLocations
+ Common.####getLocations
 Get countries, states, cities
 
 
@@ -2390,7 +2390,7 @@ Success
 ## Lead
 
 
-#### Lead.getTicket
+ Lead.####getTicket
 Get Ticket with the specific id
 
 
@@ -2428,7 +2428,7 @@ Success
 ---
 
 
-#### Lead.createHistory
+ Lead.####createHistory
 Create history for specific Ticket
 
 
@@ -2466,7 +2466,7 @@ Success
 ---
 
 
-#### Lead.createTicket
+ Lead.####createTicket
 Create Ticket
 
 
@@ -2503,7 +2503,7 @@ Success
 ---
 
 
-#### Lead.getCustomForm
+ Lead.####getCustomForm
 Get specific Custom Form using it's slug
 
 
@@ -2541,7 +2541,7 @@ Success
 ---
 
 
-#### Lead.submitCustomForm
+ Lead.####submitCustomForm
 Submit Response for a specific Custom Form using it's slug
 
 
@@ -2579,7 +2579,7 @@ Success
 ---
 
 
-#### Lead.getParticipantsInsideVideoRoom
+ Lead.####getParticipantsInsideVideoRoom
 Get participants of a specific Video Room using it's unique name
 
 
@@ -2617,7 +2617,7 @@ Success
 ---
 
 
-#### Lead.getTokenForVideoRoom
+ Lead.####getTokenForVideoRoom
 Get Token to join a specific Video Room using it's unqiue name
 
 
@@ -2660,7 +2660,7 @@ Success
 ## Theme
 
 
-#### Theme.getAllPages
+ Theme.####getAllPages
 Get all pages of a theme
 
 
@@ -2698,7 +2698,7 @@ Success. Returns an array all the pages of the theme. Refer `AllAvailablePageSch
 ---
 
 
-#### Theme.getPage
+ Theme.####getPage
 Get page of a theme
 
 
@@ -2737,7 +2737,7 @@ Success. Returns an object of the pages.  Refer `AvailablePageSchema` for more d
 ---
 
 
-#### Theme.getAppliedTheme
+ Theme.####getAppliedTheme
 Get the theme currently applied to an application
 
 
@@ -2770,7 +2770,7 @@ Success. Returns a JSON object of the theme. Check the example shown below or   
 ---
 
 
-#### Theme.getThemeForPreview
+ Theme.####getThemeForPreview
 Get a theme for a preview
 
 
@@ -2813,7 +2813,7 @@ Success. Returns a JSON object of the theme. Check the example shown below or re
 ## User
 
 
-#### User.loginWithFacebook
+ User.####loginWithFacebook
 Login or Register using Facebook
 
 
@@ -2850,7 +2850,7 @@ Success. Returns a JSON object with the user details. Check the example shown be
 ---
 
 
-#### User.loginWithGoogle
+ User.####loginWithGoogle
 Login or Register using Google
 
 
@@ -2887,7 +2887,7 @@ Success. Returns a JSON object with the user details. Check the example shown be
 ---
 
 
-#### User.loginWithGoogleAndroid
+ User.####loginWithGoogleAndroid
 Login or Register using Google on Android
 
 
@@ -2924,7 +2924,7 @@ Success. Returns a JSON object with the user details. Check the example shown be
 ---
 
 
-#### User.loginWithGoogleIOS
+ User.####loginWithGoogleIOS
 Login or Register using Google on iOS
 
 
@@ -2961,7 +2961,7 @@ Success. Returns a JSON object with the user details. Check the example shown be
 ---
 
 
-#### User.loginWithOTP
+ User.####loginWithOTP
 Login or Register with OTP
 
 
@@ -2999,7 +2999,7 @@ Success. Check the example shown below or refer `SendOtpResponse` for more detai
 ---
 
 
-#### User.loginWithEmailAndPassword
+ User.####loginWithEmailAndPassword
 Login or Register with password
 
 
@@ -3036,7 +3036,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.sendResetPasswordEmail
+ User.####sendResetPasswordEmail
 Reset Password
 
 
@@ -3074,7 +3074,7 @@ Success. Check the example shown below or refer `ResetPasswordSuccess` for more 
 ---
 
 
-#### User.forgotPassword
+ User.####forgotPassword
 Forgot Password
 
 
@@ -3111,7 +3111,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.sendResetToken
+ User.####sendResetToken
 Reset Password using token
 
 
@@ -3148,7 +3148,7 @@ Success. Check the example shown below or refer `ResetPasswordSuccess` for more 
 ---
 
 
-#### User.loginWithToken
+ User.####loginWithToken
 Login or Register with token
 
 
@@ -3185,7 +3185,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.registerWithForm
+ User.####registerWithForm
 Registration using a form
 
 
@@ -3223,7 +3223,7 @@ Success. Check the example shown below or refer `RegisterFormSuccess` for more d
 ---
 
 
-#### User.verifyEmail
+ User.####verifyEmail
 Verify email
 
 
@@ -3260,7 +3260,7 @@ Success. Check the example shown below or refer `VerifyEmailSuccess` for more de
 ---
 
 
-#### User.verifyMobile
+ User.####verifyMobile
 Verify mobile
 
 
@@ -3297,7 +3297,7 @@ Success. Check the example shown below or refer `VerifyEmailSuccess` for more de
 ---
 
 
-#### User.hasPassword
+ User.####hasPassword
 Check password
 
 
@@ -3330,7 +3330,7 @@ Success. Returns a boolean value. Check the example shown below or refer `HasPas
 ---
 
 
-#### User.updatePassword
+ User.####updatePassword
 Update user password
 
 
@@ -3367,7 +3367,7 @@ Success. Returns a success message. Refer `VerifyEmailSuccess` for more details.
 ---
 
 
-#### User.logout
+ User.####logout
 Logs out currently logged in user
 
 
@@ -3400,7 +3400,7 @@ Success. Returns a success message as shown below. Refer `LogoutSuccess` for mor
 ---
 
 
-#### User.sendOTPOnMobile
+ User.####sendOTPOnMobile
 Send OTP on mobile
 
 
@@ -3438,7 +3438,7 @@ Success. Returns a JSON object as shown below. Refer `OtpSuccess` for more detai
 ---
 
 
-#### User.verifyMobileOTP
+ User.####verifyMobileOTP
 Verify OTP on mobile
 
 
@@ -3476,7 +3476,7 @@ Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more
 ---
 
 
-#### User.sendOTPOnEmail
+ User.####sendOTPOnEmail
 Send OTP on email
 
 
@@ -3514,7 +3514,7 @@ Success. Returns a JSON object as shown below. Refer `EmailOtpSuccess` for more 
 ---
 
 
-#### User.verifyEmailOTP
+ User.####verifyEmailOTP
 Verify OTP on email
 
 
@@ -3552,7 +3552,7 @@ Success. Returns a JSON object as shown below. Refer `VerifyOtpSuccess` for more
 ---
 
 
-#### User.getLoggedInUser
+ User.####getLoggedInUser
 Get logged in user
 
 
@@ -3585,7 +3585,7 @@ Success. Returns a JSON object with user details. Refer `UserObjectSchema` for m
 ---
 
 
-#### User.getListOfActiveSessions
+ User.####getListOfActiveSessions
 Get list of sessions
 
 
@@ -3618,7 +3618,7 @@ Success. Returns a JSON object containing an array of sessions. Refer `SessionLi
 ---
 
 
-#### User.getPlatformConfig
+ User.####getPlatformConfig
 Get platform configurations
 
 
@@ -3656,7 +3656,7 @@ Success. Returns a JSON object containing the all the platform configurations. R
 ---
 
 
-#### User.updateProfile
+ User.####updateProfile
 Edit Profile Details
 
 
@@ -3694,7 +3694,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.addMobileNumber
+ User.####addMobileNumber
 Add mobile number to profile
 
 
@@ -3732,7 +3732,7 @@ Success. Check the example shown below or refer `VerifyMobileOTPSuccess` for mor
 ---
 
 
-#### User.deleteMobileNumber
+ User.####deleteMobileNumber
 Delete mobile number from profile
 
 
@@ -3775,7 +3775,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.setMobileNumberAsPrimary
+ User.####setMobileNumberAsPrimary
 Set mobile as primary
 
 
@@ -3812,7 +3812,7 @@ Success. Check the example shown below or refer `LoginSuccess` for more details.
 ---
 
 
-#### User.sendVerificationLinkToMobile
+ User.####sendVerificationLinkToMobile
 Send verification link to mobile
 
 
@@ -3850,7 +3850,7 @@ Success. Check the example shown below or refer `SendMobileVerifyLinkSuccess` fo
 ---
 
 
-#### User.addEmail
+ User.####addEmail
 Add email to profile
 
 
@@ -3888,7 +3888,7 @@ Success. Returns a JSON object with user details. Refer `VerifyEmailOTPSuccess` 
 ---
 
 
-#### User.deleteEmail
+ User.####deleteEmail
 Delete email from profile
 
 
@@ -3930,7 +3930,7 @@ Success. Returns a JSON object with user details. Refer `LoginSuccess` for more 
 ---
 
 
-#### User.setEmailAsPrimary
+ User.####setEmailAsPrimary
 Set email as primary
 
 
@@ -3967,7 +3967,7 @@ Success. Returns a JSON object with user details. Refer `LoginSuccess` for more 
 ---
 
 
-#### User.sendVerificationLinkToEmail
+ User.####sendVerificationLinkToEmail
 Send verification link to email
 
 
@@ -4010,7 +4010,7 @@ Request body must contain an email ID. Refer `EditEmailRequestSchema` for more d
 ## Content
 
 
-#### Content.getAnnouncements
+ Content.####getAnnouncements
 Get live announcements
 
 
@@ -4043,7 +4043,7 @@ Success. Returns a JSON object with the details of the announcement shown on an 
 ---
 
 
-#### Content.getBlog
+ Content.####getBlog
 Get a blog
 
 
@@ -4082,7 +4082,7 @@ Success. Returns a JSON object with blog details. Check the example shown below 
 ---
 
 
-#### Content.getBlogs
+ Content.####getBlogs
 Get a list of blogs
 
 
@@ -4121,7 +4121,7 @@ Success. Check the example shown below or refer `BlogGetResponse` for more detai
 ---
 
 
-#### Content.getFaqs
+ Content.####getFaqs
 Get a list of FAQs
 
 
@@ -4154,7 +4154,7 @@ Success. Returns a JSON object with question and answers. Check the example show
 ---
 
 
-#### Content.getFaqCategories
+ Content.####getFaqCategories
 Get a list of FAQ categories
 
 
@@ -4187,7 +4187,7 @@ Success. Returns a JSON object with categories of FAQ. Check the example shown b
 ---
 
 
-#### Content.getFaqBySlug
+ Content.####getFaqBySlug
 Get an FAQ
 
 
@@ -4225,7 +4225,7 @@ Success. Returns a question and answer by its slug. Check the example shown belo
 ---
 
 
-#### Content.getFaqCategoryBySlug
+ Content.####getFaqCategoryBySlug
 Get the FAQ category
 
 
@@ -4263,7 +4263,7 @@ Success. Returns a FAQ category with its slug. Check the example shown below or 
 ---
 
 
-#### Content.getFaqsByCategorySlug
+ Content.####getFaqsByCategorySlug
 Get FAQs using the slug of FAQ category
 
 
@@ -4301,7 +4301,7 @@ Success. Returns a categorized list of question and answers using its slug. Chec
 ---
 
 
-#### Content.getLandingPage
+ Content.####getLandingPage
 Get the landing page
 
 
@@ -4334,7 +4334,7 @@ Success. Returns the landing page details. Check the example shown below or refe
 ---
 
 
-#### Content.getLegalInformation
+ Content.####getLegalInformation
 Get legal information
 
 
@@ -4367,7 +4367,7 @@ Success. Returns the T&C, Shipping Policy, Privacy Policy and Return Policy. Che
 ---
 
 
-#### Content.getNavigations
+ Content.####getNavigations
 Get the navigation
 
 
@@ -4406,7 +4406,7 @@ Success. Returns a JSON object with navigation details. Check the example shown 
 ---
 
 
-#### Content.getPage
+ Content.####getPage
 Get a page
 
 
@@ -4445,7 +4445,7 @@ Success. Returns a JSON object with page details. Check the example shown below 
 ---
 
 
-#### Content.getPages
+ Content.####getPages
 Get all pages
 
 
@@ -4484,7 +4484,7 @@ Success. Returns a list of pages along with their details. Check the example sho
 ---
 
 
-#### Content.getSEOConfiguration
+ Content.####getSEOConfiguration
 Get the SEO of an application
 
 
@@ -4517,7 +4517,7 @@ Success. Returns a JSON object SEO details such as robots.txt, meta-tags, and si
 ---
 
 
-#### Content.getSlideshows
+ Content.####getSlideshows
 Get the slideshows
 
 
@@ -4556,7 +4556,7 @@ Success. Check the example shown below or refer `SlideshowGetResponse` for more 
 ---
 
 
-#### Content.getSlideshow
+ Content.####getSlideshow
 Get a slideshow
 
 
@@ -4594,7 +4594,7 @@ Success. Returns the details of how a slideshow is configured. Check the example
 ---
 
 
-#### Content.getSupportInformation
+ Content.####getSupportInformation
 Get the support information
 
 
@@ -4627,7 +4627,7 @@ Success. Returns all support information including email and phone number. Check
 ---
 
 
-#### Content.getTags
+ Content.####getTags
 Get the tags associated with an application
 
 
@@ -4665,7 +4665,7 @@ Success. Returns a JSON object containing all the tags injected in the applicati
 ## Communication
 
 
-#### Communication.getCommunicationConsent
+ Communication.####getCommunicationConsent
 Get communication consent
 
 
@@ -4698,7 +4698,7 @@ Success. Returns all available communication opt-ins along with the consent deta
 ---
 
 
-#### Communication.upsertCommunicationConsent
+ Communication.####upsertCommunicationConsent
 Upsert communication consent
 
 
@@ -4735,7 +4735,7 @@ Success. Updates the channels for which user has consented. Check the example sh
 ---
 
 
-#### Communication.upsertAppPushtoken
+ Communication.####upsertAppPushtoken
 Upsert push token of a user
 
 
@@ -4777,7 +4777,7 @@ Success. Check the example shown below or refer `PushtokenRes` for more details.
 ## Share
 
 
-#### Share.getApplicationQRCode
+ Share.####getApplicationQRCode
 Create QR Code of an app
 
 
@@ -4810,7 +4810,7 @@ Success. Check the example shown below or refer `QRCodeResp` for more details.
 ---
 
 
-#### Share.getProductQRCodeBySlug
+ Share.####getProductQRCodeBySlug
 Create QR Code of a product
 
 
@@ -4848,7 +4848,7 @@ Success. Check the example shown below or refer `QRCodeResp` for more details.
 ---
 
 
-#### Share.getCollectionQRCodeBySlug
+ Share.####getCollectionQRCodeBySlug
 Create QR Code of a collection
 
 
@@ -4886,7 +4886,7 @@ Success. Check the example shown below or refer `QRCodeResp` for more details.
 ---
 
 
-#### Share.getUrlQRCode
+ Share.####getUrlQRCode
 Create QR Code of a URL
 
 
@@ -4924,7 +4924,7 @@ Success. Check the example shown below or refer `QRCodeResp` for more details.
 ---
 
 
-#### Share.createShortLink
+ Share.####createShortLink
 Create a short link
 
 
@@ -4961,7 +4961,7 @@ Success. Check the example shown below or refer `ShortLinkRes` for more details.
 ---
 
 
-#### Share.getShortLinkByHash
+ Share.####getShortLinkByHash
 Get short link by hash
 
 
@@ -4999,7 +4999,7 @@ Success. Check the example shown below or refer `ShortLinkRes` for more details.
 ---
 
 
-#### Share.getOriginalShortLinkByHash
+ Share.####getOriginalShortLinkByHash
 Get original link by hash
 
 
@@ -5042,7 +5042,7 @@ Success. Check the example shown below or refer `ShortLinkRes` for more details.
 ## FileStorage
 
 
-#### FileStorage.startUpload
+ FileStorage.####startUpload
 Initiates an upload and returns a storage link that is valid for 30 minutes. You can use the storage link to make subsequent upload request with file buffer or blob.
 
 
@@ -5098,7 +5098,7 @@ Success. Next, call the `completeUpload` API and pass the response payload of th
 ---
 
 
-#### FileStorage.completeUpload
+ FileStorage.####completeUpload
 Completes the upload process. After successfully uploading a file, call this API to finish the upload process.
 
 
@@ -5159,7 +5159,7 @@ Success
 ## Configuration
 
 
-#### Configuration.getApplication
+ Configuration.####getApplication
 Get current application details
 
 
@@ -5192,7 +5192,7 @@ Success. Check the example shown below or refer `Application` for more details.
 ---
 
 
-#### Configuration.getOwnerInfo
+ Configuration.####getOwnerInfo
 Get application, owner and seller information
 
 
@@ -5225,7 +5225,7 @@ Success. Check the example shown below or refer `ApplicationAboutResponse` for m
 ---
 
 
-#### Configuration.getBasicDetails
+ Configuration.####getBasicDetails
 Get basic application details
 
 
@@ -5258,7 +5258,7 @@ Success. Check the example shown below or refer `ApplicationDetail` for more det
 ---
 
 
-#### Configuration.getIntegrationTokens
+ Configuration.####getIntegrationTokens
 Get integration tokens
 
 
@@ -5291,7 +5291,7 @@ Success. Check the example shown below or refer `AppTokenResponse` for more deta
 ---
 
 
-#### Configuration.getOrderingStores
+ Configuration.####getOrderingStores
 Get deployment stores
 
 
@@ -5331,7 +5331,7 @@ Success. Check the example shown below or refer `OrderingStores` for more detail
 ---
 
 
-#### Configuration.getFeatures
+ Configuration.####getFeatures
 Get features of application
 
 
@@ -5364,7 +5364,7 @@ Success. Check the example shown below or refer `AppFeatureResponse` for more de
 ---
 
 
-#### Configuration.getContactInfo
+ Configuration.####getContactInfo
 Get application information
 
 
@@ -5397,7 +5397,7 @@ Success. Check the example shown below or refer `ApplicationAboutResponse` for m
 ---
 
 
-#### Configuration.getCurrencies
+ Configuration.####getCurrencies
 Get currencies enabled in the application
 
 
@@ -5430,7 +5430,7 @@ Success. Check the example shown below or refer `CurrenciesResponse` for more de
 ---
 
 
-#### Configuration.getCurrencyById
+ Configuration.####getCurrencyById
 Get currency by its ID
 
 
@@ -5468,7 +5468,7 @@ Success. Check the example shown below or refer `Currency` for more details.
 ---
 
 
-#### Configuration.getLanguages
+ Configuration.####getLanguages
 Get list of languages
 
 
@@ -5501,7 +5501,7 @@ Success. Check the example shown below or refer `LanguageResponse` for more deta
 ---
 
 
-#### Configuration.getOrderingStoreCookie
+ Configuration.####getOrderingStoreCookie
 Get an Ordering Store signed cookie on selection of ordering store.
 
 
@@ -5538,7 +5538,7 @@ Success
 ---
 
 
-#### Configuration.removeOrderingStoreCookie
+ Configuration.####removeOrderingStoreCookie
 Unset the Ordering Store signed cookie.
 
 
@@ -5571,7 +5571,7 @@ Success
 ---
 
 
-#### Configuration.getAppStaffs
+ Configuration.####getAppStaffs
 Get a list of staff.
 
 
@@ -5616,7 +5616,7 @@ Success. Check the example shown below or refer `AppStaffResponse` for more deta
 ## Payment
 
 
-#### Payment.getAggregatorsConfig
+ Payment.####getAggregatorsConfig
 Get payment gateway keys
 
 
@@ -5655,7 +5655,7 @@ Success. Returns the keys of all payment gateways. Check the example shown below
 ---
 
 
-#### Payment.attachCardToCustomer
+ Payment.####attachCardToCustomer
 Attach a saved card to customer.
 
 
@@ -5692,7 +5692,7 @@ Success. Check the example shown below or refer `AttachCardsResponse` for more d
 ---
 
 
-#### Payment.getActiveCardAggregator
+ Payment.####getActiveCardAggregator
 Fetch active payment gateway for card payments
 
 
@@ -5730,7 +5730,7 @@ Success. Returns an active payment gateway. Check the example shown below or ref
 ---
 
 
-#### Payment.getActiveUserCards
+ Payment.####getActiveUserCards
 Fetch the list of cards saved by the user
 
 
@@ -5768,7 +5768,7 @@ Success. Returns a list of cards saved by the user. Check the example shown belo
 ---
 
 
-#### Payment.deleteUserCard
+ Payment.####deleteUserCard
 Delete a card
 
 
@@ -5805,7 +5805,7 @@ Success. Returns a success message if card is deleted.
 ---
 
 
-#### Payment.verifyCustomerForPayment
+ Payment.####verifyCustomerForPayment
 Validate customer for payment
 
 
@@ -5842,7 +5842,7 @@ Success. Check the example shown below or refer `ValidateCustomerResponse` for m
 ---
 
 
-#### Payment.verifyAndChargePayment
+ Payment.####verifyAndChargePayment
 Verify and charge payment
 
 
@@ -5879,7 +5879,7 @@ Success. Check the example shown below or refer `ChargeCustomerResponse` for mor
 ---
 
 
-#### Payment.initialisePayment
+ Payment.####initialisePayment
 Initialize a payment (server-to-server) for UPI and BharatQR
 
 
@@ -5916,7 +5916,7 @@ Success. Check the example shown below or refer `PaymentInitializationResponse` 
 ---
 
 
-#### Payment.checkAndUpdatePaymentStatus
+ Payment.####checkAndUpdatePaymentStatus
 Performs continuous polling to check status of payment on the server
 
 
@@ -5953,7 +5953,7 @@ Success. Returns the status of payment. Check the example shown below or refer `
 ---
 
 
-#### Payment.getPaymentModeRoutes
+ Payment.####getPaymentModeRoutes
 Get applicable payment options
 
 
@@ -5997,7 +5997,7 @@ Success. Returns all available options for payment. Check the example shown belo
 ---
 
 
-#### Payment.getPosPaymentModeRoutes
+ Payment.####getPosPaymentModeRoutes
 Get applicable payment options for Point-of-Sale (POS)
 
 
@@ -6042,7 +6042,7 @@ Success. Returns all available options for payment. Check the example shown belo
 ---
 
 
-#### Payment.getRupifiBannerDetails
+ Payment.####getRupifiBannerDetails
 Get CreditLine Offer
 
 
@@ -6075,7 +6075,7 @@ Success. Return CreditLine Offer detail. Check the example shown below or refer 
 ---
 
 
-#### Payment.getActiveRefundTransferModes
+ Payment.####getActiveRefundTransferModes
 Lists the mode of refund
 
 
@@ -6108,7 +6108,7 @@ Success. Shows the available refund mode to choose, e.g. Netbanking. Check the e
 ---
 
 
-#### Payment.enableOrDisableRefundTransferMode
+ Payment.####enableOrDisableRefundTransferMode
 Enable/Disable a mode for transferring a refund
 
 
@@ -6145,7 +6145,7 @@ Success. Shows whether the refund mode was successfully enabled or disabled.
 ---
 
 
-#### Payment.getUserBeneficiariesDetail
+ Payment.####getUserBeneficiariesDetail
 Lists the beneficiary of a refund
 
 
@@ -6183,7 +6183,7 @@ Success. Returns the details of the beneficiary getting a refund. Check the exam
 ---
 
 
-#### Payment.verifyIfscCode
+ Payment.####verifyIfscCode
 Verify IFSC Code
 
 
@@ -6221,7 +6221,7 @@ Success. Shows whether the IFSC code is valid, and returns the bank details. Che
 ---
 
 
-#### Payment.getOrderBeneficiariesDetail
+ Payment.####getOrderBeneficiariesDetail
 Lists the beneficiary of a refund
 
 
@@ -6259,7 +6259,7 @@ Success. Returns the details of the beneficiary getting a refund. Check the exam
 ---
 
 
-#### Payment.verifyOtpAndAddBeneficiaryForBank
+ Payment.####verifyOtpAndAddBeneficiaryForBank
 Verify the beneficiary details using OTP
 
 
@@ -6296,7 +6296,7 @@ Success. Check the example shown below or refer `AddBeneficiaryViaOtpVerificatio
 ---
 
 
-#### Payment.addBeneficiaryDetails
+ Payment.####addBeneficiaryDetails
 Save bank details for cancelled/returned order
 
 
@@ -6333,7 +6333,7 @@ Success. Shows whether the beneficiary details were saved to a returned/cancelle
 ---
 
 
-#### Payment.verifyOtpAndAddBeneficiaryForWallet
+ Payment.####verifyOtpAndAddBeneficiaryForWallet
 Send OTP on adding a wallet beneficiary
 
 
@@ -6370,7 +6370,7 @@ Success. Sends the OTP to the given mobile number. Check the example shown below
 ---
 
 
-#### Payment.updateDefaultBeneficiary
+ Payment.####updateDefaultBeneficiary
 Set a default beneficiary for a refund
 
 
@@ -6412,7 +6412,7 @@ Success. Check the example shown below or refer `SetDefaultBeneficiaryResponse` 
 ## Order
 
 
-#### Order.getOrders
+ Order.####getOrders
 Get all orders
 
 
@@ -6454,7 +6454,7 @@ Success. Returns all the orders. Check the example shown below or refer `OrderLi
 ---
 
 
-#### Order.getOrderById
+ Order.####getOrderById
 Get details of an order
 
 
@@ -6492,7 +6492,7 @@ Success. Check the example shown below or refer `OrderById` for more details.
 ---
 
 
-#### Order.getShipmentById
+ Order.####getShipmentById
 Get details of a shipment
 
 
@@ -6530,7 +6530,7 @@ Success. Check the example shown below or refer `ShipmentById` for more details.
 ---
 
 
-#### Order.getShipmentReasons
+ Order.####getShipmentReasons
 Get reasons behind full or partial cancellation of a shipment
 
 
@@ -6568,7 +6568,7 @@ Success. Check the example shown below or refer `ShipmentReasons` for more detai
 ---
 
 
-#### Order.updateShipmentStatus
+ Order.####updateShipmentStatus
 Update the shipment status
 
 
@@ -6606,7 +6606,7 @@ Success. Check the example shown below or refer `ShipmentStatusUpdateBody` for m
 ---
 
 
-#### Order.trackShipment
+ Order.####trackShipment
 Track shipment
 
 
@@ -6644,7 +6644,7 @@ Success. Check the example shown below or refer `ShipmentTrack` for more details
 ---
 
 
-#### Order.getPosOrderById
+ Order.####getPosOrderById
 Get POS Order
 
 
@@ -6687,7 +6687,7 @@ Success. Check the example shown below or refer `PosOrderById` for more details.
 ## Rewards
 
 
-#### Rewards.getPointsOnProduct
+ Rewards.####getPointsOnProduct
 Get the eligibility of reward points on a product
 
 
@@ -6724,7 +6724,7 @@ Success. Check example below or refer `CatalogueOrderRequest` for more details.
 ---
 
 
-#### Rewards.getOfferByName
+ Rewards.####getOfferByName
 Get offer by name
 
 
@@ -6762,7 +6762,7 @@ Success. Check example below or refer `Offer` for more details.
 ---
 
 
-#### Rewards.getOrderDiscount
+ Rewards.####getOrderDiscount
 Calculates the discount on order-amount
 
 
@@ -6799,7 +6799,7 @@ Success. Check example below or refer `OrderDiscountResponse` for more details.
 ---
 
 
-#### Rewards.getUserPoints
+ Rewards.####getUserPoints
 Get reward points available with a user
 
 
@@ -6832,7 +6832,7 @@ Success. Check example below or refer `PointsResponse` for more details.
 ---
 
 
-#### Rewards.getUserPointsHistory
+ Rewards.####getUserPointsHistory
 Get all transactions of reward points
 
 
@@ -6871,7 +6871,7 @@ Success. Check example below or refer `PointsHistoryResponse` for more details.
 ---
 
 
-#### Rewards.getUserReferralDetails
+ Rewards.####getUserReferralDetails
 Get referral details of a user
 
 
@@ -6904,7 +6904,7 @@ Success. Check example below or refer `ReferralDetailsResponse` for more details
 ---
 
 
-#### Rewards.redeemReferralCode
+ Rewards.####redeemReferralCode
 Redeems a referral code and credits reward points to users
 
 
@@ -6946,7 +6946,7 @@ Success. Check example below or refer `RedeemReferralCodeResponse` for more deta
 ## Feedback
 
 
-#### Feedback.createAbuseReport
+ Feedback.####createAbuseReport
 Post a new abuse request
 
 
@@ -6983,7 +6983,7 @@ Success. Returns an abuse ID.
 ---
 
 
-#### Feedback.updateAbuseReport
+ Feedback.####updateAbuseReport
 Update abuse details
 
 
@@ -7020,7 +7020,7 @@ Success.
 ---
 
 
-#### Feedback.getAbuseReports
+ Feedback.####getAbuseReports
 Get a list of abuse data
 
 
@@ -7062,7 +7062,7 @@ Success. Check the example shown below or refer `ReportAbuseGetResponse` for mor
 ---
 
 
-#### Feedback.getAttributes
+ Feedback.####getAttributes
 Get a list of attribute data
 
 
@@ -7101,7 +7101,7 @@ Success. Check the example shown below or refer `AttributeResponse` for more det
 ---
 
 
-#### Feedback.createAttribute
+ Feedback.####createAttribute
 Add a new attribute request
 
 
@@ -7138,7 +7138,7 @@ Success. Returns an attribute ID.
 ---
 
 
-#### Feedback.getAttribute
+ Feedback.####getAttribute
 Get data of a single attribute
 
 
@@ -7176,7 +7176,7 @@ Success. Check the example shown below or refer `Attribute` for more details.
 ---
 
 
-#### Feedback.updateAttribute
+ Feedback.####updateAttribute
 Update details of an attribute 
 
 
@@ -7214,7 +7214,7 @@ Success.
 ---
 
 
-#### Feedback.createComment
+ Feedback.####createComment
 Post a new comment
 
 
@@ -7251,7 +7251,7 @@ Success. Returns a comment ID.
 ---
 
 
-#### Feedback.updateComment
+ Feedback.####updateComment
 Update the status of a comment
 
 
@@ -7288,7 +7288,7 @@ Success.
 ---
 
 
-#### Feedback.getComments
+ Feedback.####getComments
 Get a list of comments
 
 
@@ -7331,7 +7331,7 @@ Success. Check the example shown below or refer `CommentGetResponse` for more de
 ---
 
 
-#### Feedback.checkEligibility
+ Feedback.####checkEligibility
 Checks eligibility to rate and review, and shows the cloud media configuration
 
 
@@ -7370,7 +7370,7 @@ Success. Returns a Product object. Check the example shown below or refer `Check
 ---
 
 
-#### Feedback.deleteMedia
+ Feedback.####deleteMedia
 Delete Media
 
 
@@ -7408,7 +7408,7 @@ Success.
 ---
 
 
-#### Feedback.createMedia
+ Feedback.####createMedia
 Add Media
 
 
@@ -7445,7 +7445,7 @@ Success. Returns media IDs.
 ---
 
 
-#### Feedback.updateMedia
+ Feedback.####updateMedia
 Update Media
 
 
@@ -7482,7 +7482,7 @@ Success.
 ---
 
 
-#### Feedback.getMedias
+ Feedback.####getMedias
 Get Media
 
 
@@ -7525,7 +7525,7 @@ Success. Check the example shown below or refer `MediaGetResponse` for more deta
 ---
 
 
-#### Feedback.getReviewSummaries
+ Feedback.####getReviewSummaries
 Get a review summary
 
 
@@ -7567,7 +7567,7 @@ Success. Check the example shown below or refer `ReviewMetricGetResponse` for mo
 ---
 
 
-#### Feedback.createReview
+ Feedback.####createReview
 Add customer reviews
 
 
@@ -7604,7 +7604,7 @@ Success. Returns a review ID.
 ---
 
 
-#### Feedback.updateReview
+ Feedback.####updateReview
 Update customer reviews
 
 
@@ -7641,7 +7641,7 @@ Success.
 ---
 
 
-#### Feedback.getReviews
+ Feedback.####getReviews
 Get list of customer reviews
 
 
@@ -7691,7 +7691,7 @@ Success. Check the example shown below or refer `ReviewGetResponse` for more det
 ---
 
 
-#### Feedback.getTemplates
+ Feedback.####getTemplates
 Get the feedback templates for a product or l3
 
 
@@ -7731,7 +7731,7 @@ Success. Check the example shown below or refer `TemplateGetResponse` for more d
 ---
 
 
-#### Feedback.createQuestion
+ Feedback.####createQuestion
 Create a new question
 
 
@@ -7768,7 +7768,7 @@ Success. Returns a qna ID.
 ---
 
 
-#### Feedback.updateQuestion
+ Feedback.####updateQuestion
 Update a question
 
 
@@ -7805,7 +7805,7 @@ Success.
 ---
 
 
-#### Feedback.getQuestionAndAnswers
+ Feedback.####getQuestionAndAnswers
 Get a list of QnA
 
 
@@ -7849,7 +7849,7 @@ Success. Check the example shown below or refer `QNAGetResponse` for more detail
 ---
 
 
-#### Feedback.getVotes
+ Feedback.####getVotes
 Get a list of votes
 
 
@@ -7890,7 +7890,7 @@ Success. Check the example shown below or refer `VoteResponse` for more details.
 ---
 
 
-#### Feedback.createVote
+ Feedback.####createVote
 Create a new vote
 
 
@@ -7927,7 +7927,7 @@ Success. Returns a vote ID.
 ---
 
 
-#### Feedback.updateVote
+ Feedback.####updateVote
 Update a vote
 
 
@@ -7969,7 +7969,7 @@ Success.
 ## PosCart
 
 
-#### PosCart.getCart
+ PosCart.####getCart
 Fetch all items added to the cart
 
 
@@ -8010,7 +8010,7 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 ---
 
 
-#### PosCart.getCartLastModified
+ PosCart.####getCartLastModified
 Fetch last-modified timestamp
 
 
@@ -8043,7 +8043,7 @@ Use this API to fetch Last-Modified timestamp in header metadata.
 ---
 
 
-#### PosCart.addItems
+ PosCart.####addItems
 Add items to cart
 
 
@@ -8082,7 +8082,7 @@ Success. Returns a cart object as shown below. Refer `AddCartResponse` for more 
 ---
 
 
-#### PosCart.updateCart
+ PosCart.####updateCart
 Update items in the cart
 
 
@@ -8122,7 +8122,7 @@ Success. Updates and returns a cart object as shown below. Refer `UpdateCartResp
 ---
 
 
-#### PosCart.getItemCount
+ PosCart.####getItemCount
 Count items in the cart
 
 
@@ -8160,7 +8160,7 @@ Success. Returns the total count of items in a user's cart.
 ---
 
 
-#### PosCart.getCoupons
+ PosCart.####getCoupons
 Fetch Coupon
 
 
@@ -8198,7 +8198,7 @@ Success. Returns a coupon object which has a list of all the eligible coupons. R
 ---
 
 
-#### PosCart.applyCoupon
+ PosCart.####applyCoupon
 Apply Coupon
 
 
@@ -8230,7 +8230,7 @@ Use this API to apply coupons on items in the cart.
 ---
 
 
-#### PosCart.removeCoupon
+ PosCart.####removeCoupon
 Remove Coupon Applied
 
 
@@ -8268,7 +8268,7 @@ Success. Returns coupons removed from the cart along with item details and price
 ---
 
 
-#### PosCart.getBulkDiscountOffers
+ PosCart.####getBulkDiscountOffers
 Get discount offers based on quantity
 
 
@@ -8309,7 +8309,7 @@ Success. Returns a data object containing the seller details and available offer
 ---
 
 
-#### PosCart.applyRewardPoints
+ PosCart.####applyRewardPoints
 Apply reward points at cart
 
 
@@ -8349,7 +8349,7 @@ Success. Returns a Cart object. Check the example shown below or refer `CartResp
 ---
 
 
-#### PosCart.getAddresses
+ PosCart.####getAddresses
 Fetch address
 
 
@@ -8391,7 +8391,7 @@ Success. Returns an Address object containing a list of address saved in the acc
 ---
 
 
-#### PosCart.addAddress
+ PosCart.####addAddress
 Add address to an account
 
 
@@ -8428,7 +8428,7 @@ Success. Returns the address ID, a flag whether the address is set as default, a
 ---
 
 
-#### PosCart.getAddressById
+ PosCart.####getAddressById
 Fetch a single address by its ID
 
 
@@ -8471,7 +8471,7 @@ Success. Returns an Address object containing a list of address saved in the acc
 ---
 
 
-#### PosCart.updateAddress
+ PosCart.####updateAddress
 Update address added to an account
 
 
@@ -8500,7 +8500,7 @@ Use this API to update an existing address in the account. Request object should
 ---
 
 
-#### PosCart.removeAddress
+ PosCart.####removeAddress
 Remove address associated with an account
 
 
@@ -8529,7 +8529,7 @@ Use this API to delete an address by its ID. This will returns an object that wi
 ---
 
 
-#### PosCart.selectAddress
+ PosCart.####selectAddress
 Select an address from available addresses
 
 
@@ -8560,7 +8560,7 @@ poscart.selectAddress(uid: uid, i: i, b: b, body: body) { (response, error) in
 ---
 
 
-#### PosCart.selectPaymentMode
+ PosCart.####selectPaymentMode
 Update cart payment
 
 
@@ -8598,7 +8598,7 @@ Success. Returns a Cart object as shown below. Refer `CartResponse` for more det
 ---
 
 
-#### PosCart.validateCouponForPayment
+ PosCart.####validateCouponForPayment
 Verify the coupon eligibility against the payment mode
 
 
@@ -8641,7 +8641,7 @@ Success. Returns a success message and the coupon validity. Refer `PaymentCoupon
 ---
 
 
-#### PosCart.getShipments
+ PosCart.####getShipments
 Get delivery date and options before checkout
 
 
@@ -8685,7 +8685,7 @@ Success. Returns delivery promise along with shipment details and price breakup.
 ---
 
 
-#### PosCart.updateShipments
+ PosCart.####updateShipments
 Update shipment delivery type and quantity before checkout
 
 
@@ -8727,7 +8727,7 @@ Success. Returns delivery promise along with shipment details and price breakup.
 ---
 
 
-#### PosCart.checkoutCart
+ PosCart.####checkoutCart
 Checkout all items in the cart
 
 
@@ -8765,7 +8765,7 @@ Success. Returns the status of cart checkout. Refer `CartCheckoutResponse` for m
 ---
 
 
-#### PosCart.updateCartMeta
+ PosCart.####updateCartMeta
 Update the cart meta
 
 
@@ -8803,7 +8803,7 @@ Returns a message indicating the success of cart meta updation as shown below.
 ---
 
 
-#### PosCart.getAvailableDeliveryModes
+ PosCart.####getAvailableDeliveryModes
 Get available delivery modes for cart
 
 
@@ -8842,7 +8842,7 @@ Success. Returns the available delivery mode available for a given PIN Code, alo
 ---
 
 
-#### PosCart.getStoreAddressByUid
+ PosCart.####getStoreAddressByUid
 Get list of stores for give uids
 
 
@@ -8880,7 +8880,7 @@ Success. Returns available store information with its address as shown below.
 ---
 
 
-#### PosCart.getCartShareLink
+ PosCart.####getCartShareLink
 Generate token for sharing the cart
 
 
@@ -8917,7 +8917,7 @@ Returns a URL to share and a token as shown below.
 ---
 
 
-#### PosCart.getCartSharedItems
+ PosCart.####getCartSharedItems
 Get details of a shared cart
 
 
@@ -8955,7 +8955,7 @@ Success. Returns a Cart object as per the valid token. Refer `SharedCartResponse
 ---
 
 
-#### PosCart.updateCartWithSharedItems
+ PosCart.####updateCartWithSharedItems
 Merge or replace existing cart
 
 
@@ -8999,7 +8999,7 @@ Success. Returns a merged or replaced cart as per the valid token. Refer `Shared
 ## Logistic
 
 
-#### Logistic.getTatProduct
+ Logistic.####getTatProduct
 Get TAT of a product
 
 
@@ -9036,7 +9036,7 @@ Success. Check the example shown below or refer `GetTatProductResponse` for more
 ---
 
 
-#### Logistic.getPincodeCity
+ Logistic.####getPincodeCity
 Get city from PIN Code
 
 
@@ -9081,31 +9081,6 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
- #### [ProductListingActionPage](#ProductListingActionPage)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | params | [String: Any] |  no  |  |
- | type | String |  no  |  |
- | query | [String: Any] |  no  |  |
-
----
-
-
- 
- 
- #### [ProductListingAction](#ProductListingAction)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | page | [ProductListingActionPage](#ProductListingActionPage) |  no  |  |
- | type | String |  no  |  |
-
----
-
-
- 
- 
  #### [Meta](#Meta)
 
  | Properties | Type | Nullable | Description |
@@ -9121,9 +9096,59 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | meta | [Meta](#Meta) |  no  |  |
  | type | String |  no  |  |
  | url | String |  no  |  |
- | meta | [Meta](#Meta) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductDetailAttribute](#ProductDetailAttribute)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | value | String |  no  |  |
+ | key | String |  no  |  |
+ | type | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | title | String |  no  |  |
+ | details | [[ProductDetailAttribute](#ProductDetailAttribute)] |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductListingActionPage](#ProductListingActionPage)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | type | String |  no  |  |
+ | query | [String: Any] |  no  |  |
+ | params | [String: Any] |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductListingAction](#ProductListingAction)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | type | String |  no  |  |
+ | page | [ProductListingActionPage](#ProductListingActionPage) |  no  |  |
 
 ---
 
@@ -9135,9 +9160,9 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | uid | Int |  no  |  |
- | action | [ProductListingAction](#ProductListingAction) |  no  |  |
- | logo | [Media](#Media) |  no  |  |
  | name | String |  no  |  |
+ | logo | [Media](#Media) |  no  |  |
+ | action | [ProductListingAction](#ProductListingAction) |  no  |  |
 
 ---
 
@@ -9148,10 +9173,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | min | Double |  no  |  |
- | currency_code | String |  no  |  |
- | max | Double |  no  |  |
  | currency_symbol | String |  no  |  |
+ | max | Double |  no  |  |
+ | currency_code | String |  no  |  |
+ | min | Double |  no  |  |
 
 ---
 
@@ -9170,61 +9195,36 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
- #### [ProductDetailAttribute](#ProductDetailAttribute)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | value | String |  no  |  |
- | type | String |  no  |  |
- | key | String |  no  |  |
-
----
-
-
- 
- 
- #### [ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | details | [[ProductDetailAttribute](#ProductDetailAttribute)] |  no  |  |
- | title | String |  no  |  |
-
----
-
-
- 
- 
  #### [ProductDetail](#ProductDetail)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | slug | String? |  yes  |  |
- | rating | Double |  no  |  |
- | categories | [[ProductBrand](#ProductBrand)] |  no  |  |
- | short_description | String |  no  |  |
- | teaser_tag | String |  no  |  |
- | image_nature | String |  no  |  |
- | color | String |  no  |  |
- | brand | [ProductBrand](#ProductBrand) |  no  |  |
  | uid | Int |  no  |  |
  | item_code | String |  no  |  |
- | medias | [[Media](#Media)] |  no  |  |
- | name | String |  no  |  |
- | highlights | [String] |  no  |  |
+ | image_nature | String |  no  |  |
  | type | String |  no  |  |
- | has_variant | Bool |  no  |  |
- | rating_count | Int |  no  |  |
- | item_type | String |  no  |  |
- | similars | [String] |  no  |  |
- | description | String |  no  |  |
- | attributes | [String: Any] |  no  |  |
- | tryouts | [String] |  no  |  |
- | price | [ProductListingPrice](#ProductListingPrice) |  no  |  |
- | action | [ProductListingAction](#ProductListingAction) |  no  |  |
- | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  no  |  |
+ | medias | [[Media](#Media)] |  no  |  |
+ | short_description | String |  no  |  |
  | discount | String |  no  |  |
  | product_online_date | String |  no  |  |
+ | similars | [String] |  no  |  |
+ | name | String |  no  |  |
+ | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  no  |  |
+ | highlights | [String] |  no  |  |
+ | brand | [ProductBrand](#ProductBrand) |  no  |  |
+ | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | item_type | String |  no  |  |
+ | rating | Double |  no  |  |
+ | tryouts | [String] |  no  |  |
+ | attributes | [String: Any] |  no  |  |
+ | teaser_tag | String |  no  |  |
+ | color | String |  no  |  |
+ | price | [ProductListingPrice](#ProductListingPrice) |  no  |  |
+ | has_variant | Bool |  no  |  |
+ | rating_count | Int |  no  |  |
+ | categories | [[ProductBrand](#ProductBrand)] |  no  |  |
+ | description | String |  no  |  |
 
 ---
 
@@ -9236,22 +9236,6 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | error | String |  no  |  |
-
----
-
-
- 
- 
- #### [SizeChartValues](#SizeChartValues)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | col_4 | String |  no  |  |
- | col_3 | String |  no  |  |
- | col_6 | String |  no  |  |
- | col_2 | String |  no  |  |
- | col_1 | String |  no  |  |
- | col_5 | String |  no  |  |
 
 ---
 
@@ -9275,11 +9259,27 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | col_4 | [ColumnHeader](#ColumnHeader) |  no  |  |
- | col_3 | [ColumnHeader](#ColumnHeader) |  no  |  |
+ | col_5 | [ColumnHeader](#ColumnHeader) |  no  |  |
  | col_6 | [ColumnHeader](#ColumnHeader) |  no  |  |
  | col_2 | [ColumnHeader](#ColumnHeader) |  no  |  |
  | col_1 | [ColumnHeader](#ColumnHeader) |  no  |  |
- | col_5 | [ColumnHeader](#ColumnHeader) |  no  |  |
+ | col_3 | [ColumnHeader](#ColumnHeader) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [SizeChartValues](#SizeChartValues)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | col_4 | String |  no  |  |
+ | col_5 | String |  no  |  |
+ | col_6 | String |  no  |  |
+ | col_2 | String |  no  |  |
+ | col_1 | String |  no  |  |
+ | col_3 | String |  no  |  |
 
 ---
 
@@ -9290,13 +9290,13 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | unit | String |  no  |  |
- | sizes | [[SizeChartValues](#SizeChartValues)] |  no  |  |
- | image | String |  no  |  |
  | size_tip | String |  no  |  |
+ | unit | String |  no  |  |
  | headers | [ColumnHeaders](#ColumnHeaders) |  no  |  |
- | description | String |  no  |  |
+ | image | String |  no  |  |
  | title | String |  no  |  |
+ | sizes | [[SizeChartValues](#SizeChartValues)] |  no  |  |
+ | description | String |  no  |  |
 
 ---
 
@@ -9307,10 +9307,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | value | String |  no  |  |
- | is_available | Bool |  no  |  |
- | quantity | Int |  no  |  |
  | display | String |  no  |  |
+ | is_available | Bool |  no  |  |
+ | value | String |  no  |  |
+ | quantity | Int |  no  |  |
 
 ---
 
@@ -9332,25 +9332,12 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | size_chart | [SizeChart](#SizeChart) |  no  |  |
+ | sellable | Bool |  no  |  |
  | price | [ProductListingPrice](#ProductListingPrice) |  no  |  |
+ | size_chart | [SizeChart](#SizeChart) |  no  |  |
+ | discount | String |  no  |  |
  | sizes | [[ProductSize](#ProductSize)] |  no  |  |
  | stores | [ProductSizeStores](#ProductSizeStores) |  no  |  |
- | discount | String |  no  |  |
- | sellable | Bool |  no  |  |
-
----
-
-
- 
- 
- #### [ReturnConfig](#ReturnConfig)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | time | Int |  no  |  |
- | returnable | Bool |  no  |  |
- | unit | String |  no  |  |
 
 ---
 
@@ -9361,36 +9348,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | currency | String |  no  |  |
  | marked | Double |  no  |  |
  | effective | Double |  no  |  |
- | currency | String |  no  |  |
-
----
-
-
- 
- 
- #### [StrategyWiseListing](#StrategyWiseListing)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | tat | Int |  no  |  |
- | quantity | Int |  no  |  |
- | distance | Int |  no  |  |
- | pincode | Int |  no  |  |
-
----
-
-
- 
- 
- #### [Store](#Store)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
- | count | Int |  no  |  |
- | name | String |  no  |  |
 
 ---
 
@@ -9402,20 +9362,8 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | uid | Int |  no  |  |
- | count | Int |  no  |  |
  | name | String |  no  |  |
-
----
-
-
- 
- 
- #### [ArticleAssignment](#ArticleAssignment)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | level | String |  no  |  |
- | strategy | String |  no  |  |
+ | count | Int |  no  |  |
 
 ---
 
@@ -9449,8 +9397,48 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | size_distribution | [ProductSetDistribution](#ProductSetDistribution) |  no  |  |
  | quantity | Int |  no  |  |
+ | size_distribution | [ProductSetDistribution](#ProductSetDistribution) |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [Store](#Store)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
+ | count | Int |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [StrategyWiseListing](#StrategyWiseListing)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | pincode | Int |  no  |  |
+ | distance | Int |  no  |  |
+ | quantity | Int |  no  |  |
+ | tat | Int |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ReturnConfig](#ReturnConfig)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | time | Int |  no  |  |
+ | returnable | Bool |  no  |  |
+ | unit | String |  no  |  |
 
 ---
 
@@ -9462,8 +9450,8 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | value | String |  no  |  |
- | type | String |  no  |  |
  | key | String |  no  |  |
+ | type | String |  no  |  |
 
 ---
 
@@ -9474,8 +9462,20 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | details | [[Details](#Details)] |  no  |  |
  | title | String |  no  |  |
+ | details | [[Details](#Details)] |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ArticleAssignment](#ArticleAssignment)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | level | String |  no  |  |
+ | strategy | String |  no  |  |
 
 ---
 
@@ -9486,23 +9486,23 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | pincode | Int |  no  |  |
- | article_id | String |  no  |  |
- | return_config | [ReturnConfig](#ReturnConfig) |  no  |  |
- | price | [ProductStockPrice](#ProductStockPrice) |  no  |  |
- | strategy_wise_listing | [[StrategyWiseListing](#StrategyWiseListing)] |  no  |  |
- | store | [Store](#Store) |  no  |  |
- | seller_count | Int |  no  |  |
- | seller | [Seller](#Seller) |  no  |  |
- | special_badge | String |  no  |  |
- | discount | String |  no  |  |
- | quantity | Int |  no  |  |
- | item_type | String |  no  |  |
- | long_lat | [Double] |  no  |  |
- | article_assignment | [ArticleAssignment](#ArticleAssignment) |  no  |  |
- | set | [ProductSet](#ProductSet) |  no  |  |
- | marketplace_attributes | [[MarketPlaceSttributes](#MarketPlaceSttributes)] |  no  |  |
  | price_per_price | [ProductStockPrice](#ProductStockPrice) |  no  |  |
+ | long_lat | [Double] |  no  |  |
+ | price | [ProductStockPrice](#ProductStockPrice) |  no  |  |
+ | seller | [Seller](#Seller) |  no  |  |
+ | item_type | String |  no  |  |
+ | discount | String |  no  |  |
+ | set | [ProductSet](#ProductSet) |  no  |  |
+ | store | [Store](#Store) |  no  |  |
+ | special_badge | String |  no  |  |
+ | strategy_wise_listing | [[StrategyWiseListing](#StrategyWiseListing)] |  no  |  |
+ | return_config | [ReturnConfig](#ReturnConfig) |  no  |  |
+ | marketplace_attributes | [[MarketPlaceSttributes](#MarketPlaceSttributes)] |  no  |  |
+ | article_id | String |  no  |  |
+ | quantity | Int |  no  |  |
+ | pincode | Int |  no  |  |
+ | seller_count | Int |  no  |  |
+ | article_assignment | [ArticleAssignment](#ArticleAssignment) |  no  |  |
 
 ---
 
@@ -9514,8 +9514,8 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | value | String |  no  |  |
- | is_selected | Bool |  no  |  |
  | name | String |  no  |  |
+ | is_selected | Bool |  no  |  |
 
 ---
 
@@ -9526,8 +9526,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | page | [Page](#Page)? |  yes  |  |
  | items | [[ProductSizePriceResponse](#ProductSizePriceResponse)] |  no  |  |
+ | page | [Page](#Page)? |  yes  |  |
  | sort_on | [[ProductSizeSellerFilter](#ProductSizeSellerFilter)] |  no  |  |
 
 ---
@@ -9539,10 +9539,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | key | String |  no  |  |
- | logo | String |  no  |  |
- | description | String |  no  |  |
  | display | String |  no  |  |
+ | key | String |  no  |  |
+ | description | String |  no  |  |
+ | logo | String |  no  |  |
 
 ---
 
@@ -9553,8 +9553,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | details | [[AttributeDetail](#AttributeDetail)] |  no  |  |
  | title | String |  no  |  |
+ | details | [[AttributeDetail](#AttributeDetail)] |  no  |  |
 
 ---
 
@@ -9577,8 +9577,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | items | [[ProductDetail](#ProductDetail)] |  no  |  |
  | subtitle | String |  no  |  |
+ | items | [[ProductDetail](#ProductDetail)] |  no  |  |
  | title | String |  no  |  |
  | attributes_metadata | [[AttributeMetadata](#AttributeMetadata)] |  no  |  |
 
@@ -9602,8 +9602,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | items | [[ProductDetail](#ProductDetail)] |  no  |  |
  | subtitle | String |  no  |  |
+ | items | [[ProductDetail](#ProductDetail)] |  no  |  |
  | title | String |  no  |  |
 
 ---
@@ -9626,14 +9626,14 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
- | slug | String |  no  |  |
+ | is_available | Bool |  no  |  |
  | medias | [[Media](#Media)] |  no  |  |
- | color_name | String |  no  |  |
- | name | String |  no  |  |
+ | slug | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
  | value | String |  no  |  |
- | is_available | Bool |  no  |  |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
+ | color_name | String |  no  |  |
  | color | String |  no  |  |
 
 ---
@@ -9670,8 +9670,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | id | Int |  no  |  |
  | name | String |  no  |  |
+ | id | Int |  no  |  |
 
 ---
 
@@ -9682,10 +9682,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | code | String |  no  |  |
- | id | Int |  no  |  |
- | city | String |  no  |  |
  | name | String |  no  |  |
+ | code | String |  no  |  |
+ | city | String |  no  |  |
+ | id | Int |  no  |  |
 
 ---
 
@@ -9696,15 +9696,15 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | String |  no  |  |
  | item_id | Int |  no  |  |
- | company | [CompanyDetail](#CompanyDetail) |  no  |  |
  | price | [ProductStockPrice](#ProductStockPrice) |  no  |  |
- | store | [StoreDetail](#StoreDetail) |  no  |  |
+ | company | [CompanyDetail](#CompanyDetail) |  no  |  |
  | seller | [Seller](#Seller) |  no  |  |
+ | size | String |  no  |  |
+ | store | [StoreDetail](#StoreDetail) |  no  |  |
+ | uid | String |  no  |  |
  | quantity | Int |  no  |  |
  | identifier | [String: Any] |  no  |  |
- | size | String |  no  |  |
 
 ---
 
@@ -9734,13 +9734,48 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  
  
- #### [ProductSortOn](#ProductSortOn)
+ #### [ProductFiltersValue](#ProductFiltersValue)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | is_selected | Bool? |  yes  |  |
+ | currency_code | String |  no  |  |
  | value | String |  no  |  |
- | is_selected | Bool |  no  |  |
- | name | String |  no  |  |
+ | count | Int |  no  |  |
+ | selected_min | Int |  no  |  |
+ | currency_symbol | String |  no  |  |
+ | min | Int |  no  |  |
+ | display | String? |  yes  |  |
+ | max | Int |  no  |  |
+ | query_format | String |  no  |  |
+ | selected_max | Int |  no  |  |
+ | display_format | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductFiltersKey](#ProductFiltersKey)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | display | String? |  yes  |  |
+ | name | String? |  yes  |  |
+ | kind | String |  no  |  |
+ | logo | String |  no  |  |
+
+---
+
+
+ 
+ 
+ #### [ProductFilters](#ProductFilters)
+
+ | Properties | Type | Nullable | Description |
+ | ---------- | ---- | -------- | ----------- |
+ | values | [[ProductFiltersValue](#ProductFiltersValue)]? |  yes  |  |
+ | key | [ProductFiltersKey](#ProductFiltersKey)? |  yes  |  |
 
 ---
 
@@ -9752,80 +9787,45 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | slug | String? |  yes  |  |
- | rating | Double |  no  |  |
- | categories | [[ProductBrand](#ProductBrand)] |  no  |  |
- | short_description | String |  no  |  |
- | teaser_tag | String |  no  |  |
- | image_nature | String |  no  |  |
- | color | String |  no  |  |
- | brand | [ProductBrand](#ProductBrand) |  no  |  |
  | uid | Int |  no  |  |
  | item_code | String |  no  |  |
- | medias | [[Media](#Media)] |  no  |  |
- | name | String |  no  |  |
- | highlights | [String] |  no  |  |
+ | image_nature | String |  no  |  |
  | type | String |  no  |  |
- | has_variant | Bool |  no  |  |
- | rating_count | Int |  no  |  |
- | item_type | String |  no  |  |
- | similars | [String] |  no  |  |
- | sellable | Bool |  no  |  |
- | description | String |  no  |  |
- | attributes | [String: Any] |  no  |  |
- | tryouts | [String] |  no  |  |
- | price | [ProductListingPrice](#ProductListingPrice) |  no  |  |
- | action | [ProductListingAction](#ProductListingAction) |  no  |  |
- | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  no  |  |
+ | medias | [[Media](#Media)] |  no  |  |
+ | short_description | String |  no  |  |
  | discount | String |  no  |  |
  | product_online_date | String |  no  |  |
+ | similars | [String] |  no  |  |
+ | name | String |  no  |  |
+ | grouped_attributes | [[ProductDetailGroupedAttribute](#ProductDetailGroupedAttribute)] |  no  |  |
+ | highlights | [String] |  no  |  |
+ | brand | [ProductBrand](#ProductBrand) |  no  |  |
+ | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | item_type | String |  no  |  |
+ | rating | Double |  no  |  |
+ | tryouts | [String] |  no  |  |
+ | attributes | [String: Any] |  no  |  |
+ | teaser_tag | String |  no  |  |
+ | color | String |  no  |  |
+ | sellable | Bool |  no  |  |
+ | price | [ProductListingPrice](#ProductListingPrice) |  no  |  |
+ | has_variant | Bool |  no  |  |
+ | rating_count | Int |  no  |  |
+ | categories | [[ProductBrand](#ProductBrand)] |  no  |  |
+ | description | String |  no  |  |
 
 ---
 
 
  
  
- #### [ProductFiltersKey](#ProductFiltersKey)
+ #### [ProductSortOn](#ProductSortOn)
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | name | String? |  yes  |  |
- | kind | String |  no  |  |
- | logo | String |  no  |  |
- | display | String? |  yes  |  |
-
----
-
-
- 
- 
- #### [ProductFiltersValue](#ProductFiltersValue)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | currency_code | String |  no  |  |
- | is_selected | Bool? |  yes  |  |
- | display_format | String |  no  |  |
- | selected_min | Int |  no  |  |
- | count | Int |  no  |  |
- | min | Int |  no  |  |
- | query_format | String |  no  |  |
- | selected_max | Int |  no  |  |
- | currency_symbol | String |  no  |  |
  | value | String |  no  |  |
- | max | Int |  no  |  |
- | display | String? |  yes  |  |
-
----
-
-
- 
- 
- #### [ProductFilters](#ProductFilters)
-
- | Properties | Type | Nullable | Description |
- | ---------- | ---- | -------- | ----------- |
- | key | [ProductFiltersKey](#ProductFiltersKey)? |  yes  |  |
- | values | [[ProductFiltersValue](#ProductFiltersValue)]? |  yes  |  |
+ | name | String |  no  |  |
+ | is_selected | Bool |  no  |  |
 
 ---
 
@@ -9836,10 +9836,10 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | filters | [[ProductFilters](#ProductFilters)] |  no  |  |
+ | items | [[ProductListingDetail](#ProductListingDetail)] |  no  |  |
  | page | [Page](#Page)? |  yes  |  |
  | sort_on | [[ProductSortOn](#ProductSortOn)] |  no  |  |
- | items | [[ProductListingDetail](#ProductListingDetail)] |  no  |  |
- | filters | [[ProductFilters](#ProductFilters)] |  no  |  |
 
 ---
 
@@ -9850,8 +9850,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | landscape | [Media](#Media) |  no  |  |
  | portrait | [Media](#Media) |  no  |  |
+ | landscape | [Media](#Media) |  no  |  |
 
 ---
 
@@ -9862,13 +9862,13 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
  | slug | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
- | name | String |  no  |  |
- | departments | [String] |  no  |  |
  | discount | String |  no  |  |
  | logo | [Media](#Media) |  no  |  |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
+ | departments | [String] |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
 
 ---
@@ -9893,9 +9893,9 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | uid | Int |  no  |  |
+ | name | String |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
  | logo | [Media](#Media) |  no  |  |
- | name | String |  no  |  |
 
 ---
 
@@ -9918,11 +9918,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
  | slug | String |  no  |  |
- | name | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | uid | Int |  no  |  |
  | childs | [[String: Any]] |  no  |  |
+ | name | String |  no  |  |
  | _custom_json | [String: Any] |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
 
@@ -9935,11 +9935,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
  | slug | String |  no  |  |
- | name | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | uid | Int |  no  |  |
  | childs | [[ThirdLevelChild](#ThirdLevelChild)] |  no  |  |
+ | name | String |  no  |  |
  | _custom_json | [String: Any] |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
 
@@ -9952,11 +9952,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
  | slug | String |  no  |  |
- | name | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | uid | Int |  no  |  |
  | childs | [[SecondLevelChild](#SecondLevelChild)] |  no  |  |
+ | name | String |  no  |  |
  | _custom_json | [String: Any] |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
 
@@ -9969,11 +9969,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
  | slug | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
- | name | String |  no  |  |
+ | uid | Int |  no  |  |
  | childs | [[Child](#Child)] |  no  |  |
+ | name | String |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
 
 ---
@@ -9985,8 +9985,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | items | [[CategoryItems](#CategoryItems)] |  no  |  |
  | department | String |  no  |  |
+ | items | [[CategoryItems](#CategoryItems)] |  no  |  |
 
 ---
 
@@ -10010,9 +10010,9 @@ Success. Returns a JSON object containing the city name, state and country ident
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
  | uid | Int |  no  |  |
+ | name | String |  no  |  |
  | banners | [ImageUrls](#ImageUrls) |  no  |  |
  | logo | [Media](#Media) |  no  |  |
- | name | String |  no  |  |
 
 ---
 
@@ -10036,11 +10036,11 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
- | slug | String |  no  |  |
- | name | String |  no  |  |
  | priority_order | Int |  no  |  |
+ | slug | String |  no  |  |
  | logo | [Media](#Media) |  no  |  |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
 
 ---
 
@@ -10062,9 +10062,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | display | String |  no  |  |
  | type | String |  no  |  |
  | logo | [Media](#Media) |  no  |  |
- | display | String |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
 
 ---
@@ -10087,25 +10087,25 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
+ | app_id | String |  no  |  |
  | slug | String |  no  |  |
- | is_active | Bool |  no  |  |
+ | meta | [String: Any] |  no  |  |
+ | query | [String: Any] |  no  |  |
  | logo | [Media](#Media) |  no  |  |
  | uid | String |  no  |  |
- | name | String |  no  |  |
- | type | String |  no  |  |
- | allow_sort | Bool |  no  |  |
- | tag | [String] |  no  |  |
  | visible_facets_keys | [String] |  no  |  |
- | banners | [ImageUrls](#ImageUrls) |  no  |  |
- | query | [String: Any] |  no  |  |
- | description | String |  no  |  |
+ | cron | [String: Any] |  no  |  |
  | _schedule | [String: Any] |  no  |  |
  | badge | [String: Any] |  no  |  |
- | app_id | String |  no  |  |
+ | type | String |  no  |  |
+ | name | String |  no  |  |
+ | banners | [ImageUrls](#ImageUrls) |  no  |  |
  | action | [ProductListingAction](#ProductListingAction) |  no  |  |
+ | allow_sort | Bool |  no  |  |
+ | is_active | Bool |  no  |  |
  | allow_facets | Bool |  no  |  |
- | cron | [String: Any] |  no  |  |
- | meta | [String: Any] |  no  |  |
+ | tag | [String] |  no  |  |
+ | description | String |  no  |  |
 
 ---
 
@@ -10116,9 +10116,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | is_selected | Bool |  no  |  |
  | display | String |  no  |  |
  | name | String |  no  |  |
+ | is_selected | Bool |  no  |  |
 
 ---
 
@@ -10129,9 +10129,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | is_selected | Bool |  no  |  |
  | display | String |  no  |  |
  | name | String |  no  |  |
+ | is_selected | Bool |  no  |  |
 
 ---
 
@@ -10167,23 +10167,23 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | visible_facets_keys | [String] |  no  |  |
- | slug | String |  no  |  |
- | query | [String: Any] |  no  |  |
- | name | String |  no  |  |
- | badge | [String: Any] |  no  |  |
- | type | String |  no  |  |
- | allow_sort | Bool |  no  |  |
- | is_active | Bool |  no  |  |
- | description | String |  no  |  |
- | logo | [Media](#Media) |  no  |  |
- | tag | [String] |  no  |  |
- | allow_facets | Bool |  no  |  |
- | _schedule | [String: Any] |  no  |  |
  | app_id | String |  no  |  |
- | banners | [ImageUrls](#ImageUrls) |  no  |  |
+ | type | String |  no  |  |
+ | slug | String |  no  |  |
+ | is_active | Bool |  no  |  |
  | meta | [String: Any] |  no  |  |
+ | banners | [ImageUrls](#ImageUrls) |  no  |  |
+ | query | [String: Any] |  no  |  |
+ | logo | [Media](#Media) |  no  |  |
+ | visible_facets_keys | [String] |  no  |  |
+ | name | String |  no  |  |
+ | allow_facets | Bool |  no  |  |
+ | allow_sort | Bool |  no  |  |
  | cron | [String: Any] |  no  |  |
+ | tag | [String] |  no  |  |
+ | _schedule | [String: Any] |  no  |  |
+ | description | String |  no  |  |
+ | badge | [String: Any] |  no  |  |
 
 ---
 
@@ -10194,8 +10194,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | page | [Page](#Page)? |  yes  |  |
  | items | [[ProductListingDetail](#ProductListingDetail)]? |  yes  |  |
+ | page | [Page](#Page)? |  yes  |  |
 
 ---
 
@@ -10229,9 +10229,9 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | brands | [Int] |  no  |  |
- | collections | [Int] |  no  |  |
  | products | [Int] |  no  |  |
+ | collections | [Int] |  no  |  |
+ | brands | [Int] |  no  |  |
 
 ---
 
@@ -10253,8 +10253,8 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | coordinates | [Double] |  no  |  |
  | type | String |  no  |  |
+ | coordinates | [Double] |  no  |  |
 
 ---
 
@@ -10265,16 +10265,16 @@ Success. Returns a JSON object containing the city name, state and country ident
 
  | Properties | Type | Nullable | Description |
  | ---------- | ---- | -------- | ----------- |
- | uid | Int |  no  |  |
- | store_code | String |  no  |  |
- | lat_long | [LatLong](#LatLong) |  no  |  |
- | address | String |  no  |  |
- | name | String |  no  |  |
- | country | String |  no  |  |
  | store_email | String |  no  |  |
  | state | String |  no  |  |
- | city | String |  no  |  |
+ | lat_long | [LatLong](#LatLong) |  no  |  |
+ | country | String |  no  |  |
+ | store_code | String |  no  |  |
+ | uid | Int |  no  |  |
+ | name | String |  no  |  |
  | pincode | Int |  no  |  |
+ | city | String |  no  |  |
+ | address | String |  no  |  |
 
 ---
 
